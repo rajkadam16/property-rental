@@ -1,6 +1,4 @@
-
-﻿# apartmentrentals
-
+# Frontend roadmap
 Features for Apartment Rental Project
 
 ## User Management
