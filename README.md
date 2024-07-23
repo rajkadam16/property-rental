@@ -1,6 +1,10 @@
 # Frontend roadmap
 Features for Apartment Rental Project
 
+## reference website 
+- https://www.rent.com/
+- https://www.apartments.com/
+
 ## User Management
 
 #User Registration and Login:
