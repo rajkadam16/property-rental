@@ -7,6 +7,9 @@ import { NavbarComponent } from './page/navbar/navbar.component';
 import { HomeComponent } from './page/home/home.component';
 import { FooterComponent } from './page/footer/footer.component';
 import { SearchComponent } from './shared/reuesable/search/search.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FaqsComponent } from './page/faqs/faqs.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { SearchComponent } from './shared/reuesable/search/search.component';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    SearchComponent
+    SearchComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,15 @@
+<div class="accordion pt-2" id="accordionExample" *ngFor="let faqs of faqData; let i = index">
+    <div *ngIf="faqs.isEnabled === true" class="accordion-item">
+      <h2 class="accordion-header" id="heading{{i}}">
+        <button class="accordion-button" [ngClass]="{'collapsed': !faqs.isOpen}" type="button"
+          (click)="togglePanel(faqs)">
+          {{ faqs.question }}
+        </button>
+      </h2>
+      <div [ngClass]="{'collapse': !faqs.isOpen, 'show': faqs.isOpen}" class="accordion-collapse collapse">
+        <div class="accordion-body text-white ">
+          {{ faqs.answer }}
+        </div>
+      </div>
+    </div>
+  </div>
