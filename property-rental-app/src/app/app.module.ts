@@ -9,6 +9,8 @@ import { FooterComponent } from './page/footer/footer.component';
 import { SearchComponent } from './shared/reuesable/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FaqsComponent } from './page/faqs/faqs.component';
+import { FeaturetteComponent } from './page/featurette/featurette.component';
+import { CardComponent } from './page/card/card.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FaqsComponent } from './page/faqs/faqs.component';
     HomeComponent,
     FooterComponent,
     SearchComponent,
-    FaqsComponent
+    FaqsComponent,
+    FeaturetteComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

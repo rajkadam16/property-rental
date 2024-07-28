@@ -22,7 +22,7 @@
     height: 50vh;
 }
 
-section h1 {
+ h1 {
     font-weight: bold;
     font-size: 5vh;
     text-align: center;
@@ -49,4 +49,8 @@ section h1 {
         padding: 30px;
     }
 }
+
+
+
+
 

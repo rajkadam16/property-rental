@@ -1,4 +1,4 @@
-<main class="w-full h-full ">
+<main class="w-full h-full">
   <section id="page-1" class="" style="background-image: url('assets/images/pexels-pixabay-280221.jpg')">
     <div class="container">
       <h1>Find your perfect place.</h1>
@@ -7,30 +7,25 @@
       </div>
     </div>
   </section>
-
-  <section class="px-5">
-    <h1>Renting Made Easy for Residents and Property Managers</h1>
-    <p class="text-yellow-100 font-light text-center text-lg  ">Our articles, guides, and videos help you through the process, start to finish.</p>
-    <div class=" px-5 text-white" *ngFor="let featurette of featuretteData">
-      <div *ngIf="featurette.isEnabled" [class]="featurette.class">
-        <div class="col-md-7 order-md-2 my-auto">
-          <h2 class="featurette-heading fw-normal lh-1">
-            {{ featurette.heading1 }}
-            <span class="text-body-secondary">{{ featurette.heading2 }}</span>
-          </h2>
-          <p class="lead">
-            {{ featurette.text }}
-          </p>
-        </div>
-        <div class="col-md-5  order-md-2">
-          <img class="rounded-lg" [src]=" featurette.image " alt="Generic placeholder image"
-            [style]="featurette.imgstyle">
-        </div>
-      </div>
+<div>
+  <h1>Explore Rentals in Chicago, IL</h1>
+<div class="">
+  <app-card></app-card>
+  <app-card></app-card>
+  <app-card></app-card>
+  <app-card></app-card>
+</div>
+</div>
+  <h1>Renting Made Easy for Residents and Property Managers</h1>
+  <p class="text-yellow-100 font-light text-center text-lg pb-5">
+    Our articles, guides, and videos help you through the process, start to
+    finish.
+  </p>
+  <app-featurette></app-featurette>
+  <section class="flex justify-center">
+    <div class="mt-5 px-5 w-[90vh] gap-9">
+      <h1 class="">FAQ's</h1>
+      <app-faqs class=""></app-faqs>
     </div>
   </section>
-<section class="mt-5 px-5">
-  <h1>FAQ's</h1>
-  <app-faqs></app-faqs>
-</section>
 </main>
