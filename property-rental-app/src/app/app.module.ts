@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FaqsComponent } from './page/faqs/faqs.component';
 import { FeaturetteComponent } from './page/featurette/featurette.component';
 import { CardComponent } from './page/card/card.component';
+import { PagenotfoundComponent } from './page/pagenotfound/pagenotfound.component';
+import { PropertydetailsComponent } from './page/propertydetails/propertydetails.component';
+import { SwiperComponent } from './page/swiper/swiper.component';
+
 
 
 @NgModule({
@@ -22,13 +26,15 @@ import { CardComponent } from './page/card/card.component';
     SearchComponent,
     FaqsComponent,
     FeaturetteComponent,
-    CardComponent
+    CardComponent,
+    PagenotfoundComponent,
+    PropertydetailsComponent,
+    SwiperComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    
+    HttpClientModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,16 @@
+@import 'swiper/css/bundle';
+
+.swiper {
+  width: 100%;
+  height: 60vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #a7a7a7;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
