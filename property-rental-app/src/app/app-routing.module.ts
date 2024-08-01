@@ -8,7 +8,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   {
-    path: 'propertydetails/:proId',
+    // path: 'propertydetails/:proId',
+    path: 'propertydetails',
     component: PropertydetailsComponent,
   },
   { path: '**', component: PagenotfoundComponent },
