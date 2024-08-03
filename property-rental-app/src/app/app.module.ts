@@ -22,6 +22,7 @@ import { SignupComponent } from './page/forms/signup/signup.component';
 import { RequestTourformComponent } from './page/forms/request-tourform/request-tourform.component';
 import { SendmessageComponent } from './page/forms/sendmessage/sendmessage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RequestboxComponent } from './page/requestbox/requestbox.component';
 
 
 
@@ -45,12 +46,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignupComponent,
     RequestTourformComponent,
     SendmessageComponent,
+    RequestboxComponent,
   ],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,67 @@
-<p>request-tourform works!</p>
+<div class="modal fade" id="requestTour" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-gray-100">
+          <h5 class="modal-title font-semibold text-gray-700" id="fileModalLabel">Appartmenrt name</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="bg-[#f2f2f2] p-6 rounded-lg shadow-lg">
+            <div>
+              <form action="" [formGroup]="requestTourForm">
+                <div class="flex gap-4 mb-4 text-black">
+                  <input type="text" placeholder="First name" class="pl-3 py-2 border border-gray-300 rounded-md w-1/2 shadow-sm focus:outline-none focus:border-green-700 transition duration-200" formControlName="firstName"/>
+                  <span class="text-red-500" *ngIf="requestTourForm.controls['firstName'].touched && requestTourForm.controls['firstName'].errors?.['required']">
+                    First name is required
+                </span>
+                  <input type="text" placeholder="Last name" class="pl-3 py-2 border border-gray-300 rounded-md w-1/2 shadow-sm focus:outline-none focus:border-green-700 transition duration-200" formControlName="lastName"/>
+                  <span class="text-red-500" *ngIf="requestTourForm.controls['lastName'].touched && requestTourForm.controls['lastName'].errors?.['required']">
+                   Last irst name is required
+                </span>
+                </div>
+                <div class="mb-4 text-black" >
+                  <input type="email" placeholder="Email Address" class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200" formControlName="email" />
+                  <span class="text-red-500" *ngIf="requestTourForm.controls['email'].touched && requestTourForm.controls['email'].errors?.['required']">
+                    First name is required
+                </span>
+                </div>
+                <div class="flex gap-4 mb-4">
+                  <div class="w-1/2 text-black">
+                    <p class="text-sm mb-1">Preferred date</p>
+                    <input type="date" class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200" formControlName="tourDate" />
+                    <span class="text-red-500" *ngIf="requestTourForm.controls['tourDate'].touched && requestTourForm.controls['tourDate'].errors?.['required']">
+                      First name is required
+                  </span>
+                  </div>
+                  <div class="w-1/2 text-black ">
+                    <p class="text-sm mb-1">Contact no</p>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200"  formControlName="phoneNumber"/>
+                    <span class="text-red-500" *ngIf="requestTourForm.controls['phoneNumber'].touched && requestTourForm.controls['phoneNumber'].errors?.['required']">
+                      First name is required
+                  </span>
+                  </div>
+                </div>
+                  <div class="w-1/2 text-black ">
+                    <p class="text-sm mb-1">Custom Message</p>
+                  <textarea name="" id="" class="w-full"></textarea>
+                  </div>
+                <div class="text-center bg-slate-600 text-white py-2 rounded-md shadow-sm hover:bg-slate-700 transition duration-200">
+                  <button type="submit" [disabled]="requestTourForm.invalid" (click)="onSubmit();reset()">Send Message</button>
+                </div>
+                <div class="text-xs mt-4 text-black">
+                  <label class="flex items-center space-x-2">
+                    <input type="checkbox" value="Email me listings and apartments related info" class="form-checkbox text-green-600" formControlName="tourDate" />
+                    <span>Email me listings and apartments related info</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer bg-gray-100">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
