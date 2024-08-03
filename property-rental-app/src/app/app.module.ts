@@ -14,6 +14,14 @@ import { CardComponent } from './page/card/card.component';
 import { PagenotfoundComponent } from './page/pagenotfound/pagenotfound.component';
 import { PropertydetailsComponent } from './page/propertydetails/propertydetails.component';
 import { SwiperComponent } from './page/swiper/swiper.component';
+import { TabsComponent } from './shared/reuesable/tabs/tabs.component';
+import { PropertydataComponent } from './page/propertydetails/propertydata/propertydata.component';
+import { PropertdatainfoComponent } from './page/propertydetails/propertdatainfo/propertdatainfo.component';
+import { LoginComponent } from './page/forms/login/login.component';
+import { SignupComponent } from './page/forms/signup/signup.component';
+import { RequestTourformComponent } from './page/forms/request-tourform/request-tourform.component';
+import { SendmessageComponent } from './page/forms/sendmessage/sendmessage.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,9 +37,17 @@ import { SwiperComponent } from './page/swiper/swiper.component';
     CardComponent,
     PagenotfoundComponent,
     PropertydetailsComponent,
-    SwiperComponent
+    SwiperComponent,
+    TabsComponent,
+    PropertydataComponent,
+    PropertdatainfoComponent,
+    LoginComponent,
+    SignupComponent,
+    RequestTourformComponent,
+    SendmessageComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,    

@@ -3,11 +3,11 @@ import { api } from 'src/app/core/constant/api/api';
 import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
 
 @Component({
-  selector: 'app-faqs',
-  templateUrl: './faqs.component.html',
-  styleUrls: ['./faqs.component.css']
+  selector: 'app-propertydata',
+  templateUrl: './propertydata.component.html',
+  styleUrls: ['./propertydata.component.css']
 })
-export class FaqsComponent {
+export class PropertydataComponent {
   faqData: any[] = [];
 
   constructor(public faq: CacheJsonDataService) { }
@@ -15,6 +15,7 @@ export class FaqsComponent {
   ngOnInit(): void {
     this.faq.parseJsonFile(api.faqs).subscribe((res: any) => {
       this.faqData = res.mainfaqs;
+
     });
   }
   togglePanel(panel: any) {
