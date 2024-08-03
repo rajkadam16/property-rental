@@ -1,4 +1,5 @@
-[
+{
+  "mainfaqs": [
     {
       "isEnabled": true,
       "question": "What types of properties are available for rent?",
@@ -48,3 +49,4 @@
       "url": "/"
     }
   ]
+}
