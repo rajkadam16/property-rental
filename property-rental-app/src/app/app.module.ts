@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './page/navbar/navbar.component';
 import { HomeComponent } from './page/home/home.component';
 import { FooterComponent } from './page/footer/footer.component';
 import { SearchComponent } from './shared/reuesable/search/search.component';
@@ -23,13 +22,14 @@ import { RequestTourformComponent } from './page/forms/request-tourform/request-
 import { SendmessageComponent } from './page/forms/sendmessage/sendmessage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RequestboxComponent } from './page/requestbox/requestbox.component';
+import { NavBarComponent } from './page/nav-bar/nav-bar.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+    
     HomeComponent,
     FooterComponent,
     SearchComponent,
@@ -47,6 +47,7 @@ import { RequestboxComponent } from './page/requestbox/requestbox.component';
     RequestTourformComponent,
     SendmessageComponent,
     RequestboxComponent,
+    NavBarComponent,
   ],
   imports: [
     ReactiveFormsModule,
