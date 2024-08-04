@@ -7,36 +7,28 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./request-tourform.component.css'],
 })
 export class RequestTourformComponent {
-  valid: boolean = false;
 
-  constructor() { }
-  requestTourForm: FormGroup = new FormGroup({
-    firstName: new FormControl('', [
-      Validators.required,
-      Validators.maxLength(20),
-    ]),
-    lastName: new FormControl('', [
-      Validators.required,
-      Validators.maxLength(20),
-    ]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    phoneNumber: new FormControl('', [
-      Validators.required,
-      Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$'),
-    ]),
-    tourDate: new FormControl('', [Validators.required]),
-    acceptTerms: new FormControl(false, [Validators.requiredTrue]),
-  });
 
-  onSubmit() {
-    this.valid = true;
-    if (this.requestTourForm.invalid) {
-      return;
-    }
-    console.log(this.requestTourForm.value);
+  submitted: boolean = false
+constructor() { }
+sendMeassgeForm: FormGroup = new FormGroup({
+  firstName : new FormControl ('',[Validators.required,Validators.maxLength(30)]),
+  lastName : new FormControl ('',[Validators.required,Validators.maxLength(30)]),
+  email : new FormControl ('',[Validators.required,Validators.email]),
+  date : new FormControl ('',[Validators.required]),
+  message : new FormControl ('',[Validators.required,Validators.maxLength(500)]),
+  phone : new FormControl ('',[Validators.required,Validators.maxLength(15)]),
+  acceptTerms: new FormControl(false, [Validators.requiredTrue]),
+})
+onSubmit() {
+  this.submitted = true;
+  if(this.sendMeassgeForm.invalid){
+    return;
   }
-
-  reset() {
-    this.requestTourForm.reset();
-  }
+  console.log(this.sendMeassgeForm.value);
+}
+reset()
+{
+  this.sendMeassgeForm.reset();
+}
 }
