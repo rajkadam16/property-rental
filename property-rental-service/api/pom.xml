@@ -16,6 +16,9 @@
   <artifactId>api</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
+  <modules>
+    <module>checksum-api</module>
+  </modules>
   <name>api</name>
 
 </project>

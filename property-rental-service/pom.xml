@@ -24,6 +24,14 @@
     <module>service</module>
   </modules>
 
+     <dependencies>
+        <dependency>
+            <groupId>com.property.rental.service</groupId>
+            <artifactId>checksum-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
   <build>
     <extensions>
       <extension>

@@ -16,6 +16,10 @@
   <artifactId>common</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
+  <modules>
+    <module>common-utility</module>
+    <module>checksum</module>
+  </modules>
   <name>common</name>
 
 </project>
