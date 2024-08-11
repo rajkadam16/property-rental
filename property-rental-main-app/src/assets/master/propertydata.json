@@ -1,0 +1,109 @@
+{
+    "propertData": [
+        {
+          "isEnabled": true,
+          "info": "How do I report a maintenance issue?",
+          "data": "The serene morning mist enveloped the forest, casting a mystical aura over the ancient trees and awakening the symphony of birdsong. Amidst this tranquil beauty, a deer grazed quietly, embodying the peaceful harmony of nature.",
+          "url": "/"
+        },
+        {
+          "isEnabled": true,
+          "info": "How do I report a maintenance issue?",
+          "data": "The serene morning mist enveloped the forest, casting a mystical aura over the ancient trees and awakening the symphony of birdsong. Amidst this tranquil beauty, a deer grazed quietly, embodying the peaceful harmony of nature.",
+          "url": "/"
+        },
+        {
+          "isEnabled": true,
+          "info": "How do I report a maintenance issue?",
+          "data": "The serene morning mist enveloped the forest, casting a mystical aura over the ancient trees and awakening the symphony of birdsong. Amidst this tranquil beauty, a deer grazed quietly, embodying the peaceful harmony of nature.",
+          "url": "/"
+        }
+      ],
+      "appartmentDetalis": [
+        {
+          "isEnabled": true,
+          "title": "Unit Media"
+        }
+      ],
+      "pictures": [
+        {
+          "isEnabled": true,
+          "url": "/",
+          "btnVal":"floor Tour"
+        },
+        {
+          "isEnabled": true,
+          "url": "/",
+          "btnVal":"images"
+        },
+        {
+          "isEnabled": true,
+          "url": "/",
+          "btnVal":"Videos"
+        },
+        {
+          "isEnabled": true,
+          "url": "/",
+          "btnVal":"Map"
+        }
+      ],
+      "sections": [
+        {
+          "isEnabled": true,
+          "title": "Highlights",
+          "links": [
+            {
+              "isEnabled": true,
+              "name": "High Speed Internet Access"
+            },
+            {
+              "isEnabled": true,
+              "name": "Wi-Fi"
+            },
+            {
+              "isEnabled": true,
+              "name": "Washer/Dryer"
+            },
+            {
+              "isEnabled": true,
+              "name": "Air Conditioning"
+            },
+            {
+              "isEnabled": true,
+              "name": "Heating"
+            },
+            {
+              "isEnabled": true,
+              "name": "Cable Ready"
+            }
+          ]
+        },
+        {
+          "isEnabled": true,
+          "title": "Kitchen Features & Appliances",
+          "links": [
+            {
+              "isEnabled": true,
+              "name": "Dishwasher"
+            },
+            {
+              "isEnabled": true,
+              "name": "Granite Countertops"
+            },
+            {
+              "isEnabled": true,
+              "name": "Kitchen"
+            },
+            {
+              "isEnabled": true,
+              "name": "Refrigerator"
+            },
+            {
+              "isEnabled": true,
+              "name": "Freezer"
+            }
+          ]
+        }
+      ]
+    
+}

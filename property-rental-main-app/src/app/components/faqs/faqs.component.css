@@ -1,0 +1,40 @@
+/* Custom styling for the accordion component */
+.accordion-button {
+    background-color: #000000; /* Bootstrap primary color */
+    color: rgb(255, 255, 255);
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: rgb(192, 192, 192); /* Darker shade when active */
+    color: rgb(0, 0, 0);
+  }
+  
+  .accordion-button:hover {
+    background-color: #b5b5b5;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  
+  .accordion-body {
+    background-color: #080808; /* Bootstrap light background color */
+    border-top: 1px solid #ffffff;
+    padding: 1rem;
+    transition: max-height 0.3s ease;
+  }
+  
+  .accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordion-item:last-child {
+    margin-bottom: 0;
+  }
+  

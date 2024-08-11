@@ -1,0 +1,7 @@
+.image-item {
+    display: block; /* or inline-block */
+    max-width: 100%;
+    /* Ensure there is no overriding margin or padding */
+    margin: 0;
+    padding: 0;
+}

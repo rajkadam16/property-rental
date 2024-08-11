@@ -1,0 +1,76 @@
+<div class="modal fade" id="signup" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fileModalLabel">Create an Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-[#f2f2f2]">
+        <div class="text-center mt-3">
+          <p class="text-xl font-semibold">Create an Account</p>
+          <p class="text-xs text-blue-500">or, <a href="#">sign into your account</a></p>
+        </div>
+        <form class="mt-5 px-4" [formGroup]="signUp" (ngSubmit)="onSubmit()">
+          <div class="mb-3 d-flex flex-wrap gap-3">
+            <input type="text" placeholder="First name" class="form-control flex-fill shadow-sm" formControlName="firstName">
+            <span class="text-red-500" *ngIf="signUp.controls['firstName'].touched && signUp.controls['firstName'].hasError('required')">
+              First name is required
+            </span>
+            <span class="text-red-500" *ngIf="signUp.controls['firstName'].touched && signUp.controls['firstName'].hasError('maxlength')">
+              First name must be less than 50 characters
+            </span>
+            <input type="text" placeholder="Last name" class="form-control flex-fill shadow-sm" formControlName="lastName">
+            <span class="text-red-500" *ngIf="signUp.controls['lastName'].touched && signUp.controls['lastName'].hasError('required')">
+              Last name is required
+            </span>
+            <span class="text-red-500" *ngIf="signUp.controls['lastName'].touched && signUp.controls['lastName'].hasError('maxlength')">
+              Last name must be less than 50 characters
+            </span>
+          </div>
+          <div class="mb-3">
+            <input type="email" placeholder="Email address" class="form-control shadow-sm" formControlName="email">
+            <span class="text-red-500" *ngIf="signUp.controls['email'].touched && signUp.controls['email'].errors?.['required']">
+              Email is required
+            </span>
+            <span class="text-red-500" *ngIf="signUp.controls['email'].touched && signUp.controls['email'].hasError('email')">
+              Invalid email format
+            </span>
+          </div>
+          <div class="mb-3">
+            <input type="password" placeholder="Password" class="form-control shadow-sm" formControlName="password">
+            <span class="text-red-500" *ngIf="signUp.controls['password'].touched && signUp.controls['password'].errors?.['required']">
+              Password is required
+            </span>
+            <span class="text-red-500" *ngIf="signUp.controls['password'].touched && signUp.controls['password'].hasError('minlength')">
+              Password must be at least 8 characters
+            </span>
+          </div>
+          <div class="mb-3">
+            <input type="password" placeholder="Confirm Password" class="form-control shadow-sm" formControlName="confirmPassword">
+            <span class="text-red-500" *ngIf="signUp.controls['confirmPassword'].touched && signUp.controls['confirmPassword'].errors?.['required']">
+              Confirm password is required
+            </span>
+            <span class="text-red-500" *ngIf="signUp.errors?.['mismatch']">
+              Passwords do not match
+            </span>
+          </div>
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="professionalCheck" formControlName="acceptTerms">
+            <span class="text-red-500" *ngIf="signUp.controls['acceptTerms'].touched && signUp.controls['acceptTerms'].errors?.['required']">
+              Please click the checkbox
+            </span>
+            <label class="form-check-label text-xs" for="professionalCheck">I am a professional</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 shadow-sm" [disabled]="signUp.invalid">Sign Up</button>
+        </form>
+        
+        <div class="text-xs text-center mt-4">
+          <p>By registering, I accept the Cityscape.com <a href="#" class="text-blue-500">Terms of Use</a>.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

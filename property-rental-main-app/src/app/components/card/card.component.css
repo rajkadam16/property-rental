@@ -1,0 +1,29 @@
+h4 {
+    color: #505050;
+    font-size: 1.15em;
+    font-weight: 900;
+    margin: 0 0 0.5em;
+    text-align: center;
+}
+
+
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #dccdcd; /* Card background for contrast with black background */
+    color: #000000; /* Text color for contrast */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @keyframes backgroundAnimation {
+    from {
+      background-position: top;
+    }
+    to {
+      background-position: bottom;
+    }
+  }
+  
