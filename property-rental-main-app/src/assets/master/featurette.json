@@ -1,0 +1,32 @@
+[
+    {
+        "isEnabled": true,
+        "class":"row featurette  flex-row-reverse",
+        "heading1":" Oh yeah, it’s that good.",
+        "heading2":" See for yourself.",
+        "text":" Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world",
+        "image":"assets/images/widget_advertise_your_rental_1407.png",
+        "imgstyle":"height: 450px; width: 450px;"
+        
+    },
+    {
+        "isEnabled": true,
+        "class":"row featurette ",
+        "heading1":" Oh yeah, it’s that good.",
+        "heading2":" See for yourself.",
+        "text":" Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world",
+        "image":"assets/images/widget_lease_100_online_469.png",
+        "imgstyle":"height: 450px; width: 450px; object-fit: cover;"
+        
+    },
+    {
+        "isEnabled": true,
+        "class":"row featurette  flex-row-reverse",
+        "heading1":" Oh yeah, it’s that good.",
+        "heading2":" See for yourself.",
+        "text":" Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world",
+        "image":"assets/images/widget_tips_for_renters_938.png",
+        "imgstyle":"height: 450px; width: 450px;"
+        
+    }
+]

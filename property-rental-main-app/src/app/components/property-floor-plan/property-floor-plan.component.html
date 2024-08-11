@@ -1,0 +1,3 @@
+<div class="px-5 flex flex-col flex-wrap gap-5 items-center justify-center" *ngFor="let floorPlan of floorPlans">
+    <img *ngIf="floorPlan.isEnabled" [src]="floorPlan.url" alt="">
+</div>

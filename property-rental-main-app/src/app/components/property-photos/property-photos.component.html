@@ -1,0 +1,3 @@
+<div class="px-5 flex flex-row flex-wrap gap-5 items-center justify-center" *ngFor="let photo of photos">
+    <img *ngIf="photo.isEnabled" class="image-item" [src]="photo.url" alt="">
+</div>

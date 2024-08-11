@@ -1,0 +1,53 @@
+<!-- <div class="card mt-5">
+  
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li *ngFor="let tabData of tabDataList" class="nav-item" role="presentation">
+        <button class="nav-link {{tabData.defaultActive}}" id="{{tabData.id}}+'-tab'" data-bs-toggle="tab"
+          [attr.data-bs-target]="'#'+tabData.id" type="button" role="tab" [attr.aria-controls]="tabData.id"
+          [attr.aria-selected]="tabData.selected">{{tabData.displayName}}</button>
+      </li>
+    </ul>
+  
+  
+    <div class="tab-content" id="myTabContent">
+      <div *ngFor="let tabData of tabDataList" class="tab-pane fade show {{tabData.defaultActive}}" id="{{tabData.id}}"
+        role="tabpanel" [attr.aria-labelledby]="tabData.id+'-tab'">
+        <ng-container *ngFor="let component of tabData.components">
+          <ng-container *ngComponentOutlet="component"></ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="card mt-5 bg-gray-900 text-white">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs flex space-x-2" id="myTab" role="tablist">
+      <li *ngFor="let tabData of tabDataList" class="nav-item" role="presentation">
+        <button
+          class="nav-link px-4 py-2 rounded-t-md bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 {{tabData.defaultActive}}"
+          id="{{tabData.id}}+'-tab'"
+          data-bs-toggle="tab"
+          [attr.data-bs-target]="'#'+tabData.id"
+          type="button"
+          role="tab"
+          [attr.aria-controls]="tabData.id"
+          [attr.aria-selected]="tabData.selected">
+          {{tabData.displayName}}
+        </button>
+      </li>
+    </ul>
+  
+    <!-- Tab panes -->
+    <div class="tab-content p-4 bg-gray-800 rounded-b-md" id="myTabContent">
+      <div *ngFor="let tabData of tabDataList" class="tab-pane fade show {{tabData.defaultActive}}"
+        id="{{tabData.id}}"
+        role="tabpanel"
+        [attr.aria-labelledby]="tabData.id+'-tab'">
+        <ng-container *ngFor="let component of tabData.components">
+          <ng-container *ngComponentOutlet="component"></ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,97 @@
+
+   <div class="modal fade" id="requestTour" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-gray-100">
+          <h5 class="modal-title font-semibold text-gray-700" id="fileModalLabel">Appartmenrt name</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="bg-[#f2f2f2] p-6 rounded-lg shadow-lg">
+            <div>
+              <form action="" [formGroup]="sendMeassgeForm" (ngSubmit)="onSubmit()">
+                <div class="flex gap-4 mb-4 text-black">
+                  <input type="text" placeholder="First name" class="pl-3 py-2 border border-gray-300 rounded-md w-1/2 shadow-sm focus:outline-none focus:border-green-700 transition duration-200" formControlName="firstName"/>
+                  <span class="text-red-500" *ngIf="sendMeassgeForm.controls['firstName'].touched && sendMeassgeForm.controls['firstName'].hasError('required')">
+                    First name is required
+                </span>
+                  <span class="text-red-500" *ngIf="sendMeassgeForm.controls['firstName'].touched && sendMeassgeForm.controls['firstName'].hasError('maxlength')">
+                    First name must be less than 30 characters
+                </span>
+                  <input type="text" placeholder="Last name" class="pl-3 py-2 border border-gray-300 rounded-md w-1/2 shadow-sm focus:outline-none focus:border-green-700 transition duration-200"  formControlName="lastName"/>
+                  <span class="text-red-500" *ngIf="sendMeassgeForm.controls['lastName'].touched && sendMeassgeForm.controls['lastName'].hasError('required')">
+                    Last name is required
+                </span>
+                  <span class="text-red-500" *ngIf="sendMeassgeForm.controls['lastName'].touched && sendMeassgeForm.controls['lastName'].hasError('maxlength')">
+                    Last name must be less than 30 characters
+                </span>
+                </div>
+                <div class="mb-4">
+                  <input type="email" placeholder="Email Address" class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200" formControlName="email" />
+                  <span class="text-red-500" *ngIf="sendMeassgeForm.controls['email'].touched && sendMeassgeForm.controls['email'].hasError('email')">
+                    Please enter a valid email address
+                </span>
+                  <span class="text-red-500" *ngIf="sendMeassgeForm.controls['email'].touched && sendMeassgeForm.controls['email'].hasError('required')">
+                    Email is required
+                </span>
+                </div>
+                <div class="flex gap-4 mb-4">
+                  <div class="w-1/2 text-black">
+                    <p class="text-sm mb-1">Preferred date</p>
+                    <input type="date" class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200"  formControlName="date"/>
+                    <span class="text-red-500" *ngIf="sendMeassgeForm.controls['date'].touched && sendMeassgeForm.controls['date'].hasError('required')">
+                      Date is required
+                  </span>
+                  </div>
+                  <div class="w-1/2 text-black ">
+                    <p class="text-sm mb-1">Contact no</p>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200" formControlName="phone" />
+                    <span class="text-red-500" *ngIf="sendMeassgeForm.controls['phone'].touched && sendMeassgeForm.controls['phone'].hasError('required')">
+                      Phone number is required
+                  </span>
+                  </div>
+                </div>
+                <div class="mb-4 text-black">
+                  <p class="text-sm mb-2">I would like to...</p>
+                  <div class="flex flex-wrap gap-4">
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" value="schedule a tour" class="form-checkbox text-green-600" />
+                      <span>Schedule a tour</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" value="Request Application" class="form-checkbox text-green-600" />
+                      <span>Request Application</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" value="Confirm availability" class="form-checkbox text-green-600" />
+                      <span>Confirm availability</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                      <input type="checkbox" value="Custom Message" class="form-checkbox text-green-600" />
+                      <span>Custom Message</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="text-center bg-slate-600 text-white py-2 rounded-md shadow-sm hover:bg-slate-700 transition duration-200">
+                  <button type="submit" [disabled]="sendMeassgeForm.invalid" (click)="onSubmit();reset()">Send Message</button>
+                </div>
+                <div class="text-xs mt-4 text-black">
+                  <label class="flex items-center space-x-2">
+                    <input type="checkbox" value="Email me listings and apartments related info" class="form-checkbox text-green-600" formControlName="acceptTerms" />
+                    <span class="text-red-500" *ngIf="sendMeassgeForm.controls['acceptTerms'].touched && sendMeassgeForm.controls['acceptTerms'].hasError('required')">
+                      You must accept the terms and conditions
+                  </span>
+                    <span>Email me listings and apartments related info</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer bg-gray-100">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
