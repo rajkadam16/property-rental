@@ -1,4 +1,4 @@
-package com.property.rental.property_rental_service;
+package com.property.rental.service.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

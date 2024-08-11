@@ -19,6 +19,7 @@
   <modules>
     <module>common-utility</module>
     <module>checksum</module>
+    <module>model</module>
   </modules>
   <name>common</name>
 
