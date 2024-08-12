@@ -1,0 +1,45 @@
+<div class="card apartment-card border border-gray-300 rounded-lg overflow-hidden " style="width: 60vh; height: 30vh;" routerLink="/">
+    <div class="title h-12 bg-gray-100 flex items-center px-4">
+        <div>
+            <h2 class="m-0 text-lg text-gray-800">The Meadows Apartments</h2>
+            <p class="m-0 text-sm text-gray-500">2400 Springdale Rd, Waukesha, WI 53186</p>
+        </div>
+    </div>
+    <div class="side flex h-full">
+        <div class="imgs w-1/2 h-full overflow-hidden">
+            <div id="carouselExampleControls" class="carousel slide h-full" data-bs-ride="carousel">
+                <div class="carousel-inner h-full">
+                    <div class="carousel-item active h-full">
+                        <img src="https://images1.apartments.com/i2/URpFBKxlLnxh1z4a82Dhb8yhhIGhg76I5DqcVnm2Al0/102/village-at-fox-river-waukesha-wi-building-photo.jpg?p=1" class="d-block w-full h-full object-cover" alt="...">
+                    </div>
+                    <div class="carousel-item h-full">
+                        <img src="https://images1.apartments.com/i2/2F_Y_XBNRCxvlHX6UnCU65IbR3doy8NO_wUFliVRI-E/102/village-at-fox-river-waukesha-wi-1-br-1-ba---952sf.jpg" class="d-block w-full h-full object-cover" alt="...">
+                    </div>
+                    <div class="carousel-item h-full">
+                        <img src="https://images1.apartments.com/i2/zBmwq-xNA_j9ANkzWIAldfgV68Y2bgUmzkTZ8E51108/102/village-at-fox-river-waukesha-wi-1-br-1-ba---952sf.jpg" class="d-block w-full h-full object-cover" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="details w-1/2 p-2 flex flex-col justify-center">
+            <div class="card-body">
+                <p class="text-lg font-extrabold text-gray-800 ">$1,045 - $1,545</p>
+                <p class="text-sm font-bold text-gray-500 pb-1">1-2 bedrooms, 1-2 bathrooms</p>
+                <p class="text-sm text-gray-500 pb-2">952-1,200 sqft</p>
+                <p class="text-sm font-extralight text-gray-500 pb-4">Pets Allowed, Pool, Maintenance on site, Playground, Tennis Court, Smoke Free</p>
+                <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#requestTour">
+                    Send Message
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-request-tourform></app-request-tourform>
