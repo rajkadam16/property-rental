@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.property.rental</groupId>
-    <artifactId>service</artifactId>
-    <version>1.0.0</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
+	<parent>
+		<groupId>com.property.rental.service</groupId>
+		<artifactId>property-rental-service</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
-  <groupId>com.property.rental.service</groupId>
-  <artifactId>core</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
-  <modules>
-    <module>dao</module>
-    <module>service</module>
-  </modules>
-  <name>core</name>
+	<groupId>com.property.rental.service</groupId>
+	<artifactId>core</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>core</name>
 
+	<modules>
+		<module>api</module>
+		<module>dao</module>
+		<module>service</module>
+	</modules>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+	</dependencies>
 </project>

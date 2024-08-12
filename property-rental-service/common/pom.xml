@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.property.rental</groupId>
-    <artifactId>service</artifactId>
-    <version>1.0.0</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
+	<parent>
+		<groupId>com.property.rental.service</groupId>
+		<artifactId>property-rental-service</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
-  <groupId>com.property.rental.service</groupId>
-  <artifactId>common</artifactId>
-  <version>1.0.0</version>
-  <packaging>pom</packaging>
-  <modules>
-    <module>common-utility</module>
-    <module>checksum</module>
-    <module>model</module>
-  </modules>
-  <name>common</name>
+	<groupId>com.property.rental.service</groupId>
+	<artifactId>common</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>common</name>
+
+	<modules>
+		<module>common-utility</module>
+		<module>checksum</module>
+		<module>model</module>
+	</modules>
 
 </project>
