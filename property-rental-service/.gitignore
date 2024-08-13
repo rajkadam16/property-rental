@@ -7,17 +7,3 @@
 # Ignore target directories
 target/
 
-
-# Ignore project files
-#core/api/.project
-#core/dao/.project
-
-# Ignore build directories and their contents
-#core/api/target/
-#core/dao/target/
-
-# Ignore specific generated class files
-#*.class
-
-# Ignore Maven specific files
-#**/pom.properties
