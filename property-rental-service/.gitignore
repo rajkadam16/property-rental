@@ -10,4 +10,4 @@ target/
 *.classpath
 
 # Ignore all bin directories
-.*/bin/
+bin/
