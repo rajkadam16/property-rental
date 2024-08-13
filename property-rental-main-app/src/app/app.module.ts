@@ -12,7 +12,6 @@ import { FaqsComponent } from './components/faqs/faqs.component';
 import { FeaturetteComponent } from './components/featurette/featurette.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { PropertdatainfoComponent } from './components/propertdatainfo/propertdatainfo.component';
-import { PropertydetailsComponent } from './page/propertydetails/propertydetails.component';
 import { SwiperComponent } from './components/swiper/swiper.component';
 import { PropertydataComponent } from './components/propertydata/propertydata.component';
 import { LoginComponent } from './components/login/login.component';
@@ -31,6 +30,8 @@ import { PropertyFloorPlanComponent } from './components/property-floor-plan/pro
 import { PropertyVirtualToursComponent } from './components/property-virtual-tours/property-virtual-tours.component';
 import { PropertyVideosComponent } from './components/property-videos/property-videos.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { PropertyCardsComponent } from './components/property-cards/property-cards.component';
+import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 
 
 
@@ -45,7 +46,6 @@ import { GoogleMapsModule } from '@angular/google-maps';
     FeaturetteComponent,
     PagenotfoundComponent,
     PropertdatainfoComponent,
-    PropertydetailsComponent,
     SwiperComponent,
     PropertydataComponent,
     LoginComponent,
@@ -62,7 +62,9 @@ import { GoogleMapsModule } from '@angular/google-maps';
     PropertyPhotosComponent,
     PropertyFloorPlanComponent,
     PropertyVirtualToursComponent,
-    PropertyVideosComponent
+    PropertyVideosComponent,
+    PropertyCardsComponent,
+    PropertyMapViewComponent
 
   ],
   imports: [
