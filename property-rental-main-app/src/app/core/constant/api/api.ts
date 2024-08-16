@@ -5,5 +5,6 @@ export const api = {
     cards:"assets/master/card.json",
     propertyData:"assets/master/propertydata.json",
     listgroupNav:"assets/master/listgroupNavbar.json",
-    propertyImgVid:"assets/master/propertyImgVid.json"
+    propertyImgVid:"assets/master/propertyImgVid.json",
+    propertyCard:"assets/master/propertycard.json",
 }

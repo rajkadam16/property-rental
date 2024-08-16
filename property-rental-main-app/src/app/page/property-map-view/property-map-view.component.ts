@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { api } from 'src/app/core/constant/api/api';
+import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
 
 @Component({
   selector: 'app-property-map-view',

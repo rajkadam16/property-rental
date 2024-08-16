@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './page/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SearchComponent } from './shared/reuesable/search/search.component';
+import { SearchComponent } from './components/search/search.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { FeaturetteComponent } from './components/featurette/featurette.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
