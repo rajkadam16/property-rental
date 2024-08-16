@@ -1,3 +1,9 @@
+# Tech Stack
+- Frontend: Angular v16
+- Backend: springBoot v
+- Database: mongoDB v
+- Styling : Bootstrap v5.0
+
 # Frontend roadmap
 Features for Apartment Rental Project
 
