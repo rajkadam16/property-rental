@@ -1,0 +1,48 @@
+{
+    "apartments": [
+      {
+        "title": {
+          "isEnabled": true,
+          "heading": "The Meadows Apartments",
+          "address": "2400 Springdale Rd, Waukesha, WI 53186"
+        },
+        "images": [
+          "https://images1.apartments.com/i2/URpFBKxlLnxh1z4a82Dhb8yhhIGhg76I5DqcVnm2Al0/102/village-at-fox-river-waukesha-wi-building-photo.jpg?p=1",
+          "https://images1.apartments.com/i2/2F_Y_XBNRCxvlHX6UnCU65IbR3doy8NO_wUFliVRI-E/102/village-at-fox-river-waukesha-wi-1-br-1-ba---952sf.jpg",
+          "https://images1.apartments.com/i2/zBmwq-xNA_j9ANkzWIAldfgV68Y2bgUmzkTZ8E51108/102/village-at-fox-river-waukesha-wi-1-br-1-ba---952sf.jpg"
+        ],
+        "details": {
+          "price": "1,045 - 1,545",
+          "size": "1-2 bedrooms, 1-2 bathrooms",
+          "area": "952-1,200 sqft",
+          "amenities": "Pets Allowed, Pool, Maintenance on site, Playground, Tennis Court, Smoke Free"
+        },
+        "button": {
+          "isEnabled": true,
+          "text": "Send Message"
+        }
+      },
+      {
+        "title": {
+          "isEnabled": true,
+          "heading": "Riverside Apartments",
+          "address": "123 River Rd, Waukesha, WI 53186"
+        },
+        "images": [
+            "https://images1.apartments.com/i2/URpFBKxlLnxh1z4a82Dhb8yhhIGhg76I5DqcVnm2Al0/102/village-at-fox-river-waukesha-wi-building-photo.jpg?p=1",
+            "https://images1.apartments.com/i2/2F_Y_XBNRCxvlHX6UnCU65IbR3doy8NO_wUFliVRI-E/102/village-at-fox-river-waukesha-wi-1-br-1-ba---952sf.jpg",
+            "https://images1.apartments.com/i2/zBmwq-xNA_j9ANkzWIAldfgV68Y2bgUmzkTZ8E51108/102/village-at-fox-river-waukesha-wi-1-br-1-ba---952sf.jpg"
+          ],
+        "details": {
+          "price": "1,200 - 1,700",
+          "size": "2-3 bedrooms, 2 bathrooms",
+          "area": "1,100-1,500 sqft",
+          "amenities": "Pets Allowed, Gym, Pool, Parking, Playground"
+        },
+        "button": {
+          "isEnabled": true,
+          "text": "Contact Us"
+        }
+      }
+    ]
+  }
