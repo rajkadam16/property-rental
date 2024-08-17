@@ -32,6 +32,7 @@ import { PropertyVideosComponent } from './components/property-videos/property-v
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PropertyCardsComponent } from './components/property-cards/property-cards.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
+import { ShowPropertyCardsComponent } from './components/show-property-cards/show-property-cards.component';
 
 
 
@@ -64,7 +65,8 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
     PropertyVirtualToursComponent,
     PropertyVideosComponent,
     PropertyCardsComponent,
-    PropertyMapViewComponent
+    PropertyMapViewComponent,
+    ShowPropertyCardsComponent
 
   ],
   imports: [
