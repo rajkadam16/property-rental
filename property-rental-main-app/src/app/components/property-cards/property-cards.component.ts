@@ -1,6 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
-import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-property-cards',
@@ -9,4 +7,6 @@ import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.servi
 })
 export class PropertyCardsComponent {
   @Input() apartment:any;
-}
+  @Input() index: any;
+} 
+ 
