@@ -11,4 +11,5 @@
 	</parent>
 	<groupId>com.property.rental.service.common</groupId>
 	<artifactId>checksum</artifactId>
+	<packaging>jar</packaging>
 </project>

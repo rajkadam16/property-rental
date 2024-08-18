@@ -11,10 +11,31 @@ public class PropertyDetailServiceImpl implements PropertyDetailService  {
 
 	@Autowired
 	private PropertyDetailDao propertyDetailDao;
-	
+
 	@Override
-	public String shouldAnswerWithTrue() {
-		return propertyDetailDao.shouldAnswerWithTrue();
+	public String getPropertyDetail(String propertyID) {
+		return propertyDetailDao.getPropertyDetail(propertyID);
 	}
-  
+
+	@Override
+	public String getAllPropertyDetail() {
+		return null;
+	}
+
+	@Override
+	public String deletePropertyDetail(String propertyID) {
+		return null;
+	}
+
+	@Override
+	public String updatePropertyDetail(String propertyID) {
+		return null;
+	}
+
+	@Override
+	public String addPropertyDetail(String propertyID) {
+		return null;
+	}
+	
+
 }
