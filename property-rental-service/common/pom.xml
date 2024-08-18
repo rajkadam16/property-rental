@@ -22,6 +22,7 @@
 		<module>common-utility</module>
 		<module>checksum</module>
 		<module>model</module>
+		<module>validation</module>
 	</modules>
 
 </project>
