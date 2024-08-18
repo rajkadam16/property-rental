@@ -1,4 +1,4 @@
-package com.property.rental.service;
+package com.property.rental.service.common.commonutils;
 
 import java.nio.file.Files;
 

@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.property.rental.service.core.api.service.PropertyDetailService;
-import com.property.rental.service.core.service.PropertyDetailServiceImpl;
-import com.property.rental.service.model.PropertyDetail;
+import com.property.rental.service.common.model.PropertyDetail;
 
 @RestController
 @RequestMapping("property")
@@ -25,19 +24,24 @@ public class PropertyDetailController {
 		return propertyDetailService.getPropertyDetail(propertyID);
 	}
 	
-	@PostMapping()
-	public Object createPropertyDetail(@RequestBody PropertyDetail propertyDetails) {
-		return "Property created";
+	@GetMapping("/details")
+	public Object getAllPropertyDetails(String propertyID) {
+		return propertyDetailService.getAllPropertyDetails();
 	}
 	
-	@PutMapping()
-	public Object updatePropertyDetail(@RequestBody PropertyDetail propertyDetails) {
-		return "Property Updated";
+	@PostMapping("/add")
+	public Object addPropertyDetail(@RequestBody PropertyDetail propertyDetail) {
+		return propertyDetailService.addPropertyDetail(propertyDetail);
 	}
 	
-	@DeleteMapping()
-	public Object deletePropertyDetail(@RequestBody PropertyDetail propertyDetails) {
-		return "Property deleted";
+	@PutMapping("/update")
+	public Object updatePropertyDetail(@RequestBody PropertyDetail propertyDetail) {
+		return propertyDetailService.updatePropertyDetail(propertyDetail);
+	}
+	
+	@DeleteMapping("/delete")
+	public Object deletePropertyDetail( String propertyID) {
+		return propertyDetailService.deletePropertyDetail(propertyID);
 	}
 	
 

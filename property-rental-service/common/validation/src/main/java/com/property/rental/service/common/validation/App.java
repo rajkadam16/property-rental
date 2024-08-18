@@ -1,4 +1,4 @@
-package org.validation;
+package com.property.rental.service.common.validation;
 
 /**
  * Hello world!

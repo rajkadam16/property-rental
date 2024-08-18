@@ -1,7 +1,9 @@
 /**
  * 
  */
-package com.property.rental.service.model;
+package com.property.rental.service.common.model;
+
+import com.property.rental.service.common.enums.PropertyTypeEnum;
 
 /**
  * 
@@ -12,6 +14,8 @@ public class PropertyDetail {
 	private String propertyName;
 	private String propertyAddress;
 	private String propertyContact;
+	private String propertyType;
+	
 	/**
 	 * @return the propertyID
 	 */
@@ -60,6 +64,25 @@ public class PropertyDetail {
 	public void setPropertyContact(String propertyContact) {
 		this.propertyContact = propertyContact;
 	}
-
+	/**
+	 * @return the propertyType
+	 */
+	public String getPropertyType() {
+		return propertyType;
+	}
+	/**
+	 * @param propertyType the propertyType to set
+	 */
+	public void setPropertyType(String propertyType) {
+		this.propertyType = propertyType;
+	}
+	
+	@Override
+	public String toString() {
+		return "PropertyDetail [propertyID=" + propertyID + ", propertyName=" + propertyName + ", propertyAddress="
+				+ propertyAddress + ", propertyContact=" + propertyContact + ", propertyType=" + propertyType + "]";
+	}
+	
+	
 	
 }

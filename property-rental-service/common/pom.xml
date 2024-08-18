@@ -11,7 +11,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<groupId>com.property.rental.service</groupId>
 	<artifactId>common</artifactId>
 	<version>1.0.0</version>
