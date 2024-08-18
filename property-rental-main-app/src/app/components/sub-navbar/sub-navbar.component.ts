@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./sub-navbar.component.css']
 })
 export class SubNavbarComponent {
+  searchtext: any;
+searchText: any;
 
+  onSearch(){
+    
+  }
 }

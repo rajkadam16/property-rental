@@ -8,5 +8,7 @@ import { Component, Input} from '@angular/core';
 export class PropertyCardsComponent {
   @Input() apartment:any;
   @Input() index: any;
+searchtext: any;
+
 } 
  
