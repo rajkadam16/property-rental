@@ -2,10 +2,10 @@ package com.property.rental.service.core.dao;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import org.springframework.stereotype.Repository;
 
+import com.property.rental.service.common.commonutils.StringUtility;
 import com.property.rental.service.common.enums.PropertyTypeEnum;
 import com.property.rental.service.common.model.PropertyDetail;
 import com.property.rental.service.core.api.dao.PropertyDetailDao;
@@ -42,7 +42,7 @@ public class PropertyDetailDaoImpl implements PropertyDetailDao {
 
 	@Override
 	public String updatePropertyDetail(PropertyDetail propertyDetail) {
-		this.propertyDetail.setPropertyID(UUID.randomUUID().toString());
+		this.propertyDetail.setPropertyID(StringUtility.generateNewUUID());
 		System.out.println("updatePropertyDetail :: "+this.propertyDetail.toString());
 
 		return this.propertyDetail.getPropertyID();
@@ -51,7 +51,7 @@ public class PropertyDetailDaoImpl implements PropertyDetailDao {
 	@Override
 	public String addPropertyDetail(PropertyDetail propertyDetail) {
 		System.out.println("addPropertyDetail :: "+propertyDetail.toString());
-		this.propertyDetail.setPropertyID(UUID.randomUUID().toString());
+		this.propertyDetail.setPropertyID(StringUtility.generateNewUUID());
 		this.propertyDetail.setPropertyName("Meadows Apartments");
 		this.propertyDetail.setPropertyAddress("Waukesha");
 		this.propertyDetail.setPropertyContact("262-242-8888");
