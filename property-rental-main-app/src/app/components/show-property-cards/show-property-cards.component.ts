@@ -8,7 +8,10 @@ import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.servi
   styleUrls: ['./show-property-cards.component.css']
 })
 export class ShowPropertyCardsComponent {
+  pageSize = 5;
+  currentPage = 1;
   apartments: any[] = [];
+  searchText: any;
 
   constructor(private apartmentService: CacheJsonDataService) {}
 
@@ -17,4 +20,5 @@ export class ShowPropertyCardsComponent {
       this.apartments = data.apartments;
     });
   }
+
 }

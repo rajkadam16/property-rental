@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './page/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -34,6 +34,9 @@ import { PropertyCardsComponent } from './components/property-cards/property-car
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { ShowPropertyCardsComponent } from './components/show-property-cards/show-property-cards.component';
 import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component';
+import { CommonModule } from '@angular/common';
+import { FilterCardsPipe } from './core/pipes/filter-cards.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -68,15 +71,19 @@ import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component
     PropertyCardsComponent,
     PropertyMapViewComponent,
     ShowPropertyCardsComponent,
-    SubNavbarComponent
+    SubNavbarComponent,
+    FilterCardsPipe
 
   ],
   imports: [
+    FormsModule,
+    CommonModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,    
     GoogleMapsModule, 
+    NgxPaginationModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

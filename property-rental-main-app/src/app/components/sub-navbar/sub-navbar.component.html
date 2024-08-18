@@ -1,9 +1,15 @@
-<nav class="navbar navbar-light bg-light z-10">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <a class="navbar-brand" href="#">Navbar</a>
-    <a class="navbar-brand" href="#">Navbar</a>
-    <a class="navbar-brand" href="#">Navbar</a>
-    <a class="navbar-brand" href="#">Navbar</a>
-    <a class="navbar-brand" href="#">Navbar</a>
-  </nav>
-  
+<nav class="navbar navbar-light bg-slate-300 z-20 ">
+  <div class="container-fluid">
+    <form class="d-flex input-group w-auto">
+      <input
+        type="search"
+        [(ngModel)]="searchText"
+        id="form1"
+        class="form-control"
+        placeholder="Search your property"
+        aria-label="search "
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

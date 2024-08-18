@@ -1,3 +1,13 @@
-<div class="apartment-list h-screen flex flex-col gap-3 absolute top-28 right-0 bg-black p-4 rounded-lg overflow-x-auto ">
-   <app-property-cards *ngFor="let apartment of apartments; let i = index" [apartment]="apartment" [index]="i"></app-property-cards>
-</div>
+
+<div class="apartment-list h-screen flex flex-col gap-3 absolute top-28 right-0 bg-black p-4 rounded-lg overflow-x-auto">
+   <app-property-cards
+     *ngFor="let apartment of apartments |filterCards:searchText:'title.heading'|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
+     [apartment]="apartment"
+     [index]="i">
+     
+   </app-property-cards>
+   <div class="border-top text-white d-md-flex justify-content-center align-items-center p-3">
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+ </div>
+ </div>
+ 
