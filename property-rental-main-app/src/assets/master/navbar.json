@@ -1,0 +1,32 @@
+[
+    {
+        "isEnabled": true,
+        "displayname":"List a Property",
+        "routerLink":"PropertyMapView"
+    },
+    {
+        "isEnabled": true,
+        "displayname":"Manage Rentals",
+        "routerLink":"/"
+    },
+    {
+        "isEnabled": true,
+        "displayname":"Contact",
+        "routerLink":"/"
+    },
+    {
+        "isEnabled": true,
+        "displayname":"Sign Up",
+        "routerLink":"/",
+        "datatoggle":"modal",
+        "datatarget":"#signup"
+    },
+    {
+        "isEnabled": true,
+        "displayname":"Log In",
+        "routerLink":"/",
+        "datatoggle":"modal",
+        "datatarget":"#login"
+        
+    }
+]

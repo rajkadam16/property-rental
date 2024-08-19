@@ -1,13 +1,16 @@
-<nav class="h-16 w-screen bg-black ">
-    <div class="container mx-auto h-full flex justify-center items-center space-x-8 text-white">
-      <a href="#" class="hover:text-gray-400">List a Property</a>
-      <a href="#" class="hover:text-gray-400">Manage Rentals</a>
-      <a href="#" class="hover:text-gray-400">Contact</a>
-      <a href="#" class="hover:text-gray-400" data-bs-toggle="modal" data-bs-target="#signup">Sign Up</a>
-      
-      <a href="#" class="hover:text-gray-400" data-bs-toggle="modal" data-bs-target="#login">Log In</a>
-      
-    </div>
-  </nav>
+<nav class="h-16 w-full bg-black">
+  <div class="container mx-auto h-full flex justify-center items-center space-x-8 text-white">
+    <a 
+      *ngFor="let nav of navbarData"
+      href="#" 
+      class="hover:text-gray-400 transition duration-300 ease-in-out"
+      [attr.data-bs-toggle]="nav.datatoggle" 
+      [attr.data-bs-target]="nav.datatarget" 
+      [routerLink]="nav.routerLink">
+      {{nav.displayname}}
+    </a>
+  </div>
+</nav>
+
   <app-login></app-login>
   <app-signup></app-signup>

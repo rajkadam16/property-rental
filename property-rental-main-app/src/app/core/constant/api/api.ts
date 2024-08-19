@@ -7,4 +7,5 @@ export const api = {
     listgroupNav:"assets/master/listgroupNavbar.json",
     propertyImgVid:"assets/master/propertyImgVid.json",
     propertyCard:"assets/master/propertycard.json",
+    navbar:"assets/master/navbar.json",
 }
