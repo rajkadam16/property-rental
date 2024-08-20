@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { api } from 'src/app/core/constant/api/api';
-import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
+import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
+
 
 @Component({
   selector: 'app-property-floor-plan',
@@ -9,7 +10,7 @@ import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.servi
 })
 export class PropertyFloorPlanComponent implements OnInit {
   floorPlans:any[]=[]
-  constructor(private floorPlan: CacheJsonDataService) { }
+  constructor(private floorPlan: CommonUtilitiesService) { }
   
   ngOnInit(): void {
     this.floorPlan.parseJsonFile(api.propertyImgVid).subscribe((res: any) => {

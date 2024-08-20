@@ -10,15 +10,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './components/search/search.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { FeaturetteComponent } from './components/featurette/featurette.component';
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PropertdatainfoComponent } from './components/propertdatainfo/propertdatainfo.component';
 import { SwiperComponent } from './components/swiper/swiper.component';
 import { PropertydataComponent } from './components/propertydata/propertydata.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { RequestTourformComponent } from './components/request-tourform/request-tourform.component';
-import { SendmessageComponent } from './components/sendmessage/sendmessage.component';
-import { RequestboxComponent } from './components/requestbox/requestbox.component';
+import { SendMessageComponent } from './components/send-message/send-message.component';
+import { RequestBoxComponent } from './components/request-box/request-box.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MapComponent } from './components/map/map.component';
 import { PropertyDataComponent } from './page/property-data/property-data.component';
@@ -49,15 +49,15 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SearchComponent,
     FaqsComponent,
     FeaturetteComponent,
-    PagenotfoundComponent,
+    PageNotFoundComponent,
     PropertdatainfoComponent,
     SwiperComponent,
     PropertydataComponent,
     LoginComponent,
     SignupComponent,
     RequestTourformComponent,
-    SendmessageComponent,
-    RequestboxComponent,
+    SendMessageComponent,
+    RequestBoxComponent,
     NavBarComponent,
     MapComponent,
     PropertyDataComponent,

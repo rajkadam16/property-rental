@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { api } from 'src/app/core/constant/api/api';
-import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
+import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
+
 
 @Component({
   selector: 'app-show-property-cards',
@@ -13,7 +14,7 @@ export class ShowPropertyCardsComponent {
   apartments: any[] = [];
   searchText: any;
 
-  constructor(private apartmentService: CacheJsonDataService) {}
+  constructor(private apartmentService: CommonUtilitiesService) {}
 
   ngOnInit(): void {
     this.apartmentService.parseJsonFile(api.propertyCard).subscribe((data:any) => {

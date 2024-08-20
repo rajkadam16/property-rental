@@ -3,11 +3,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BasicGroupByOptions } from 'rxjs';
 
 @Component({
-  selector: 'app-sendmessage',
-  templateUrl: './sendmessage.component.html',
-  styleUrls: ['./sendmessage.component.css']
+  selector: 'app-send-message',
+  templateUrl: './send-message.component.html',
+  styleUrls: ['./send-message.component.css']
 })
-export class SendmessageComponent {
+export class SendMessageComponent {
     submitted: boolean = false;
 
   constructor() { }

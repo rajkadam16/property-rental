@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { api } from 'src/app/core/constant/api/api';
-import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
+import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
   selector: 'app-property-videos',
@@ -9,7 +9,7 @@ import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.servi
 })
 export class PropertyVideosComponent implements OnInit {
   videos:any[]=[]
-  constructor(private video: CacheJsonDataService) { }
+  constructor(private video: CommonUtilitiesService) { }
   
   ngOnInit(): void {
     this.video.parseJsonFile(api.propertyImgVid).subscribe((res: any) => {
