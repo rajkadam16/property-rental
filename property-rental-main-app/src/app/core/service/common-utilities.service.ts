@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CacheJsonDataService {
+export class CommonUtilitiesService {
 
 
   constructor(private http: HttpClient) { }

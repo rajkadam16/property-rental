@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { api } from 'src/app/core/constant/api/api';
-import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
+import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
   selector: 'app-propertdatainfo',
@@ -13,7 +13,7 @@ export class PropertdatainfoComponent {
   propertyListData:any[]=[];
   propertyPictures:any[]=[];
 
-  constructor(public faq: CacheJsonDataService) { }
+  constructor(public faq: CommonUtilitiesService) { }
 
   ngOnInit(): void {
     this.faq.parseJsonFile(api.propertyData).subscribe((res: any) => {

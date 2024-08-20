@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { api } from 'src/app/core/constant/api/api';
-import { CacheJsonDataService } from 'src/app/core/service/cache-json-data.service';
+import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
   selector: 'app-list-group-navbar',
@@ -13,7 +13,7 @@ export class ListGroupNavbarComponent {
 
   @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
 
-  constructor(public listgroup: CacheJsonDataService) {}
+  constructor(public listgroup: CommonUtilitiesService) {}
 
   ngOnInit(): void {
     this.listgroup

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { PropertyDataComponent } from './page/property-data/property-data.component';
 import { PropertyImgVidComponent } from './page/property-img-vid/property-img-vid.component';
@@ -28,7 +28,7 @@ const routes: Routes = [
     path: 'PropertyMapView',
     component: PropertyMapViewComponent,
   },
-  { path: '**', component: PagenotfoundComponent },
+  { path: '**', component: PageNotFoundComponent },
   {
     path: '',
     redirectTo: '',
