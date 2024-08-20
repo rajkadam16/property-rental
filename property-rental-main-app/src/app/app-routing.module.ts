@@ -24,6 +24,7 @@ const routes: Routes = [
     path: 'propertyImgVid',
     component: PropertyImgVidComponent,
   },
+
   {
     path: 'PropertyMapView',
     component: PropertyMapViewComponent,
