@@ -1,0 +1,33 @@
+[
+  {
+
+    "label": "Price",
+    "options": [
+      { "isEnabled": true,"value": "1", "price": 900 },
+      { "isEnabled": true,"value": "2", "price": 1000 },
+      { "isEnabled": true,"value": "3", "price": 1200 },
+      { "isEnabled": true,"value": "4", "price": 1400 },
+      { "isEnabled": true,"value": "5", "price": 1600 }
+    ]
+  },
+  {
+    "isEnabled": true,
+    "label": "Home Type",
+    "options": [
+      { "isEnabled": true,"value": "1", "price": "Apartment" },
+      { "isEnabled": true,"value": "2", "price": "House" },
+      { "isEnabled": true,"value": "3", "price": "Condo" },
+      { "isEnabled": true,"value": "4", "price": "TownHomes" }
+    ]
+  },
+  {
+    "isEnabled": true,
+    "label": "Specialty Housing",
+    "options": [
+      { "isEnabled": true,"value": "1", "price": "Student" },
+      { "isEnabled": true,"value": "2", "price": "Senior" },
+      { "isEnabled": true,"value": "3", "price": "Military" },
+      { "isEnabled": true,"value": "4", "price": "Corporate" }
+    ]
+  }
+]

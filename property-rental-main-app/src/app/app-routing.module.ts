@@ -9,13 +9,6 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-
-  // {
-  //   // path: 'propertydetails/:proId',
-  //   path: 'propertydetails',
-  //   component: PropertydetailsComponent,
-  // },
-
   {
     path: 'propertydetails',
     component: PropertyDataComponent,

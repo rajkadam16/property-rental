@@ -1,51 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-slate-200 z-20 h-14">
   <div class="flex gap-9 pl-4">
-
-<ul>
-  <li class="nav-item dropdown border ">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      price
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><a class="dropdown-item" href="#">$2000</a></li>
-      <li><a class="dropdown-item" href="#">$5334</a></li>
-      <li><a class="dropdown-item" href="#">$3333</a></li>
-      <li><a class="dropdown-item" href="#">$1111</a></li>
-      <li><a class="dropdown-item" href="#">$4222</a></li>
-    </ul>
-  </li>
-</ul>
-
-
-<ul>
-  <li class="nav-item dropdown border ">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Home Type
-
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <li><a class="dropdown-item" href="#">Appartment</a></li>
-      <li><a class="dropdown-item" href="#">House</a></li>
-      <li><a class="dropdown-item" href="#">Condo</a></li>
-      <li><a class="dropdown-item" href="#">TownHomes</a></li>
-    </ul>
-  </li>
-</ul>
-<div class="nav-item dropdown border">
-  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Move-In Date
-  </a>
-  <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
-    <div id="calendar" class="calendar-container">
-      <div class="calendar-header" *ngFor="let day of daysOfWeek">{{ day }}</div>
-      <div *ngFor="let _ of emptyCells"></div>
-      <div *ngFor="let day of daysInMonth" class="calendar-day" (click)="selectDate(day)">
-        {{ day }}
-      </div>
+    <div class="w-64 mx-auto" *ngFor="let select of selectData">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>{{ select.label }}</option>
+        <option *ngFor="let option of select.options" [value]="option.value">
+          {{ option.price }}
+        </option>
+      </select>
     </div>
   </div>
-</div>
-  </div>
 </nav>
-
-
