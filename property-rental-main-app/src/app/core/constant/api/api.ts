@@ -8,4 +8,5 @@ export const api = {
     propertyImgVid:"assets/master/propertyImgVid.json",
     propertyCard:"assets/master/propertycard.json",
     navbar:"assets/master/navbar.json",
+    subNavbar:"assets/master/sabnavbar.json"
 }
