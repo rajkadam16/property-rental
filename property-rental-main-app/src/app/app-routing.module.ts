@@ -4,7 +4,7 @@ import { HomeComponent } from './page/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { PropertyDataComponent } from './page/property-data/property-data.component';
-import { PropertyImgVidComponent } from './page/property-img-vid/property-img-vid.component';
+import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 
 const routes: Routes = [
@@ -14,8 +14,8 @@ const routes: Routes = [
     component: PropertyDataComponent,
   },
   {
-    path: 'propertyImgVid',
-    component: PropertyImgVidComponent,
+    path: 'PropertyMediaView',
+    component: PropertyMediaViewerComponent,
   },
 
   {

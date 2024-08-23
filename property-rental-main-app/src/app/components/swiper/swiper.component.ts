@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import Swiper from 'swiper';
 
 @Component({
@@ -7,4 +7,5 @@ import Swiper from 'swiper';
   styleUrls: ['./swiper.component.css']
 })
 export class SwiperComponent {
+  @Input() img:string='';
 }
