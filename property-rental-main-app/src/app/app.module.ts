@@ -21,7 +21,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MapComponent } from './components/map/map.component';
 import { PropertyDataComponent } from './page/property-data/property-data.component';
 import { ListGroupNavbarComponent } from './components/list-group-navbar/list-group-navbar.component';
-import { PropertyImgVidComponent } from './page/property-img-vid/property-img-vid.component';
+import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
 import { PropertyFloorPlanComponent } from './components/property-floor-plan/property-floor-plan.component';
@@ -56,7 +56,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MapComponent,
     PropertyDataComponent,
     ListGroupNavbarComponent,
-    PropertyImgVidComponent,
+    PropertyMediaViewerComponent,
     TabsComponent,
     PropertyPhotosComponent,
     PropertyFloorPlanComponent,

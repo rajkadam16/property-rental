@@ -6,11 +6,11 @@ import { PropertyVirtualToursComponent } from 'src/app/components/property-virtu
 import { TabModel } from 'src/app/core/models/interface';
 
 @Component({
-  selector: 'app-property-img-vid',
-  templateUrl: './property-img-vid.component.html',
-  styleUrls: ['./property-img-vid.component.css']
+  selector: 'app-property-media-viewer',
+  templateUrl: './property-media-viewer.component.html',
+  styleUrls: ['./property-media-viewer.component.css']
 })
-export class PropertyImgVidComponent {
+export class PropertyMediaViewerComponent {
   tableDataList: TabModel[] = [{
     id: "photo",
     displayName: "Photos",
