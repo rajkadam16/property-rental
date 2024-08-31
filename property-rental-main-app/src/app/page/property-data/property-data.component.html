@@ -1,21 +1,49 @@
-<app-swiper></app-swiper>
-<section class="w-screen flex justify-center text-gray-900 pt-5 gap-4">
+<div class="side flex">
+  <div class="imgs w-full h-[50vh] overflow-hidden">
+    <div id="carouselExampleControls" class="carousel slide bg-black h-full" data-bs-ride="carousel">
+      <div class="carousel-inner h-full">
+        <div class="carousel-item active h-full">
+          <img src="https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1" class="block w-full h-full object-cover" alt="Image 1">
+        </div>
+        <div class="carousel-item h-full">
+          <img src="https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1" class="block w-full h-full object-cover" alt="Image 2">
+        </div>
+        <div class="carousel-item h-full">
+          <img src="https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1" class="block w-full h-full object-cover" alt="Image 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
 
 
-  <div class="left w-full max-w-4xl bg-gray-100 border-2 border-gray-200 mt-6 px-4 py-4 relative rounded-lg shadow-lg">
+
+<section class="w-full flex justify-center text-gray-900 pt-5 gap-4">
+
+
+   
+  <div class="left w-full max-w-4xl bg-gray-100 border border-gray-200 mt-6 px-6 py-4 rounded-lg shadow-lg">
     <div class="flex justify-between items-start">
       <div class="flex-1">
         <h1 class="text-2xl font-semibold text-gray-700">STUDIO ONE</h1>
         <p class="text-xl text-gray-600 mt-2">10,000&#x20A8; - 50,000&#x20A8;</p>
         <p class="text-gray-800 mt-1">STUDIO, 1bhk, 546 sq ft</p>
         <div class="flex gap-4 mt-6">
-          <button type="button" class="border-2 border-green-600 text-green-600 rounded-md px-4 py-2 hover:border-4 transition">
+          <button type="button" class="border border-green-600 text-green-600 rounded-md px-4 py-2 hover:border-2 transition duration-300">
             Tour This Floor Plan
           </button>
-          <button type="button" class="text-blue-600 flex items-center gap-1 " >
-            <a routerLink="/PropertyMediaView"> Floor Plan</a>
-          </button>
-          <button type="button" class="text-blue-600 flex items-center gap-1">
+          <a routerLink="/PropertyMediaView" class="text-blue-600 flex items-center gap-1 hover:text-blue-800 transition duration-300">
+            Floor Plan
+          </a>
+          <button type="button" class="text-blue-600 flex items-center gap-1 hover:text-blue-800 transition duration-300">
             <i class="fa-solid fa-cube"></i> Virtual Tour
           </button>
         </div>
@@ -31,13 +59,13 @@
 
     <div class="relative mt-6">
       <div class="main-wrapper relative group">
-        <button type="button" class="text-blue-600 flex gap-2 items-center group">
+        <button type="button" class="text-blue-600 flex gap-2 items-center group-hover:text-blue-800 transition duration-300">
           <span>Show floor plan details</span>
           <svg class="w-6 h-6 transition-transform transform group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m6 9 6 6 6-6"/>
+            <path d="M6 9l6 6 6-6"/>
           </svg>
         </button>
-        <div class="dropdown-menu hidden group-hover:block bg-gray-100 relative w-full pb-6 mt-2 transition">
+        <div class="dropdown-menu hidden group-hover:block bg-gray-100 absolute w-full pb-6 mt-2 transition">
           <div class="text-xs font-bold text-gray-900 pt-5">Highlights</div>
           <div class="flex gap-8 text-gray-700 mt-4">
             <ul class="list-disc pl-6 space-y-2 text-xs font-serif">
@@ -57,22 +85,22 @@
 
     <div class="mt-8">
       <p class="text-xl font-semibold">4 Units Available</p>
-      <div class="mt-4 border border-t-gray-400 w-full flex text-gray-700 text-xs px-3 py-2">
-        <p class="w-[25%]">Unit</p>
-        <p class="w-[25%]">Price</p>
-        <p class="w-[25%]">SqFt</p>
-        <p class="w-[25%]">Availability</p>
+      <div class="mt-4 border-t border-gray-400 w-full flex text-gray-700 text-xs px-3 py-2">
+        <p class="w-1/4">Unit</p>
+        <p class="w-1/4">Price</p>
+        <p class="w-1/4">SqFt</p>
+        <p class="w-1/4">Availability</p>
       </div>
 
       <div class="mt-2 space-y-2">
-        <div class="border border-t-gray-400 w-full py-3">
+        <div class="border-t border-gray-400 w-full py-3">
           <details class="relative">
             <summary class="flex items-center justify-between cursor-pointer px-3">
               <div class="flex gap-6 w-full">
-                <p class="w-[25%] text-blue-600">01</p>
-                <p class="w-[25%]">25,000/-</p>
-                <p class="w-[25%]">505</p>
-                <p class="w-[25%]">15 Jun</p>
+                <p class="w-1/4 text-blue-600">01</p>
+                <p class="w-1/4">25,000/-</p>
+                <p class="w-1/4">505</p>
+                <p class="w-1/4">15 Jun</p>
               </div>
               <i class="fa-solid fa-angle-down text-gray-600"></i>
             </summary>
@@ -95,7 +123,7 @@
                 <li>Freezer</li>
               </ul>
               <div class="mt-4">
-                <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#sendMessage">
+                <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#sendMessage">
                   Send Message
                 </button>
               </div>
@@ -107,9 +135,38 @@
   </div>
 
 
-  
-  <div class="w-[40vh] h-80 bg-gray-300 shadow-lg rounded-lg p-6">
-    <app-request-box></app-request-box>
+
+  <div class="w-96 h-80 bg-gray-300 shadow-lg rounded-lg p-6">
+    <aside id="contactLead" class="relative h-full flex flex-col justify-between">
+      <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Contact This Property</h2>
+      <div class="space-y-4">
+        <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#requestTour">
+          Request Tour
+        </button>
+        <button class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#sendMessage">
+          Send Message
+        </button>
+        <p class="flex justify-center items-center text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out">
+          <a href="tel:7087251991" class="flex items-center">
+            <i class="storyicon comMobileStoryIcon mr-2" aria-hidden="true"></i>
+            <span>(708) 725-1991</span>
+          </a>
+        </p>
+      </div>
+      <hr class="text-black">
+      <div class="mt-6 space-y-2">
+        <div>
+          <p class="relative group text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out cursor-pointer text-center">
+            View All Hours
+          </p>
+        </div>
+      </div>
+    </aside>
   </div>
+
+
+
 </section>
+
 <app-send-message></app-send-message>
+<app-request-tourform></app-request-tourform>
