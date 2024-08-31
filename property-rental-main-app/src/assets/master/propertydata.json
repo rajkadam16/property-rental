@@ -1,109 +1,186 @@
-{
-    "propertData": [
-        {
+[
+  {
+    "id": 1,
+    "swiper": [
+      {
+        "isEnabled": true,
+        "imagepath": "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
+      },
+      {
+        "isEnabled": true,
+        "imagepath": "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1"
+      },
+      {
+        "isEnabled": true,
+        "imagepath": "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
+      },
+      {
+        "isEnabled": true,
+        "imagepath": "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
+      }
+    ],
+    "amenities": [
+      {
+        "isEnabled": true,
+        "heading": "Presidential Towers",
+        "price": "$10,000 - $50,000",
+        "area": "STUDIO, 1bhk, 546 sq ft",
+        "Floorplan": [
+          {
+            "isEnabled": true,
+            "options": "Floor Plan"
+          },
+          {
+            "isEnabled": true,
+            "options": "Virtual Tour"
+          },
+          {
+            "isEnabled": true,
+            "options": "Tour This Floor Plan"
+          }
+        ],
+        "sideimage": {
           "isEnabled": true,
-          "info": "How do I report a maintenance issue?",
-          "data": "The serene morning mist enveloped the forest, casting a mystical aura over the ancient trees and awakening the symphony of birdsong. Amidst this tranquil beauty, a deer grazed quietly, embodying the peaceful harmony of nature.",
-          "url": "/"
+          "imagepath": "https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1"
         },
-        {
+        "floorplandetails": {
           "isEnabled": true,
-          "info": "How do I report a maintenance issue?",
-          "data": "The serene morning mist enveloped the forest, casting a mystical aura over the ancient trees and awakening the symphony of birdsong. Amidst this tranquil beauty, a deer grazed quietly, embodying the peaceful harmony of nature.",
-          "url": "/"
-        },
-        {
-          "isEnabled": true,
-          "info": "How do I report a maintenance issue?",
-          "data": "The serene morning mist enveloped the forest, casting a mystical aura over the ancient trees and awakening the symphony of birdsong. Amidst this tranquil beauty, a deer grazed quietly, embodying the peaceful harmony of nature.",
-          "url": "/"
-        }
-      ],
-      "appartmentDetalis": [
-        {
-          "isEnabled": true,
-          "title": "Unit Media"
-        }
-      ],
-      "pictures": [
-        {
-          "isEnabled": true,
-          "url": "/",
-          "btnVal":"floor Tour"
-        },
-        {
-          "isEnabled": true,
-          "url": "/",
-          "btnVal":"images"
-        },
-        {
-          "isEnabled": true,
-          "url": "/",
-          "btnVal":"Videos"
-        },
-        {
-          "isEnabled": true,
-          "url": "/",
-          "btnVal":"Map"
-        }
-      ],
-      "sections": [
-        {
-          "isEnabled": true,
-          "title": "Highlights",
-          "links": [
+          "heading": "Show floor plan details",
+          "sections": [
             {
               "isEnabled": true,
-              "name": "High Speed Internet Access"
-            },
-            {
-              "isEnabled": true,
-              "name": "Wi-Fi"
-            },
-            {
-              "isEnabled": true,
-              "name": "Washer/Dryer"
-            },
-            {
-              "isEnabled": true,
-              "name": "Air Conditioning"
-            },
-            {
-              "isEnabled": true,
-              "name": "Heating"
-            },
-            {
-              "isEnabled": true,
-              "name": "Cable Ready"
+              "title": "Highlights",
+              "data1": [
+                {
+                  "isEnabled": true,
+                  "name": "Air conditioning"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Washer / Dryer"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Cable ready"
+                }
+              ],
+              "data2": [
+                {
+                  "isEnabled": true,
+                  "name": "Walk-in closets"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Window coverings"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Skylight"
+                }
+              ]
             }
           ]
         },
-        {
+        "table": {
           "isEnabled": true,
-          "title": "Kitchen Features & Appliances",
-          "links": [
+          "availableunits": "1 Available units",
+          "column": [
             {
               "isEnabled": true,
-              "name": "Dishwasher"
+              "name": "Unit"
             },
             {
               "isEnabled": true,
-              "name": "Granite Countertops"
+              "name": "Price"
             },
             {
               "isEnabled": true,
-              "name": "Kitchen"
+              "name": "SqFt"
             },
             {
               "isEnabled": true,
-              "name": "Refrigerator"
-            },
-            {
-              "isEnabled": true,
-              "name": "Freezer"
+              "name": "Availability"
             }
-          ]
+          ],
+          "propertyinfo": [
+            {
+              "isEnabled": true,
+              "info": "01"
+            },
+            {
+              "isEnabled": true,
+              "info": "25,000/-"
+            },
+            {
+              "isEnabled": true,
+              "info": "505"
+            },
+            {
+              "isEnabled": true,
+              "info": "15 Jun"
+            }
+          ],
+
+          "propertyamenities": [
+            {
+              "isEnabled": true,
+              "title": "Highlights",
+              "data1": [
+                {
+                  "isEnabled": true,
+                  "name": "High-Speed Internet Access"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "WiFi"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Heating"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Air Conditioning"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Cable ready"
+                }
+              ]
+            },
+              {
+                "isEnabled": true,
+                "title": "Kitchen Features & Appliances:",
+              "data2": [
+                {
+                  "isEnabled": true,
+                  "name": "Walk-in closets"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Window coverings"
+                },
+                {
+                  "isEnabled": true,
+                  "name": "Skylight"
+                }
+              ]
+            }
+          ],
+          "button":{
+            "isEnabled": true,
+            "text":"Send Message"
+          }
         }
-      ]
-    
-}
+      }
+    ],
+    "messagebox":{
+        "isEnabled": true,
+        "phoneNo":"(708) 725-1991"
+    }
+  },
+
+  {
+    "id": 2
+  }
+]

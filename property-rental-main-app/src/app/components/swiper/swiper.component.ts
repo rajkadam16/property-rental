@@ -7,5 +7,4 @@ import Swiper from 'swiper';
   styleUrls: ['./swiper.component.css']
 })
 export class SwiperComponent {
-  @Input() img:string='';
 }
