@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 
@@ -9,17 +8,18 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./show-property-cards.component.css']
 })
 export class ShowPropertyCardsComponent {
-  pageSize = 5;
+  pageSize = 2;
   currentPage = 1;
-  apartments: any[] = [];
+  products: any[] = [];
   searchText: any;
 
   constructor(private apartmentService: CommonUtilitiesService) {}
 
   ngOnInit(): void {
-    this.apartmentService.parseJsonFile(api.propertyCard).subscribe((data:any) => {
-      this.apartments = data.apartments;
+    this.apartmentService.getProducts().subscribe(data => {
+      this.products = data;
     });
   }
 
 }
+

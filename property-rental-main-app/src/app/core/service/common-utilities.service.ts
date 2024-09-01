@@ -4,12 +4,20 @@ import { Observable, map } from 'rxjs';
 // import { Product } from '../models/interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CommonUtilitiesService {
+  // constructor(private http: HttpClient) {}
 
+  // // getProducts(id:string) {
+  // //   return this.http.get<any[]>(`this.jsonUrl/${id}`);
+  // // }
 
-  private jsonUrl = '/assets/master/propertydata.json';
+  // getProducts(path:string,id:any) {
+  //   return this.http.get(path,id);
+  // }
+
+  private jsonUrl = 'assets/master/propertydata.json';
 
   constructor(private http: HttpClient) {}
 
@@ -19,18 +27,16 @@ export class CommonUtilitiesService {
 
   getProductById(id: number): Observable<any | undefined> {
     return this.getProducts().pipe(
-      map((products: any[]) => products.find(product => product.id === id))
+      map((products: any[]) => products.find((product) => product.id === id))
     );
   }
-
-
   /**
-   * 
+   *
    * @param path  Json file path
    * @returns returns json Object
    * @author raj
    */
   parseJsonFile(path: string) {
-    return this.http.get(path)
+    return this.http.get(path);
   }
 }

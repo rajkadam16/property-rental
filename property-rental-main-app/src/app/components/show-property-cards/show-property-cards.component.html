@@ -1,8 +1,8 @@
 <div class="apartment-list h-screen flex flex-col gap-3 absolute top-28 right-0 bg-black p-4 rounded-lg overflow-x-auto">
     <input [(ngModel)]="searchText" class="form-control mr-sm-2 w-full" type="search" placeholder="Find your property" aria-label="Search">
    <app-property-cards
-     *ngFor="let apartment of apartments |filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
-     [apartment]="apartment"
+     *ngFor="let apartment of products |filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
+     [propertyCard]="apartment"
      [index]="i">
    </app-property-cards>
    <div class="border-top text-white d-md-flex justify-content-center align-items-center p-3">

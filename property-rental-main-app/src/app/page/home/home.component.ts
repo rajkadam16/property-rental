@@ -10,12 +10,20 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 export class HomeComponent {
   featuretteData: any[] = [];
   faqData: any[] = [];
-  constructor(private featurette: CommonUtilitiesService) { }
+  products: any[] = [];
+  constructor(private data: CommonUtilitiesService) { }
 
   ngOnInit(): void {
-    this.featurette.parseJsonFile(api.featurette).subscribe((res: any) => {
+    this.data.parseJsonFile(api.featurette).subscribe((res: any) => {
       this.featuretteData = res;
+      this.data.getProducts().subscribe(data => {
+        this.products = data;
+      });
     });
+
+
+
+
 
   }
 

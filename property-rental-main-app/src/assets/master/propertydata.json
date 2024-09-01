@@ -1,186 +1,142 @@
 [
   {
     "id": 1,
-    "swiper": [
-      {
-        "isEnabled": true,
-        "imagepath": "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
-      },
-      {
-        "isEnabled": true,
-        "imagepath": "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1"
-      },
-      {
-        "isEnabled": true,
-        "imagepath": "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
-      },
-      {
-        "isEnabled": true,
-        "imagepath": "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
-      }
-    ],
-    "amenities": [
-      {
-        "isEnabled": true,
-        "heading": "Presidential Towers",
-        "price": "$10,000 - $50,000",
-        "area": "STUDIO, 1bhk, 546 sq ft",
-        "Floorplan": [
-          {
-            "isEnabled": true,
-            "options": "Floor Plan"
-          },
-          {
-            "isEnabled": true,
-            "options": "Virtual Tour"
-          },
-          {
-            "isEnabled": true,
-            "options": "Tour This Floor Plan"
-          }
-        ],
-        "sideimage": {
-          "isEnabled": true,
-          "imagepath": "https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1"
-        },
-        "floorplandetails": {
-          "isEnabled": true,
-          "heading": "Show floor plan details",
-          "sections": [
-            {
-              "isEnabled": true,
-              "title": "Highlights",
-              "data1": [
-                {
-                  "isEnabled": true,
-                  "name": "Air conditioning"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Washer / Dryer"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Cable ready"
-                }
-              ],
-              "data2": [
-                {
-                  "isEnabled": true,
-                  "name": "Walk-in closets"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Window coverings"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Skylight"
-                }
-              ]
-            }
-          ]
-        },
-        "table": {
-          "isEnabled": true,
-          "availableunits": "1 Available units",
-          "column": [
-            {
-              "isEnabled": true,
-              "name": "Unit"
-            },
-            {
-              "isEnabled": true,
-              "name": "Price"
-            },
-            {
-              "isEnabled": true,
-              "name": "SqFt"
-            },
-            {
-              "isEnabled": true,
-              "name": "Availability"
-            }
-          ],
-          "propertyinfo": [
-            {
-              "isEnabled": true,
-              "info": "01"
-            },
-            {
-              "isEnabled": true,
-              "info": "25,000/-"
-            },
-            {
-              "isEnabled": true,
-              "info": "505"
-            },
-            {
-              "isEnabled": true,
-              "info": "15 Jun"
-            }
-          ],
 
-          "propertyamenities": [
-            {
-              "isEnabled": true,
-              "title": "Highlights",
-              "data1": [
-                {
-                  "isEnabled": true,
-                  "name": "High-Speed Internet Access"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "WiFi"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Heating"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Air Conditioning"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Cable ready"
-                }
-              ]
-            },
-              {
-                "isEnabled": true,
-                "title": "Kitchen Features & Appliances:",
-              "data2": [
-                {
-                  "isEnabled": true,
-                  "name": "Walk-in closets"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Window coverings"
-                },
-                {
-                  "isEnabled": true,
-                  "name": "Skylight"
-                }
-              ]
-            }
-          ],
-          "button":{
-            "isEnabled": true,
-            "text":"Send Message"
-          }
-        }
-      }
+    "carouselImages": [
+      "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
     ],
-    "messagebox":{
-        "isEnabled": true,
-        "phoneNo":"(708) 725-1991"
-    }
+    "name": "Presidential Towers",
+    "price": "Studio - 2 Beds | $1,640 - $5,860",
+    "location": "555 W Madison St, Chicago, IL 60661",
+    "amenities": "Pets Allowed, Pool, Maintenance on site, Playground, Tennis Court, Smoke Free",
+    "backgroundimage": "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/115/image.png?p=1",
+    "imageUrl": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
+    "area": "STUDIO, 1bhk, 546 sq ft",
+    "highlights": [
+      "Air conditioning",
+      "Washer / Dryer",
+      "Cable ready",
+      "Walk-in closets",
+      "Window coverings",
+      "Skylight"
+    ],
+    "button": {
+      "isEnabled": true,
+      "text": "Send Message"
+    },
+    "unit": "01",
+    "tprice": "25,000₹",
+    "sqft": "505",
+    "availability": "15 Jun",
+    "features": [
+      "High-Speed Internet Access",
+      "WiFi",
+      "Washer/Dryer",
+      "Air Conditioning",
+      "Heating",
+      "Cable Ready"
+    ],
+    "kitchenFeatures": [
+      "Dishwasher",
+      "Granite Countertops",
+      "Kitchen",
+      "Refrigerator",
+      "Freezer"
+    ],
+    "phone": "(708) 725-1991"
   },
-
   {
-    "id": 2
+    "id": 2,
+    "carouselImages": [
+      "https://images1.apartments.com/i2/GZQnEKV7Mk4uCxh3pHTH3vybQw6ZDXXLJTE9Y8PkxUI/117/shoreham-and-tides-chicago-il-modern-living-room-at-shoreham-and-tides.jpg?p=1",
+      "https://images1.apartments.com/i2/Ez2k4uAqW2k-lWoARIt6g3-vOEEbeMSm042arr808Jg/117/shoreham-and-tides-chicago-il-spacious-kitchen-at-shoreham-and-tides.jpg?p=1",
+      "https://images1.apartments.com/i2/DI1hHDvoIHBNuvfx13gC5LjcM4ROfGjM1G62YPbZbnk/117/shoreham-and-tides-chicago-il-open-living-spaces-at-shoreham-and-tides.jpg?p=1"
+    ],
+    "name": "Church Station",
+    "price": "1 Bed | $2,200 - $3,200",
+    "location": "1550 Commonwealth Ave, Brighton, MA 02135",
+    "amenities": "Pets Allowed, Gym, Pool, Parking, Playground",
+    "backgroundimage": "https://images1.apartments.com/i2/GqK4dUC6DghlCTuGdYZnLRiZ85TaOC6LKBuTkHZWcJY/115/image.png?p=1",
+    "imageUrl": "https://images1.apartments.com/i2/PS6lbmQwWTKR6h8L6SZLTby8obqBgW8q3dIVdQP-g9Q/118/post-chicago-il-4br-3br.jpg?p=1",
+    "area": "1 Bed, 678 sq ft",
+    "highlights": [
+      "Fitness Center",
+      "Balcony",
+      "Pet Friendly",
+      "Hardwood Floors",
+      "On-Site Laundry"
+    ],
+    "button": {
+      "isEnabled": true,
+      "text": "Send Message"
+    },
+    "unit": "02",
+    "tprice": "30,000₹",
+    "sqft": "678",
+    "availability": "20 Aug",
+    "features": [
+      "High-Speed Internet Access",
+      "WiFi",
+      "Washer/Dryer in Unit",
+      "Central Air Conditioning",
+      "Heating",
+      "Cable Ready"
+    ],
+    "kitchenFeatures": [
+      "Dishwasher",
+      "Granite Countertops",
+      "Stainless Steel Appliances",
+      "Refrigerator",
+      "Microwave"
+    ],
+    "phone": "(617) 555-1234"
+  },
+  {
+    "id": 3,
+    "carouselImages": [
+      "https://images1.apartments.com/i2/NF-GijqHdoiU0AcGdrUF76DW057AwP3urvdmDhDjmB0/116/mondial-river-west-chicago-il-primary-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/IoXxc16v1W0rzYI9y3vMwBhdi5A8I1NbqseG2fhlwUM/111/mondial-river-west-chicago-il-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/msDf9NbXa-yrjMRAJ3_fVbSoelYaihMk5cqXb66pap8/117/mondial-river-west-chicago-il-building-photo.jpg?p=1"
+    ],
+    "name": "The Yards at 3 Crossings",
+    "price": "Studio - 2 Beds | $1,500 - $3,000",
+    "location": "2645 Railroad St, Pittsburgh, PA 15222",
+    "amenities": "Pets Allowed, Fitness Center, Garage, Security, Elevator",
+    "backgroundimage": "https://images1.apartments.com/i2/zuwbTlfRp0gf7K5Q5z7I4G0Zf1RfZ9uoYOhRFLrc1BI/115/image.png?p=1",
+    "imageUrl": "https://images1.apartments.com/i2/UJ6rvlIg_yqJ4O2JIc6wvGn30DN8RNeUh0tZ35C0VNk/118/the-808-cleveland-chicago-il-building-photo.jpg?p=1",
+    "area": "STUDIO, 600 sq ft",
+    "highlights": [
+      "Fitness Center",
+      "Swimming Pool",
+      "Pet Friendly",
+      "Washer / Dryer",
+      "Storage Units"
+    ],
+    "button": {
+      "isEnabled": true,
+      "text": "Send Message"
+    },
+    "unit": "03",
+    "tprice": "20,000₹",
+    "sqft": "600",
+    "availability": "5 Sep",
+    "features": [
+      "High-Speed Internet Access",
+      "WiFi",
+      "Washer/Dryer",
+      "Air Conditioning",
+      "Heating",
+      "Cable Ready"
+    ],
+    "kitchenFeatures": [
+      "Dishwasher",
+      "Quartz Countertops",
+      "Kitchen",
+      "Refrigerator",
+      "Freezer"
+    ],
+    "phone": "(412) 555-9876"
   }
 ]
