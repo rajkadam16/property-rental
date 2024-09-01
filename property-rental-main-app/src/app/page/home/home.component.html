@@ -9,9 +9,10 @@
   </section>
 <div class="pb-5">
   <h1  class="mb-4">Explore Rentals in Chicago, IL</h1>
-<div>
-  <app-card></app-card>
-</div>
+  <div class="cards-container">
+    <app-card  *ngFor="let card of products" [product]="card"></app-card>
+  </div>
+  
 </div>
   <h1>Renting Made Easy for Residents and Property Managers</h1>
   <p class="text-yellow-100 font-light text-center text-lg mb-3">
