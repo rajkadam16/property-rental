@@ -29,12 +29,12 @@ import { PropertyVirtualToursComponent } from './components/property-virtual-tou
 import { PropertyVideosComponent } from './components/property-videos/property-videos.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PropertyCardsComponent } from './components/property-cards/property-cards.component';
-import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { ShowPropertyCardsComponent } from './components/show-property-cards/show-property-cards.component';
 import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component';
 import { CommonModule } from '@angular/common';
 import { FilterCardsPipe } from './core/pipes/filter-cards.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 
 @NgModule({
   declarations: [
@@ -63,10 +63,12 @@ import { NgxPaginationModule } from 'ngx-pagination';
     PropertyVirtualToursComponent,
     PropertyVideosComponent,
     PropertyCardsComponent,
-    PropertyMapViewComponent,
+    PropertyMediaViewerComponent,
     ShowPropertyCardsComponent,
     SubNavbarComponent,
-    FilterCardsPipe
+    FilterCardsPipe,
+    TabsComponent,
+    PropertyMapViewComponent
 
   ],
   imports: [

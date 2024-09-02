@@ -7,6 +7,7 @@ import { PropertyDataComponent } from './page/property-data/property-data.compon
 import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
