@@ -10,7 +10,7 @@
           <p class="text-xl font-semibold">Create an Account</p>
           <p class="text-xs text-blue-500">or, <a href="#">sign into your account</a></p>
         </div>
-        <form class="mt-5 px-4" [formGroup]="signUp" (ngSubmit)="onSubmit()">
+        <form class="mt-5 px-4" [formGroup]="signUp" (ngSubmit)="onSubmit();sendEmail()">
           <div class="mb-3 d-flex flex-wrap gap-3">
             <input type="text" placeholder="First name" class="form-control flex-fill shadow-sm" formControlName="firstName">
             <span class="text-red-500" *ngIf="signUp.controls['firstName'].touched && signUp.controls['firstName'].hasError('required')">
@@ -61,7 +61,7 @@
             </span>
             <label class="form-check-label text-xs" for="professionalCheck">I am a professional</label>
           </div>
-          <button type="submit" class="btn btn-primary w-100 shadow-sm" [disabled]="signUp.invalid">Sign Up</button>
+          <button type="submit" class="btn btn-primary w-100 shadow-sm" [disabled]="signUp.invalid" >Sign Up</button>
         </form>
         
         <div class="text-xs text-center mt-4">
