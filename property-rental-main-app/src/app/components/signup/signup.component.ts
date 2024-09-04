@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators,  } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators,  } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 
 @Component({
@@ -35,10 +35,7 @@ export class SignupComponent {
     this.reset();
   }
   
-  reset() {
-    this.signUp.reset();
-    this.valid = false; 
-  }
+
   
    async sendEmail(){
     emailjs.init('okGSde90IJRSKKcdy')
@@ -49,6 +46,12 @@ export class SignupComponent {
         last_name: this.signUp.value.lastName,
         reply_to: this.signUp.value.firstName && this.signUp.value.lastName,
         });;
-        alert("message has been send")
+        console.log('Email sent successfully', response.status);
+        console.log(this.signUp.value.firstName)
+    }
+
+    reset() {
+      this.signUp.reset();
+      this.valid = false; 
     }
 }
