@@ -31,11 +31,7 @@ export class SignupComponent {
     if (this.signUp.invalid) {
       return;
     }
-    console.log(this.signUp.value);
-    this.reset();
   }
-  
-
   
    async sendEmail(){
     emailjs.init('okGSde90IJRSKKcdy')
@@ -45,6 +41,7 @@ export class SignupComponent {
         first_name: this.signUp.value.firstName,
         last_name: this.signUp.value.lastName,
         reply_to: this.signUp.value.firstName && this.signUp.value.lastName,
+        email:this.signUp.value.email
         });;
         console.log('Email sent successfully', response.status);
         console.log(this.signUp.value.firstName)

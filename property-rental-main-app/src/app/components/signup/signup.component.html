@@ -61,7 +61,7 @@
             </span>
             <label class="form-check-label text-xs" for="professionalCheck">I am a professional</label>
           </div>
-          <button type="submit" class="btn btn-primary w-100 shadow-sm" [disabled]="signUp.invalid" >Sign Up</button>
+          <button type="submit" class="btn btn-primary w-100 shadow-sm" [disabled]="signUp.invalid" (click)="reset()">Sign Up</button>
         </form>
         
         <div class="text-xs text-center mt-4">

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { api } from 'src/app/core/constant/api/api';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
@@ -9,48 +9,52 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./request-tourform.component.css'],
 })
 export class RequestTourformComponent implements OnInit {
-propertyName:any[]=[]
+  requestTourForm: FormGroup;
+  propertyName: any[] = [];
+  submitted: boolean = false;
 
-  submitted: boolean = false
-sendMeassgeForm: FormGroup = new FormGroup({
-  firstName : new FormControl ('',[Validators.required,Validators.maxLength(30)]),
-  lastName : new FormControl ('',[Validators.required,Validators.maxLength(30)]),
-  email : new FormControl ('',[Validators.required,Validators.email]),
-  date : new FormControl ('',[Validators.required]),
-  message : new FormControl ('',[Validators.required,Validators.maxLength(500)]),
-  phone : new FormControl ('',[Validators.required,Validators.maxLength(15)]),
-  acceptTerms: new FormControl(false, [Validators.requiredTrue]),
-})
-onSubmit() {
-  this.submitted = true;
-  if(this.sendMeassgeForm.invalid){
-    return;
+  constructor(private formBuilder: FormBuilder, private propertyData: CommonUtilitiesService) {
+    this.requestTourForm = this.formBuilder.group({
+      firstName: ['', [Validators.required, Validators.maxLength(30)]],
+      lastName: ['', [Validators.required, Validators.maxLength(30)]],
+      email: ['', [Validators.required, Validators.email]],
+      date: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.maxLength(15)]],
+      acceptTerms: [false, Validators.requiredTrue],
+    });
   }
-  console.log(this.sendMeassgeForm.value);
-}
-reset()
-{
-  this.sendMeassgeForm.reset();
-}
 
-constructor(private propertyData:CommonUtilitiesService){}
   ngOnInit(): void {
-   this.propertyData.parseJsonFile(api.propertyData).subscribe((res:any)=>{
-    this.propertyName=res.name
-   })
+    this.propertyData.parseJsonFile(api.propertyData).subscribe((res: any) => {
+      this.propertyName = res.name;
+    });
+    console.log(this.propertyName)
   }
 
+  onSubmit() {
+    this.submitted = true;
 
+    if (this.requestTourForm.invalid) {
+      return;
+    }
+  }
 
-  // async sendEmail(){
-  //   emailjs.init('okGSde90IJRSKKcdy')
-  //  let response = await  emailjs.send("service_8ngt4aj","template_igoc5fv",{
-  //   from_name: this.sendMeassgeForm.value.firstName && this.sendMeassgeForm.value.lastName,
-  //   firstname: this.sendMeassgeForm.value.firstName ,
-  //   lastname: this.sendMeassgeForm.value.lastName,
-  //   propertyname: this.propertyName,
-  //   date: this.sendMeassgeForm.value.date,
-  //       });;
-  //       alert("request accepted")
-  //   }
+  async sendEmail() {
+      emailjs.init('okGSde90IJRSKKcdy');
+      let response = await emailjs.send('service_8ngt4aj', 'template_igoc5fv', {
+        from_name: `${this.requestTourForm.value.firstName} ${this.requestTourForm.value.lastName}`,
+        firstname: this.requestTourForm.value.firstName,
+        lastname: this.requestTourForm.value.lastName,
+        propertyname: this.propertyName,
+        date: this.requestTourForm.value.date,
+      });
+      alert('Request accepted');
+      console.log('sending request for tour', response.status);
+  }
+
+  reset() {
+    this.requestTourForm.reset();
+    this.submitted = false;
+  }
+  
 }
