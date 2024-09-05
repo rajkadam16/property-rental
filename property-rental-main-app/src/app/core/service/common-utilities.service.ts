@@ -1,22 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-// import { Product } from '../models/interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommonUtilitiesService {
-  // constructor(private http: HttpClient) {}
-
-  // // getProducts(id:string) {
-  // //   return this.http.get<any[]>(`this.jsonUrl/${id}`);
-  // // }
-
-  // getProducts(path:string,id:any) {
-  //   return this.http.get(path,id);
-  // }
-
   private jsonUrl = 'assets/master/propertydata.json';
 
   constructor(private http: HttpClient) {}
