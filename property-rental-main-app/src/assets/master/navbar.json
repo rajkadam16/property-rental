@@ -1,9 +1,5 @@
 [
-    {
-        "isEnabled": true,
-        "displayname":"List a Property",
-        "routerLink":"PropertyMapView"
-    },
+
     {
         "isEnabled": true,
         "displayname":"Manage Rentals",
@@ -11,8 +7,13 @@
     },
     {
         "isEnabled": true,
-        "displayname":"Contact",
-        "routerLink":"/"
+        "displayname":"List a Property",
+        "routerLink":"PropertyMapView"
+    },
+    {
+        "isEnabled": true,
+        "displayname":"Contact Us",
+        "routerLink":"/contactus"
     },
     {
         "isEnabled": true,

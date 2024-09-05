@@ -20,7 +20,6 @@ import { RequestBoxComponent } from './components/request-box/request-box.compon
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MapComponent } from './components/map/map.component';
 import { PropertyDataComponent } from './page/property-data/property-data.component';
-import { ListGroupNavbarComponent } from './components/list-group-navbar/list-group-navbar.component';
 import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
@@ -55,7 +54,6 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
     NavBarComponent,
     MapComponent,
     PropertyDataComponent,
-    ListGroupNavbarComponent,
     PropertyMediaViewerComponent,
     TabsComponent,
     PropertyPhotosComponent,
