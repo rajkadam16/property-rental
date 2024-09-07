@@ -34,6 +34,7 @@ import { CommonModule } from '@angular/common';
 import { FilterCardsPipe } from './core/pipes/filter-cards.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
+import { ContactUsComponent } from './page/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
     SubNavbarComponent,
     FilterCardsPipe,
     TabsComponent,
-    PropertyMapViewComponent
+    PropertyMapViewComponent,
+    ContactUsComponent
 
   ],
   imports: [
