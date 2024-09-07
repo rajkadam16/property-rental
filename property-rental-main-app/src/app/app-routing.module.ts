@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { PropertyDataComponent } from './page/property-data/property-data.component';
 import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
+import { ContactUsComponent } from './page/contact-us/contact-us.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'PropertyMapView',
     component: PropertyMapViewComponent,
+  },
+  {
+    path: 'contactus',
+    component:ContactUsComponent
   },
   { path: '**', component: PageNotFoundComponent },
   {
