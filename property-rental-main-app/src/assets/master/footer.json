@@ -2,95 +2,67 @@
     "main":[
         {
             "isEnabled": true,
-            "header":"COMPANY NAME",
-            "title":"Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-            "footerend":"© 2021 Copyright:"
+            "header":"PROPERTY RENTALS",
+            "title":" We are dedicated to helping you find the perfect rental property. With a wide range of listings and user-friendly tools, we make renting an apartment or home easier than ever.",
+            "footerend":"© 2024 Copyright:"
         }
     ],
     "sections": [
       {
         "isEnabled": true,
-        "title": "Products",
+        "title": "Quick Links",
         "links": [
           {
             "isEnabled": true,
-            "name": "Material UI",
+            "name": "Home",
             "routerlink": "/"
           },
           {
             "isEnabled": true,
-            "name": "Base UI",
-            "routerlink": "/"
+            "name": "Browse Propertie",
+            "routerlink": "/PropertyMapView"
           },
           {
             "isEnabled": true,
-            "name": "MUI X",
-            "routerlink": "/"
+            "name": "FAQs",
+            "routerlink": "/contactus"
           },
           {
             "isEnabled": true,
-            "name": "Toolpad",
-            "routerlink": "/"
+            "name": "Contact Us",
+            "routerlink": "/contactus"
           }
         ]
       },
+
       {
         "isEnabled": true,
-        "title": "Explore",
+        "title": "Social Media",
         "links": [
           {
             "isEnabled": true,
-            "name": "Documentation",
+            "name": "Facebook",
             "routerlink": "/"
           },
           {
             "isEnabled": true,
-            "name": "Store",
+            "name": "Twitter",
             "routerlink": "/"
           },
           {
             "isEnabled": true,
-            "name": "Blog",
+            "name": "Instagram",
             "routerlink": "/"
           },
           {
             "isEnabled": true,
-            "name": "Showcase",
-            "routerlink": "/"
-          },
-          {
-            "isEnabled": true,
-            "name": "Roadmap",
-            "routerlink": "/"
-          }
-        ]
-      },
-      {
-        "isEnabled": true,
-        "title": "Resources",
-        "links": [
-          {
-            "isEnabled": true,
-            "name": "Material Icons",
-            "routerlink": "/"
-          },
-          {
-            "isEnabled": true,
-            "name": "Templates",
-            "routerlink": "/"
-          },
-          {
-            "isEnabled": true,
-            "name": "Customization",
-            "routerlink": "/"
-          },
-          {
-            "isEnabled": true,
-            "name": "Design Kits",
+            "name": "LinkedIn",
             "routerlink": "/"
           }
         ]
       }
     ]
   }
+
+
   
