@@ -2,35 +2,37 @@
   <!-- Hero Section -->
   <section id="page-1" class="bg-cover bg-center h-screen flex items-center justify-center" 
            style="background-image: url('assets/images/pexels-pixabay-280221.jpg')">
-    <div class="container text-center">
-      <h1 class="text-white text-4xl font-bold mb-4">Find your perfect place.</h1>
-      <div class="center">
+    <div class="container mx-auto text-center px-4">
+      <h1 class="text-white text-4xl md:text-5xl font-bold mb-4">Find Your Perfect Place</h1>
+      <div class="flex justify-center">
         <app-search></app-search>
       </div>
     </div>
   </section>
 
   <!-- Rentals Section -->
-  <div class="pb-10 bg-black-100">
+  <div class="pb-10 bg-black">
     <h1 class="text-center text-3xl font-semibold mb-8">Explore Rentals in Chicago, IL</h1>
-    <div class="cards-container">
-      <app-card *ngFor="let card of products" [product]="card" class="p-4 h-80 w-64 "></app-card>
+    <div class="cards-container flex flex-wrap justify-center gap-6">
+      <app-card *ngFor="let card of products" [product]="card" class="p-4"></app-card>
     </div>
   </div>
 
   <!-- Information Section -->
-  <div class="text-center my-10">
+  <div class="text-center my-10 px-6">
     <h1 class="text-3xl font-semibold mb-4">Renting Made Easy for Residents and Property Managers</h1>
-    <p class="text-yellow-600 font-light text-lg mb-3">
+    <p class="text-yellow-600 font-light text-lg mb-6">
       Our articles, guides, and videos help you through the process, start to finish.
     </p>
-    <app-featurette></app-featurette>
+    <div class="flex justify-center">
+      <app-featurette></app-featurette>
+    </div>
   </div>
 
   <!-- FAQ Section -->
-  <section class="flex justify-center mt-10">
+  <section class="flex justify-center mt-10 bg-black">
     <div class="px-5 w-full max-w-5xl">
-      <h1 class="text-2xl font-bold mb-6">FAQ's</h1>
+      <h1 class="text-2xl font-bold mb-6">FAQs</h1>
       <app-faqs></app-faqs>
     </div>
   </section>
