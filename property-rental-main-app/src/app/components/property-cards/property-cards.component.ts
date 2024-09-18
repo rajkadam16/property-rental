@@ -7,16 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./property-cards.component.css']
 })
 export class PropertyCardsComponent {
-  // @Input() apartment:any;
-  @Input() index: any;
-
-
-
-
+@Input() index: any;
 @Input() propertyCard!: any;
 constructor(private router: Router) {}
 redirectToDetails() {
   this.router.navigate(['/propertydetails', this.propertyCard.id]);
 }
+
+
+
 } 
  

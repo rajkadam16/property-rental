@@ -22,4 +22,5 @@ export class MapComponent {
   move(event: google.maps.MapMouseEvent) {
     if (event.latLng != null) this.display = event.latLng.toJSON();
   }
+  
 }
