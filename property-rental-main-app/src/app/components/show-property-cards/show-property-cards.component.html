@@ -1,11 +1,7 @@
-<!-- <div *ngIf="products.length == 0">
-  <h1 class="text-white"> no data</h1>
-</div> -->
-
 <div class="apartment-list h-screen flex flex-col gap-3 absolute top-[7.5rem]  right-0 bg-black p-4  overflow-x-auto">
     <input [(ngModel)]="searchText" class="form-control mr-sm-2 w-full" type="search" placeholder="Find your property" aria-label="Search">
    <app-property-cards
-     *ngFor="let apartment of products |filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
+     *ngFor="let apartment of products|filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
      [propertyCard]="apartment"
      [index]="i">
    </app-property-cards>

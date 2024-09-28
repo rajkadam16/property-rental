@@ -9,11 +9,19 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 })
 export class PropertyVirtualToursComponent {
   virtualTours:any[]=[]
+  dataResponse: string | undefined;
   constructor(private virtualTour: CommonUtilitiesService) { }
   
   ngOnInit(): void {
     this.virtualTour.parseJsonFile(api.propertyImgVid).subscribe((res: any) => {
       this.virtualTours = res.virtual;
     });
+  //   if(this.virtualTours.length==0){
+  //     this.dataResponse="data was not available"
+  // }else{
+  //   this.dataResponse="ss"
+  // }
+
   }
+
 }
