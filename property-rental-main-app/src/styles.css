@@ -1,9 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body {
     background: #000;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+p{
+    letter-spacing: 1px; 
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+a{
+    font-family: "PT Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+li{
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }

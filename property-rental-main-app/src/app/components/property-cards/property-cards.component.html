@@ -1,8 +1,5 @@
-<!-- <div *ngIf="propertyCard.length == null">
-    <h1 class="text-white"> no data</h1>
-</div> -->
 
-<div class="card apartment-card border border-gray-300 rounded-lg overflow-hidden " style="width: 60vh; height: 30vh;" >
+<div class="card apartment-card border border-gray-300 rounded-lg overflow-hidden " style="width: 60vh; max-height: 35vh;" >
     
     <div  class="title h-12 bg-gray-100 flex items-center px-4">
         <div>
@@ -11,7 +8,7 @@
         </div>
     </div>
     <div class="side flex h-full">
-        <div class="imgs w-1/2 h-full overflow-hidden">
+        <div class="imgs w-1/2  overflow-hidden">
             <div *ngIf="propertyCard.carouselImages.length"  [id]="'carousel' + index" class="carousel slide h-full" data-bs-ride="carousel">
                 <div class="carousel-inner h-full">
                     <div *ngFor="let image of propertyCard.carouselImages;let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}" class="h-full">
