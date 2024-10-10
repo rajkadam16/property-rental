@@ -5,13 +5,13 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   featuretteData: any[] = [];
   faqData: any[] = [];
   products: any[] = [];
-  constructor(private data: CommonUtilitiesService) { }
+  constructor(private readonly data: CommonUtilitiesService) { }
 
   ngOnInit(): void {
     this.data.parseJsonFile(api.featurette).subscribe((res: any) => {

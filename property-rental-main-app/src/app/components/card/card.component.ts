@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CardComponent {
   @Input() product!: any;
-  constructor(private router: Router) {}
+  constructor(private readonly router: Router) {}
   redirectToDetails() {
     this.router.navigate(['/propertydetails', this.product.id]);
   }
