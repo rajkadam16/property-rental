@@ -35,6 +35,7 @@ import { FilterCardsPipe } from './core/pipes/filter-cards.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { ContactUsComponent } from './page/contact-us/contact-us.component';
+import { DropDownPipe } from './core/pipes/drop-down.pipe';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { ContactUsComponent } from './page/contact-us/contact-us.component';
     FilterCardsPipe,
     TabsComponent,
     PropertyMapViewComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    DropDownPipe
 
   ],
   imports: [

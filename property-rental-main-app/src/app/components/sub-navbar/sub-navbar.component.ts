@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component } from '@angular/core';
 import { api } from 'src/app/core/constant/api/api';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
@@ -11,7 +11,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 export class SubNavbarComponent {
 selectData: any[] = [];
 
-constructor(private subNav:CommonUtilitiesService) {}
+constructor(private readonly subNav:CommonUtilitiesService) {}
 
 ngOnInit(): void {
   this.subNav.parseJsonFile(api.subNavbar).subscribe((data:any) => {
