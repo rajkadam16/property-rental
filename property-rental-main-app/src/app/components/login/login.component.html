@@ -1,42 +1,4 @@
-<!-- <div class="modal fade" id="login" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="fileModalLabel">Sign into your account</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form [formGroup]="LoginForm">
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email Address" formControlName="username" required >
-                   <span class="text-red-500" *ngIf="LoginForm.controls['username'].touched && LoginForm.controls['username'].errors?.['required']">
-                Email is required
-            </span>
-            </div>
-       
-            <div class="mb-3">
-              <input type="password" class="form-control" placeholder="Password" required formControlName="password">
-              <span class="text-red-500" *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].errors?.['required']">
-                Password is required
-            </span>
-            </div>
-            <div class="d-flex justify-content-end">
-              <a href="#" class="text-xs text-blue-600">Forgot your password?</a>
-            </div>
-      
-            <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="LoginForm.invalid" (click)="submit();reset()">Log in</button>
-          </form>
-          <p class="text-center text-xs mt-3">By logging in, I accept the <a href="#">Terms of Use</a>.</p>
-          <p class="text-center text-xs mt-2">Or, <a href="#">create an account</a>.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
