@@ -1,0 +1,35 @@
+
+
+.features-container {
+    /* max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; */
+}
+
+
+.features-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.features-list {
+    flex: 1;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.features-list li {
+    padding: 8px 0;
+    font-size: 14px;
+
+}
+
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .features-wrapper {
+        flex-direction: column;
+    }
+}
