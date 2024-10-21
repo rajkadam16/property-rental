@@ -11,9 +11,10 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 export class PropertyDataComponent implements OnInit{
 product: any | undefined;
 
+
   constructor(
-    private route: ActivatedRoute,
-    private productService: CommonUtilitiesService
+    private readonly route: ActivatedRoute,
+    private readonly productService: CommonUtilitiesService
   ) {}
 
   ngOnInit(): void {

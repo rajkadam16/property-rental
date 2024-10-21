@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class MapComponent {
   constructor() {}
 
-  ngOnInit(): void {}
-
   display: any;
   center: google.maps.LatLngLiteral = {
     lat: 20.5937,

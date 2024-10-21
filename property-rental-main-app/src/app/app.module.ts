@@ -16,7 +16,6 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { RequestTourformComponent } from './components/request-tourform/request-tourform.component';
 import { SendMessageComponent } from './components/send-message/send-message.component';
-import { RequestBoxComponent } from './components/request-box/request-box.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MapComponent } from './components/map/map.component';
 import { PropertyDataComponent } from './page/property-data/property-data.component';
@@ -52,7 +51,6 @@ import { DropDownPipe } from './core/pipes/drop-down.pipe';
     SignupComponent,
     RequestTourformComponent,
     SendMessageComponent,
-    RequestBoxComponent,
     NavBarComponent,
     MapComponent,
     PropertyDataComponent,

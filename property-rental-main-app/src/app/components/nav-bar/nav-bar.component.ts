@@ -9,11 +9,11 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 })
 export class NavBarComponent implements OnInit{
   navbarData:any [] = []
+  username:string | undefined;
 constructor(private navbar:CommonUtilitiesService){}
   ngOnInit(): void {
     this.navbar.parseJsonFile(api.navbar).subscribe((res:any)=>{
       this.navbarData =res;
     })
   }
-
 }
