@@ -540,62 +540,112 @@
   </section>
 </main> -->
 
-
 <div class="w-full h-[70vh] overflow-hidden">
-  <div *ngIf="product.propertyImages.length" id="carousel" class="carousel slide h-full" data-bs-ride="carousel">
+  <div
+    *ngIf="product.propertyImages.length"
+    id="carousel"
+    class="carousel slide h-full"
+    data-bs-ride="carousel"
+  >
     <div class="carousel-inner h-full">
-      <div *ngFor="let image of product.propertyImages" class="carousel-item active h-full">
-        <img [src]="image" class="block w-full h-full object-cover" alt="...">
+      <div
+        *ngFor="let image of product.propertyImages"
+        class="carousel-item active h-full"
+      >
+        <img [src]="image" class="block w-full h-full object-cover" alt="..." />
       </div>
     </div>
-    <a href="#carousel" class="carousel-control-prev absolute top-0 bottom-0 left-0 flex items-center justify-center p-0 text-center text-gray-700 hover:text-gray-900" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+    <a
+      href="#carousel"
+      class="carousel-control-prev absolute top-0 bottom-0 left-0 flex items-center justify-center p-0 text-center text-gray-700 hover:text-gray-900"
+      role="button"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon inline-block bg-no-repeat"
+        aria-hidden="true"
+      ></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a href="#carousel" class="carousel-control-next absolute top-0 bottom-0 right-0 flex items-center justify-center p-0 text-center text-gray-700 hover:text-gray-900" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+    <a
+      href="#carousel"
+      class="carousel-control-next absolute top-0 bottom-0 right-0 flex items-center justify-center p-0 text-center text-gray-700 hover:text-gray-900"
+      role="button"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon inline-block bg-no-repeat"
+        aria-hidden="true"
+      ></span>
       <span class="sr-only">Next</span>
     </a>
   </div>
 </div>
-
-
-
-
+<!-- 
+property data -->
 <section class="w-full flex justify-center text-gray-900 pt-5 gap-16">
-  
-  <div class="property-data w-[55vw]  p-6 rounded-lg shadow-lg text-gray-800">
-   
+  <div class="property-data w-[55vw] p-6 rounded-lg shadow-lg text-gray-800">
     <div class="text-white">
-      <div class="property-location text-sm  mb-2">Illinois / Cook County / Chicago / Presidential Towers</div>
-    <h1 class="text-2xl font-semibold">Presidential Towers</h1>
-    <p class="mt-1 text-lg">555 W Madison St, Chicago, IL 60661</p>
+      <div class="property-location text-sm mb-2">
+        Illinois / Cook County / Chicago / Presidential Towers
+      </div>
+      <h1 class="text-2xl font-semibold">Presidential Towers</h1>
+      <p class="mt-1 text-lg">555 W Madison St, Chicago, IL 60661</p>
     </div>
     <div class="mt-6 border-2 bg-white border-gray-200 p-4 rounded-lg">
       <div class="flex justify-between">
         <div>
           <div class="text-lg font-semibold text-gray-600">STUDIO ONE</div>
-          <div class="mt-2 text-xl font-bold text-gray-600">₹10,000 - ₹50,000</div>
+          <div class="mt-2 text-xl font-bold text-gray-600">
+            ₹10,000 - ₹50,000
+          </div>
           <div class="mt-1 text-gray-800">STUDIO, 1BHK, 546 sq ft</div>
           <div class="flex gap-4 mt-6">
-            <button class="border-2 border-green-700 text-green-700 rounded-lg px-4 py-2 hover:border-4">Tour This Floor Plan</button>
-            <button class="text-blue-600 hover:underline"><i class="fa-solid fa-building"></i> Floor Plan</button>
-            <button class="text-blue-600 hover:underline"><i class="fa-duotone fa-cube"></i> Virtual Tour</button>
+            <button
+              class="border-2 border-green-700 text-green-700 rounded-lg px-4 py-2 hover:border-4"
+            >
+              Tour This Floor Plan
+            </button>
+            <button class="text-blue-600 hover:underline">
+              <i class="fa-solid fa-building"></i> Floor Plan
+            </button>
+            <button class="text-blue-600 hover:underline">
+              <i class="fa-duotone fa-cube"></i> Virtual Tour
+            </button>
           </div>
         </div>
         <div>
           <a href="#">
-            <div class="h-32 w-40 bg-cover bg-no-repeat rounded-lg" style="background-image: url('https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1');"></div>
+            <div
+              class="h-32 w-40 bg-cover bg-no-repeat rounded-lg"
+              style="
+                background-image: url('https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1');
+              "
+            ></div>
           </a>
         </div>
       </div>
 
       <div class="mt-4 group">
-        <button type="button" class="flex items-center text-blue-600 ">
+        <button type="button" class="flex items-center text-blue-600">
           <span class="hover:underline">Show floor plan details</span>
-          <svg class="ml-2 transition-transform duration-300 transform group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          <svg
+            class="ml-2 transition-transform duration-300 transform group-hover:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
         </button>
-        <div class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg">
+        <div
+          class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg"
+        >
           <p class="text-sm font-bold text-gray-900">Highlights:</p>
           <div class="flex gap-16 mt-4 text-gray-700">
             <ul class="list-disc pl-6 space-y-2 text-sm">
@@ -610,12 +660,19 @@
             </ul>
           </div>
         </div>
-      
 
         <div class="mt-6">
           <p class="text-xl font-semibold mb-4">4 Units Available</p>
           <div class="border-b border-gray-400 mb-4"></div>
-        
+
+          <details class="p-4 rounded-lg">
+            <summary class="flex justify-between">
+              <span class="text-blue-600">Unit</span>
+              <span class="text-gray-800">price</span>
+              <span class="text-gray-800">square fit</span>
+              <span class="text-gray-600">Availability</span>
+            </summary>
+          </details>
           <div class="space-y-4">
             <details class="border border-gray-300 p-4 rounded-lg">
               <summary class="flex justify-between cursor-pointer">
@@ -640,35 +697,407 @@
                   <li>Freezer</li>
                 </ul>
               </div>
-              <button class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4">Send Message</button>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
+            </details>
+            <details class="border border-gray-300 p-4 rounded-lg">
+              <summary class="flex justify-between cursor-pointer">
+                <span class="text-blue-600">Unit 01</span>
+                <span class="text-gray-800">₹25,000</span>
+                <span class="text-gray-800">505 sq ft</span>
+                <span class="text-gray-600">Available: 15 June</span>
+              </summary>
+              <div class="mt-4 text-sm text-gray-700">
+                <p class="font-semibold">Highlights:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>High Speed Internet Access</li>
+                  <li>Wifi</li>
+                  <li>Washer/Dryer</li>
+                  <li>Air Conditioning</li>
+                </ul>
+                <p class="mt-4 font-semibold">Kitchen Features:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>Dishwasher</li>
+                  <li>Granite Countertops</li>
+                  <li>Refrigerator</li>
+                  <li>Freezer</li>
+                </ul>
+              </div>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
+            </details>
+            <details class="border border-gray-300 p-4 rounded-lg">
+              <summary class="flex justify-between cursor-pointer">
+                <span class="text-blue-600">Unit 01</span>
+                <span class="text-gray-800">₹25,000</span>
+                <span class="text-gray-800">505 sq ft</span>
+                <span class="text-gray-600">Available: 15 June</span>
+              </summary>
+              <div class="mt-4 text-sm text-gray-700">
+                <p class="font-semibold">Highlights:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>High Speed Internet Access</li>
+                  <li>Wifi</li>
+                  <li>Washer/Dryer</li>
+                  <li>Air Conditioning</li>
+                </ul>
+                <p class="mt-4 font-semibold">Kitchen Features:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>Dishwasher</li>
+                  <li>Granite Countertops</li>
+                  <li>Refrigerator</li>
+                  <li>Freezer</li>
+                </ul>
+              </div>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
+            </details>
+            <details class="border border-gray-300 p-4 rounded-lg">
+              <summary class="flex justify-between cursor-pointer">
+                <span class="text-blue-600">Unit 01</span>
+                <span class="text-gray-800">₹25,000</span>
+                <span class="text-gray-800">505 sq ft</span>
+                <span class="text-gray-600">Available: 15 June</span>
+              </summary>
+              <div class="mt-4 text-sm text-gray-700">
+                <p class="font-semibold">Highlights:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>High Speed Internet Access</li>
+                  <li>Wifi</li>
+                  <li>Washer/Dryer</li>
+                  <li>Air Conditioning</li>
+                </ul>
+                <p class="mt-4 font-semibold">Kitchen Features:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>Dishwasher</li>
+                  <li>Granite Countertops</li>
+                  <li>Refrigerator</li>
+                  <li>Freezer</li>
+                </ul>
+              </div>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
             </details>
             <!-- Repeat for other units -->
           </div>
         </div>
-        
       </div>
     </div>
+    <div class="mt-6 border-2 bg-white border-gray-200 p-4 rounded-lg">
+      <div class="flex justify-between">
+        <div>
+          <div class="text-lg font-semibold text-gray-600">STUDIO ONE</div>
+          <div class="mt-2 text-xl font-bold text-gray-600">
+            ₹10,000 - ₹50,000
+          </div>
+          <div class="mt-1 text-gray-800">STUDIO, 1BHK, 546 sq ft</div>
+          <div class="flex gap-4 mt-6">
+            <button
+              class="border-2 border-green-700 text-green-700 rounded-lg px-4 py-2 hover:border-4"
+            >
+              Tour This Floor Plan
+            </button>
+            <button class="text-blue-600 hover:underline">
+              <i class="fa-solid fa-building"></i> Floor Plan
+            </button>
+            <button class="text-blue-600 hover:underline">
+              <i class="fa-duotone fa-cube"></i> Virtual Tour
+            </button>
+          </div>
+        </div>
+        <div>
+          <a href="#">
+            <div
+              class="h-32 w-40 bg-cover bg-no-repeat rounded-lg"
+              style="
+                background-image: url('https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1');
+              "
+            ></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-4 group">
+        <button type="button" class="flex items-center text-blue-600">
+          <span class="hover:underline">Show floor plan details</span>
+          <svg
+            class="ml-2 transition-transform duration-300 transform group-hover:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+        <div
+          class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg"
+        >
+          <p class="text-sm font-bold text-gray-900">Highlights:</p>
+          <div class="flex gap-16 mt-4 text-gray-700">
+            <ul class="list-disc pl-6 space-y-2 text-sm">
+              <li>Air conditioning</li>
+              <li>Washer/Dryer</li>
+              <li>Cable ready</li>
+            </ul>
+            <ul class="list-disc pl-6 space-y-2 text-sm">
+              <li>Walk-in closets</li>
+              <li>Window coverings</li>
+              <li>Skylight</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <p class="text-xl font-semibold mb-4">4 Units Available</p>
+          <div class="border-b border-gray-400 mb-4"></div>
+
+          <details class="p-4 rounded-lg">
+            <summary class="flex justify-between">
+              <span class="text-blue-600">Unit</span>
+              <span class="text-gray-800">price</span>
+              <span class="text-gray-800">square fit</span>
+              <span class="text-gray-600">Availability</span>
+            </summary>
+          </details>
+          <div class="space-y-4">
+            <details class="border border-gray-300 p-4 rounded-lg">
+              <summary class="flex justify-between cursor-pointer">
+                <span class="text-blue-600">Unit 01</span>
+                <span class="text-gray-800">₹25,000</span>
+                <span class="text-gray-800">505 sq ft</span>
+                <span class="text-gray-600">Available: 15 June</span>
+              </summary>
+              <div class="mt-4 text-sm text-gray-700">
+                <p class="font-semibold">Highlights:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>High Speed Internet Access</li>
+                  <li>Wifi</li>
+                  <li>Washer/Dryer</li>
+                  <li>Air Conditioning</li>
+                </ul>
+                <p class="mt-4 font-semibold">Kitchen Features:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>Dishwasher</li>
+                  <li>Granite Countertops</li>
+                  <li>Refrigerator</li>
+                  <li>Freezer</li>
+                </ul>
+              </div>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
+            </details>
+            <details class="border border-gray-300 p-4 rounded-lg">
+              <summary class="flex justify-between cursor-pointer">
+                <span class="text-blue-600">Unit 01</span>
+                <span class="text-gray-800">₹25,000</span>
+                <span class="text-gray-800">505 sq ft</span>
+                <span class="text-gray-600">Available: 15 June</span>
+              </summary>
+              <div class="mt-4 text-sm text-gray-700">
+                <p class="font-semibold">Highlights:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>High Speed Internet Access</li>
+                  <li>Wifi</li>
+                  <li>Washer/Dryer</li>
+                  <li>Air Conditioning</li>
+                </ul>
+                <p class="mt-4 font-semibold">Kitchen Features:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>Dishwasher</li>
+                  <li>Granite Countertops</li>
+                  <li>Refrigerator</li>
+                  <li>Freezer</li>
+                </ul>
+              </div>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
+            </details>
+            <details class="border border-gray-300 p-4 rounded-lg">
+              <summary class="flex justify-between cursor-pointer">
+                <span class="text-blue-600">Unit 01</span>
+                <span class="text-gray-800">₹25,000</span>
+                <span class="text-gray-800">505 sq ft</span>
+                <span class="text-gray-600">Available: 15 June</span>
+              </summary>
+              <div class="mt-4 text-sm text-gray-700">
+                <p class="font-semibold">Highlights:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>High Speed Internet Access</li>
+                  <li>Wifi</li>
+                  <li>Washer/Dryer</li>
+                  <li>Air Conditioning</li>
+                </ul>
+                <p class="mt-4 font-semibold">Kitchen Features:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>Dishwasher</li>
+                  <li>Granite Countertops</li>
+                  <li>Refrigerator</li>
+                  <li>Freezer</li>
+                </ul>
+              </div>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
+            </details>
+            <details class="border border-gray-300 p-4 rounded-lg">
+              <summary class="flex justify-between cursor-pointer">
+                <span class="text-blue-600">Unit 01</span>
+                <span class="text-gray-800">₹25,000</span>
+                <span class="text-gray-800">505 sq ft</span>
+                <span class="text-gray-600">Available: 15 June</span>
+              </summary>
+              <div class="mt-4 text-sm text-gray-700">
+                <p class="font-semibold">Highlights:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>High Speed Internet Access</li>
+                  <li>Wifi</li>
+                  <li>Washer/Dryer</li>
+                  <li>Air Conditioning</li>
+                </ul>
+                <p class="mt-4 font-semibold">Kitchen Features:</p>
+                <ul class="grid grid-cols-2 gap-4 mt-2">
+                  <li>Dishwasher</li>
+                  <li>Granite Countertops</li>
+                  <li>Refrigerator</li>
+                  <li>Freezer</li>
+                </ul>
+              </div>
+              <button
+                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+              >
+                Send Message
+              </button>
+            </details>
+            <!-- Repeat for other units -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--  about property -->
+    <div class="about-property pt-5 ">
+      <div >
+        <h2 class="text-white text-3xl font-semibold">About Presidential Towers</h2>
+      <p class="pt-3 text-gray-300">What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!</p><br>
+      <p class="text-gray-300">Presidential Towers is an apartment community managed by Waterton, located in Cook County and the 60661 ZIP Code. This area is served by the Chicago Public Schools attendance zone.</p>
+      </div>
+      <div class="features-container text-white  ">
+        <h1 class="text-2xl pt-3 font-semibold">Unique Features</h1>
+        <div class="features-wrapper pt-3">
+            <ul class="features-list">
+                <li>Columbia College is 1.5 miles away.</li>
+                <li>Online Rent Payments</li>
+                <li>UIC is a mile away.</li>
+                <li>Union Station 0.3 miles away</li>
+                <li>Wood Inspired Flooring*</li>
+                <li>Bicycle and Additional Personal Storage</li>
+                <li>Free WiFi in The M Lounge</li>
+                <li>Newly Remodeled Residences*</li>
+                <li>Oak Cabinetry Options Available</li>
+                <li>Washer/Dryers*</li>
+                <li>4 Grocery Stores Within a 5 Minute Walk</li>
+                <li>Breakfast Bars*</li>
+            </ul>
+            
+            <ul class="features-list">
+                <li>Concentra Urgent care located in the building</li>
+                <li>DePaul University is 1.3 miles away.</li>
+                <li>Digital Cable and HDTV Packages Available</li>
+                <li>Millennium Park is 1 mile away</li>
+                <li>Upgraded Appliances*</li>
+                <li>Cultured Marble Vanities</li>
+                <li>French Market 0.2 miles away</li>
+                <li>Guest Suites</li>
+                <li>Sales Force Tower is a mile away.</li>
+                <li>Ultra-Fast Fiber Internet Up to 1,000 Mbps</li>
+                <li>Chicago Kent Law School is 0.2 miles away.</li>
+                <li>Decorator Light</li>
+            </ul>
+            
+            <ul class="features-list">
+                <li>Deloitte is 0.7 miles away.</li>
+                <li>Generous Closet Space</li>
+                <li>Google Office is 0.9 miles away.</li>
+                <li>Granite Countertops*</li>
+                <li>Large Pets Accepted (breed restrictions)</li>
+                <li>Ogilvie Station across the street</li>
+                <li>Stunning City Views*</li>
+                <li>Trash Chutes on Every Floor</li>
+                <li>Espresso Cabinetry Option Available</li>
+                <li>Luxer One Package Room</li>
+                <li>On-site Dining Options</li>
+                <li>Renovated Kitchens</li>
+            </ul>
+        </div>
+    </div>
+    <div >
+
+      <!-- Neighborhood -->
+      <h2 class="text-white text-3xl font-semibold">Neighborhood</h2>
+    <p class="pt-3 text-gray-300">Chicago’s reputation as one of America’s most distinctive cities owes a lot to the electric atmosphere and vibrant culture that defines Downtown Chicago. Iconic sites like Grant Park, Soldier Field, the Chicago Theatre, Navy Pier, and the Chicago Riverwalk are the most famous landmarks in Downtown, but that barely scratches the surface of what the neighborhood has to offer: dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste, plus the campuses of Columbia College Chicago, DePaul University, and the Art Institute of Chicago.</p><br>
+    <p class="text-gray-300">The Loop, Greektown, River North, and the Magnificent Mile are all nearby, easily reached by a short ride on the train. There’s no shortage of swanky apartments and condos in Downtown Chicago, but you can often find great deals on studios as well, allowing you to live in the heart of the action even if you’re on a budget</p>
+    </div>
+    </div>
   </div>
-
-
-  
+  <!-- form -->
   <aside class="form w-96 h-80 bg-gray-300 shadow-lg rounded-lg p-6">
     <div id="contactLead" class="h-full flex flex-col justify-between">
-      <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Contact This Property</h2>
+      <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">
+        Contact This Property
+      </h2>
       <div class="space-y-4">
-        <button class="bg-blue-500 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-600">Request Tour</button>
-        <button class="bg-gray-500 text-white py-2 px-4 rounded-lg w-full hover:bg-gray-600">Send Message</button>
-        <a href="tel:7087251991" class="flex justify-center items-center text-blue-600 hover:text-blue-800 transition duration-300">
+        <button
+          class="bg-blue-500 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-600"
+        >
+          Request Tour
+        </button>
+        <button
+          class="bg-gray-500 text-white py-2 px-4 rounded-lg w-full hover:bg-gray-600"
+        >
+          Send Message
+        </button>
+        <a
+          href="tel:7087251991"
+          class="flex justify-center items-center text-blue-600 hover:text-blue-800 transition duration-300"
+        >
           <i class="fa fa-phone mr-2"></i> {{ product.phone }}
         </a>
       </div>
-      <hr class="my-4 border-gray-400">
+      <hr class="my-4 border-gray-400" />
       <div class="text-center">
-        <p class="text-blue-600 hover:underline cursor-pointer">View All Hours</p>
+        <p class="text-blue-600 hover:underline cursor-pointer">
+          View All Hours
+        </p>
       </div>
     </div>
   </aside>
-  
 
-<app-send-message></app-send-message>
-<app-request-tourform></app-request-tourform>
+  <app-send-message></app-send-message>
+  <app-request-tourform></app-request-tourform> 
+</section>
