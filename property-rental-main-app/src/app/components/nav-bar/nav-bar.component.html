@@ -1,9 +1,7 @@
 <nav class="h-16 w-full bg-black">
   
   <div class="container mx-auto h-full flex justify-center items-center space-x-8 text-white">
-
-    <a 
-      *ngFor="let nav of navbarData"
+    <a *ngFor="let nav of navbarData"
       href="#" 
       class="hover:text-gray-400 transition duration-300 ease-in-out"
       [attr.data-bs-toggle]="nav.datatoggle" 
@@ -11,6 +9,7 @@
       [routerLink]="nav.routerLink">
       {{nav.displayname}}
     </a>
+    {{username}}
   </div>
 </nav>
 <app-login></app-login>

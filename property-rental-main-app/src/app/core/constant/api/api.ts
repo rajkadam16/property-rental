@@ -6,4 +6,5 @@ export const api = {
     propertyImgVid:"assets/master/propertyImgVid.json",
     navbar:"assets/master/navbar.json",
     subNavbar:"assets/master/sabnavbar.json",
+    pageNotFound:"assets/master/pagenotfound.json"
 }
