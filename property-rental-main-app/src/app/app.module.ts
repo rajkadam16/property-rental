@@ -11,7 +11,6 @@ import { SearchComponent } from './components/search/search.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { FeaturetteComponent } from './components/featurette/featurette.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { SwiperComponent } from './components/swiper/swiper.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { RequestTourformComponent } from './components/request-tourform/request-tourform.component';
@@ -35,6 +34,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { ContactUsComponent } from './page/contact-us/contact-us.component';
 import { DropDownPipe } from './core/pipes/drop-down.pipe';
+import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,6 @@ import { DropDownPipe } from './core/pipes/drop-down.pipe';
     FaqsComponent,
     FeaturetteComponent,
     PageNotFoundComponent,
-    SwiperComponent,
     LoginComponent,
     SignupComponent,
     RequestTourformComponent,
@@ -68,7 +67,8 @@ import { DropDownPipe } from './core/pipes/drop-down.pipe';
     TabsComponent,
     PropertyMapViewComponent,
     ContactUsComponent,
-    DropDownPipe
+    DropDownPipe,
+    ImageCarouselComponent
 
   ],
   imports: [

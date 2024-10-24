@@ -10,18 +10,13 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 export class PropertyPhotosComponent implements OnInit {
   photos:any[]=[]
   // dataResponse:string|undefined;
-  constructor(private photo: CommonUtilitiesService) { }
+  constructor(private readonly photo: CommonUtilitiesService) { }
   
   ngOnInit(): void {
     this.photo.parseJsonFile(api.propertyImgVid).subscribe((res: any) => {
       this.photos = res.images;
     });
-    // if(this.photos.length==0){
-    //   this.dataResponse="No Photos Available"
-    // }else{
-    //   this.dataResponse=""
-    // }
-    // console.log(this.photo)
+
   }
   
 }
