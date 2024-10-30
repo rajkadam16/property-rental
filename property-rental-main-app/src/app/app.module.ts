@@ -35,6 +35,8 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
 import { ContactUsComponent } from './page/contact-us/contact-us.component';
 import { DropDownPipe } from './core/pipes/drop-down.pipe';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
+import { PropertyDataFacilitiesComponent } from './components/property-data-facilities/property-data-facilities.component';
+import { PropertyDataAdditionalInfoComponent } from './components/property-data-additional-info/property-data-additional-info.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { ImageCarouselComponent } from './components/image-carousel/image-carous
     PropertyMapViewComponent,
     ContactUsComponent,
     DropDownPipe,
-    ImageCarouselComponent
+    ImageCarouselComponent,
+    PropertyDataFacilitiesComponent,
+    PropertyDataAdditionalInfoComponent
 
   ],
   imports: [
