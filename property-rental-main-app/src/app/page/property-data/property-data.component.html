@@ -1,545 +1,3 @@
-<!-- <main class="" *ngIf="product">
-  <div class="side flex">
-        <div class="imgs w-full h-[70vh] overflow-hidden">
-            <div *ngIf="product.carouselImages.length" id="carousel" class="carousel slide h-full" data-bs-ride="carousel">
-                <div class="carousel-inner h-full">
-                    <div *ngFor="let image of product.carouselImages" ngClass="carousel-item active" class="h-full">
-                        <img [src]="image" class="d-block w-full h-full object-cover" alt="...">
-                    </div>
-                </div>
-                <a href="#carousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a href="#carousel" class="carousel-control-next" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-  </div>
-  
-
-  
-  <section class="w-full flex justify-center text-gray-900 pt-5 gap-4">
-  
-  
-     
-    <div class="left w-full max-w-4xl bg-gray-100 border border-gray-200 mt-6 px-6 py-4 rounded-lg shadow-lg">
-      <div class="flex justify-between items-start">
-        <div class="flex-1">
-          <h1 class="text-2xl font-semibold text-gray-700">{{product.name}}</h1>
-          <p class="text-xl text-gray-600 mt-2">{{product.price}}</p>
-          <p class="text-gray-800 mt-1">{{product.location}}</p>
-          <div class="flex gap-4 mt-6">
-            <button type="button" class="border border-green-600 text-green-600 rounded-md px-4 py-2 hover:border-2 transition duration-300">
-              Tour This Floor Plan
-            </button>
-            <a routerLink="/PropertyMediaView" class="text-blue-600 flex items-center gap-1 hover:text-blue-800 transition duration-300">
-              Floor Plan
-            </a>
-            <button type="button" class="text-blue-600 flex items-center gap-1 hover:text-blue-800 transition duration-300">
-              <i class="fa-solid fa-cube"></i> Virtual Tour
-            </button>
-          </div>
-        </div>
-        <div class="ml-6">
-          <a href="#">
-            <div class="border-2 border-black h-32 w-32 bg-cover bg-center rounded-lg" 
-                 style="background-image: url('https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1');">
-            </div>
-          </a>
-        </div>
-      </div>
-  
-      <div class="relative mt-6">
-        <div class="main-wrapper relative group">
-          <button type="button" class="text-blue-600 flex gap-2 items-center group-hover:text-blue-800 transition duration-300">
-            <span>Show floor plan details</span>
-            <svg class="w-6 h-6 transition-transform transform group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu hidden group-hover:block bg-gray-100 absolute w-full pb-6 mt-2 transition">
-            <div class="text-xs font-bold text-gray-900 pt-5">Highlights</div>
-            <div class="flex gap-8 text-gray-700 mt-4">
-              <ul class="list-disc pl-6 space-y-2 text-xs font-serif">
-                <li>{{product.highlights}}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="mt-8">
-        <p class="text-xl font-semibold">4 Units Available</p>
-        <div class="mt-4 border-t border-gray-400 w-full flex text-gray-700 text-xs px-3 py-2">
-          <p class="w-1/4">Unit</p>
-          <p class="w-1/4">Price</p>
-          <p class="w-1/4">SqFt</p>
-          <p class="w-1/4">Availability</p>
-        </div>
-  
-        <div class="mt-2 space-y-2">
-          <div class="border-t border-gray-400 w-full py-3">
-            <details class="relative">
-              <summary class="flex items-center justify-between cursor-pointer px-3">
-                <div class="flex gap-6 w-full">
-                  <p class="w-1/4 text-blue-600">{{product.unit}}</p>
-                  <p class="w-1/4">{{product.tprice}}</p>
-                  <p class="w-1/4">{{product.sqft}}</p>
-                  <p class="w-1/4">{{product.availability}}</p>
-                </div>
-                <i class="fa-solid fa-angle-down text-gray-600"></i>
-              </summary>
-              <div class="pt-4 px-3 text-xs text-gray-700">
-                <p class="font-bold">Highlights:</p>
-                <ul class="list-disc grid grid-cols-2 gap-2 pt-3">
-                  <li>{{product.features}}</li>
-                </ul>
-                <p class="font-bold mt-4">Kitchen Features & Appliances:</p>
-                <ul class="list-disc grid grid-cols-2 gap-2 pt-3">
-                  <li>{{product.kitchenFeatures}}</li>
-                </ul>
-                <div class="mt-4">
-                  <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#sendMessage">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </details>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  
-  
-    <div class="w-96 h-80 bg-gray-300 shadow-lg rounded-lg p-6">
-      <aside id="contactLead" class="relative h-full flex flex-col justify-between">
-        <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Contact This Property</h2>
-        <div class="space-y-4">
-          <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#requestTour">
-            Request Tour
-          </button>
-          <button class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 w-full transition duration-300 ease-in-out" data-bs-toggle="modal" data-bs-target="#sendMessage">
-            Send Message
-          </button>
-          <p class="flex justify-center items-center text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out">
-            <a href="tel:7087251991" class="flex items-center">
-              <i class="storyicon comMobileStoryIcon mr-2" aria-hidden="true"></i>
-              <span>{{product.phone}}</span>
-            </a>
-          </p>
-        </div>
-        <hr class="text-black">
-        <div class="mt-6 space-y-2">
-          <div>
-            <p class="relative group text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out cursor-pointer text-center">
-              View All Hours
-            </p>
-          </div>
-        </div>
-      </aside>
-    </div>
-  
-  
-  
-  </section>
-  
-
-</main> -->
-
-<!-- <main>
-  <section class="section1 carouselImages">
-    <div class="side flex">
-      <div class="imgs w-full h-[70vh] overflow-hidden">
-        <div
-          *ngIf="product.propertyImages.length"
-          id="carousel"
-          class="carousel slide h-full"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner h-full">
-            <div
-              *ngFor="let image of product.propertyImages"
-              ngClass="carousel-item active"
-              class="h-full"
-            >
-              <img
-                [src]="image"
-                class="d-block w-full h-full object-cover"
-                alt="..."
-              />
-            </div>
-          </div>
-          <a
-            href="#carousel"
-            class="carousel-control-prev"
-            role="button"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            href="#carousel"
-            class="carousel-control-next"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="w-full flex justify-center text-gray-900 pt-5 gap-[30vh]">
-    <div class="property-data left-side text-white">
-      <div class="property-loaction">
-        Illinois / Cook County / Chicago / Presidential Towers
-      </div>
-      <div>
-        <h1 class="text-2xl font-semibold">Presidential Towers</h1>
-        <p class="mt-1">555 W Madison St, Chicago, IL 60661</p>
-      </div>
-      <div
-      class=" w-[55vw] bg-[#f2f2f2] border-2 border-gray-200 mt-6  relative">
-      <div class="flex justify-between">
-        <div>
-          <div class="text-2xl text-gray-600">
-            <span> STUDIO ONE</span>
-          </div>
-          <div class="mt-2 text-2xl text-gray-600">
-            <p>10,000&#x20A8;-50,0000&#x20A8;</p>
-          </div>
-          <div class="mt-1 text-gray-950">
-            <span> STUDIO,1bhk,546 sq ft</span>
-          </div>
-          <div class="flex gap-8 mt-8">
-            <div
-              class="border-2 border-[#427b01] text-[#427b01] rounded-md text-center w-[11vw] hover:border-4"
-            >
-              <button type="button" class="">Tour This Floor Plan</button>
-            </div>
-            <div>
-              <button type="button" class="text-[#0576a7]">
-                <i class="fa-solid fa-building"></i> Floor plan
-              </button>
-            </div>
-            <div>
-              <button type="button" class="text-[#0576a7]">
-                <i class="fa-duotone fa-solid fa-cube"></i> Virtual Tour
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <a href="#">
-            <div
-              class="border-2 border-black h-[20vh] w-[10vw] mr-10 mt-5 bg-[url('https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1')] bg-no-repeat bg-cover"
-            ></div>
-          </a>
-        </div>
-      </div>
-      
-    <div class="main-wrapper  group">
-      <button type="button" class="text-[#0576a7] flex gap-5 group">
-        <span>Show floor plan details</span>
-
-        <svg
-          class="mt-1 hs-dropdown-open:rotate-180 size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
-      </button>
-      <div
-        class="dropdown-menu group-hover:block hidden bg-[#f2f2f2]  relative w-[53vw] pb-6"
-      >
-        <div class="text-xs font-bold text-gray-900 pt-5">Highlights....</div>
-        <div class="flex gap-72 text-gray-700">
-          <div class="">
-            <ul class="list-disc pl-6 space-y-8 mt-8 text-xs font-serif">
-              <li>Air conditioning</li>
-              <li>washer /dryer</li>
-              <li>cable ready</li>
-            </ul>
-          </div>
-
-          <div>
-            <ul class="list-disc pl-6 space-y-8 mt-8 text-xs font-serif">
-              <li>Walk in closets</li>
-              <li>window coverings</li>
-              <li>skylight</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <p class="text-xl font-semibold">4 Units Available</p>
-      </div>
-      <div
-        class="mt-4 border border-t-gray-400 w-[53vw] flex text-[#4c4c4c] text-xs px-3 py-2"
-      >
-        <div><p class="w-[12vw]">Unit</p></div>
-        <div><p class="w-[12vw]">Price</p></div>
-        <div><p class="w-[12vw]">SqFt</p></div>
-        <div><p class="w-[12vw]">Availability</p></div>
-      </div>
-      <div>
-        <div class="border border-t-gray-400 w-[53vw] py-3">
-          <details class="">
-            <summary class="flex">
-              <div class="flex px-3">
-                <div><p class="w-[12vw] text-[#0576a7]">01</p></div>
-                <div><p class="w-[12vw]">25000/-</p></div>
-                <div><p class="w-[12vw]">505</p></div>
-                <div class="flex">
-                  <div><p class="w-[12vw] flex">15.jun</p></div>
-                  <div class="pl-10">
-                    <i class="fa-solid fa-angle-down pr-7"></i>
-                  </div>
-                </div>
-              </div>
-            </summary>
-            <p class="pt-4 text-xs text-[#4c4c4c]">Highlights..</p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-6 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>High Speed Internet Access</li>
-              <li>Wifi</li>
-              <li>Washer/dryer</li>
-              <li>Air Conditioning</li>
-              <li>Heating</li>
-              <li>Cable Ready</li>
-            </ul>
-            <p class="pt-8 text-xs text-[#4c4c4c]">
-              Kitchen Features & Appliances
-            </p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-6 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>Dishwasher</li>
-              <li>Granite Countertops</li>
-              <li>Kitchen</li>
-              <li>Refrigerator</li>
-              <li>Freezer</li>
-            </ul>
-            <div
-              class="mt-6 border-2 border-[#427b01] w-[7vw] text-[#427b01] hover:border-4 text-center py-1 text-xs"
-            >
-              <button type="submit">Send message</button>
-            </div>
-          </details>
-        </div>
-  
-        <div class="relative border border-t-gray-400 w-[53vw] py-3">
-          <details class="non">
-            <summary class="flex">
-              <div class="flex px-3">
-                <div><p class="w-[12vw] text-[#0576a7]">02</p></div>
-                <div><p class="w-[12vw]">30000/-</p></div>
-                <div><p class="w-[12vw]">515</p></div>
-                <div class="flex">
-                  <div><p class="w-[12vw] flex">20.Aug</p></div>
-                  <div class="pl-10">
-                    <i class="fa-solid fa-angle-down pr-7"></i>
-                  </div>
-                </div>
-              </div>
-            </summary>
-            <p class="pt-4 text-xs text-[#4c4c4c]">Highlights..</p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-5 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>High Speed Internet Access</li>
-              <li>Wifi</li>
-              <li>Washer/dryer</li>
-              <li>Air Conditioning</li>
-              <li>Heating</li>
-              <li>Cable Ready</li>
-            </ul>
-            <p class="pt-8 text-xs text-[#4c4c4c]">
-              Kitchen Features & Appliances
-            </p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-3 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>Dishwasher</li>
-              <li>Granite Countertops</li>
-              <li>Kitchen</li>
-              <li>Refrigerator</li>
-              <li>Freezer</li>
-            </ul>
-            <div
-              class="mt-6 border-2 border-[#427b01] w-[7vw] text-[#427b01] hover:border-4 text-center py-1 text-xs"
-            >
-              <button type="submit">Send message</button>
-            </div>
-          </details>
-        </div>
-  
-        <div class="border border-t-gray-400 w-[53vw] py-3">
-          <details class="">
-            <summary class="flex">
-              <div class="flex px-3">
-                <div><p class="w-[12vw] text-[#0576a7]">03</p></div>
-                <div><p class="w-[12vw]">22000/-</p></div>
-                <div><p class="w-[12vw]">476</p></div>
-                <div class="flex">
-                  <div><p class="w-[12vw] flex">18.Sep</p></div>
-                  <div class="pl-10">
-                    <i class="fa-solid fa-angle-down pr-7"></i>
-                  </div>
-                </div>
-              </div>
-            </summary>
-            <p class="pt-4 text-xs text-[#4c4c4c]">Highlights..</p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-3 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>High Speed Internet Access</li>
-              <li>Wifi</li>
-              <li>Washer/dryer</li>
-              <li>Air Conditioning</li>
-              <li>Heating</li>
-              <li>Cable Ready</li>
-            </ul>
-            <p class="pt-8 text-xs text-[#4c4c4c]">
-              Kitchen Features & Appliances
-            </p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-3 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>Dishwasher</li>
-              <li>Granite Countertops</li>
-              <li>Kitchen</li>
-              <li>Refrigerator</li>
-              <li>Freezer</li>
-            </ul>
-            <div
-              class="mt-6 border-2 border-[#427b01] w-[7vw] text-[#427b01] hover:border-4 text-center py-1 text-xs"
-            >
-              <button type="submit">Send message</button>
-            </div>
-          </details>
-        </div>
-  
-        <div class="border border-t-gray-400 w-[53vw] py-3">
-          <details class="">
-            <summary class="flex">
-              <div class="flex px-3">
-                <div><p class="w-[12vw] text-[#0576a7]">04</p></div>
-                <div><p class="w-[12vw]">35000/-</p></div>
-                <div><p class="w-[12vw]">551</p></div>
-                <div class="flex">
-                  <div><p class="w-[12vw] flex">10.oct</p></div>
-                  <div class="pl-10">
-                    <i class="fa-solid fa-angle-down pr-7"></i>
-                  </div>
-                </div>
-              </div>
-            </summary>
-            <p class="pt-4 text-xs text-[#4c4c4c]">Highlights..</p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-3 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>High Speed Internet Access</li>
-              <li>Wifi</li>
-              <li>Washer/dryer</li>
-              <li>Air Conditioning</li>
-              <li>Heating</li>
-              <li>Cable Ready</li>
-            </ul>
-            <p class="pt-8 text-xs text-[#4c4c4c]">
-              Kitchen Features & Appliances
-            </p>
-            <ul
-              class="list-disc grid grid-cols-2 list-inside pt-3 space-y-3 text-xs text-[#4c4c4c]"
-            >
-              <li>Dishwasher</li>
-              <li>Granite Countertops</li>
-              <li>Kitchen</li>
-              <li>Refrigerator</li>
-              <li>Freezer</li>
-            </ul>
-            <div
-              class="mt-6 border-2 border-[#427b01] w-[7vw] text-[#427b01] hover:border-4 text-center py-1 text-xs"
-            >
-              <button type="submit">Send message</button>
-            </div>
-          </details>
-        </div>
-      </div>
-    </div>
-      </div>
-      
-    </div>
-
-    <aside class="form right-side">
-      <div class="w-96 h-80 bg-gray-300 shadow-lg rounded-lg p-6">
-        <aside
-          id="contactLead"
-          class="relative h-full flex flex-col justify-between"
-        >
-          <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">
-            Contact This Property
-          </h2>
-          <div class="space-y-4">
-            <button
-              class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full transition duration-300 ease-in-out"
-              data-bs-toggle="modal"
-              data-bs-target="#requestTour"
-            >
-              Request Tour
-            </button>
-            <button
-              class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 w-full transition duration-300 ease-in-out"
-              data-bs-toggle="modal"
-              data-bs-target="#sendMessage"
-            >
-              Send Message
-            </button>
-            <p
-              class="flex justify-center items-center text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out"
-            >
-              <a href="tel:7087251991" class="flex items-center">
-                <i
-                  class="storyicon comMobileStoryIcon mr-2"
-                  aria-hidden="true"
-                ></i>
-                <span>{{ product.phone }}</span>
-              </a>
-            </p>
-          </div>
-          <hr class="text-black" />
-          <div class="mt-6 space-y-2">
-            <div>
-              <p
-                class="relative group text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out cursor-pointer text-center"
-              >
-                View All Hours
-              </p>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </aside>
-  </section>
-</main> -->
-
 <div class="w-full h-[70vh] overflow-hidden">
   <app-image-carousel [data]="product"></app-image-carousel>
 </div>
@@ -563,27 +21,22 @@ property data -->
           </div>
           <div class="mt-1 text-gray-800">STUDIO, 1BHK, 546 sq ft</div>
           <div class="flex gap-4 mt-6">
-            <button
-              class="border-2 border-green-700 text-green-700 rounded-lg px-4 py-2 hover:border-4"
-            >
+            <button class="border-2 border-green-700 text-green-700 rounded-lg px-4 py-2 hover:border-4" (click)="FloorPlanTour()">
               Tour This Floor Plan
             </button>
-            <button class="text-blue-600 hover:underline">
+            <button class="text-blue-600 hover:underline" routerLink="/PropertyMediaView">
               <i class="fa-solid fa-building"></i> Floor Plan
             </button>
-            <button class="text-blue-600 hover:underline">
+            <button class="text-blue-600 hover:underline"  routerLink="/PropertyMediaView">
               <i class="fa-duotone fa-cube"></i> Virtual Tour
             </button>
           </div>
         </div>
         <div>
           <a href="#">
-            <div
-              class="h-32 w-40 bg-cover bg-no-repeat rounded-lg"
-              style="
+            <div class="h-32 w-40 bg-cover bg-no-repeat rounded-lg" style="
                 background-image: url('https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1');
-              "
-            ></div>
+              "></div>
           </a>
         </div>
       </div>
@@ -591,23 +44,13 @@ property data -->
       <div class="mt-4 group">
         <button type="button" class="flex items-center text-blue-600">
           <span class="hover:underline">Show floor plan details</span>
-          <svg
-            class="ml-2 transition-transform duration-300 transform group-hover:rotate-180"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+          <svg class="ml-2 transition-transform duration-300 transform group-hover:rotate-180"
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M6 9l6 6 6-6"></path>
           </svg>
         </button>
-        <div
-          class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg"
-        >
+        <div class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg">
           <p class="text-sm font-bold text-gray-900">Highlights:</p>
           <div class="flex gap-16 mt-4 text-gray-700">
             <ul class="list-disc pl-6 space-y-2 text-sm">
@@ -659,9 +102,8 @@ property data -->
                   <li>Freezer</li>
                 </ul>
               </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
+              <button class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+                data-bs-toggle="modal" data-bs-target="#sendMessage">
                 Send Message
               </button>
             </details>
@@ -688,9 +130,8 @@ property data -->
                   <li>Freezer</li>
                 </ul>
               </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
+              <button class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+                data-bs-toggle="modal" data-bs-target="#sendMessage">
                 Send Message
               </button>
             </details>
@@ -717,9 +158,8 @@ property data -->
                   <li>Freezer</li>
                 </ul>
               </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
+              <button class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+                data-bs-toggle="modal" data-bs-target="#sendMessage">
                 Send Message
               </button>
             </details>
@@ -746,212 +186,8 @@ property data -->
                   <li>Freezer</li>
                 </ul>
               </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
-                Send Message
-              </button>
-            </details>
-            <!-- Repeat for other units -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mt-6 border-2 bg-white border-gray-200 p-4 rounded-lg">
-      <div class="flex justify-between">
-        <div>
-          <div class="text-lg font-semibold text-gray-600">STUDIO ONE</div>
-          <div class="mt-2 text-xl font-bold text-gray-600">
-            ₹10,000 - ₹50,000
-          </div>
-          <div class="mt-1 text-gray-800">STUDIO, 1BHK, 546 sq ft</div>
-          <div class="flex gap-4 mt-6">
-            <button
-              class="border-2 border-green-700 text-green-700 rounded-lg px-4 py-2 hover:border-4"
-            >
-              Tour This Floor Plan
-            </button>
-            <button class="text-blue-600 hover:underline">
-              <i class="fa-solid fa-building"></i> Floor Plan
-            </button>
-            <button class="text-blue-600 hover:underline">
-              <i class="fa-duotone fa-cube"></i> Virtual Tour
-            </button>
-          </div>
-        </div>
-        <div>
-          <a href="#">
-            <div
-              class="h-32 w-40 bg-cover bg-no-repeat rounded-lg"
-              style="
-                background-image: url('https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/105/image.png?p=1');
-              "
-            ></div>
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-4 group">
-        <button type="button" class="flex items-center text-blue-600">
-          <span class="hover:underline">Show floor plan details</span>
-          <svg
-            class="ml-2 transition-transform duration-300 transform group-hover:rotate-180"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M6 9l6 6 6-6"></path>
-          </svg>
-        </button>
-        <div
-          class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg"
-        >
-          <p class="text-sm font-bold text-gray-900">Highlights:</p>
-          <div class="flex gap-16 mt-4 text-gray-700">
-            <ul class="list-disc pl-6 space-y-2 text-sm">
-              <li>Air conditioning</li>
-              <li>Washer/Dryer</li>
-              <li>Cable ready</li>
-            </ul>
-            <ul class="list-disc pl-6 space-y-2 text-sm">
-              <li>Walk-in closets</li>
-              <li>Window coverings</li>
-              <li>Skylight</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="mt-6">
-          <p class="text-xl font-semibold mb-4">4 Units Available</p>
-          <div class="border-b border-gray-400 mb-4"></div>
-
-          <details class="p-4 rounded-lg">
-            <summary class="flex justify-between">
-              <span class="text-blue-600">Unit</span>
-              <span class="text-gray-800">price</span>
-              <span class="text-gray-800">square fit</span>
-              <span class="text-gray-600">Availability</span>
-            </summary>
-          </details>
-          <div class="space-y-4">
-            <details class="border border-gray-300 p-4 rounded-lg">
-              <summary class="flex justify-between cursor-pointer">
-                <span class="text-blue-600">Unit 01</span>
-                <span class="text-gray-800">₹25,000</span>
-                <span class="text-gray-800">505 sq ft</span>
-                <span class="text-gray-600">Available: 15 June</span>
-              </summary>
-              <div class="mt-4 text-sm text-gray-700">
-                <p class="font-semibold">Highlights:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>High Speed Internet Access</li>
-                  <li>Wifi</li>
-                  <li>Washer/Dryer</li>
-                  <li>Air Conditioning</li>
-                </ul>
-                <p class="mt-4 font-semibold">Kitchen Features:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>Dishwasher</li>
-                  <li>Granite Countertops</li>
-                  <li>Refrigerator</li>
-                  <li>Freezer</li>
-                </ul>
-              </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
-                Send Message
-              </button>
-            </details>
-            <details class="border border-gray-300 p-4 rounded-lg">
-              <summary class="flex justify-between cursor-pointer">
-                <span class="text-blue-600">Unit 01</span>
-                <span class="text-gray-800">₹25,000</span>
-                <span class="text-gray-800">505 sq ft</span>
-                <span class="text-gray-600">Available: 15 June</span>
-              </summary>
-              <div class="mt-4 text-sm text-gray-700">
-                <p class="font-semibold">Highlights:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>High Speed Internet Access</li>
-                  <li>Wifi</li>
-                  <li>Washer/Dryer</li>
-                  <li>Air Conditioning</li>
-                </ul>
-                <p class="mt-4 font-semibold">Kitchen Features:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>Dishwasher</li>
-                  <li>Granite Countertops</li>
-                  <li>Refrigerator</li>
-                  <li>Freezer</li>
-                </ul>
-              </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
-                Send Message
-              </button>
-            </details>
-            <details class="border border-gray-300 p-4 rounded-lg">
-              <summary class="flex justify-between cursor-pointer">
-                <span class="text-blue-600">Unit 01</span>
-                <span class="text-gray-800">₹25,000</span>
-                <span class="text-gray-800">505 sq ft</span>
-                <span class="text-gray-600">Available: 15 June</span>
-              </summary>
-              <div class="mt-4 text-sm text-gray-700">
-                <p class="font-semibold">Highlights:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>High Speed Internet Access</li>
-                  <li>Wifi</li>
-                  <li>Washer/Dryer</li>
-                  <li>Air Conditioning</li>
-                </ul>
-                <p class="mt-4 font-semibold">Kitchen Features:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>Dishwasher</li>
-                  <li>Granite Countertops</li>
-                  <li>Refrigerator</li>
-                  <li>Freezer</li>
-                </ul>
-              </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
-                Send Message
-              </button>
-            </details>
-            <details class="border border-gray-300 p-4 rounded-lg">
-              <summary class="flex justify-between cursor-pointer">
-                <span class="text-blue-600">Unit 01</span>
-                <span class="text-gray-800">₹25,000</span>
-                <span class="text-gray-800">505 sq ft</span>
-                <span class="text-gray-600">Available: 15 June</span>
-              </summary>
-              <div class="mt-4 text-sm text-gray-700">
-                <p class="font-semibold">Highlights:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>High Speed Internet Access</li>
-                  <li>Wifi</li>
-                  <li>Washer/Dryer</li>
-                  <li>Air Conditioning</li>
-                </ul>
-                <p class="mt-4 font-semibold">Kitchen Features:</p>
-                <ul class="grid grid-cols-2 gap-4 mt-2">
-                  <li>Dishwasher</li>
-                  <li>Granite Countertops</li>
-                  <li>Refrigerator</li>
-                  <li>Freezer</li>
-                </ul>
-              </div>
-              <button
-                class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
-              >
+              <button class="mt-4 border-2 border-green-700 text-green-700 px-4 py-2 rounded-lg hover:border-4"
+                data-bs-toggle="modal" data-bs-target="#sendMessage">
                 Send Message
               </button>
             </details>
@@ -963,98 +199,12 @@ property data -->
 
     <!--  about property -->
     <div class="about-property pt-5">
-      <div>
-        <h2 class="text-white text-3xl font-semibold">
-          About Presidential Towers
-        </h2>
-        <p class="pt-3 text-gray-300">
-          What do you want to do tonight? The simple question holds such
-          anticipation, especially here at Presidential Towers, where you can
-          get just about anywhere on foot. With a Fitness Formula Club, a
-          relaxing sundeck, and several restaurants in the building, the options
-          are endless. So go ahead, live life on your terms. Schedule a tour of
-          our apartments in Chicago near the West Loop today!
-        </p>
-        <br />
-        <p class="text-gray-300">
-          Presidential Towers is an apartment community managed by Waterton,
-          located in Cook County and the 60661 ZIP Code. This area is served by
-          the Chicago Public Schools attendance zone.
-        </p>
-      </div>
-      <div class="features-container text-white">
-        <h1 class="text-2xl pt-3 font-semibold">Unique Features</h1>
-        <div class="features-wrapper pt-3">
-          <ul class="features-list">
-            <li>Columbia College is 1.5 miles away.</li>
-            <li>Online Rent Payments</li>
-            <li>UIC is a mile away.</li>
-            <li>Union Station 0.3 miles away</li>
-            <li>Wood Inspired Flooring*</li>
-            <li>Bicycle and Additional Personal Storage</li>
-            <li>Free WiFi in The M Lounge</li>
-            <li>Newly Remodeled Residences*</li>
-            <li>Oak Cabinetry Options Available</li>
-            <li>Washer/Dryers*</li>
-            <li>4 Grocery Stores Within a 5 Minute Walk</li>
-            <li>Breakfast Bars*</li>
-          </ul>
+      <app-property-data-additional-info [additionalInfo]="AboutPresidentialTowers"></app-property-data-additional-info>
 
-          <ul class="features-list">
-            <li>Concentra Urgent care located in the building</li>
-            <li>DePaul University is 1.3 miles away.</li>
-            <li>Digital Cable and HDTV Packages Available</li>
-            <li>Millennium Park is 1 mile away</li>
-            <li>Upgraded Appliances*</li>
-            <li>Cultured Marble Vanities</li>
-            <li>French Market 0.2 miles away</li>
-            <li>Guest Suites</li>
-            <li>Sales Force Tower is a mile away.</li>
-            <li>Ultra-Fast Fiber Internet Up to 1,000 Mbps</li>
-            <li>Chicago Kent Law School is 0.2 miles away.</li>
-            <li>Decorator Light</li>
-          </ul>
+      <!-- <app-property-data-facilities [propertyDetalisList]="properties"></app-property-data-facilities> -->
 
-          <ul class="features-list">
-            <li>Deloitte is 0.7 miles away.</li>
-            <li>Generous Closet Space</li>
-            <li>Google Office is 0.9 miles away.</li>
-            <li>Granite Countertops*</li>
-            <li>Large Pets Accepted (breed restrictions)</li>
-            <li>Ogilvie Station across the street</li>
-            <li>Stunning City Views*</li>
-            <li>Trash Chutes on Every Floor</li>
-            <li>Espresso Cabinetry Option Available</li>
-            <li>Luxer One Package Room</li>
-            <li>On-site Dining Options</li>
-            <li>Renovated Kitchens</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <!-- Neighborhood -->
-        <h2 class="text-white text-3xl font-semibold">Neighborhood</h2>
-        <p class="pt-3 text-gray-300">
-          Chicago’s reputation as one of America’s most distinctive cities owes
-          a lot to the electric atmosphere and vibrant culture that defines
-          Downtown Chicago. Iconic sites like Grant Park, Soldier Field, the
-          Chicago Theatre, Navy Pier, and the Chicago Riverwalk are the most
-          famous landmarks in Downtown, but that barely scratches the surface of
-          what the neighborhood has to offer: dozens of theaters, live music
-          venues, museums, and galleries fill the area, along with hundreds of
-          shops and restaurants catering to every conceivable taste, plus the
-          campuses of Columbia College Chicago, DePaul University, and the Art
-          Institute of Chicago.
-        </p>
-        <br />
-        <p class="text-gray-300">
-          The Loop, Greektown, River North, and the Magnificent Mile are all
-          nearby, easily reached by a short ride on the train. There’s no
-          shortage of swanky apartments and condos in Downtown Chicago, but you
-          can often find great deals on studios as well, allowing you to live in
-          the heart of the action even if you’re on a budget
-        </p>
-      </div>
+      <app-property-data-additional-info  [additionalInfo]="NeighborhoodData"></app-property-data-additional-info>
+
       <div class="features-container text-white">
         <h1 class="text-3xl pt-5 font-semibold">Community Amenities</h1>
         <div class="features-wrapper pt-3">
@@ -1104,7 +254,6 @@ property data -->
             <li>Office</li>
             <li>Skylights</li>
             <li>Walk-In Closets</li>
-
           </ul>
 
           <ul class="features-list">
@@ -1115,37 +264,41 @@ property data -->
           </ul>
         </div>
       </div>
+
+      <div class="features-container text-white">
+        <h1 class="text-3xl pt-5 font-semibold pb-3">Details</h1>
+        <span>Property Information</span>
+        <hr />
+        <div class="features-wrapper pt-3">
+          <ul class="features-list">
+            <li>Built in 1986</li>
+            <li>2346 units/50 stories</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
   <!-- form -->
-  <aside class="form w-96 h-80 bg-gray-300 shadow-lg rounded-lg p-6">
+  <aside class="form w-80 bg-gray-200 shadow-lg rounded-lg p-6 fixed bottom-5 right-12">
     <div id="contactLead" class="h-full flex flex-col justify-between">
-      <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">
+      <h2 class="text-lg font-semibold mb-4 text-gray-800 text-center">
         Contact This Property
       </h2>
-      <div class="space-y-4">
+      <div class="space-y-3">
         <button
-          class="bg-blue-500 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-600"
-        >
+          class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full transition duration-300 ease-in-out"
+          data-bs-toggle="modal" data-bs-target="#requestTour">
           Request Tour
         </button>
         <button
-          class="bg-gray-500 text-white py-2 px-4 rounded-lg w-full hover:bg-gray-600"
-        >
+          class="bg-green-400 text-white py-2 px-4 rounded-lg hover:bg-green-600 w-full transition duration-300 ease-in-out"
+          data-bs-toggle="modal" data-bs-target="#sendMessage">
           Send Message
         </button>
-        <a
-          href="tel:7087251991"
-          class="flex justify-center items-center text-blue-600 hover:text-blue-800 transition duration-300"
-        >
+        <a href="tel:7087251991"
+          class="flex justify-center items-center text-blue-700 hover:text-blue-800 transition duration-300">
           <i class="fa fa-phone mr-2"></i> {{ product.phone }}
         </a>
-      </div>
-      <hr class="my-4 border-gray-400" />
-      <div class="text-center">
-        <p class="text-blue-600 hover:underline cursor-pointer">
-          View All Hours
-        </p>
       </div>
     </div>
   </aside>

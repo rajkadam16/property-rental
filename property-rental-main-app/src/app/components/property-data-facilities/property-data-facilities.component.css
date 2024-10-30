@@ -1,0 +1,27 @@
+ul {
+    list-style-type:disc; /* options: disc, circle, square, none */
+  }
+  
+  .property-item {
+    margin-bottom: 15px;
+  }
+  
+  .features-container {
+    display: flex;
+    gap: 20px; /* space between each column */
+  }
+  
+  .features-wrapper {
+    flex: 1; /* Each wrapper takes equal space */
+  }
+  
+  .features-list {
+    list-style-type: disc; /* Default bullet */
+    padding-left: 20px; /* Space for bullets */
+    margin-top: 10px; /* Adjust spacing */
+  }
+  
+  .features-list li {
+    margin-bottom: 5px; /* Space between list items */
+  }
+  

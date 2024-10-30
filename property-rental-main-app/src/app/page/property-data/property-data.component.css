@@ -22,6 +22,14 @@
     font-size: 14px;
 
 }
+ul {
+    list-style-type: circle; /* options: disc, circle, square, none */
+  }
+  
+  .property-item {
+    margin-bottom: 15px;
+  }
+  
 
 
 
