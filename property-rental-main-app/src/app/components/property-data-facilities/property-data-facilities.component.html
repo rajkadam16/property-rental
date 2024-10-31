@@ -1,18 +1,30 @@
-<h1 class="text-2xl pt-5 font-semibold text-white">{{facilities.heading}}</h1>
+<h1 class="text-2xl pt-5 font-semibold text-white">{{ facilities.heading }}</h1>
+
 <div class="features-container text-white flex space-x-5">
+  <!-- First Column -->
   <div class="features-wrapper pt-3">
-    <ul class="features-list " *ngFor="let property of facilities">
-      <li >{{ property.name }}</li>
-    </ul>
-  </div>
-  <div class="features-wrapper pt-3">
-    <ul class="features-list " *ngFor="let property of facilities">
-      <li >{{ property.name }}</li>
-    </ul>
-  </div>
-  <div class="features-wrapper pt-3">
-    <ul class="features-list " *ngFor="let property of facilities">
-      <li >{{ property.name }}</li>
+    <ul class="features-list">
+      <li *ngFor="let property of facilities.features.slice(0, 6)">
+        {{ property.list }}
+      </li>
     </ul>
   </div>
 
+  <!-- Second Column -->
+  <div class="features-wrapper pt-3">
+    <ul class="features-list">
+      <li *ngFor="let property of facilities.features.slice(6, 12)">
+        {{ property.list }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Third Column -->
+  <div class="features-wrapper pt-3">
+    <ul class="features-list">
+      <li *ngFor="let property of facilities.features.slice(12, 18)">
+        {{ property.list }}
+      </li>
+    </ul>
+  </div>
+</div>
