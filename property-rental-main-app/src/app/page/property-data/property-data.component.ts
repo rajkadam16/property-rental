@@ -45,7 +45,7 @@ export class PropertyDataComponent implements OnInit {
     ],
 
     apartmentFeatures: [
-      'Wood Inspired Flooring*',
+      '',
       'Breakfast Bars*',
       'Cultured Marble Vanities',
       'Decorator Light',
@@ -74,14 +74,6 @@ export class PropertyDataComponent implements OnInit {
     ],
   };
 
-  properties = [
-    { name: 'Property 1' },
-    { name: 'Property 2' },
-    { name: 'Property 3' },
-    { name: 'Property 1' },
-    { name: 'Property 2' },
-    { name: 'Property 3' },
-  ];
 
   NeighborhoodData = {
     heading: 'Neighborhood',
@@ -101,4 +93,93 @@ export class PropertyDataComponent implements OnInit {
       'Presidential Towers is an apartment community managed by Waterton, located in Cook County and the 60661 ZIP Code. This area is served by the Chicago Public Schools attendance zone.',
     ],
   };
+
+  
+  UniqueFeaturesOfProperty = {
+    heading: "Unique Features",
+    features: [
+      { list: "Espresso Cabinetry Option Available" },
+      { list: "Luxer One Package Room" },
+      { list: "On-site Dining Options" },
+      { list: "Renovated Kitchens" },
+      { list: "Bicycle and Additional Personal Storage" },
+      { list: "Free WiFi in The M Lounge" },
+      { list: "Newly Remodeled Residences*" },
+      { list: "Oak Cabinetry Options Available" },
+      { list: "Washer/Dryers*" },
+      { list: "Cultured Marble Vanities" },
+      { list: "French Market 0.2 miles away" },
+      { list: "Guest Suites" },
+      { list: "Sales Force Tower is a mile away." },
+      { list: "Ultra-Fast Fiber Internet Up to 1,000 Mbps" },
+      { list: "DePaul University is 1.3 miles away." },
+      { list: "Digital Cable and HDTV Packages Available" },
+      { list: "Millennium Park is 1 mile away" },
+      { list: "Upgraded Appliances*" },
+      { list: "Chicago Kent Law School is 0.2 miles away." },
+      { list: "Decorator Light" },
+      { list: "Deloitte is 0.7 miles away." },
+      { list: "Generous Closet Space" },
+      { list: "Google Office is 0.9 miles away." },
+      { list: "Granite Countertops*" },
+      { list: "Large Pets Accepted (breed restrictions)" },
+      { list: "Ogilvie Station across the street" },
+      { list: "Stunning City Views*" },
+      { list: "Trash Chutes on Every Floor" },
+      { list: "Columbia College is 1.5 miles away." },
+      { list: "Online Rent Payments" },
+      { list: "UIC is a mile away." },
+      { list: "Union Station 0.3 miles away" },
+      { list: "4 Grocery Stores Within a 5 Minute Walk" },
+ 
+    ]
+  };
+  
+
+  PropertyAmenities = {
+    heading: "Community Amenities",
+    features: [
+      { list: " Laundry Facilities" },
+      { list: "Property Manager on Site" },
+      { list: "Doorman" },
+      { list: "Concierge" },
+      { list: "24 Hour Access" },
+      { list: "On-Site Retai" },
+      { list: "Health Club Discount" },
+      { list: "Public Transportation" },
+      { list: "Elevator" },
+      { list: "Lounge" },
+      { list: "Disposal Chutes" },
+      { list: "Fitness Center" },
+      { list: "Pool" },
+      { list: "Sundeck" },
+      { list: "Courtyard" },
+      { list: "Grill" },
+    ]
+   
+  }
+
+  propertyFeatures = {
+    heading: "Apartment Features",
+    features: [
+      { list: "Washer/Dryer" },
+      { list: "Air Conditioning" },
+      { list: "Dishwasher" },
+      { list: "High Speed Internet Access" },
+      { list: "Wi-Fi" },
+      { list: "Heating" },
+      { list: "Cable Ready" },
+      { list: "Granite Countertops" },
+      { list: "Kitchen" },
+      { list: "Refrigerator" },
+      { list: "Freezer" },
+      { list: "Office" },
+      { list: "Views" },
+      { list: "Skylights" },
+      { list: "Walk-In Closets" },
+      { list: "Window Coverings" }
+    ]
+  };
+  
+
 }
