@@ -37,6 +37,7 @@ import { DropDownPipe } from './core/pipes/drop-down.pipe';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 import { PropertyDataFacilitiesComponent } from './components/property-data-facilities/property-data-facilities.component';
 import { PropertyDataAdditionalInfoComponent } from './components/property-data-additional-info/property-data-additional-info.component';
+import { PropertySchoolCardComponent } from './components/property-school-card/property-school-card.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { PropertyDataAdditionalInfoComponent } from './components/property-data-
     DropDownPipe,
     ImageCarouselComponent,
     PropertyDataFacilitiesComponent,
-    PropertyDataAdditionalInfoComponent
+    PropertyDataAdditionalInfoComponent,
+    PropertySchoolCardComponent
 
   ],
   imports: [
