@@ -180,6 +180,55 @@ export class PropertyDataComponent implements OnInit {
       { list: "Window Coverings" }
     ]
   };
+
+  propertySchoolData={
+     heading: "Schools",
+     schoolData:[
+      {
+        schoolName: "Lincoln High School",
+        schoolAddress: "456 Elm St, Cityville, USA",
+        schoolDistance: "1.2 miles",
+        schoolType: "Public High School",
+        schoolRating: "8"
+    },
+    {
+        schoolName: "Greenwood Middle School",
+        schoolAddress: "789 Maple Ave, Townsville, USA",
+        schoolDistance: "2.5 miles",
+        schoolType: "Public Middle School",
+        schoolRating: "7"
+    },
+    {
+        schoolName: "Riverside Elementary School",
+        schoolAddress: "101 River Rd, Lakeside, USA",
+        schoolDistance: "0.8 miles",
+        schoolType: "Public Elementary School",
+        schoolRating: "6"
+    },
+    {
+        schoolName: "Oakridge Academy",
+        schoolAddress: "202 Oak St, Forest City, USA",
+        schoolDistance: "3.1 miles",
+        schoolType: "Private K-12 School",
+        schoolRating: "10"
+    },
+    {
+        schoolName: "Westwood Charter School",
+        schoolAddress: "303 West Blvd, Uptown, USA",
+        schoolDistance: "4.0 miles",
+        schoolType: "Charter High School",
+        schoolRating: "9"
+    },
+    {
+        schoolName: "Bright Future Preschool",
+        schoolAddress: "404 Sunshine Ln, Pleasantville, USA",
+        schoolDistance: "0.3 miles",
+        schoolType: "Private Preschool",
+        schoolRating: "9"
+    }
+    
+     ]
+  }
   
 
 }
