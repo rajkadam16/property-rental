@@ -1,0 +1,22 @@
+{
+    "data": {
+        "unit": "units",
+        "price": "₹25,000",
+        "squarefit": "505 sq ft",
+        "Availability": "Available: 15 June"
+    },
+    "Highlights": {
+        "heading": "Highlights",
+        "value": "High Speed Internet Access",
+        "value": "Wifi",
+        "value": "Washer/Dryer",
+        "value": "Air Conditioning"
+    },
+    "KitchenFeatures:": {
+        "heading": "Kitchen Features",
+        "value": "Dishwasher",
+        "value": "Granite Countertops",
+        "value": "Refrigerator",
+        "value": "Freezer"
+    }
+}

@@ -26,53 +26,7 @@ export class PropertyDataComponent implements OnInit {
     alert('Floor Plan Tour not available yet');
   }
 
-  propertyDetalisList: any = {
-    heading: 'Unique Features',
-    nearbyLandmarks: [
-      'Columbia College is 1.5 miles away.',
-      'UIC is a mile away.',
-      'Union Station 0.3 miles away',
-      '4 Grocery Stores Within a 5 Minute Walk',
-      'Concentra Urgent care located in the building',
-      'French Market 0.2 miles away',
-      'Sales Force Tower is a mile away.',
-      'Chicago Kent Law School is 0.2 miles away.',
-      'Deloitte is 0.7 miles away.',
-      'Google Office is 0.9 miles away.',
-      'Ogilvie Station across the street',
-      'DePaul University is 1.3 miles away.',
-      'Millennium Park is 1 mile away',
-    ],
 
-    apartmentFeatures: [
-      '',
-      'Breakfast Bars*',
-      'Cultured Marble Vanities',
-      'Decorator Light',
-      'Generous Closet Space',
-      'Granite Countertops*',
-      'Stunning City Views*',
-      'Trash Chutes on Every Floor',
-      'Upgraded Appliances*',
-      'Espresso Cabinetry Option Available',
-      'Renovated Kitchens',
-      'Newly Remodeled Residences*',
-      'Oak Cabinetry Options Available',
-      'Washer/Dryers*',
-    ],
-
-    convenienceAndCommunity: [
-      'Online Rent Payments',
-      'Ultra-Fast Fiber Internet Up to 1,000 Mbps',
-      'Guest Suites',
-      'Large Pets Accepted (breed restrictions)',
-      'Digital Cable and HDTV Packages Available',
-      'Luxer One Package Room',
-      'On-site Dining Options',
-      'Bicycle and Additional Personal Storage',
-      'Free WiFi in The M Lounge',
-    ],
-  };
 
 
   NeighborhoodData = {
@@ -86,7 +40,7 @@ export class PropertyDataComponent implements OnInit {
   };
 
   AboutPresidentialTowers = {
-    heading: '        About Presidential Towers',
+    heading: 'About Presidential Towers',
     description:
       'What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!',
     details: [
