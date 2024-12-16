@@ -36,7 +36,14 @@
     },
 
     "propertyunitsdata": {
-      "unitsdata": {
+      "propertyunitscol":[
+        {"value":"Unit"},
+        {"value":"Price"},
+        {"value":"Square Fit"},
+        {"value":"Availability"}
+      ],
+      "unitsdata":[
+         {
         "unit": "units 1",
         "price": "₹25,000",
         "squarefit": "505 sq ft",
@@ -59,7 +66,33 @@
             { "value": "Freezer" }
           ]
         }
+      },
+      {
+        "unit": "units 2",
+        "price": "₹35,000",
+        "squarefit": "705 sq ft",
+        "Availability": "Available: 09 June",
+        "Highlights": {
+          "heading": "Highlights",
+          "features": [
+            { "value": "High Speed Internet Access" },
+            { "value": "Wifi" },
+            { "value": "Washer/Dryer" },
+            { "value": "Air Conditioning" }
+          ]
+        },
+        "KitchenFeatures:": {
+          "heading": "Kitchen Features",
+          "features": [
+            { "value": "Dishwasher" },
+            { "value": "Granite Countertops" },
+            { "value": "Refrigerator" },
+            { "value": "Freezer" }
+          ]
+        }
       }
+    
+    ]
     },
 
     "AboutPresidentialTowers": {
