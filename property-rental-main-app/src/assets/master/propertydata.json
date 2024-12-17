@@ -36,66 +36,65 @@
     },
 
     "propertyunitsdata": {
-      "propertyunitscol":[
-        {"value":"Unit"},
-        {"value":"Price"},
-        {"value":"Square Fit"},
-        {"value":"Availability"}
+      "propertyunitscol": [
+        { "value": "Unit" },
+        { "value": "Price" },
+        { "value": "Square Fit" },
+        { "value": "Availability" }
       ],
-      "unitsdata":[
-         {
-        "unit": "units 1",
-        "price": "₹25,000",
-        "squarefit": "505 sq ft",
-        "Availability": "Available: 15 June",
-        "Highlights": {
-          "heading": "Highlights",
-          "features": [
-            { "value": "High Speed Internet Access" },
-            { "value": "Wifi" },
-            { "value": "Washer/Dryer" },
-            { "value": "Air Conditioning" }
-          ]
+      "unitsdata": [
+        {
+          "unit": "units 1",
+          "price": "₹25,000",
+          "squarefit": "505 sq ft",
+          "Availability": "Available: 15 June",
+          "Highlights": {
+            "heading": "Highlights",
+            "features": [
+              { "value": "High Speed Internet Access" },
+              { "value": "Wifi" },
+              { "value": "Washer/Dryer" },
+              { "value": "Air Conditioning" }
+            ]
+          },
+          "KitchenFeatures:": {
+            "heading": "Kitchen Features",
+            "features": [
+              { "value": "Dishwasher" },
+              { "value": "Granite Countertops" },
+              { "value": "Refrigerator" },
+              { "value": "Freezer" }
+            ]
+          }
         },
-        "KitchenFeatures:": {
-          "heading": "Kitchen Features",
-          "features": [
-            { "value": "Dishwasher" },
-            { "value": "Granite Countertops" },
-            { "value": "Refrigerator" },
-            { "value": "Freezer" }
-          ]
+        {
+          "unit": "units 2",
+          "price": "₹35,000",
+          "squarefit": "705 sq ft",
+          "Availability": "Available: 09 June",
+          "Highlights": {
+            "heading": "Highlights",
+            "features": [
+              { "value": "High Speed Internet Access" },
+              { "value": "Wifi" },
+              { "value": "Washer/Dryer" },
+              { "value": "Air Conditioning" }
+            ]
+          },
+          "KitchenFeatures:": {
+            "heading": "Kitchen Features",
+            "features": [
+              { "value": "Dishwasher" },
+              { "value": "Granite Countertops" },
+              { "value": "Refrigerator" },
+              { "value": "Freezer" }
+            ]
+          }
         }
-      },
-      {
-        "unit": "units 2",
-        "price": "₹35,000",
-        "squarefit": "705 sq ft",
-        "Availability": "Available: 09 June",
-        "Highlights": {
-          "heading": "Highlights",
-          "features": [
-            { "value": "High Speed Internet Access" },
-            { "value": "Wifi" },
-            { "value": "Washer/Dryer" },
-            { "value": "Air Conditioning" }
-          ]
-        },
-        "KitchenFeatures:": {
-          "heading": "Kitchen Features",
-          "features": [
-            { "value": "Dishwasher" },
-            { "value": "Granite Countertops" },
-            { "value": "Refrigerator" },
-            { "value": "Freezer" }
-          ]
-        }
-      }
-    
-    ]
+      ]
     },
 
-    "AboutPresidentialTowers": {
+    "AboutProperty": {
       "heading": "About Presidential Towers",
       "description": "What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!",
       "details": [
@@ -141,7 +140,6 @@
         { "list": "4 Grocery Stores Within a 5 Minute Walk" }
       ]
     },
-
     "NeighborhoodData": {
       "heading": "Neighborhood",
       "description": "Chicago’s reputation as one of America’s most distinctive cities owes a lot to the electric atmosphere and vibrant culture that defines Downtown Chicago. Iconic sites like Grant Park, Soldier Field, the Chicago Theatre, Navy Pier, and the Chicago Riverwalk are the most famous landmarks in Downtown, but that barely scratches the surface of what the neighborhood has to offer.",
@@ -151,7 +149,7 @@
       ]
     },
 
-    "PropertyAmenities": {
+    "PropertyAmenitie": {
       "heading": "Community Amenities",
       "features": [
         { "list": "Laundry Facilities" },
@@ -173,7 +171,7 @@
       ]
     },
 
-    "propertyFeatures": {
+    "ApartmentFeature": {
       "heading": "Apartment Features",
       "features": [
         { "list": "Washer/Dryer" },
@@ -250,5 +248,8 @@
       "value2": "Send Message",
       "phone": "(708) 725-1991"
     }
+  },
+  {
+    "id": 2
   }
 ]
