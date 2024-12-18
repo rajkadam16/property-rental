@@ -38,6 +38,7 @@ import { ImageCarouselComponent } from './components/image-carousel/image-carous
 import { PropertyDataFacilitiesComponent } from './components/property-data-facilities/property-data-facilities.component';
 import { PropertyDataAdditionalInfoComponent } from './components/property-data-additional-info/property-data-additional-info.component';
 import { PropertySchoolCardComponent } from './components/property-school-card/property-school-card.component';
+import { AppartmentDataComponent } from './components/appartment-data/appartment-data.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { PropertySchoolCardComponent } from './components/property-school-card/p
     ImageCarouselComponent,
     PropertyDataFacilitiesComponent,
     PropertyDataAdditionalInfoComponent,
-    PropertySchoolCardComponent
+    PropertySchoolCardComponent,
+    AppartmentDataComponent
 
   ],
   imports: [
