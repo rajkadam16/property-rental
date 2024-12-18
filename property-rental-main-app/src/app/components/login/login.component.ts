@@ -19,7 +19,7 @@ export class LoginComponent {
     if (this.LoginForm.invalid) {
       return;
     }
-    console.log(JSON.stringify(this.LoginForm.value));
+    // console.log(JSON.stringify(this.LoginForm.value));
     this.reset();
   }
   

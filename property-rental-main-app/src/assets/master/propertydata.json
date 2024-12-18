@@ -10,19 +10,10 @@
     "propertyName": "Presidential Towers",
     "propertyLocation": "555 W Madison St, Chicago, IL 60661",
     "propertyPrice": " $1,640 - $5,860",
-    "propertyAmenities": [
-      "Pets Allowed",
-      "Pool",
-      "Maintenance on site",
-      "Playground",
-      "Tennis Court",
-      "Smoke Free"
-    ],
     "propertyOverViewImage": "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/115/image.png?p=1",
     "propertyCardImage": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
     "propertyArea": "STUDIO, 1bhk, 546 sq ft",
     "propertySize": "Studio - 2 Beds ",
-
     "floorplandetails": {
       "heading": "Highlights",
       "features": [
@@ -34,7 +25,6 @@
         { "value": "Skylight" }
       ]
     },
-
     "propertyunitsdata": {
       "propertyunitscol": [
         { "value": "Unit" },
@@ -44,31 +34,26 @@
       ],
       "unitsdata": [
         {
-          "unit": "units 1",
+          "unit": "Units 1",
           "price": "₹25,000",
           "squarefit": "505 sq ft",
           "Availability": "Available: 15 June",
-          "Highlights": {
-            "heading": "Highlights",
-            "features": [
+           "features": [
               { "value": "High Speed Internet Access" },
               { "value": "Wifi" },
               { "value": "Washer/Dryer" },
               { "value": "Air Conditioning" }
-            ]
-          },
-          "KitchenFeatures:": {
-            "heading": "Kitchen Features",
-            "features": [
+            ],
+            "KitchenFeatures": [
               { "value": "Dishwasher" },
               { "value": "Granite Countertops" },
               { "value": "Refrigerator" },
               { "value": "Freezer" }
             ]
-          }
+          
         },
         {
-          "unit": "units 2",
+          "unit": "Units 2",
           "price": "₹35,000",
           "squarefit": "705 sq ft",
           "Availability": "Available: 09 June",
@@ -93,7 +78,6 @@
         }
       ]
     },
-
     "AboutProperty": {
       "heading": "About Presidential Towers",
       "description": "What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!",
@@ -101,7 +85,6 @@
         "Presidential Towers is an apartment community managed by Waterton, located in Cook County and the 60661 ZIP Code. This area is served by the Chicago Public Schools attendance zone."
       ]
     },
-
     "UniqueFeaturesOfProperty": {
       "heading": "Unique Features",
       "features": [
@@ -148,7 +131,6 @@
         "The campuses of Columbia College Chicago, DePaul University, and the Art Institute of Chicago are also located here."
       ]
     },
-
     "PropertyAmenitie": {
       "heading": "Community Amenities",
       "features": [
@@ -170,7 +152,6 @@
         { "list": "Grill" }
       ]
     },
-
     "ApartmentFeature": {
       "heading": "Apartment Features",
       "features": [
@@ -192,7 +173,6 @@
         { "list": "Window Coverings" }
       ]
     },
-
     "propertySchoolData": {
       "heading": "Schools",
       "schoolData": [
@@ -240,7 +220,6 @@
         }
       ]
     },
-
     "contactpropertybox": {
       "isEnabled": true,
       "heading": "Contact This Property",

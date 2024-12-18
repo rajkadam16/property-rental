@@ -43,8 +43,8 @@ export class SignupComponent {
         reply_to: this.signUp.value.firstName && this.signUp.value.lastName,
         email:this.signUp.value.email
         });;
-        console.log('Email sent successfully', response.status);
-        console.log(this.signUp.value.firstName)
+        // console.log('Email sent successfully', response.status);
+        // console.log(this.signUp.value.firstName)
     }
 
     reset() {

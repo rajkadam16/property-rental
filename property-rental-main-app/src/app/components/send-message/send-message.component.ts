@@ -34,7 +34,7 @@ export class SendMessageComponent {
     if (this.requestTourForm.invalid) {
       return;
     }
-    console.log(JSON.stringify(this.requestTourForm.value));
+    // console.log(JSON.stringify(this.requestTourForm.value));
   }
 
   reset() {

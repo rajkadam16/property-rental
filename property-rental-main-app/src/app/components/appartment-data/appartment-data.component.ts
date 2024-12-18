@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class AppartmentDataComponent {
 @Input("data") appartmentData:any;
+@Input("unitsData") unitData:any;
+@Input("floorplandetails") floordetails:any;
 }

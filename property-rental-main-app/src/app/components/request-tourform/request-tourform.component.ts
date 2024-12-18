@@ -28,7 +28,7 @@ export class RequestTourformComponent implements OnInit {
     this.propertyData.parseJsonFile(api.propertyData).subscribe((res: any) => {
       this.propertyName = res.name;
     });
-    console.log(this.propertyName)
+  
   }
 
   onSubmit() {
@@ -49,7 +49,7 @@ export class RequestTourformComponent implements OnInit {
         date: this.requestTourForm.value.date,
       });
       alert('Request accepted');
-      console.log('sending request for tour', response.status);
+      // console.log('sending request for tour', response.status);
   }
 
   reset() {

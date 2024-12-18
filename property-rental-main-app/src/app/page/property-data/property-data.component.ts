@@ -16,7 +16,9 @@ export class PropertyDataComponent implements OnInit {
   UniqueFeaturesOfPropertys:any[]=[];
   PropertyAmenities:any[]=[];
   ApartmentFeatures:any[]=[];
-  // appartmentDatas:any[]=[];
+  floorplandetails:any[]=[];
+  propertyunitsdatas:any[]=[];
+ 
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -33,8 +35,9 @@ export class PropertyDataComponent implements OnInit {
       this.UniqueFeaturesOfPropertys = product.UniqueFeaturesOfProperty;
       this.PropertyAmenities = product.PropertyAmenitie;
       this.ApartmentFeatures = product.ApartmentFeature;
-      // this.appartmentDatas = product.appartmentData;
-      console.log(this.product)
+      this.floorplandetails = product.floorplandetails;
+      this.propertyunitsdatas = product.propertyunitsdata;
+
     });
   }
 
