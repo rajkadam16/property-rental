@@ -18,6 +18,7 @@ export class PropertyDataComponent implements OnInit {
   ApartmentFeatures:any[]=[];
   floorplandetails:any[]=[];
   propertyunitsdatas:any[]=[];
+  contactpropertyboxs:any[]=[];
  
 
   constructor(
@@ -37,6 +38,7 @@ export class PropertyDataComponent implements OnInit {
       this.ApartmentFeatures = product.ApartmentFeature;
       this.floorplandetails = product.floorplandetails;
       this.propertyunitsdatas = product.propertyunitsdata;
+      this.contactpropertyboxs= product.contactpropertybox;
 
     });
   }

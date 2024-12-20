@@ -26,28 +26,5 @@
     </div>
   </div>
 
-  <!-- form -->
-  <aside class="form w-80 bg-gray-200 shadow-lg rounded-lg p-6 fixed bottom-5 right-12">
-    <div id="contactLead" class="h-full flex flex-col justify-between">
-      <h2 class="text-lg font-semibold mb-4 text-gray-800 text-center">
-        Contact This Property
-      </h2>
-      <div class="space-y-3">
-        <button
-          class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full transition duration-300 ease-in-out"
-          data-bs-toggle="modal" data-bs-target="#requestTour">
-          Request Tour
-        </button>
-        <button
-          class="bg-green-400 text-white py-2 px-4 rounded-lg hover:bg-green-600 w-full transition duration-300 ease-in-out"
-          data-bs-toggle="modal" data-bs-target="#sendMessage">
-          Send Message
-        </button>
-
-      </div>
-    </div>
-  </aside>
-
-  <app-send-message></app-send-message>
-  <app-request-tourform></app-request-tourform>
+<app-contact-property [propertyContact]="contactpropertyboxs"></app-contact-property>
 </section>

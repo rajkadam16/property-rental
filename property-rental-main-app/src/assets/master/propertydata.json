@@ -14,6 +14,9 @@
     "propertyCardImage": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
     "propertyArea": "STUDIO, 1bhk, 546 sq ft",
     "propertySize": "Studio - 2 Beds ",
+    "propertyAmenities":[
+      "Pets Allowed", "Fitness Center", "Pool", "Dishwasher", "Refrigerator" ,"Kitchen"
+    ],
     "floorplandetails": {
       "heading": "Highlights",
       "features": [
@@ -223,8 +226,8 @@
     "contactpropertybox": {
       "isEnabled": true,
       "heading": "Contact This Property",
-      "value1": "  Request Tour",
-      "value2": "Send Message",
+      "btn1": "  Request Tour",
+      "btn2": "Send Message",
       "phone": "(708) 725-1991"
     }
   },

@@ -39,6 +39,7 @@ import { PropertyDataFacilitiesComponent } from './components/property-data-faci
 import { PropertyDataAdditionalInfoComponent } from './components/property-data-additional-info/property-data-additional-info.component';
 import { PropertySchoolCardComponent } from './components/property-school-card/property-school-card.component';
 import { AppartmentDataComponent } from './components/appartment-data/appartment-data.component';
+import { ContactPropertyComponent } from './components/contact-property/contact-property.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { AppartmentDataComponent } from './components/appartment-data/appartment
     PropertyDataFacilitiesComponent,
     PropertyDataAdditionalInfoComponent,
     PropertySchoolCardComponent,
-    AppartmentDataComponent
+    AppartmentDataComponent,
+    ContactPropertyComponent
 
   ],
   imports: [

@@ -1,15 +1,16 @@
-<nav class="h-16 w-full bg-black">
-  
-  <div class="container mx-auto h-full flex justify-center items-center space-x-8 text-white">
-    <a *ngFor="let nav of navbarData"
+<nav class="bg-dark">
+  <div class="container d-flex align-items-center justify-content-center h-100 text-white">
+    <a 
+      *ngFor="let nav of navbarData"
       href="#" 
-      class="hover:text-gray-400 transition duration-300 ease-in-out"
+      class="text-white text-decoration-none px-3 py-2"
       [attr.data-bs-toggle]="nav.datatoggle" 
       [attr.data-bs-target]="nav.datatarget" 
-      [routerLink]="nav.routerLink">
-      {{nav.displayname}}
+      [routerLink]="nav.routerLink"
+      style="transition: color 0.3s ease-in-out;">
+      {{ nav.displayname }}
     </a>
-    {{username}}
+    <span class="ms-3">{{ username }}</span>
   </div>
 </nav>
 <app-login></app-login>

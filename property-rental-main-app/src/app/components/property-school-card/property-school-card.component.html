@@ -1,21 +1,22 @@
-<h1 class="text-2xl pt-5 font-semibold text-white">{{school.heading}}</h1>
-<div class="container mx-auto max-w-4xl p-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<h1 class="h2 pt-3 fw-semibold text-white text-center">{{ school.heading }}</h1>
+<div class="container mx-auto p-4">
+    <div class="row g-4">
         <!-- Card Template -->
-        <div class="card bg-white shadow-md rounded-lg overflow-hidden flex flex-col md:flex-row max-w-sm mx-auto h-48 w-full" *ngFor="let data of school.schoolData">
-            <div class="md:w-2/3 p-3">
-                <h3 class="text-lg font-semibold text-gray-800 truncate">{{data.schoolName}}</h3>
-                <p class="text-gray-600 text-sm">{{data.schoolType}}</p>
-                <p class="text-gray-500 text-sm truncate">{{data.schoolAddress}}</p>
-                <p class="text-gray-500 text-sm">{{data.schoolDistance}}</p>
-            </div>
-            <div class="md:w-1/3 flex items-center justify-center bg-gray-100 p-3">
-                <div class="text-center">
-                    <h1 class="text-4xl font-bold text-green-600">{{data.schoolRating}}</h1>
-                    <span class="text-gray-600 text-sm">Out of 10</span>
+        <div class="col-12 col-md-6" *ngFor="let data of school.schoolData">
+            <div class="card shadow-sm rounded overflow-hidden h-100 d-flex flex-row">
+                <div class="p-3 flex-grow-1">
+                    <h3 class="h5 fw-semibold text-dark text-truncate">{{ data.schoolName }}</h3>
+                    <p class="text-muted small">{{ data.schoolType }}</p>
+                    <p class="text-muted small text-truncate">{{ data.schoolAddress }}</p>
+                    <p class="text-muted small">{{ data.schoolDistance }}</p>
+                </div>
+                <div class="bg-light d-flex align-items-center justify-content-center p-3" style="width: 33%;">
+                    <div class="text-center">
+                        <h1 class="display-4 fw-bold text-success">{{ data.schoolRating }}</h1>
+                        <span class="text-muted small">Out of 10</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

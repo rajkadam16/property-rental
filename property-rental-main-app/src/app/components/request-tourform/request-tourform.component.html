@@ -1,76 +1,75 @@
 <div class="modal fade" id="requestTour" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header bg-gray-100">
-        <h5 class="modal-title font-semibold text-gray-700" id="fileModalLabel">Apartment Name</h5>
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-semibold text-dark" id="fileModalLabel">Apartment Name</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="bg-[#f2f2f2] p-6 rounded-lg shadow-lg">
-          <div>
-            <form [formGroup]="requestTourForm" (ngSubmit)="onSubmit();sendEmail()">
-              <div class="flex gap-4 mb-4 text-black">
-                <input type="text" placeholder="First name" formControlName="firstName" class="pl-3 py-2 border border-gray-300 rounded-md w-1/2 shadow-sm focus:outline-none focus:border-green-700 transition duration-200"/>
-                <span class="text-red-500" *ngIf="requestTourForm.controls['firstName'].touched && requestTourForm.controls['firstName'].hasError('required')">First name is required</span>
-                <span class="text-red-500" *ngIf="requestTourForm.controls['firstName'].touched && requestTourForm.controls['firstName'].hasError('maxlength')">First name must be less than 30 characters</span>
-                <input type="text" placeholder="Last name" formControlName="lastName" class="pl-3 py-2 border border-gray-300 rounded-md w-1/2 shadow-sm focus:outline-none focus:border-green-700 transition duration-200"/>
-                <span class="text-red-500" *ngIf="requestTourForm.controls['lastName'].touched && requestTourForm.controls['lastName'].hasError('required')">Last name is required</span>
-                <span class="text-red-500" *ngIf="requestTourForm.controls['lastName'].touched && requestTourForm.controls['lastName'].hasError('maxlength')">Last name must be less than 30 characters</span>
+        <div class="bg-light p-4 rounded shadow">
+          <form [formGroup]="requestTourForm" (ngSubmit)="onSubmit();sendEmail()">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <input type="text" placeholder="First name" formControlName="firstName" 
+                       class="form-control" />
+                <small class="text-danger" *ngIf="requestTourForm.controls['firstName'].touched && requestTourForm.controls['firstName'].hasError('required')">First name is required</small>
+                <small class="text-danger" *ngIf="requestTourForm.controls['firstName'].touched && requestTourForm.controls['firstName'].hasError('maxlength')">First name must be less than 30 characters</small>
               </div>
-              <div class="mb-4">
-                <input type="email" placeholder="Email Address" formControlName="email" class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200"/>
-                <span class="text-red-500" *ngIf="requestTourForm.controls['email'].touched && requestTourForm.controls['email'].hasError('email')">Please enter a valid email address</span>
-                <span class="text-red-500" *ngIf="requestTourForm.controls['email'].touched && requestTourForm.controls['email'].hasError('required')">Email is required</span>
+              <div class="col-md-6">
+                <input type="text" placeholder="Last name" formControlName="lastName" 
+                       class="form-control" />
+                <small class="text-danger" *ngIf="requestTourForm.controls['lastName'].touched && requestTourForm.controls['lastName'].hasError('required')">Last name is required</small>
+                <small class="text-danger" *ngIf="requestTourForm.controls['lastName'].touched && requestTourForm.controls['lastName'].hasError('maxlength')">Last name must be less than 30 characters</small>
               </div>
-              <div class="flex gap-4 mb-4">
-                <div class="w-1/2 text-black">
-                  <p class="text-sm mb-1">Preferred date</p>
-                  <input type="date" formControlName="date" class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200"/>
-                  <span class="text-red-500" *ngIf="requestTourForm.controls['date'].touched && requestTourForm.controls['date'].hasError('required')">Date is required</span>
-                </div>
-                <div class="w-1/2 text-black">
-                  <p class="text-sm mb-1">Contact no</p>
-                  <input type="tel" id="phone" formControlName="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="pl-3 py-2 border border-gray-300 rounded-md w-full shadow-sm focus:outline-none focus:border-green-700 transition duration-200"/>
-                  <span class="text-red-500" *ngIf="requestTourForm.controls['phone'].touched && requestTourForm.controls['phone'].hasError('required')">Phone number is required</span>
-                </div>
+            </div>
+            <div class="mb-3">
+              <input type="email" placeholder="Email Address" formControlName="email" 
+                     class="form-control" />
+              <small class="text-danger" *ngIf="requestTourForm.controls['email'].touched && requestTourForm.controls['email'].hasError('email')">Please enter a valid email address</small>
+              <small class="text-danger" *ngIf="requestTourForm.controls['email'].touched && requestTourForm.controls['email'].hasError('required')">Email is required</small>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Preferred date</label>
+                <input type="date" formControlName="date" class="form-control" />
+                <small class="text-danger" *ngIf="requestTourForm.controls['date'].touched && requestTourForm.controls['date'].hasError('required')">Date is required</small>
               </div>
-              <div class="mb-4 text-black">
-                <p class="text-sm mb-2">I would like to...</p>
-                <div class="flex flex-wrap gap-4">
-                  <label class="flex items-center space-x-2">
-                    <input type="checkbox" value="schedule a tour" class="form-checkbox text-green-600"/>
-                    <span>Schedule a tour</span>
-                  </label>
-                  <label class="flex items-center space-x-2">
-                    <input type="checkbox" value="Request Application" class="form-checkbox text-green-600"/>
-                    <span>Request Application</span>
-                  </label>
-                  <label class="flex items-center space-x-2">
-                    <input type="checkbox" value="Confirm availability" class="form-checkbox text-green-600"/>
-                    <span>Confirm availability</span>
-                  </label>
-                  <label class="flex items-center space-x-2">
-                    <input type="checkbox" value="Custom Message" class="form-checkbox text-green-600"/>
-                    <span>Custom Message</span>
-                  </label>
-                </div>
+              <div class="col-md-6">
+                <label class="form-label">Contact no</label>
+                <input type="tel" id="phone" formControlName="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                       class="form-control" />
+                <small class="text-danger" *ngIf="requestTourForm.controls['phone'].touched && requestTourForm.controls['phone'].hasError('required')">Phone number is required</small>
               </div>
-              <div class="text-center bg-slate-600 text-white py-2 rounded-md shadow-sm hover:bg-slate-700 transition duration-200">
-                <button type="submit" [disabled]="requestTourForm.invalid">Send Message</button>
+            </div>
+            <div class="mb-3">
+              <p class="form-label">I would like to...</p>
+              <div class="form-check">
+                <input type="checkbox" value="schedule a tour" class="form-check-input" id="scheduleTour" />
+                <label class="form-check-label" for="scheduleTour">Schedule a tour</label>
               </div>
-              <div class="text-xs mt-4 text-black">
-                <label class="flex items-center space-x-2">
-                  <input type="checkbox" value="Email me listings and apartments related info" formControlName="acceptTerms" class="form-checkbox text-green-600"/>
-                  <span class="text-red-500" *ngIf="requestTourForm.controls['acceptTerms'].touched && requestTourForm.controls['acceptTerms'].hasError('required')">You must accept the terms and conditions</span>
-                  <span>Email me listings and apartments related info</span>
-                </label>
+              <div class="form-check">
+                <input type="checkbox" value="Request Application" class="form-check-input" id="requestApp" />
+                <label class="form-check-label" for="requestApp">Request Application</label>
               </div>
-            </form>
-          </div>
+              <div class="form-check">
+                <input type="checkbox" value="Confirm availability" class="form-check-input" id="confirmAvail" />
+                <label class="form-check-label" for="confirmAvail">Confirm availability</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" value="Custom Message" class="form-check-input" id="customMessage" />
+                <label class="form-check-label" for="customMessage">Custom Message</label>
+              </div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" [disabled]="requestTourForm.invalid">Send Message</button>
+            </div>
+            <div class="form-check mt-3">
+              <input type="checkbox" value="Email me listings and apartments related info" formControlName="acceptTerms" class="form-check-input" id="acceptTerms" />
+              <label class="form-check-label" for="acceptTerms">Email me listings and apartments related info</label>
+              <small class="text-danger" *ngIf="requestTourForm.controls['acceptTerms'].touched && requestTourForm.controls['acceptTerms'].hasError('required')">You must accept the terms and conditions</small>
+            </div>
+          </form>
         </div>
-      </div>
-      <div class="modal-footer bg-gray-100">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

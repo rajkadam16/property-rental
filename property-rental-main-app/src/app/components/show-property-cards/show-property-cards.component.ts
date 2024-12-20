@@ -15,7 +15,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShowPropertyCardsComponent implements OnInit, OnDestroy {
-  pageSize = 2;
+  pageSize = 4;
   currentPage = 1;
   products: any[] = [];
   searchText: any;
