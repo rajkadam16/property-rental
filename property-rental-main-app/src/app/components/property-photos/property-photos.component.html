@@ -1,3 +1,3 @@
-<div class="px-5 flex flex-row flex-wrap gap-5 items-center justify-center" *ngFor="let photo of photos">
-    <img *ngIf="photo.isEnabled" class="image-item" [src]="photo.url" alt="">
+<div class="d-flex flex-wrap justify-content-center gap-4 p-4" *ngFor="let photo of photos">
+    <img *ngIf="photo.isEnabled" class="img-thumbnail" [src]="photo.url" alt="Photo" style="height: auto;">
 </div>

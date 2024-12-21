@@ -1,5 +1,4 @@
 import { Component, Input} from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-property-cards',
@@ -9,12 +8,5 @@ import { Router } from '@angular/router';
 export class PropertyCardsComponent {
 @Input() index: any;
 @Input() propertyCard!: any;
-constructor(private router: Router) {}
-redirectToDetails() {
-  this.router.navigate(['/propertydetails', this.propertyCard.id]);
-}
-
-
-
 } 
  
