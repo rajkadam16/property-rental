@@ -229,7 +229,47 @@
       "btn1": "  Request Tour",
       "btn2": "Send Message",
       "phone": "(708) 725-1991"
-    }
+    },
+
+    "propertyFloorPlanMedia":{
+      "images": [
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/i2/z-iRWML2hawokBVtodo9PJ2OxJ3zM7Es9KBO22OYDDs/116/the-residences-at-newcity-chicago-il-primary-photo.jpg?p=1"
+          },
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/m2/6ae0hgfTwbRpJ8mc7Vmmfwky_HtpcY0_WXkQio1tMnI/H330W495/the-residences-at-newcity-chicago-il-map-image-of-the-property.jpg?p=1"
+          },
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/i2/_Qt9EN0ilnfgv0qWNnGgUPoVQ8RTmItxAigACWVxxIo/111/the-residences-at-newcity-chicago-il-building-photo.jpg?p=1"
+          },
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/m2/6ae0hgfTwbRpJ8mc7Vmmfwky_HtpcY0_WXkQio1tMnI/H330W495/the-residences-at-newcity-chicago-il-map-image-of-the-property.jpg?p=1"
+          },
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/i2/4m3YPfvRJv3wvMOawOVKgasEvT2qrXeaq9crfyNt9qw/111/the-residences-at-newcity-chicago-il-building-photo.jpg?p=1"
+          }
+      ],
+
+      "floorPlan": [
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/114/presidential-towers-chicago-il-floorplan.png?p=1"
+          },
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/114/presidential-towers-chicago-il-floorplan.png?p=1"
+          },
+          {
+              "isEnabled": true,
+              "url": "https://images1.apartments.com/i2/-13mgxk-sY6JKTOZ-0qykavwDjkORAs7lNVS4aGU_XU/114/presidential-towers-chicago-il-floorplan.png?p=1"
+          }
+      ]
+  }
   },
   {
     "id": 2

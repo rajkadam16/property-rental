@@ -2,12 +2,12 @@
 
     {
         "isEnabled": true,
-        "displayname":"Manage Rentals",
+        "displayname":"Home",
         "routerLink":"/"
     },
     {
         "isEnabled": true,
-        "displayname":"List a Property",
+        "displayname":"Find Property",
         "routerLink":"PropertyMapView"
     },
     {

@@ -28,25 +28,7 @@ export class PropertyMediaViewerComponent {
     components: [
       PropertyFloorPlanComponent
     ]
-  },
-  {
-    id: "virtual",
-    displayName: "Virtual",
-    defaultActive: "",
-    selected: false,
-    components: [
-      PropertyVirtualToursComponent
-    ]
-  },
-  {
-    id: "video",
-    displayName: "Video",
-    defaultActive: "",
-    selected: false,
-    components: [
-      PropertyVideosComponent
-    ]
-  },
+  }
   ];
 }
      
