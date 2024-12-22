@@ -11,9 +11,44 @@
       </div>
       <div class="mt-1 text-muted">{{appartmentData.propertyArea}}</div>
       <div class="d-flex gap-3 mt-4">
-        <button routerLink="/PropertyMediaView" class="btn btn-outline-success">
-          Tour This Floor Plan
+
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Show floor plan details
         </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-light">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="text-light  p-4">
+                  <div class="text-center mb-4">
+                      <h1 class="fw-bold display-5 text-black">
+                        {{appartmentData.propertyName}}
+                      </h1>
+                  </div>
+                  <div class="tabs">
+                   
+                          <div class="card-body ">
+                              <p class="card-text mb-0">   
+                                  <app-tabs [data]="tableDataList"></app-tabs>
+                              </p>
+                          </div>
+                      
+                  </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
     <div>
