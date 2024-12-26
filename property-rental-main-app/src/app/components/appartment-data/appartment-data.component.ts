@@ -9,9 +9,11 @@ import { TabModel } from 'src/app/core/models/interface';
   styleUrls: ['./appartment-data.component.css']
 })
 export class AppartmentDataComponent {
-@Input("data") appartmentData:any;
+@Input("data") apartmentData:any;
 @Input("unitsData") unitData:any;
-@Input("floorplandetails") floordetails:any;
+@Input("floorplandetails") floorDetails:any;
+isFloorPlanVisible: boolean = false;
+isModalOpen: boolean = false;
 
  tableDataList: TabModel[] = [{
     id: "photo",

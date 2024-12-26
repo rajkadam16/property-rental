@@ -7,6 +7,6 @@ import { Component, Input} from '@angular/core';
 })
 export class PropertyCardsComponent {
 @Input() index: any;
-@Input() propertyCard!: any;
+@Input() propertyCard: any;
 } 
  

@@ -1,16 +1,35 @@
-<div class="text-light  p-4">
+<div class="text-light p-4 absolute bg-white h-[100vh] w-[168vh] top-0 z-10">
+<div class="flex justify-between">
     <div class="text-center mb-4">
-        <h1 class="fw-bold display-5">
-            The Residences at NewCity
-        </h1>
+        <h1 class="fw-bold display-5 text-black">The Residences at NewCity</h1>
     </div>
+    <div>
+        <button type="button" class="btn btn-secondary" routerLink="/propertydetails/">
+            Close
+        </button>
+    </div>
+</div>
     <div class="tabs">
-        <div class="card  border-0 shadow">
-            <div class="card-body ">
-                <p class="card-text mb-0">   
-                    <app-tabs [data]="tableDataList"></app-tabs>
-                </p>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-fill mb-3" id="myTab" role="tablist">
+            <li *ngFor="let tabData of tabDataList" class="nav-item" role="presentation">
+                <a class="nav-link active" [class.active]="tabData.defaultActive" id="{{ tabData.id }}-tab"
+                    data-mdb-tab-init data-bs-toggle="tab" [attr.data-bs-target]="'#' + tabData.id" type="button"
+                    role="tab" [attr.aria-controls]="tabData.id" [attr.aria-selected]="tabData.selected">
+                    {{ tabData.displayName }}
+                </a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content" id="myTabContent">
+            <div *ngFor="let tabData of tabDataList" class="tab-pane fade show  {{ tabData.defaultActive }}"
+                id="{{ tabData.id }}" role="tabpanel" [attr.aria-labelledby]="tabData.id + '-tab'">
+                <ng-container *ngFor="let component of tabData.components">
+                    <ng-container *ngComponentOutlet="component"></ng-container>
+                </ng-container>
             </div>
         </div>
+
     </div>
 </div>

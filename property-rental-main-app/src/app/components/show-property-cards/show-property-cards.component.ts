@@ -29,9 +29,7 @@ export class ShowPropertyCardsComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    const propertyData = this.apartmentService
-      .getProducts()
-      .subscribe((data) => {
+    const propertyData = this.apartmentService.getProducts().subscribe((data) => {
         this.products = data;
         this.changeDetectionRef.detectChanges();
       });
