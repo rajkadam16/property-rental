@@ -2,59 +2,23 @@
   <div class="d-flex justify-content-between">
     <div>
       <div class="property-location small mb-2 text-muted">
-        {{appartmentData.locationhierarchy}}
+        {{ apartmentData.locationhierarchy }}
       </div>
-      <h1 class="h4 fw-bold">{{appartmentData.propertyName}}</h1>
-      <p class="mt-1 h6">{{appartmentData.propertyLocation}}</p>
+      <h1 class="h1 fw-bold">{{ apartmentData.propertyName }}</h1>
+      <p class="mt-1 h6">{{ apartmentData.propertyLocation }}</p>
       <div class="mt-2 h5 fw-bold text-secondary">
-        {{appartmentData.propertyPrice}}
+        {{ apartmentData.propertyPrice }}
       </div>
-      <div class="mt-1 text-muted">{{appartmentData.propertyArea}}</div>
+      <div class="mt-1 text-muted">{{ apartmentData.propertyArea }}</div>
       <div class="d-flex gap-3 mt-4">
-
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Show floor plan details
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" routerLink="PropertyMediaView">
+          Floor media
         </button>
-        
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header bg-light">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Floor Plan</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <div class="text-light  p-4">
-                  <div class="text-center mb-4">
-                      <h1 class="fw-bold display-5 text-black">
-                        {{appartmentData.propertyName}}
-                      </h1>
-                  </div>
-                  <div class="tabs">
-                   
-                          <div class="card-body ">
-                              <p class="card-text mb-0">   
-                                  <app-tabs [data]="tableDataList"></app-tabs>
-                              </p>
-                          </div>
-                      
-                  </div>
-              </div>
-              
-              </div>
-            </div>
-          </div>
-        </div>
-
-
       </div>
     </div>
     <div>
       <a href="#">
-        <div class="rounded bg-cover bg-no-repeat"
-          style="width: 160px; height: 128px; background-image: url({{appartmentData.propertyOverViewImage}});"></div>
+        <div class="rounded bg-cover bg-no-repeat" style="width: 260px; height:100%; background-image: url({{apartmentData.propertyOverViewImage}});"></div>
       </a>
     </div>
   </div>
@@ -70,13 +34,13 @@
     </button>
 
     <div class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg">
-      <p class="text-sm font-bold text-gray-900">{{floordetails.heading}}</p>
+      <p class="text-sm font-bold text-gray-900">{{ floorDetails.heading }}</p>
       <div class="d-flex gap-4 mt-4 text-secondary">
-        <ul class="list-unstyled ps-3 mb-0" *ngFor="let item of floordetails.features.slice(0,3)">
-          <li>{{item.value}}</li>
+        <ul class="list-unstyled ps-3 mb-0" *ngFor="let item of floorDetails.features.slice(0, 3)">
+          <li>{{ item.value }}</li>
         </ul>
-        <ul class="list-unstyled ps-3 mb-0" *ngFor="let item of floordetails.features.slice(3)">
-          <li>{{item.value}}</li>
+        <ul class="list-unstyled ps-3 mb-0" *ngFor="let item of floorDetails.features.slice(3)">
+          <li>{{ item.value }}</li>
         </ul>
       </div>
     </div>
@@ -84,12 +48,12 @@
 
   <div class="mt-4">
     <p class="h5 fw-bold mb-3">Units Available</p>
-    <hr class="mb-3">
+    <hr class="mb-3" />
 
     <details class="border rounded p-3">
       <summary class="d-flex justify-content-between fw-semibold">
         <span *ngFor="let item of unitData.propertyunitscol" class="text-dark">
-          {{item.value}}
+          {{ item.value }}
         </span>
       </summary>
     </details>
@@ -97,22 +61,22 @@
     <div class="mt-4">
       <details class="border rounded p-3 mb-3" *ngFor="let item of unitData.unitsdata">
         <summary class="d-flex justify-content-between text-primary fw-bold cursor-pointer">
-          <span>{{item.unit}}</span>
-          <span>{{item.price}}</span>
-          <span>{{item.squarefit}}</span>
-          <span>{{item.Availability}}</span>
+          <span>{{ item.unit }}</span>
+          <span>{{ item.price }}</span>
+          <span>{{ item.squarefit }}</span>
+          <span>{{ item.Availability }}</span>
         </summary>
         <div class="mt-3 text-muted small">
           <p class="fw-bold">Highlights:</p>
           <ul class="row list-unstyled g-2">
             <li class="col-6" *ngFor="let data of item.features">
-              {{data.value}}
+              {{ data.value }}
             </li>
           </ul>
           <p class="mt-3 fw-bold">Kitchen Features:</p>
           <ul class="row list-unstyled g-2">
             <li class="col-6" *ngFor="let data of item.KitchenFeatures">
-              {{data.value}}
+              {{ data.value }}
             </li>
           </ul>
         </div>
@@ -120,3 +84,5 @@
     </div>
   </div>
 </div>
+
+<router-outlet></router-outlet>

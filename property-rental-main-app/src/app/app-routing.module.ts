@@ -14,10 +14,12 @@ const routes: Routes = [
   {
     path: 'propertydetails/:id',
     component: PropertyDataComponent,
-  },
-  {
-    path: 'PropertyMediaView',
-    component: PropertyMediaViewerComponent,
+    children: [
+      {
+        path: 'PropertyMediaView',
+        component: PropertyMediaViewerComponent,
+      },
+      ]
   },
 
   {

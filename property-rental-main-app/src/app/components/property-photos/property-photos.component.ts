@@ -9,13 +9,12 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 })
 export class PropertyPhotosComponent implements OnInit {
   photos:any[]=[]
-  // dataResponse:string|undefined;
   constructor(private readonly photo: CommonUtilitiesService) { }
   
   ngOnInit(): void {
-    this.photo.parseJsonFile(api.propertyImgVid).subscribe((res: any) => {
-      this.photos = res.images;
-    });
+   this.photo.getProducts().subscribe((data) => {
+      this.photos = data;
+    } );
 
   }
   
