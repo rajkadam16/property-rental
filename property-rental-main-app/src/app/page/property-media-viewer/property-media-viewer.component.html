@@ -1,35 +1,72 @@
-<div class="text-light p-4 absolute bg-white h-[100vh] w-[168vh] top-0 z-10">
-<div class="flex justify-between">
-    <div class="text-center mb-4">
-        <h1 class="fw-bold display-5 text-black">The Residences at NewCity</h1>
+<div class="bg-white text-light p-4 fixed inset-0 z-10 shadow-lg overflow-auto">
+    <!-- Header Section -->
+    <div class="flex justify-between items-center border-b pb-3">
+        <div class="text-center w-full">
+            <h1 class="fw-bold text-xl text-gray-800">The Residences at NewCity</h1>
+        </div>
+        <div class="absolute right-4">
+            <button 
+                type="button" 
+                class="btn btn-outline-secondary rounded-pill px-4" 
+                routerLink="/propertydetails/" 
+                (click)="goBack()">
+                Close
+            </button>
+        </div>
     </div>
-    <div>
-        <button type="button" class="btn btn-secondary" routerLink="/propertydetails/">
-            Close
-        </button>
-    </div>
-</div>
-    <div class="tabs">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs nav-fill mb-3" id="myTab" role="tablist">
-            <li *ngFor="let tabData of tabDataList" class="nav-item" role="presentation">
-                <a class="nav-link active" [class.active]="tabData.defaultActive" id="{{ tabData.id }}-tab"
-                    data-mdb-tab-init data-bs-toggle="tab" [attr.data-bs-target]="'#' + tabData.id" type="button"
-                    role="tab" [attr.aria-controls]="tabData.id" [attr.aria-selected]="tabData.selected">
-                    {{ tabData.displayName }}
-                </a>
+
+    <!-- Tabs Section -->
+    <div class="tabs mt-4">
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button 
+                    class="nav-link active text-gray-800 fw-bold" 
+                    id="photo-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#photo" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="photo" 
+                    aria-selected="true">
+                    Photos
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button 
+                    class="nav-link text-gray-800 fw-bold" 
+                    id="floor-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#floor" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="floor" 
+                    aria-selected="false">
+                    Floor Plan
+                </button>
             </li>
         </ul>
 
-        <!-- Tab panes -->
-        <div class="tab-content" id="myTabContent">
-            <div *ngFor="let tabData of tabDataList" class="tab-pane fade show  {{ tabData.defaultActive }}"
-                id="{{ tabData.id }}" role="tabpanel" [attr.aria-labelledby]="tabData.id + '-tab'">
-                <ng-container *ngFor="let component of tabData.components">
-                    <ng-container *ngComponentOutlet="component"></ng-container>
-                </ng-container>
+        <!-- Tab Content -->
+        <div class="tab-content bg-light rounded-lg shadow-sm p-3" id="myTabContent">
+            <div 
+                class="tab-pane fade show active" 
+                id="photo" 
+                role="tabpanel" 
+                aria-labelledby="photo-tab">
+             
+                    <app-property-photos></app-property-photos>
+             
+            </div>
+            <div 
+                class="tab-pane fade" 
+                id="floor" 
+                role="tabpanel" 
+                aria-labelledby="floor-tab">
+                
+                    <app-property-floor-plan></app-property-floor-plan>
+          
             </div>
         </div>
-
     </div>
 </div>
