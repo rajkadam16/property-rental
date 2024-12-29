@@ -11,7 +11,7 @@ export class FooterComponent {
   mains:any[]=[]
   sections:any[]=[]
   forms:any[]=[]
-  constructor(private footer3: CommonUtilitiesService) { }
+  constructor(private readonly footer3: CommonUtilitiesService) { }
   
   ngOnInit(): void {
     this.footer3.parseJsonFile(api.footer).subscribe((res: any) => {

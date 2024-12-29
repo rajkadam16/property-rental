@@ -3,11 +3,11 @@
       <div *ngIf="featurette.isEnabled" [class]="featurette.class">
         <div class="col-md-7 order-md-2 my-auto flex flex-col justify-center">
           <h2 class="featurette-heading font-normal leading-tight">
-            {{ featurette.heading1 }}
-            <span class="text-gray-400">{{ featurette.heading2 }}</span>
+            {{ featurette.heading1|| "Not Available"}}
+            <span class="text-gray-400">{{ featurette.heading2 || "Not Available" }}</span>
           </h2>
           <p class="text-lg">
-            {{ featurette.text }}
+            {{ featurette.text|| "Not Available" }}
           </p>
         </div>
         <div class="col-md-5 order-md-2">
