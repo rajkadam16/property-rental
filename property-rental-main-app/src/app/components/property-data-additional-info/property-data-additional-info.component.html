@@ -1,10 +1,10 @@
 <div class="pt-5">
-  <h2 class="text-white fs-2 fw-semibold">{{ propertyInfo.heading }}</h2>
+  <h2 class="text-white fs-2 fw-semibold">{{ propertyInfo.heading || "Not Available"}}</h2>
   <p class="pt-3 text-white">
-    {{ propertyInfo.description }}
+    {{ propertyInfo.description|| "Not Available" }}
   </p>
   <br />
   <p class="text-white">
-    {{ propertyInfo.details }}
+    {{ propertyInfo.details || "Not Available"}}
   </p>
 </div>

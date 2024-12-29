@@ -10,7 +10,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 export class FeaturetteComponent {
   featuretteData: any[] = [];
   faqData: any[] = [];
-  constructor(private featurette: CommonUtilitiesService) { }
+  constructor(private readonly featurette: CommonUtilitiesService) { }
 
   ngOnInit(): void {
     this.featurette.parseJsonFile(api.featurette).subscribe((res: any) => {

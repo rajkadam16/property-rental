@@ -19,7 +19,6 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MapComponent } from './components/map/map.component';
 import { PropertyDataComponent } from './page/property-data/property-data.component';
 import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
-import { TabsComponent } from './components/tabs/tabs.component';
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
 import { PropertyFloorPlanComponent } from './components/property-floor-plan/property-floor-plan.component';
 
@@ -58,7 +57,6 @@ import { ContactPropertyComponent } from './components/contact-property/contact-
     MapComponent,
     PropertyDataComponent,
     PropertyMediaViewerComponent,
-    TabsComponent,
     PropertyPhotosComponent,
     PropertyFloorPlanComponent,
     PropertyCardsComponent,
@@ -66,7 +64,6 @@ import { ContactPropertyComponent } from './components/contact-property/contact-
     ShowPropertyCardsComponent,
     SubNavbarComponent,
     FilterCardsPipe,
-    TabsComponent,
     PropertyMapViewComponent,
     ContactUsComponent,
     DropDownPipe,

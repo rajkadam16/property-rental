@@ -2,14 +2,14 @@
   <div class="d-flex justify-content-between">
     <div>
       <div class="property-location small mb-2 text-muted">
-        {{ apartmentData.locationhierarchy }}
+        {{ apartmentData.locationhierarchy || "Not Available" }}
       </div>
-      <h1 class="h1 fw-bold">{{ apartmentData.propertyName }}</h1>
-      <p class="mt-1 h6">{{ apartmentData.propertyLocation }}</p>
+      <h1 class="h1 fw-bold">{{ apartmentData.propertyName || "Not Available" }}</h1>
+      <p class="mt-1 h6">{{ apartmentData.propertyLocation || "Not Available" }}</p>
       <div class="mt-2 h5 fw-bold text-secondary">
-        {{ apartmentData.propertyPrice }}
+        {{ apartmentData.propertyPrice || "Not Available" }}
       </div>
-      <div class="mt-1 text-muted">{{ apartmentData.propertyArea }}</div>
+      <div class="mt-1 text-muted">{{ apartmentData.propertyArea  || "Not Available"}}</div>
       <div class="d-flex gap-3 mt-4">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" routerLink="PropertyMediaView/{{apartmentData.id}}">
           Floor media
@@ -34,13 +34,13 @@
     </button>
 
     <div class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg">
-      <p class="text-sm font-bold text-gray-900">{{ floorDetails.heading }}</p>
+      <p class="text-sm font-bold text-gray-900">{{ floorDetails.heading || "Not Available"}}</p>
       <div class="d-flex gap-4 mt-4 text-secondary">
         <ul class="list-unstyled ps-3 mb-0" *ngFor="let item of floorDetails.features.slice(0, 3)">
-          <li>{{ item.value }}</li>
+          <li>{{ item.value  || "Not Available"}}</li>
         </ul>
         <ul class="list-unstyled ps-3 mb-0" *ngFor="let item of floorDetails.features.slice(3)">
-          <li>{{ item.value }}</li>
+          <li>{{ item.value  || "Not Available"}}</li>
         </ul>
       </div>
     </div>
@@ -53,7 +53,7 @@
     <details class="border rounded p-3">
       <summary class="d-flex justify-content-between fw-semibold">
         <span *ngFor="let item of unitData.propertyunitscol" class="text-dark">
-          {{ item.value }}
+          {{ item.value || "Not Available" }}
         </span>
       </summary>
     </details>
@@ -61,22 +61,22 @@
     <div class="mt-4">
       <details class="border rounded p-3 mb-3" *ngFor="let item of unitData.unitsdata">
         <summary class="d-flex justify-content-between text-primary fw-bold cursor-pointer">
-          <span>{{ item.unit }}</span>
-          <span>{{ item.price }}</span>
-          <span>{{ item.squarefit }}</span>
-          <span>{{ item.Availability }}</span>
+          <span>{{ item.unit || "Not Available" }}</span>
+          <span>{{ item.price  || "Not Available"}}</span>
+          <span>{{ item.squarefit|| "Not Available"}}</span>
+          <span>{{ item.Availability|| "Not Available" }}</span>
         </summary>
         <div class="mt-3 text-muted small">
           <p class="fw-bold">Highlights:</p>
           <ul class="row list-unstyled g-2">
             <li class="col-6" *ngFor="let data of item.features">
-              {{ data.value }}
+              {{ data.value|| "Not Available" }}
             </li>
           </ul>
           <p class="mt-3 fw-bold">Kitchen Features:</p>
           <ul class="row list-unstyled g-2">
             <li class="col-6" *ngFor="let data of item.KitchenFeatures">
-              {{ data.value }}
+              {{ data.value || "Not Available"}}
             </li>
           </ul>
         </div>

@@ -12,26 +12,5 @@ export class AppartmentDataComponent {
 @Input("data") apartmentData:any;
 @Input("unitsData") unitData:any;
 @Input("floorplandetails") floorDetails:any;
-isFloorPlanVisible: boolean = false;
-isModalOpen: boolean = false;
-
- tableDataList: TabModel[] = [{
-    id: "photo",
-    displayName: "Photos",
-    defaultActive: "active",
-    selected: true,
-    components: [
-      PropertyPhotosComponent
-    ]
-  },
-  {
-    id: "floor",
-    displayName: "Floor",
-    defaultActive: "",
-    selected: false,
-    components: [
-      PropertyFloorPlanComponent
-    ]
-  }
-  ];
+;
 }

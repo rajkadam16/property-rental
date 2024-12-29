@@ -3,12 +3,12 @@
       <h2 class="accordion-header" id="heading{{i}}">
         <button class="accordion-button" [ngClass]="{'collapsed': !faqs.isOpen}" type="button"
           (click)="togglePanel(faqs)">
-          {{ faqs.question }}
+          {{ faqs.question|| "Not Available" }}
         </button>
       </h2>
       <div [ngClass]="{'collapse': !faqs.isOpen, 'show': faqs.isOpen}" class="accordion-collapse collapse">
         <div class="accordion-body text-white ">
-          {{ faqs.answer }}
+          {{ faqs.answer || "Not Available"}}
         </div>
       </div>
     </div>
