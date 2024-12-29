@@ -22,8 +22,7 @@ import { PropertyMediaViewerComponent } from './page/property-media-viewer/prope
 import { TabsComponent } from './components/tabs/tabs.component';
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
 import { PropertyFloorPlanComponent } from './components/property-floor-plan/property-floor-plan.component';
-import { PropertyVirtualToursComponent } from './components/property-virtual-tours/property-virtual-tours.component';
-import { PropertyVideosComponent } from './components/property-videos/property-videos.component';
+
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PropertyCardsComponent } from './components/property-cards/property-cards.component';
 import { ShowPropertyCardsComponent } from './components/show-property-cards/show-property-cards.component';
@@ -62,8 +61,6 @@ import { ContactPropertyComponent } from './components/contact-property/contact-
     TabsComponent,
     PropertyPhotosComponent,
     PropertyFloorPlanComponent,
-    PropertyVirtualToursComponent,
-    PropertyVideosComponent,
     PropertyCardsComponent,
     PropertyMediaViewerComponent,
     ShowPropertyCardsComponent,

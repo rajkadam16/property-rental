@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { api } from 'src/app/core/constant/api/api';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({

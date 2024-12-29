@@ -16,7 +16,7 @@ const routes: Routes = [
     component: PropertyDataComponent,
     children: [
       {
-        path: 'PropertyMediaView',
+        path: 'PropertyMediaView/:id',
         component: PropertyMediaViewerComponent,
       },
       ]
