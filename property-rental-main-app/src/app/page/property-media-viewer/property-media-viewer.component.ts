@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
+import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 
 @Component({
@@ -9,13 +10,18 @@ import { Location } from '@angular/common';
 })
 export class PropertyMediaViewerComponent {
 
-  @Input("propertyName") propertyName:any;
+  @Input("propertymedia") propertymedia:any;
   @Input("media") mediaData:any;
 
 
-constructor(private readonly location: Location){}
-goBack() {
+constructor(private readonly location: Location,
+){}
+backToPreviwsPage() {
   this.location.back(); 
   }
+
+
+  
+
 }
      
