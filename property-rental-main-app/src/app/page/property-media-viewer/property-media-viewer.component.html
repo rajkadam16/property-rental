@@ -5,11 +5,8 @@
             <h1 class="fw-bold text-xl text-gray-800">The Residences at NewCity</h1>
         </div>
         <div class="absolute right-4">
-            <button 
-                type="button" 
-                class="btn btn-outline-secondary rounded-pill px-4" 
-                routerLink="/propertydetails/" 
-                (click)="goBack()">
+            <button type="button" class="btn btn-outline-secondary rounded-pill px-4" routerLink="/propertydetails/"
+                (click)="backToPreviwsPage()">
                 Close
             </button>
         </div>
@@ -20,28 +17,14 @@
         <!-- Navigation Tabs -->
         <ul class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button 
-                    class="nav-link active text-gray-800 fw-bold" 
-                    id="photo-tab" 
-                    data-bs-toggle="tab" 
-                    data-bs-target="#photo" 
-                    type="button" 
-                    role="tab" 
-                    aria-controls="photo" 
-                    aria-selected="true">
+                <button class="nav-link active text-gray-800 fw-bold" id="photo-tab" data-bs-toggle="tab"
+                    data-bs-target="#photo" type="button" role="tab" aria-controls="photo" aria-selected="true">
                     Photos
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button 
-                    class="nav-link text-gray-800 fw-bold" 
-                    id="floor-tab" 
-                    data-bs-toggle="tab" 
-                    data-bs-target="#floor" 
-                    type="button" 
-                    role="tab" 
-                    aria-controls="floor" 
-                    aria-selected="false">
+                <button class="nav-link text-gray-800 fw-bold" id="floor-tab" data-bs-toggle="tab"
+                    data-bs-target="#floor" type="button" role="tab" aria-controls="floor" aria-selected="false">
                     Floor Plan
                 </button>
             </li>
@@ -49,23 +32,18 @@
 
         <!-- Tab Content -->
         <div class="tab-content bg-light rounded-lg shadow-sm p-3" id="myTabContent">
-            <div 
-                class="tab-pane fade show active" 
-                id="photo" 
-                role="tabpanel" 
-                aria-labelledby="photo-tab">
-             
-                    <app-property-photos></app-property-photos>
-             
+            <div class="tab-pane fade show active" id="photo" role="tabpanel" aria-labelledby="photo-tab">
+
+
+                <app-image-carousel ></app-image-carousel>
+
             </div>
-            <div 
-                class="tab-pane fade" 
-                id="floor" 
-                role="tabpanel" 
-                aria-labelledby="floor-tab">
-                
-                    <app-property-floor-plan></app-property-floor-plan>
-          
+            <div class="tab-pane fade" id="floor" role="tabpanel" aria-labelledby="floor-tab">
+
+
+                <app-image-carousel ></app-image-carousel>
+
+
             </div>
         </div>
     </div>
