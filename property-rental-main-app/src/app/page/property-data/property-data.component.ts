@@ -9,6 +9,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 })
 export class PropertyDataComponent implements OnInit {
   product: any[] = [];
+  propertymedias:any[]=[];
   AboutPropertyTowers:any[]=[];
   NeighborhoodDatas:any[]=[];
   propertySchoolDatas:any[]=[];
@@ -29,6 +30,7 @@ export class PropertyDataComponent implements OnInit {
     const productId = Number(this.route.snapshot.paramMap.get('id'));
     this.productService.getProductById(productId).subscribe((product) => {
       this.product = product;
+      this.propertymedias = product.propertydata;
       this.AboutPropertyTowers = product.AboutProperty;
       this.NeighborhoodDatas = product.NeighborhoodData;
       this.propertySchoolDatas = product.propertySchoolData;

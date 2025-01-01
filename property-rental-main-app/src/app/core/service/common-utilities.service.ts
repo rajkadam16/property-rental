@@ -6,9 +6,9 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root',
 })
 export class CommonUtilitiesService {
-  private jsonUrl = 'assets/master/propertydata.json';
+  private readonly jsonUrl = 'assets/master/propertydata.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {}
 
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.jsonUrl);
@@ -19,12 +19,7 @@ export class CommonUtilitiesService {
       map((products: any[]) => products.find((product) => product.id === id))
     );
   }
-  /**
-   *
-   * @param path  Json file path
-   * @returns returns json Object
-   * @author raj
-   */
+
   parseJsonFile(path: string) {
     return this.http.get(path);
   }
