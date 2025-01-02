@@ -18,6 +18,7 @@ const routes: Routes = [
       {
         path: 'PropertyMediaView',
         component: PropertyMediaViewerComponent,
+        // loadChildren: () => import('./page/property-media-viewer/property-media-viewer.module').then(m => m.PropertyMediaViewerModule)
       },
       ]
   },
@@ -27,7 +28,7 @@ const routes: Routes = [
     component: PropertyMapViewComponent,
   },
   {
-    path: 'contactus',
+    path: 'CC',
     component:ContactUsComponent
   },
   { path: '**', component: PageNotFoundComponent },
