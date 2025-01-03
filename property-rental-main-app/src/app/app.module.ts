@@ -4,12 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomeComponent } from './page/home/home.component';
-import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SearchComponent } from './components/search/search.component';
-import { FaqsComponent } from './components/faqs/faqs.component';
-import { FeaturetteComponent } from './components/featurette/featurette.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -21,7 +16,6 @@ import { PropertyDataComponent } from './page/property-data/property-data.compon
 import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
 import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
 import { PropertyFloorPlanComponent } from './components/property-floor-plan/property-floor-plan.component';
-
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PropertyCardsComponent } from './components/property-cards/property-cards.component';
 import { ShowPropertyCardsComponent } from './components/show-property-cards/show-property-cards.component';
@@ -38,16 +32,13 @@ import { PropertyDataAdditionalInfoComponent } from './components/property-data-
 import { PropertySchoolCardComponent } from './components/property-school-card/property-school-card.component';
 import { AppartmentDataComponent } from './components/appartment-data/appartment-data.component';
 import { ContactPropertyComponent } from './components/contact-property/contact-property.component';
+import { HomeComponent } from './page/home/home.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AppComponent,
-    CardComponent,
     FooterComponent,
-    SearchComponent,
-    FaqsComponent,
-    FeaturetteComponent,
     PageNotFoundComponent,
     LoginComponent,
     SignupComponent,
@@ -72,8 +63,7 @@ import { ContactPropertyComponent } from './components/contact-property/contact-
     PropertyDataAdditionalInfoComponent,
     PropertySchoolCardComponent,
     AppartmentDataComponent,
-    ContactPropertyComponent
-
+    ContactPropertyComponent,
   ],
   imports: [
     FormsModule,

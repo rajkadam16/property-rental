@@ -8,23 +8,6 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  featuretteData: any[] = [];
-  faqData: any[] = [];
-  products: any[] = [];
-  constructor(private readonly data: CommonUtilitiesService) { }
 
-  ngOnInit(): void {
-    this.data.parseJsonFile(api.featurette).subscribe((res: any) => {
-      this.featuretteData = res;
-      this.data.getProducts().subscribe(data => {
-        this.products = data;
-      });
-    });
-
-
-
-
-
-  }
 
 }
