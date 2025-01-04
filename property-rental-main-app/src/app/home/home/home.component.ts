@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class HomeComponent {
   constructor(private readonly data: CommonUtilitiesService) { }
 
   ngOnInit(): void {
-    this.data.parseJsonFile(api.featurette).subscribe((res: any) => {
+    this.data.parseJsonFile(ApiConfig.featurette).subscribe((res: any) => {
       this.featuretteData = res;
       this.data.getProducts().subscribe(data => {
         this.products = data;

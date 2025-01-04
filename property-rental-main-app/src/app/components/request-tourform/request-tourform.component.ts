@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 @Component({
   selector: 'app-request-tourform',
@@ -25,7 +25,7 @@ export class RequestTourformComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.propertyData.parseJsonFile(api.propertyData).subscribe((res: any) => {
+    this.propertyData.parseJsonFile(ApiConfig.propertyData).subscribe((res: any) => {
       this.propertyName = res.name;
     });
   

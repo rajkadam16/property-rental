@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class FaqsComponent {
   constructor(public faq: CommonUtilitiesService) { }
 
   ngOnInit(): void {
-    this.faq.parseJsonFile(api.faqs).subscribe((res: any) => {
+    this.faq.parseJsonFile(ApiConfig.faqs).subscribe((res: any) => {
       this.faqData = res.mainfaqs;
     });
   }

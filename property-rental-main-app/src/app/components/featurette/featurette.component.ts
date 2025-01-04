@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class FeaturetteComponent {
   constructor(private readonly featurette: CommonUtilitiesService) { }
 
   ngOnInit(): void {
-    this.featurette.parseJsonFile(api.featurette).subscribe((res: any) => {
+    this.featurette.parseJsonFile(ApiConfig.featurette).subscribe((res: any) => {
       this.featuretteData = res;
     });
 

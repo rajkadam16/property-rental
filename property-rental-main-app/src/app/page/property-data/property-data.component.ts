@@ -9,7 +9,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 })
 export class PropertyDataComponent implements OnInit {
   product: any[] = [];
-  propertymedias:any[]=[];
+  propertyImgGallery:any={};
   AboutPropertyTowers:any[]=[];
   NeighborhoodDatas:any[]=[];
   propertySchoolDatas:any[]=[];
@@ -19,8 +19,8 @@ export class PropertyDataComponent implements OnInit {
   floorplandetails:any[]=[];
   propertyunitsdatas:any[]=[];
   contactpropertyboxs:any[]=[];
+  propertyFloorPlans:any={};
  
-
   constructor(
     private readonly route: ActivatedRoute,
     private readonly productService: CommonUtilitiesService
@@ -28,19 +28,21 @@ export class PropertyDataComponent implements OnInit {
 
   ngOnInit(): void {
     const productId = Number(this.route.snapshot.paramMap.get('id'));
-    this.productService.getProductById(productId).subscribe((product) => {
-      this.product = product;
-      this.propertymedias = product.propertydata;
-      this.AboutPropertyTowers = product.AboutProperty;
-      this.NeighborhoodDatas = product.NeighborhoodData;
-      this.propertySchoolDatas = product.propertySchoolData;
-      this.UniqueFeaturesOfPropertys = product.UniqueFeaturesOfProperty;
-      this.PropertyAmenities = product.PropertyAmenitie;
-      this.ApartmentFeatures = product.ApartmentFeature;
-      this.floorplandetails = product.floorplandetails;
-      this.propertyunitsdatas = product.propertyunitsdata;
-      this.contactpropertyboxs= product.contactpropertybox;
+    this.productService.getProductById(productId).subscribe((response) => {
+      console.log("PropertyDataComponent > propertyDataService :: > "+JSON.stringify(response));
 
+      this.product = response;
+      this.AboutPropertyTowers = response.AboutProperty;
+      this.NeighborhoodDatas = response.NeighborhoodData;
+      this.propertySchoolDatas = response.propertySchoolData;
+      this.UniqueFeaturesOfPropertys = response.UniqueFeaturesOfProperty;
+      this.PropertyAmenities = response.PropertyAmenitie;
+      this.ApartmentFeatures = response.ApartmentFeature;
+      this.floorplandetails = response.floorplandetails;
+      this.propertyunitsdatas = response.propertyunitsdata;
+      this.contactpropertyboxs= response.contactpropertybox;
+      this.propertyImgGallery = response.propertyImgGallery;
+      this.propertyFloorPlans =response.propertyFloorPlans;
     });
   }
 
