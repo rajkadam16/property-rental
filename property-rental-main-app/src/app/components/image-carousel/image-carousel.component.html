@@ -1,4 +1,4 @@
-<div *ngIf="imageCarousel" [id]="imageCarousel.id" class="carousel slide h-100" data-bs-ride="carousel">
+<div *ngIf="imageCarousel" [id]="imageCarousel.id" class="carousel slide h-100" [attr.data-bs-ride]="imageCarousel.id">
   <div class="carousel-inner h-100">
     <div *ngFor="let image of imageCarousel.images; let i = index" class="carousel-item h-100" [ngClass]="{ 'active': i === 0 }">
       <img [src]="image" class="d-block w-100 h-100" alt="..." />
