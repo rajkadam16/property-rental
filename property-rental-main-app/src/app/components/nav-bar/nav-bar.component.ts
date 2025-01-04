@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class NavBarComponent implements OnInit{
   username:string | undefined;
 constructor(private navbar:CommonUtilitiesService){}
   ngOnInit(): void {
-    this.navbar.parseJsonFile(api.navbar).subscribe((res:any)=>{
+    this.navbar.parseJsonFile(ApiConfig.navbar).subscribe((res:any)=>{
       this.navbarData =res;
     })
   }

@@ -1,30 +1,21 @@
 [
   {
     "id": 1,
-    "propertyImgGallery": {
-      "id": "propertyImgGallery",
-      "images": [
-        "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
-      ]
-    },
-    "propertyPhotos": {
-      "id": "propertyPhotos",
-      "images": [
-        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1"
-      ]
-    },
-    "propertyFloorPlans": {
-      "id": "propertyFloorPlans",
-      "images": [
-        "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
-        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1"
-      ]
-    },
+    "propertyImgGallery": [
+      "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
+    ],
+    "propertyPhotos": [
+      "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1"
+    ],
+    "propertyFloorPlans": [
+      "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
+      "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+      "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1"
+    ],
     "locationhierarchy": "Illinois / Cook County / Chicago / Presidential Towers",
     "propertyName": "Presidential Towers",
     "propertyLocation": "555 W Madison St, Chicago, IL 60661",
@@ -473,5 +464,296 @@
         }
       ]
     }
+  },
+  {
+    "id": 2,
+    "propertydata": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/bgwS-Q6DgT9r07axqkqtDOlE6RMoNg7xWkvSzbXoIqs/116/post-chicago-il-building-photo.jpg?p=1",
+        "https://images1.apartments.com/i2/_yYM5i_ei1y3O0OqWsttqpWp-5mUEAjqP649phOdh2g/116/post-chicago-il-4br-3br.jpg?p=1",
+        "https://images1.apartments.com/i2/AcwXglU0N8Xtse1T9YO_bFaE3R947vLLeYNg3CKxwlU/116/post-chicago-il-3br-2ba---966sf.jpg?p=1"
+      ]
+    },
+    "propertyphoto": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/AcwXglU0N8Xtse1T9YO_bFaE3R947vLLeYNg3CKxwlU/116/post-chicago-il-3br-2ba---966sf.jpg?p=1",
+        "https://images1.apartments.com/i2/wAehc4EJ5RtRyfaWWLMl2ogUIKO9HEN21URjE0eNqEs/116/post-chicago-il-4br-3br.jpg?p=1",
+        "https://images1.apartments.com/i2/CMzT45L_AZh13oq7ryeI3fo8DBQOdSKX2KERMKke3KY/116/post-chicago-il-3br-2ba---966sf.jpg?p=1"
+      ]
+    },
+    "propertyfloorplanphotos": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/X2Fxr-NMklyR_qDy0rqbjgd34o6XE5B2RdOU1yHAymE/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1",
+        "https://images1.apartments.com/i2/fHXWFq_VxvK_fZ6LmJWXwYNN_7WKTbPZdp9l_k_imOk/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1",
+        "https://images1.apartments.com/i2/hQFqe3Vj0HB-3OSv1gciaYmFTbAC_RWHarN2s3OyoUc/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1"
+      ]
+    },
+    "locationhierarchy": "California / Orange County / Irvine / Pine Meadow Apartments",
+    "propertyName": "Pine Meadow Apartments",
+    "propertyLocation": "123 Oak St, Irvine, CA 92612",
+    "propertyPrice": "$2,100 - $4,800",
+    "propertyOverViewImage": "https://images1.apartments.com/i2/pine-overview.png?p=1",
+    "propertyCardImage": "https://images1.apartments.com/i2/PS6lbmQwWTKR6h8L6SZLTdbvd_pNyfZMp-zeXtDcU5E/116/post-chicago-il-4br-3br.jpg?p=1",
+    "propertyArea": "STUDIO, 1bhk, 750 sq ft",
+    "propertySize": "Studio - 3 Beds ",
+    "propertyAmenities": [
+      "Pets Allowed",
+      "Fitness Center",
+      "Pool",
+      "Clubhouse",
+      "Playground",
+      "Balcony"
+    ],
+    "floorplandetails": {
+      "heading": "Features",
+      "features": [
+        {
+          "value": "Central Heating"
+        },
+        {
+          "value": "Stainless Steel Appliances"
+        },
+        {
+          "value": "Hardwood Floors"
+        },
+        {
+          "value": "Vaulted Ceilings"
+        },
+        {
+          "value": "Private Patios"
+        },
+        {
+          "value": "Energy Efficient Lighting"
+        }
+      ]
+    },
+    "propertyunitsdata": {
+      "propertyunitscol": [
+        {
+          "value": "Unit"
+        },
+        {
+          "value": "Price"
+        },
+        {
+          "value": "Square Fit"
+        },
+        {
+          "value": "Availability"
+        }
+      ],
+      "unitsdata": [
+        {
+          "unit": "Unit A",
+          "price": "₹30,000",
+          "squarefit": "600 sq ft",
+          "Availability": "Available: 10 July",
+          "features": [
+            {
+              "value": "Smart Thermostat"
+            },
+            {
+              "value": "Wi-Fi"
+            },
+            {
+              "value": "Washer/Dryer"
+            },
+            {
+              "value": "Air Conditioning"
+            }
+          ],
+          "KitchenFeatures": [
+            {
+              "value": "Dishwasher"
+            },
+            {
+              "value": "Quartz Countertops"
+            },
+            {
+              "value": "Refrigerator"
+            },
+            {
+              "value": "Microwave"
+            }
+          ]
+        },
+        {
+          "unit": "Unit B",
+          "price": "₹40,000",
+          "squarefit": "850 sq ft",
+          "Availability": "Available: 01 August",
+          "Highlights": {
+            "heading": "Highlights",
+            "features": [
+              {
+                "value": "Private Balcony"
+              },
+              {
+                "value": "Wi-Fi"
+              },
+              {
+                "value": "Washer/Dryer"
+              },
+              {
+                "value": "Air Conditioning"
+              }
+            ]
+          },
+          "KitchenFeatures": {
+            "heading": "Kitchen Features",
+            "features": [
+              {
+                "value": "Dishwasher"
+              },
+              {
+                "value": "Quartz Countertops"
+              },
+              {
+                "value": "Refrigerator"
+              },
+              {
+                "value": "Microwave"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "AboutProperty": {
+      "heading": "About Pine Meadow Apartments",
+      "description": "Pine Meadow Apartments offers luxury living with stunning amenities, all within walking distance to top-rated schools, shopping, and dining. Discover unparalleled comfort and convenience in the heart of Irvine.",
+      "details": [
+        "Pine Meadow is managed by GreenLeaf Property Management and is located in Orange County, within the 92612 ZIP Code. The Irvine School District serves this area."
+      ]
+    },
+    "UniqueFeaturesOfProperty": {
+      "heading": "Unique Features",
+      "features": [
+        {
+          "list": "Resort-Style Pool"
+        },
+        {
+          "list": "Outdoor Fireplace Lounge"
+        },
+        {
+          "list": "24-Hour Fitness Center"
+        },
+        {
+          "list": "Pet Spa"
+        },
+        {
+          "list": "Rooftop Deck"
+        },
+        {
+          "list": "Package Lockers"
+        }
+      ]
+    },
+    "NeighborhoodData": {
+      "heading": "Neighborhood",
+      "description": "The City of Irvine is known for its excellent school system, miles of bike trails, and proximity to the coast. Enjoy a community atmosphere and a quick commute to major tech hubs in the area.",
+      "details": [
+        "Award-winning Irvine Unified School District, known for top-ranking schools."
+      ]
+    },
+    "PropertyAmenitie": {
+      "heading": "Community Amenities",
+      "features": [
+        {
+          "list": "Barbecue Area"
+        },
+        {
+          "list": "Pet-Friendly Community"
+        },
+        {
+          "list": "Car Wash Station"
+        },
+        {
+          "list": "Business Center"
+        },
+        {
+          "list": "Yoga Studio"
+        }
+      ]
+    },
+    "ApartmentFeature": {
+      "heading": "Apartment Features",
+      "features": [
+        {
+          "list": "Washer/Dryer"
+        },
+        {
+          "list": "Air Conditioning"
+        },
+        {
+          "list": "Smart Locks"
+        },
+        {
+          "list": "Granite Countertops"
+        },
+        {
+          "list": "Kitchen"
+        },
+        {
+          "list": "Hardwood Floors"
+        },
+        {
+          "list": "Skylights"
+        }
+      ]
+    },
+    "propertySchoolData": {
+      "heading": "Schools",
+      "schoolData": [
+        {
+          "schoolName": "Irvine High School",
+          "schoolAddress": "1001 Walnut St, Irvine, CA",
+          "schoolDistance": "2.0 miles",
+          "schoolType": "Public High School",
+          "schoolRating": "9"
+        },
+        {
+          "schoolName": "Deerfield Elementary School",
+          "schoolAddress": "500 Oak Ave, Irvine, CA",
+          "schoolDistance": "1.0 mile",
+          "schoolType": "Public Elementary School",
+          "schoolRating": "8"
+        }
+      ]
+    },
+    "contactpropertybox": {
+      "isEnabled": true,
+      "heading": "Contact Pine Meadow Apartments",
+      "btn1": "Request Tour",
+      "btn2": "Send Message",
+      "phone": "(949) 555-1234"
+    },
+    "propertyFloorPlanMedia": {
+      "images": [
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/new-pine-building.jpg"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/new-pine-floorplan.jpg"
+        }
+      ],
+      "floorPlan": [
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/114/pine-floorplan1.png"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3
+  },
+  {
+    "id": 4
+  },
+  {
+    "id": 5
   }
 ]

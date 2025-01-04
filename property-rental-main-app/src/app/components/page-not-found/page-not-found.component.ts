@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class PageNotFoundComponent implements OnInit {
   pagenotfoundData:any[]=[];
   constructor(private pageNotFound:CommonUtilitiesService) { }
   ngOnInit(): void {
-    this.pageNotFound.parseJsonFile(api.pageNotFound).subscribe((data:any)=>{
+    this.pageNotFound.parseJsonFile(ApiConfig.pageNotFound).subscribe((data:any)=>{
       this.pagenotfoundData=data;
     })
   }
