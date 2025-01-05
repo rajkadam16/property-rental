@@ -3,8 +3,6 @@
  */
 package com.property.rental.service.common.model;
 
-import com.property.rental.service.common.enums.PropertyTypeEnum;
-
 /**
  * 
  */

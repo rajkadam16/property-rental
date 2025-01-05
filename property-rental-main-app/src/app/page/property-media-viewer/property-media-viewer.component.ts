@@ -15,13 +15,13 @@ export class PropertyMediaViewerComponent {
   @Input("media") mediaData:any;
   user: any[]=[];
   propertyName: any[]=[];
-  propertyFloorPlan: any[]=[];
-  propertyImages: any[]=[];
+  propertyFloorPlans: any={};
+  propertyPhotos: any={};
 
 
 constructor(private readonly location: Location,
       private readonly route: ActivatedRoute,
-      private readonly productService: CommonUtilitiesService
+      private readonly propertyDataService: CommonUtilitiesService
 ){}
 backToPreviwsPage() {
   this.location.back(); 
@@ -31,13 +31,14 @@ backToPreviwsPage() {
   
   ngOnInit(): void {
     const productId = Number(this.route.parent?.snapshot.paramMap.get('id'));
-    this.productService.getProductById(productId).subscribe((response:any) => {
+    this.propertyDataService.getProductById(productId).subscribe((response:any) => {
+      console.log("PropertyMediaViewerComponent > propertyDataService :: > "+JSON.stringify(response));
       this.user = response;
       this.propertyName = response.propertyName;
-      this.propertyFloorPlan = response.propertyfloorplanphotos;
-      this.propertyImages = response.propertyphoto;
-    console.log(this.propertyFloorPlan);
+      this.propertyFloorPlans = response.propertyFloorPlans;
+      this.propertyPhotos = response.propertyPhotos;
     });
+    
   }
   
 

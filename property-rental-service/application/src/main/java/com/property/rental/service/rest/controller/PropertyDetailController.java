@@ -23,7 +23,7 @@ public class PropertyDetailController {
 		return propertyDetailService.getPropertyDetail(propertyID);
 	}
 	
-	@GetMapping("/details")
+	@GetMapping("/details/{propertyID}")
 	public Object getAllPropertyDetails(String propertyID) {
 		return propertyDetailService.getAllPropertyDetails();
 	}

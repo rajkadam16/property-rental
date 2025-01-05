@@ -1,16 +1,35 @@
-<div class="accordion pt-2" id="accordionExample " *ngFor="let faqs of faqData; let i = index">
-    <div *ngIf="faqs.isEnabled === true" class="accordion-item">
-      <h2 class="accordion-header" id="heading{{i}}">
-        <button class="accordion-button" [ngClass]="{'collapsed': !faqs.isOpen}" type="button"
-          (click)="togglePanel(faqs)">
-          {{ faqs.question|| "Not Available" }}
-        </button>
-      </h2>
-      <div [ngClass]="{'collapse': !faqs.isOpen, 'show': faqs.isOpen}" class="accordion-collapse collapse">
-        <div class="accordion-body text-white ">
-          {{ faqs.answer || "Not Available"}}
-        </div>
+<div class="accordion-container" id="accordionExample" *ngFor="let faqs of faqData; let i = index">
+  <div *ngIf="faqs.isEnabled === true" class="accordion-item">
+    <!-- Accordion Header -->
+    <h2 class="accordion-header" id="heading{{ i }}">
+      <button
+        class="accordion-button"
+        [ngClass]="{ 'collapsed': !faqs.isOpen }"
+        type="button"
+        (click)="togglePanel(faqs)"
+      >
+        <span>{{ faqs.question || "Not Available" }}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="accordion-icon"
+          [ngClass]="{ 'rotated': faqs.isOpen }"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </h2>
+
+    <!-- Accordion Body -->
+    <div
+      [ngClass]="{ 'collapse': !faqs.isOpen, 'show': faqs.isOpen }"
+      class="accordion-collapse"
+    >
+      <div class="accordion-body">
+        {{ faqs.answer || "Not Available" }}
       </div>
     </div>
   </div>
-
+</div>

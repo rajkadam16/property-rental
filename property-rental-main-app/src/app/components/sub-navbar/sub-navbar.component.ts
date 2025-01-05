@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -14,7 +14,7 @@ selectData: any[] = [];
 constructor(private readonly subNav:CommonUtilitiesService) {}
 
 ngOnInit(): void {
-  this.subNav.parseJsonFile(api.subNavbar).subscribe((data:any) => {
+  this.subNav.parseJsonFile(ApiConfig.subNavbar).subscribe((data:any) => {
     this.selectData = data;
   });
 }

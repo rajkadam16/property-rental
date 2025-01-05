@@ -4,8 +4,7 @@
   align-items: center; /* Centers vertically */
   width: 600px; /* Set the desired width */
   height: 400px; /* Set the desired height */
-  margin: auto; /* Centers the container itself if needed */
-  background-color: #f9f9f9; /* Optional: Add background color to visualize */
+  margin: auto; /* Centers the container itself if needed */ 
 }
 
 app-image-carousel {

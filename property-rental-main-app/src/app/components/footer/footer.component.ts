@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { api } from 'src/app/core/constant/api/api';
+import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class FooterComponent {
   constructor(private readonly footer3: CommonUtilitiesService) { }
   
   ngOnInit(): void {
-    this.footer3.parseJsonFile(api.footer).subscribe((res: any) => {
+    this.footer3.parseJsonFile(ApiConfig.footer).subscribe((res: any) => {
       this.mains = res.main;
       this.sections = res.sections;
     });
