@@ -1,28 +1,28 @@
 [
   {
     "id": 1,
-"propertydata":{
-  "propertyImages": [
-    "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
-    "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
-    "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
-  ]
-},
-"propertyphoto": {
-  "propertyImages": [
-    "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
-    "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
-    "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1"
-  ]
-},
+    "propertydata": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+        "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
+        "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
+      ]
+    },
+    "propertyphoto": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+        "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+        "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1"
+      ]
+    },
 
- "propertyfloorplanphotos":{
-  "propertyImages": [
-    "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
-    "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
-    "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1"
-  ]
- },
+    "propertyfloorplanphotos": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
+        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1"
+      ]
+    },
 
     "locationhierarchy": "Illinois / Cook County / Chicago / Presidential Towers",
     "propertyName": "Presidential Towers",
@@ -32,8 +32,13 @@
     "propertyCardImage": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
     "propertyArea": "STUDIO, 1bhk, 546 sq ft",
     "propertySize": "Studio - 2 Beds ",
-    "propertyAmenities":[
-      "Pets Allowed", "Fitness Center", "Pool", "Dishwasher", "Refrigerator" ,"Kitchen"
+    "propertyAmenities": [
+      "Pets Allowed",
+      "Fitness Center",
+      "Pool",
+      "Dishwasher",
+      "Refrigerator",
+      "Kitchen"
     ],
     "floorplandetails": {
       "heading": "Highlights",
@@ -59,19 +64,18 @@
           "price": "₹25,000",
           "squarefit": "505 sq ft",
           "Availability": "Available: 15 June",
-           "features": [
-              { "value": "High Speed Internet Access" },
-              { "value": "Wifi" },
-              { "value": "Washer/Dryer" },
-              { "value": "Air Conditioning" }
-            ],
-            "KitchenFeatures": [
-              { "value": "Dishwasher" },
-              { "value": "Granite Countertops" },
-              { "value": "Refrigerator" },
-              { "value": "Freezer" }
-            ]
-          
+          "features": [
+            { "value": "High Speed Internet Access" },
+            { "value": "Wifi" },
+            { "value": "Washer/Dryer" },
+            { "value": "Air Conditioning" }
+          ],
+          "KitchenFeatures": [
+            { "value": "Dishwasher" },
+            { "value": "Granite Countertops" },
+            { "value": "Refrigerator" },
+            { "value": "Freezer" }
+          ]
         },
         {
           "unit": "Units 2",
@@ -249,70 +253,70 @@
       "phone": "(708) 725-1991"
     },
 
-    "propertyFloorPlanMedia":{
+    "propertyFloorPlanMedia": {
       "images": [
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/z-iRWML2hawokBVtodo9PJ2OxJ3zM7Es9KBO22OYDDs/116/the-residences-at-newcity-chicago-il-primary-photo.jpg?p=1"
-          },
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/m2/6ae0hgfTwbRpJ8mc7Vmmfwky_HtpcY0_WXkQio1tMnI/H330W495/the-residences-at-newcity-chicago-il-map-image-of-the-property.jpg?p=1"
-          },
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/_Qt9EN0ilnfgv0qWNnGgUPoVQ8RTmItxAigACWVxxIo/111/the-residences-at-newcity-chicago-il-building-photo.jpg?p=1"
-          },
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/m2/6ae0hgfTwbRpJ8mc7Vmmfwky_HtpcY0_WXkQio1tMnI/H330W495/the-residences-at-newcity-chicago-il-map-image-of-the-property.jpg?p=1"
-          },
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/4m3YPfvRJv3wvMOawOVKgasEvT2qrXeaq9crfyNt9qw/111/the-residences-at-newcity-chicago-il-building-photo.jpg?p=1"
-          }
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/z-iRWML2hawokBVtodo9PJ2OxJ3zM7Es9KBO22OYDDs/116/the-residences-at-newcity-chicago-il-primary-photo.jpg?p=1"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/m2/6ae0hgfTwbRpJ8mc7Vmmfwky_HtpcY0_WXkQio1tMnI/H330W495/the-residences-at-newcity-chicago-il-map-image-of-the-property.jpg?p=1"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/_Qt9EN0ilnfgv0qWNnGgUPoVQ8RTmItxAigACWVxxIo/111/the-residences-at-newcity-chicago-il-building-photo.jpg?p=1"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/m2/6ae0hgfTwbRpJ8mc7Vmmfwky_HtpcY0_WXkQio1tMnI/H330W495/the-residences-at-newcity-chicago-il-map-image-of-the-property.jpg?p=1"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/4m3YPfvRJv3wvMOawOVKgasEvT2qrXeaq9crfyNt9qw/111/the-residences-at-newcity-chicago-il-building-photo.jpg?p=1"
+        }
       ],
 
       "floorPlan": [
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/114/presidential-towers-chicago-il-floorplan.png?p=1"
-          },
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/114/presidential-towers-chicago-il-floorplan.png?p=1"
-          },
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/-13mgxk-sY6JKTOZ-0qykavwDjkORAs7lNVS4aGU_XU/114/presidential-towers-chicago-il-floorplan.png?p=1"
-          }
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/114/presidential-towers-chicago-il-floorplan.png?p=1"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/9ppzFGH6ehYcZNHtEuCwD823kuEYtD82M8DzwiOvDn0/114/presidential-towers-chicago-il-floorplan.png?p=1"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/-13mgxk-sY6JKTOZ-0qykavwDjkORAs7lNVS4aGU_XU/114/presidential-towers-chicago-il-floorplan.png?p=1"
+        }
       ]
-  }
+    }
   },
   {
     "id": 2,
-    "propertydata":{
-  "propertyImages": [
-    "https://images1.apartments.com/i2/bgwS-Q6DgT9r07axqkqtDOlE6RMoNg7xWkvSzbXoIqs/116/post-chicago-il-building-photo.jpg?p=1",
-    "https://images1.apartments.com/i2/_yYM5i_ei1y3O0OqWsttqpWp-5mUEAjqP649phOdh2g/116/post-chicago-il-4br-3br.jpg?p=1",
-    "https://images1.apartments.com/i2/AcwXglU0N8Xtse1T9YO_bFaE3R947vLLeYNg3CKxwlU/116/post-chicago-il-3br-2ba---966sf.jpg?p=1"
-  ]
-},
-"propertyphoto": {
-  "propertyImages": [
-    "https://images1.apartments.com/i2/AcwXglU0N8Xtse1T9YO_bFaE3R947vLLeYNg3CKxwlU/116/post-chicago-il-3br-2ba---966sf.jpg?p=1",
-    "https://images1.apartments.com/i2/wAehc4EJ5RtRyfaWWLMl2ogUIKO9HEN21URjE0eNqEs/116/post-chicago-il-4br-3br.jpg?p=1",
-    "https://images1.apartments.com/i2/CMzT45L_AZh13oq7ryeI3fo8DBQOdSKX2KERMKke3KY/116/post-chicago-il-3br-2ba---966sf.jpg?p=1"
-  ]
-},
+    "propertydata": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/bgwS-Q6DgT9r07axqkqtDOlE6RMoNg7xWkvSzbXoIqs/116/post-chicago-il-building-photo.jpg?p=1",
+        "https://images1.apartments.com/i2/_yYM5i_ei1y3O0OqWsttqpWp-5mUEAjqP649phOdh2g/116/post-chicago-il-4br-3br.jpg?p=1",
+        "https://images1.apartments.com/i2/AcwXglU0N8Xtse1T9YO_bFaE3R947vLLeYNg3CKxwlU/116/post-chicago-il-3br-2ba---966sf.jpg?p=1"
+      ]
+    },
+    "propertyphoto": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/AcwXglU0N8Xtse1T9YO_bFaE3R947vLLeYNg3CKxwlU/116/post-chicago-il-3br-2ba---966sf.jpg?p=1",
+        "https://images1.apartments.com/i2/wAehc4EJ5RtRyfaWWLMl2ogUIKO9HEN21URjE0eNqEs/116/post-chicago-il-4br-3br.jpg?p=1",
+        "https://images1.apartments.com/i2/CMzT45L_AZh13oq7ryeI3fo8DBQOdSKX2KERMKke3KY/116/post-chicago-il-3br-2ba---966sf.jpg?p=1"
+      ]
+    },
 
- "propertyfloorplanphotos":{
-  "propertyImages": [
-    "https://images1.apartments.com/i2/X2Fxr-NMklyR_qDy0rqbjgd34o6XE5B2RdOU1yHAymE/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1",
-    "https://images1.apartments.com/i2/fHXWFq_VxvK_fZ6LmJWXwYNN_7WKTbPZdp9l_k_imOk/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1",
-    "https://images1.apartments.com/i2/hQFqe3Vj0HB-3OSv1gciaYmFTbAC_RWHarN2s3OyoUc/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1"
-  ]
- },
+    "propertyfloorplanphotos": {
+      "propertyImages": [
+        "https://images1.apartments.com/i2/X2Fxr-NMklyR_qDy0rqbjgd34o6XE5B2RdOU1yHAymE/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1",
+        "https://images1.apartments.com/i2/fHXWFq_VxvK_fZ6LmJWXwYNN_7WKTbPZdp9l_k_imOk/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1",
+        "https://images1.apartments.com/i2/hQFqe3Vj0HB-3OSv1gciaYmFTbAC_RWHarN2s3OyoUc/116/180-north-jefferson-chicago-il-floorplan.jpg?p=1"
+      ]
+    },
     "locationhierarchy": "California / Orange County / Irvine / Pine Meadow Apartments",
     "propertyName": "Pine Meadow Apartments",
     "propertyLocation": "123 Oak St, Irvine, CA 92612",
@@ -322,7 +326,12 @@
     "propertyArea": "STUDIO, 1bhk, 750 sq ft",
     "propertySize": "Studio - 3 Beds ",
     "propertyAmenities": [
-      "Pets Allowed", "Fitness Center", "Pool", "Clubhouse", "Playground" ,"Balcony"
+      "Pets Allowed",
+      "Fitness Center",
+      "Pool",
+      "Clubhouse",
+      "Playground",
+      "Balcony"
     ],
     "floorplandetails": {
       "heading": "Features",
@@ -461,22 +470,22 @@
       "phone": "(949) 555-1234"
     },
 
-    "propertyFloorPlanMedia":{
+    "propertyFloorPlanMedia": {
       "images": [
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/new-pine-building.jpg"
-          },
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/new-pine-floorplan.jpg"
-          }
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/new-pine-building.jpg"
+        },
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/new-pine-floorplan.jpg"
+        }
       ],
       "floorPlan": [
-          {
-              "isEnabled": true,
-              "url": "https://images1.apartments.com/i2/114/pine-floorplan1.png"
-          }
+        {
+          "isEnabled": true,
+          "url": "https://images1.apartments.com/i2/114/pine-floorplan1.png"
+        }
       ]
     }
   },

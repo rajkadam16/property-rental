@@ -30,19 +30,15 @@ backToPreviwsPage() {
 
   
   ngOnInit(): void {
-    // Get the `id` from the parent route
     const productId = Number(this.route.parent?.snapshot.paramMap.get('id'));
     this.productService.getProductById(productId).subscribe((response:any) => {
       this.user = response;
       this.propertyName = response.propertyName;
       this.propertyFloorPlan = response.propertyfloorplanphotos;
       this.propertyImages = response.propertyphoto;
-    
+    console.log(this.propertyFloorPlan);
     });
-    console.log(this.user);
   }
   
 
 }
-// const productId = Number(this.route.snapshot.paramMap.get('id'));
-// this.productService.getProductById(productId).subscribe((product) => {
