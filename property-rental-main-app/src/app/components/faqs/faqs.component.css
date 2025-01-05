@@ -1,40 +1,73 @@
-/* Custom styling for the accordion component */
+
+.accordion-item {
+  background-color: #1f2937; /* Dark background */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+/* Accordion Header */
+.accordion-header {
+  margin: 0;
+}
+
 .accordion-button {
-    background-color: #000000; /* Bootstrap primary color */
-    color: rgb(255, 255, 255);
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .accordion-button:not(.collapsed) {
-    background-color: rgb(192, 192, 192); /* Darker shade when active */
-    color: rgb(0, 0, 0);
-  }
-  
-  .accordion-button:hover {
-    background-color: #b5b5b5;
-  }
-  
-  .accordion-button:focus {
-    box-shadow: none;
-  }
-  
-  .accordion-body {
-    background-color: #080808; /* Bootstrap light background color */
-    border-top: 1px solid #ffffff;
-    padding: 1rem;
-    transition: max-height 0.3s ease;
-  }
-  
-  .accordion-item {
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  }
-  
-  .accordion-item:last-child {
-    margin-bottom: 0;
-  }
-  
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background-color: #374151; /* Slightly lighter dark background */
+  color: #ffffff;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 500;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #4b5563; /* Lighter dark background on hover */
+}
+
+.accordion-button.collapsed {
+  color: #d1d5db; /* Light gray for collapsed state */
+}
+
+/* Accordion Icon */
+.accordion-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Accordion Body */
+.accordion-collapse {
+  background-color: #374151; /* Same as button background */
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion-collapse.collapse {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-collapse.show {
+  max-height: 1000px; /* Adjust as needed */
+  opacity: 1;
+}
+
+.accordion-body {
+  padding: 1rem;
+  color: #e5e7eb; /* Light gray text */
+  font-size: 1rem; /* 16px */
+  line-height: 1.5;
+}

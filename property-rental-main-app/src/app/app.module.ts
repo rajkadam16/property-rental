@@ -24,7 +24,7 @@ import { CommonModule } from '@angular/common';
 import { FilterCardsPipe } from './core/pipes/filter-cards.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
-import { ContactUsComponent } from './page/contact-us/contact-us.component';
+// import { ContactUsComponent } from './page/contact-us/contact-us.component';
 import { DropDownPipe } from './core/pipes/drop-down.pipe';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 import { PropertyDataFacilitiesComponent } from './components/property-data-facilities/property-data-facilities.component';
@@ -32,11 +32,11 @@ import { PropertyDataAdditionalInfoComponent } from './components/property-data-
 import { PropertySchoolCardComponent } from './components/property-school-card/property-school-card.component';
 import { AppartmentDataComponent } from './components/appartment-data/appartment-data.component';
 import { ContactPropertyComponent } from './components/contact-property/contact-property.component';
-import { HomeComponent } from './page/home/home.component';
+// import { HomeComponent } from './page/home/home.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    // HomeComponent,
     AppComponent,
     FooterComponent,
     PageNotFoundComponent,
@@ -56,7 +56,7 @@ import { HomeComponent } from './page/home/home.component';
     SubNavbarComponent,
     FilterCardsPipe,
     PropertyMapViewComponent,
-    ContactUsComponent,
+    // ContactUsComponent,
     DropDownPipe,
     ImageCarouselComponent,
     PropertyDataFacilitiesComponent,

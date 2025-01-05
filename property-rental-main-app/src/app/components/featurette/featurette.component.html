@@ -1,18 +1,26 @@
-<section class="px-5">
-    <div class="px-5 text-white" *ngFor="let featurette of featuretteData">
-      <div *ngIf="featurette.isEnabled" [class]="featurette.class">
-        <div class="col-md-7 order-md-2 my-auto flex flex-col justify-center">
-          <h2 class="featurette-heading font-normal leading-tight">
-            {{ featurette.heading1|| "Not Available"}}
-            <span class="text-gray-400">{{ featurette.heading2 || "Not Available" }}</span>
+<section class="px-6 py-12 ">
+  <div class="container mx-auto">
+    <div class="featurette flex flex-wrap items-center gap-10 mb-12" *ngFor="let featurette of featuretteData">
+      <div *ngIf="featurette.isEnabled" [class]="featurette.class + ' w-full lg:flex lg:items-center'">
+        <!-- Text Content -->
+        <div class="lg:w-1/2 text-center lg:text-left mb-6 lg:mb-0 order-2 lg:order-1 px-4">
+          <h2 class="featurette-heading font-semibold text-3xl md:text-4xl leading-tight text-gray-800 mb-4">
+            {{ featurette.heading1 || "Not Available" }}
+            <span class="text-gray-500">
+              {{ featurette.heading2 || "Not Available" }}
+            </span>
           </h2>
-          <p class="text-lg">
-            {{ featurette.text|| "Not Available" }}
+          <p class="text-lg text-gray-600">
+            {{ featurette.text || "Not Available" }}
           </p>
         </div>
-        <div class="col-md-5 order-md-2">
-          <img class="rounded-lg" [src]="featurette.image" alt="" [ngStyle]="featurette.imgstyle" />
+
+        <!-- Image -->
+        <div class="lg:w-1/2 flex justify-center order-1 lg:order-2 px-4">
+          <img class="rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300" 
+          [src]="featurette.image" alt="Featurette" [ngStyle]="featurette.imgstyle" />
         </div>
       </div>
     </div>
-  </section>                                                                         
+  </div>
+</section>

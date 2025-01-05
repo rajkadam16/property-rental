@@ -30,7 +30,6 @@ backToPreviwsPage() {
 
   
   ngOnInit(): void {
-    // Get the `id` from the parent route
     const productId = Number(this.route.parent?.snapshot.paramMap.get('id'));
     this.propertyDataService.getProductById(productId).subscribe((response:any) => {
       console.log("PropertyMediaViewerComponent > propertyDataService :: > "+JSON.stringify(response));
@@ -44,5 +43,3 @@ backToPreviwsPage() {
   
 
 }
-// const productId = Number(this.route.snapshot.paramMap.get('id'));
-// this.productService.getProductById(productId).subscribe((product) => {
