@@ -29,8 +29,6 @@ export class PropertyDataComponent implements OnInit {
   ngOnInit(): void {
     const productId = Number(this.route.snapshot.paramMap.get('id'));
     this.productService.getProductById(productId).subscribe((response) => {
-      console.log("PropertyDataComponent > propertyDataService :: > "+JSON.stringify(response));
-
       this.product = response;
       this.AboutPropertyTowers = response.AboutProperty;
       this.NeighborhoodDatas = response.NeighborhoodData;
