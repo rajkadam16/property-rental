@@ -2,9 +2,9 @@
     {
         "isEnabled": true,
         "class":"row featurette  flex-row-reverse",
-        "heading1":" Oh yeah, it’s that good.",
+        "heading1":"Advertise Your Rental",
         "heading2":" See for yourself.",
-        "text":" Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world",
+        "text":" Connect with more than 75 million renters looking for new homes using our comprehensive marketing platform.",
         "image":"assets/images/widget_advertise_your_rental_1407.png",
         "imgstyle":"height: 450px; width: 450px;"
         
@@ -12,9 +12,9 @@
     {
         "isEnabled": true,
         "class":"row featurette ",
-        "heading1":" Oh yeah, it’s that good.",
+        "heading1":"Lease 100% Online",
         "heading2":" See for yourself.",
-        "text":" Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world",
+        "text":" Lease 100% Online Accept applications, process rent payments online, and sign digital leases all powered on a single platform.",
         "image":"assets/images/widget_lease_100_online_469.png",
         "imgstyle":"height: 450px; width: 450px; object-fit: cover;"
         
@@ -22,10 +22,20 @@
     {
         "isEnabled": true,
         "class":"row featurette  flex-row-reverse",
-        "heading1":" Oh yeah, it’s that good.",
+        "heading1":" Tips for Renters",
         "heading2":" See for yourself.",
-        "text":" Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world",
+        "text":" Find answers to all of your renting questions with the best renter’s guide in the galaxy.",
         "image":"assets/images/widget_tips_for_renters_938.png",
         "imgstyle":"height: 450px; width: 450px;"
+    },
+    {
+        "isEnabled": true,
+        "class":"row featurette ",
+        "heading1":"Property Manager Resources",
+        "heading2":" See for yourself.",
+        "text":" Stay up-to-date using our tips and guides on rent payments, leasing, management solutions, and more.",
+        "image":"assets/images/widget_property_mgr_resources_938.png",
+        "imgstyle":"height: 450px; width: 450px; object-fit: cover;"
+        
     }
 ]
