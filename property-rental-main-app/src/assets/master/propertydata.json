@@ -4,25 +4,52 @@
     "propertyImgGallery": {
       "id": "propertyImgGallery",
       "images": [
-        "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1"
+        {
+          "url": "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+          "alt": "image 1"
+        },
+        {
+          "url": "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
+          "alt": "image 2"
+        },
+        {
+          "url": "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+          "alt": "image 3"
+        }
       ]
     },
     "propertyPhotos": {
       "id": "propertyPhotos",
       "images": [
-        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1"
+        {
+          "url": "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+          "alt": "image 1"
+        },
+        {
+          "url": "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+          "alt": "image 2"
+        },
+        {
+          "url": "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+          "alt": "image 3"
+        }
       ]
     },
     "propertyFloorPlans": {
       "id": "propertyFloorPlans",
       "images": [
-        "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
-        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
-        "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1"
+        {
+          "url": "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
+          "alt": "image 1"
+        },
+        {
+          "url": "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+          "alt": "image 2"
+        },
+        {
+          "url": "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+          "alt": "image 3"
+        }
       ]
     },
     "locationhierarchy": "Illinois / Cook County / Chicago / Presidential Towers",
