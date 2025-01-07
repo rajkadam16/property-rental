@@ -8,6 +8,13 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./property-data.component.css'],
 })
 export class PropertyDataComponent implements OnInit {
+  carouselImageStyle:any = {
+    'object-fit': 'cover', // Ensures images are cropped to fill the container
+    height: '100%',        // Matches the height of the carousel item
+    width: '100%',         // Stretches to fit the width
+    'max-height': '750px'  // Adjust as needed for your carousel height
+  };
+
   product: any[] = [];
   propertyImgGallery:any={};
   AboutPropertyTowers:any[]=[];
@@ -41,6 +48,7 @@ export class PropertyDataComponent implements OnInit {
       this.propertyImgGallery = response.propertyImgGallery;
     });
   }
+
 
 
 }

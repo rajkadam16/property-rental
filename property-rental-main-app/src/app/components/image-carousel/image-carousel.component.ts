@@ -8,6 +8,7 @@ import { PropertyImages } from 'src/app/core/models/interface';
 })
 export class ImageCarouselComponent implements OnInit {
   @Input("data") imageCarousel: PropertyImages | undefined;
+  @Input("imageStyle") imageCarouselStyle: PropertyImages | undefined;
 
   currentIndex: number = 0;
   interval: any;
