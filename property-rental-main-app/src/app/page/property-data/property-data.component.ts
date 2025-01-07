@@ -19,7 +19,6 @@ export class PropertyDataComponent implements OnInit {
   floorplandetails:any[]=[];
   propertyunitsdatas:any[]=[];
   contactpropertyboxs:any[]=[];
-  propertyFloorPlans:any={};
  
   constructor(
     private readonly route: ActivatedRoute,
@@ -40,7 +39,6 @@ export class PropertyDataComponent implements OnInit {
       this.propertyunitsdatas = response.propertyunitsdata;
       this.contactpropertyboxs= response.contactpropertybox;
       this.propertyImgGallery = response.propertyImgGallery;
-      this.propertyFloorPlans =response.propertyFloorPlans;
     });
   }
 

@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
+import { PropertyImages } from 'src/app/core/models/interface';
 
 
 @Component({
@@ -15,8 +16,8 @@ export class PropertyMediaViewerComponent {
   @Input("media") mediaData:any;
   user: any[]=[];
   propertyName: any[]=[];
-  propertyFloorPlans: any={};
-  propertyPhotos: any={};
+  propertyFloorPlans: PropertyImages | undefined;
+  propertyPhotos: PropertyImages | undefined;
 
 
 constructor(private readonly location: Location,
