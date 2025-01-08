@@ -1,8 +1,17 @@
-<nav class="" >
-  <div class="container d-flex align-items-center justify-content-center  ">
+<nav class="">
+  <div class="container d-flex align-items-center justify-content-center">
+    <!-- <button class="btn" (click)="menu()">
+      <span class="icon">
+          <svg viewBox="0 0 175 80" width="40" height="40">
+              <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+              <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+              <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+          </svg>
+      </span>
+      <span class="text">MENU</span>
+  </button> -->
     <a 
       *ngFor="let nav of navbarData"
-      href="#" 
       class="text-black font-bold text-decoration-none px-3 py-2"
       [attr.data-bs-toggle]="nav.datatoggle" 
       [attr.data-bs-target]="nav.datatarget" 
@@ -15,3 +24,18 @@
 </nav>
 <app-login></app-login>
 <app-signup></app-signup>
+<!-- <div class="relative z-30">
+  <div 
+    [ngClass]="{'invisible': !isMenuOpen, 'visible': isMenuOpen}"  
+    id="sidebar" 
+    class="absolute bg-[#f2f2f2] w-[15vw] shadow-xl border-[#4c4c4c] transform transition-all ease-in-out duration-100"
+    style="z-index: 10;">
+    <hr>
+    <ul class="text-[#0576a7] font-serif">
+      <div class="pl-4 pt-1 h-[5vh] hover:bg-[#427b01] hover:text-white"    *ngFor="let nav of navbarData">
+        <li><a [routerLink]="nav.routerLink">{{ nav.displayname }}</a></li>
+      </div>
+    </ul>
+  </div>
+</div> -->
+ 
