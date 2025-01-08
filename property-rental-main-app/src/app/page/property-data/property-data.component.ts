@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AboutProperty, ContactPropertyBox, FeaturesSection, FloorPlanDetails, ImageGallery, PropertyData, PropertySchoolData } from 'src/app/core/models/interface';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -15,17 +16,17 @@ export class PropertyDataComponent implements OnInit {
     'max-height': '750px'  // Adjust as needed for your carousel height
   };
 
-  product: any[] = [];
-  propertyImgGallery:any={};
-  AboutPropertyTowers:any[]=[];
-  NeighborhoodDatas:any[]=[];
-  propertySchoolDatas:any[]=[];
-  UniqueFeaturesOfPropertys:any[]=[];
-  PropertyAmenities:any[]=[];
-  ApartmentFeatures:any[]=[];
+  product: PropertyData[] = [];
+  propertyImgGallery:ImageGallery={id:'',images:[]};
+  AboutPropertyTowers:AboutProperty[]=[];
+  NeighborhoodDatas:FloorPlanDetails[]=[];
+  propertySchoolDatas:PropertySchoolData[]=[];
+  UniqueFeaturesOfPropertys:FeaturesSection[]=[];
+  PropertyAmenities:FeaturesSection[]=[];
+  ApartmentFeatures:FeaturesSection[]=[];
   floorplandetails:any[]=[];
   propertyunitsdatas:any[]=[];
-  contactpropertyboxs:any[]=[];
+  contactpropertyboxs:ContactPropertyBox[]=[];
  
   constructor(
     private readonly route: ActivatedRoute,
