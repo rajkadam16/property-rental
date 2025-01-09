@@ -1,12 +1,12 @@
-.carousel-container {
-  display: flex; /* Enables Flexbox */
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  width: 80vh; /* Set the desired width */
-  height: 80vh; /* Set the desired height */
-  margin: auto; /* Centers the container itself if needed */ 
+/* .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 80vh;
+  height: 80vh; 
+  margin: auto; 
 }
 
 .tab-content {
-  min-height: 300px; /* Ensures the content remains consistent for different tabs */
-}
+  min-height: 300px; 
+} */

@@ -1,12 +1,8 @@
-<div class="relative">
-  <div class="w-full h-[70vh] overflow-hidden">
-    <!-- {{propertyImgGallery|json}} -->
-    <app-image-carousel [data]="propertyImgGallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
-  </div>
-
-  <!-- property data -->
-
-  <section class="w-full flex pl-12  pt-2 gap-16">
+<div class="row">
+  <app-image-carousel [data]="propertyImgGallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+</div>
+<div class="row">
+  <div class="col-8">
     <div class="property-data w-[75vw] p-6 rounded-lg">
 
       <app-appartment-data [data]="product" [floorplandetails]="floorplandetails"
@@ -28,8 +24,11 @@
       </div>
     </div>
 
+  </div>
+  <div class="col-4">
     <app-contact-property [propertyContact]="contactpropertyboxs" [propertyHeading]="product"></app-contact-property>
-  </section>
 
+  </div>
 </div>
 
+<!-- ---------rk---- -->

@@ -41,12 +41,9 @@ export class PropertyMediaViewerComponent {
     this.location.back();
   }
 
-
-
   ngOnInit(): void {
     const productId = Number(this.route.parent?.snapshot.paramMap.get('id'));
     this.propertyDataService.getProductById(productId).subscribe((response: any) => {
-      console.log("PropertyMediaViewerComponent > propertyDataService :: > " + JSON.stringify(response));
       this.user = response;
       this.propertyName = response.propertyName;
       this.propertyFloorPlans = response.propertyFloorPlans;
@@ -54,6 +51,4 @@ export class PropertyMediaViewerComponent {
     });
 
   }
-
-
 }
