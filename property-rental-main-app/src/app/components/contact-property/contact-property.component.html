@@ -1,30 +1,23 @@
 <!-- Contact Form -->
-<aside class="form" style="width: 20rem; position: fixed; bottom: 1.25rem; right: 2rem;">
+<aside class="form" style="width: 20rem; position: fixed; bottom: 1rem; right: 0.2rem;">
   <div class="bg-light shadow rounded p-4 ">
     <div id="contactLead" class="d-flex flex-column justify-content-between h-100">
       <!-- Heading -->
       <h2 class="text-center text-secondary mb-3">
         <!-- {{propertyContactData.heading || "Not Available"}} -->
-        Contact  {{propertyHeading.propertyName}}
-         
+        Contact {{propertyHeading.propertyName}}
       </h2>
-      
+
       <!-- Buttons -->
       <div class="d-grid gap-3">
-        <button
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#requestTour">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#requestTour">
           {{propertyContactData.btn1}}
         </button>
-        <button
-          class="btn btn-success"
-          data-bs-toggle="modal"
-          data-bs-target="#sendMessage">
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sendMessage">
           {{propertyContactData.btn2}}
         </button>
       </div>
-      
+
       <!-- Phone Number -->
       <h2 class="text-center text-secondary mt-4">
         {{propertyContactData.phone || 'Number Not Available'}}
