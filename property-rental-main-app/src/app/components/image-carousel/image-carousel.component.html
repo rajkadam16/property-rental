@@ -5,8 +5,9 @@
   <div class="carousel-inner">
     <div *ngFor="let image of imageCarousel.images; let i = index" 
          class="carousel-item h-100" 
-         [ngClass]="{ 'active': i === currentIndex }">
-      <img [src]="image.url" class="" [alt]="image.alt || 'Image'" [style]="imageCarouselStyle">
+         [ngClass]="{ 'active': i === currentIndex }" width="150px" height="100px">
+      <img [src]="image.url" class="" [alt]="image.alt || 'Image'" [style]="imageCarouselStyle"
+      class="img-fluid" >
     </div>
   </div>
   <button class="carousel-control-prev" (click)="previousImage()" role="button" aria-label="Previous">
