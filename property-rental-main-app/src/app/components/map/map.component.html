@@ -1,14 +1,1 @@
-<div class="d-flex relative">
-    <div>
-      <google-map 
-              width="100vw"
-              height="100vh"
-              [center]="center"
-              [zoom]="zoom"
-              (mapClick)="moveMap($event)"
-              (mapMousemove)="move($event)">
-  </google-map>
-    </div>
-    <div>
-    </div>
-  </div>
+<google-map width="100vw" height="100vh" [center]="center" [zoom]="zoom" [options]="options"></google-map>

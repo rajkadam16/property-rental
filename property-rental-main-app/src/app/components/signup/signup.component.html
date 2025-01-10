@@ -2,15 +2,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="fileModalLabel">Create an Account</h5>
+        <h5 class="modal-title" id="fileModalLabel">Create New Account</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body bg-[#f2f2f2]">
-        <div class="text-center mt-3">
-          <p class="text-xl font-semibold">Create an Account</p>
-          <p class="text-xs text-blue-500">or, <a href="#">sign into your account</a></p>
-        </div>
-        <form class="mt-5 px-4" [formGroup]="signUp" (ngSubmit)="onSubmit();sendEmail()">
+        <form class="mt-2 px-4" [formGroup]="signUp" (ngSubmit)="onSubmit();sendEmail()">
           <div class="mb-3 d-flex flex-wrap gap-3">
             <input type="text" placeholder="First name" class="form-control flex-fill shadow-sm" formControlName="firstName">
             <span class="text-red-500" *ngIf="signUp.controls['firstName'].touched && signUp.controls['firstName'].hasError('required')">
