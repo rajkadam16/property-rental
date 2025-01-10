@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./send-message.component.css']
 })
 export class SendMessageComponent {
+  @Input("propertyInfo") propertyInfo:any
     submitted: boolean = false;
 
   constructor() { }

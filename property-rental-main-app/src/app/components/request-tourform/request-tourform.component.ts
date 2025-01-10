@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { ApiConfig } from 'src/app/core/constant/ApiConfig';
@@ -9,6 +9,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./request-tourform.component.css'],
 })
 export class RequestTourformComponent implements OnInit {
+  @Input("propertyInfo") propertyInfo:any;
   requestTourForm: FormGroup;
   propertyName: any[] = [];
   submitted: boolean = false;
