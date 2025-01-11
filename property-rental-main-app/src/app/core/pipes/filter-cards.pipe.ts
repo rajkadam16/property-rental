@@ -13,11 +13,10 @@ export class FilterCardsPipe implements PipeTransform {
     searchText = searchText.toLowerCase();
 
     return propertyCard.filter(propertyCard => {
-      return propertyCard.name.toLowerCase().includes(searchText) ||
-      propertyCard.location.toLowerCase().includes(searchText) ||
-      propertyCard.price.toLowerCase().includes(searchText) ||
-      propertyCard.area.toLowerCase().includes(searchText) ||
-      propertyCard.amenities.toLowerCase().includes(searchText);
+      return propertyCard.propertyName.toLowerCase().includes(searchText) ||
+        propertyCard.propertyLocation.toLowerCase().includes(searchText) ||
+        propertyCard.propertyPrice.toLowerCase().includes(searchText) ||
+        propertyCard.propertyArea.toLowerCase().includes(searchText)
     });
   }
 

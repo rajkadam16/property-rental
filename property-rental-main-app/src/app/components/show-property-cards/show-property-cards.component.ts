@@ -22,6 +22,8 @@ export class ShowPropertyCardsComponent implements OnInit, OnDestroy {
   dropDownFilter: any;
   loader: boolean = true;
   subscriptionList: Subscription[] = [];
+  noData:string = 'No Data Found';
+
 
   constructor(
     private readonly apartmentService: CommonUtilitiesService,
@@ -36,6 +38,7 @@ export class ShowPropertyCardsComponent implements OnInit, OnDestroy {
     this.subscriptionList.push(propertyData);
     this.loader = false;
   }
+  
 
   ngOnDestroy(): void {
     this.subscriptionList.forEach((subscription) => subscription.unsubscribe());
