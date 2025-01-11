@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <div class="bg-light p-4 rounded shadow">
-          <form action="" [formGroup]="requestTourForm" (ngSubmit)="onSubmit()">
+          <form action="" [formGroup]="sendMessage" (ngSubmit)="onSubmit()">
             <div class="row mb-3">
               <div class="col-md-6">
                 <input  
@@ -16,10 +16,10 @@
                   class="form-control" 
                   formControlName="firstName" 
                 />
-                <small class="text-danger" *ngIf="requestTourForm.controls['firstName'].touched && requestTourForm.controls['firstName'].hasError('required')">
+                <small class="text-danger" *ngIf="sendMessage.controls['firstName'].touched && sendMessage.controls['firstName'].hasError('required')">
                   First name is required
                 </small>
-                <small class="text-danger" *ngIf="requestTourForm.controls['firstName'].touched && requestTourForm.controls['firstName'].hasError('maxlength')">
+                <small class="text-danger" *ngIf="sendMessage.controls['firstName'].touched && sendMessage.controls['firstName'].hasError('maxlength')">
                   First name must be less than 20 characters
                 </small>
               </div>
@@ -30,10 +30,10 @@
                   class="form-control" 
                   formControlName="lastName" 
                 />
-                <small class="text-danger" *ngIf="requestTourForm.controls['lastName'].touched && requestTourForm.controls['lastName'].hasError('required')">
+                <small class="text-danger" *ngIf="sendMessage.controls['lastName'].touched && sendMessage.controls['lastName'].hasError('required')">
                   Last name is required
                 </small>
-                <small class="text-danger" *ngIf="requestTourForm.controls['lastName'].touched && requestTourForm.controls['lastName'].hasError('maxlength')">
+                <small class="text-danger" *ngIf="sendMessage.controls['lastName'].touched && sendMessage.controls['lastName'].hasError('maxlength')">
                   Last name must be less than 20 characters
                 </small>
               </div>
@@ -45,10 +45,10 @@
                 class="form-control" 
                 formControlName="email" 
               />
-              <small class="text-danger" *ngIf="requestTourForm.controls['email'].touched && requestTourForm.controls['email'].hasError('required')">
+              <small class="text-danger" *ngIf="sendMessage.controls['email'].touched && sendMessage.controls['email'].hasError('required')">
                 Email is required
               </small>
-              <small class="text-danger" *ngIf="requestTourForm.controls['email'].touched && requestTourForm.controls['email'].hasError('email')">
+              <small class="text-danger" *ngIf="sendMessage.controls['email'].touched && sendMessage.controls['email'].hasError('email')">
                 Please enter a valid email address
               </small>
             </div>
@@ -60,7 +60,7 @@
                   class="form-control" 
                   formControlName="tourDate" 
                 />
-                <small class="text-danger" *ngIf="requestTourForm.controls['tourDate'].touched && requestTourForm.controls['tourDate'].hasError('required')">
+                <small class="text-danger" *ngIf="sendMessage.controls['tourDate'].touched && sendMessage.controls['tourDate'].hasError('required')">
                   Date is required
                 </small>
               </div>
@@ -70,29 +70,28 @@
                   type="tel" 
                   id="phone" 
                   name="phone" 
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
                   class="form-control" 
                   required 
                   formControlName="phoneNumber" 
                 />
-                <small class="text-danger" *ngIf="requestTourForm.controls['phoneNumber'].touched && requestTourForm.controls['phoneNumber'].hasError('required')">
+                <small class="text-danger" *ngIf="sendMessage.controls['phoneNumber'].touched && sendMessage.controls['phoneNumber'].hasError('required')">
                   Phone number is required
                 </small>
-                <small class="text-danger" *ngIf="requestTourForm.controls['phoneNumber'].touched && requestTourForm.controls['phoneNumber'].hasError('pattern')">
+                <small class="text-danger" *ngIf="sendMessage.controls['phoneNumber'].touched && sendMessage.controls['phoneNumber'].hasError('pattern')">
                   Please enter a valid phone number
                 </small>
               </div>
             </div>
             <div class="mb-3">
               <label class="form-label">Custom Message</label>
-              <textarea class="form-control" formControlName="message"></textarea>
+              <textarea class="form-control" formControlName="coustomMessage" ></textarea>
             </div>
             <div class="d-grid">
               <button 
                 type="submit" 
                 class="btn btn-primary" 
-                [disabled]="requestTourForm.invalid" 
-                (click)="onSubmit();reset()">
+                [disabled]="sendMessage.invalid" 
+                (click)="onSubmit();sendEmail();reset()">
                 Send Message
               </button>
             </div>
@@ -106,7 +105,7 @@
               <label class="form-check-label" for="acceptTerms">
                 Email me listings and apartments related info
               </label>
-              <small class="text-danger" *ngIf="requestTourForm.controls['acceptTerms'].touched && requestTourForm.controls['acceptTerms'].hasError('required')">
+              <small class="text-danger" *ngIf="sendMessage.controls['acceptTerms'].touched && sendMessage.controls['acceptTerms'].hasError('required')">
                 You must accept the terms and conditions
               </small>
             </div>

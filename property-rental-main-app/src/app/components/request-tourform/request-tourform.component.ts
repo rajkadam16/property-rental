@@ -1,20 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
-import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 @Component({
   selector: 'app-request-tourform',
   templateUrl: './request-tourform.component.html',
   styleUrls: ['./request-tourform.component.css'],
 })
-export class RequestTourformComponent implements OnInit {
+export class RequestTourformComponent  {
   @Input("propertyInfo") propertyInfo:any;
   requestTourForm: FormGroup;
   propertyName: any[] = [];
   submitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private propertyData: CommonUtilitiesService) {
+  constructor(private readonly formBuilder: FormBuilder) {
     this.requestTourForm = this.formBuilder.group({
       firstName: ['', [Validators.required, Validators.maxLength(30)]],
       lastName: ['', [Validators.required, Validators.maxLength(30)]],
@@ -25,12 +24,7 @@ export class RequestTourformComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.propertyData.parseJsonFile(ApiConfig.propertyData).subscribe((res: any) => {
-      this.propertyName = res.name;
-    });
-  
-  }
+
 
   onSubmit() {
     this.submitted = true;
@@ -46,7 +40,7 @@ export class RequestTourformComponent implements OnInit {
         from_name: `${this.requestTourForm.value.firstName} ${this.requestTourForm.value.lastName}`,
         firstname: this.requestTourForm.value.firstName,
         lastname: this.requestTourForm.value.lastName,
-        propertyname: this.propertyName,
+        propertyname: this.propertyInfo.propertyName,
         date: this.requestTourForm.value.date,
       });
       alert('Request accepted');
