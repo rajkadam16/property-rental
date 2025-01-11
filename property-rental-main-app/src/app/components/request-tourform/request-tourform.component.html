@@ -36,7 +36,7 @@
               </div>
               <div class="col-md-6">
                 <label class="form-label">Contact no</label>
-                <input type="tel" id="phone" formControlName="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                <input type="tel" id="phone" formControlName="phone" 
                        class="form-control" />
                 <small class="text-danger" *ngIf="requestTourForm.controls['phone'].touched && requestTourForm.controls['phone'].hasError('required')">Phone number is required</small>
               </div>
