@@ -6,19 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent {
-  constructor() {}
+  constructor() { }
 
   display: any;
   center: google.maps.LatLngLiteral = {
-    lat: 20.5937,
-    lng: 78.9629,
+    lat: 19.0760, lng: 72.8777
   };
-  zoom = 2;
-  moveMap(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) this.center = event.latLng.toJSON();
-  }
-  move(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) this.display = event.latLng.toJSON();
-  }
-  
+  zoom = 5;
+  options: google.maps.MapOptions = {
+    disableDefaultUI: true,
+    zoomControl: true,
+    fullscreenControl: true,
+  };
 }

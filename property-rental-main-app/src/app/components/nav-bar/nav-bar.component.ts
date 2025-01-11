@@ -7,13 +7,13 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit{
-  navbarData:any [] = []
-  username:string | undefined;
-constructor(private readonly navbar:CommonUtilitiesService){}
+export class NavBarComponent implements OnInit {
+  navbarData: any[] = []
+  username: string | undefined;
+  constructor(private readonly navbar: CommonUtilitiesService) { }
   ngOnInit(): void {
-    this.navbar.parseJsonFile(ApiConfig.navbar).subscribe((response:any)=>{
-      this.navbarData =response;
+    this.navbar.parseJsonFile(ApiConfig.navbar).subscribe((response: any) => {
+      this.navbarData = response;
     })
   }
   isMenuOpen: boolean = false;
