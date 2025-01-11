@@ -35,7 +35,6 @@ export class ShowPropertyCardsComponent implements OnInit, OnDestroy {
       });
     this.subscriptionList.push(propertyData);
     this.loader = false;
-    console.log(this.products);
   }
 
   ngOnDestroy(): void {

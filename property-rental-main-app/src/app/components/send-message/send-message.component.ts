@@ -37,7 +37,7 @@ export class SendMessageComponent {
     if (this.sendMessage.invalid) {
       return;
     }
-    console.log(JSON.stringify(this.sendMessage.value));
+
   }
 
 
@@ -53,7 +53,6 @@ export class SendMessageComponent {
         message: this.sendMessage.value.coustomMessage,
         reply_to: this.sendMessage.value.email,
     });
-    console.log('sending request for tour', response.status);
     alert('Mesaage sent successfully');
     
 }
