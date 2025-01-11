@@ -44,7 +44,6 @@ export class RequestTourformComponent  {
         date: this.requestTourForm.value.date,
       });
       alert('Request accepted');
-      // console.log('sending request for tour', response.status);
   }
 
   reset() {
