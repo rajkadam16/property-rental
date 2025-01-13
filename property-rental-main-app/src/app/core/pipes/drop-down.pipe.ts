@@ -5,14 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DropDownPipe implements PipeTransform {
 
-  transform(subNav:any[],dropDown:any): unknown {
-    if (!subNav || !dropDown ) {
-      return subNav;
+  transform(value: any[], args: any[]): any {
+    if (!value) {
+      return value;
     }
-    return subNav.filter(subNav => {
-      return subNav.price.toLowerCase().includes(dropDown) 
+    return value.filter((val) => {
+      return val[args[0]].toLowerCase().includes(args[1].toLowerCase());
     });
-    
   }
 
 
