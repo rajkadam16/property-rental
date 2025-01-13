@@ -1,62 +1,54 @@
-<main class="  min-h-screen">
-    <div>
-      <img src="https://www.persistent.com/wp-content/uploads/2023/12/banner-image-for-digital-lending-solutions-blog-scaled.jpg" alt=""
-        class="h-[70vh] w-full object-cover">
-    </div>
-  
-    <div class="mt-10 text-center">
-      <p class="text-3xl font-semibold">Welcome to the CityScapes-Rentals.com Help Center!</p>
-      <p class="mt-4 text-xl">Find answers fast by choosing the help you need</p>
-    </div>
-  
-    <div class="mt-24 flex flex-col lg:flex-row justify-evenly space-y-6 lg:space-y-0">
-      <div class="h-[25vh] w-[80vw] lg:w-[28vw] border-2 border-[#4c4c4c] flex gap-x-4 justify-center items-center">
-        <div>
-          <img src="https://www.apartments.com/images/librariesprovider3/default-album/renters@2x-2.png?sfvrsn=2f6f0238_0" alt=""
-            class="h-[12vh] w-[8vw] object-contain">
-        </div>
-        <div class="text-xs space-y-3 text-center">
-          <p class="text-2xl font-bold">I’m a renter</p>
-          <p>Learn about searching for rentals, applying, and paying rent online.</p>
-          <p class="text-blue-700"><a href="#"> Renter help center </a> <i class="fa-solid fa-angle-right"></i></p>
-        </div>
-      </div>
-  
-      <div class="h-[25vh] w-[80vw] lg:w-[28vw] border-2 border-[#4c4c4c] flex gap-x-4 justify-center items-center">
-        <div>
-          <img src="https://www.apartments.com/images/librariesprovider3/default-album/user-all-rentals@2x.png?sfvrsn=4079d0a1_0" alt=""
-            class="h-[12vh] w-[8vw] object-contain">
-        </div>
-        <div class="text-xs space-y-3 text-center">
-          <p class="text-2xl font-bold">I manage Rentals</p>
-          <p>Get help adding, editing, and managing your properties.</p>
-          <p class="text-blue-700"><a href="#">Rental Manager help center</a> <i class="fa-solid fa-angle-right"></i></p>
-        </div>
-      </div>
-    </div>
-  
-    <hr class="mt-16 border-gray-700">
-  
+<div class="bg-gray-100 min-h-screen font-sans">
+  <!-- Header Section -->
+  <div class="relative h-[70vh] bg-cover bg-center" style="background-image: url('../assets/images/hc.jpg');">
+  </div>
 
-    <section class="flex justify-center mt-10 ">
-      <div class="px-5 w-full max-w-5xl">
-        <p class="text-3xl font-semibold">Frequently asked questions</p>
-        <!-- <app-faqs></app-faqs> -->
-      </div>
-    </section>
+  <!-- Welcome Section -->
+  <div class="mt-10 text-center px-4">
+    <p class="text-4xl font-bold text-gray-800">Welcome to the CityScapes-Rentals.com Help Center!</p>
+    <p class="mt-4 text-lg text-gray-600">Find answers fast by choosing the help you need</p>
+  </div>
 
-
-    <div class="bg-cover bg-no-repeat bg-center mt-20"
-      style="background-image: url('https://www.apartments.com/images/librariesprovider3/logos/backgroundimg-callout_revised.jpg'); height: 20vh;">
-      <div class="space-y-3 pl-8 pt-5 flex flex-col items-end px-20">
-        <p class="text-2xl font-semibold">Own or manage a 5+ unit building?</p>
-        <p class="text-[#4c4c4c] text-xs font-medium">List apartments for rent on the most powerful and up-to-date network in the industry.</p>
+  <!-- Help Options Section -->
+  <div class="mt-16 flex flex-wrap justify-center gap-8 px-4">
+    <div
+      class="h-[25vh] w-[90%] max-w-[28vw] border border-gray-400 bg-white shadow-md flex items-center p-4 rounded-lg">
+      <img src="../assets/images/imrenter.png" alt="Renter" class="h-20 w-20">
+      <div class="ml-4">
+        <p class="text-2xl font-semibold text-gray-800">I’m a renter</p>
+        <p class="text-sm text-gray-600 mt-2">Learn about searching for rentals, applying, and paying rent online.</p>
+        <a href="#" class="text-blue-600 hover:underline mt-2 block">Renter help center <i
+            class="fa fa-angle-right"></i></a>
       </div>
     </div>
-  
-    <div class="mt-20 mx-4 lg:mx-72 font-bold text-center space-y-4">
-      <p>A full suite of resources to get the help you need about Apartments.com, The #1 Site for Renters.</p>
-      <p>Ask, search, and find instant answers. 24/7. Online. Anytime.</p>
+
+    <div
+      class="h-[25vh] w-[90%] max-w-[28vw] border border-gray-400 bg-white shadow-md flex items-center p-4 rounded-lg">
+      <img src="../assets/images/i manage rentals.png" alt="Manager" class="h-20 w-20">
+      <div class="ml-4">
+        <p class="text-2xl font-semibold text-gray-800">I manage Rentals</p>
+        <p class="text-sm text-gray-600 mt-2">Get help adding, editing, and managing your properties.</p>
+        <a href="#" class="text-blue-600 hover:underline mt-2 block">Rental Manager help center <i
+            class="fa fa-angle-right"></i></a>
+      </div>
     </div>
-  </main>
-  
+  </div>
+
+  <!-- FAQs Section -->
+  <div class="mt-20 px-4">
+    <p class="text-3xl font-semibold text-center text-gray-800">Frequently asked questions</p>
+    <div class="faq w-1/2 mx-auto pt-4"> <!-- Using standard Tailwind width class -->
+      <app-faqs></app-faqs>
+    </div>
+  </div>
+
+  <!-- Advertising Section -->
+  <div class="relative bg-cover bg-center mt-20 py-10 px-4 text-white"
+    style="background-image: url('../assets/images/bldgg.png');">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <p class="text-2xl font-bold">Own or manage a 5+ unit building?</p>
+      <p class="text-black font-bold">List apartments for rent on the most powerful and up-to-date network in the industry.</p>
+      <a href="#" class="text-blue-400 hover:underline">Learn about advertising solutions</a>
+    </div>
+  </div>
+</div>

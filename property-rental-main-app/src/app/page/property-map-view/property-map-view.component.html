@@ -1,11 +1,112 @@
-<div class="row">
-    <!-- <app-sub-navbar></app-sub-navbar> -->
-</div>
-<div class="row">
-    <div >
-        <!-- <app-map></app-map> -->
+<section class="container flex justify-center items-center px-10  h-full w-screen">
+  <div class="right w-[30%]  md:w-[30%] md:h-[95%] bg-slate-200 rounded-lg p-6 shadow-md">
+    <!-- Search Bar -->
+    <div class="mb-6">
+      <input
+        [(ngModel)]="searchText"
+        class="form-control w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        type="search"
+        placeholder="Search for a property"
+        aria-label="Search"
+      />
     </div>
-    <div class="col-sm-4">
-        <app-show-property-cards></app-show-property-cards>
+  
+    <!-- Filter by Price -->
+    <div class="property-filter mb-6">
+      <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Price</label>
+      <select
+        class="form-select w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <option value="0">Select</option>
+        <option value="1">Price: Low to High</option>
+        <option value="2">Price: High to Low</option>
+        <option value="3">Newest</option>
+      </select>
     </div>
-</div>
+  
+    <!-- Filter by Area -->
+    <div class="property-filter mb-6">
+      <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Area</label>
+      <div class="space-y-2">
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">1RK</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">1BHK</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">2BHK</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">3BHK</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Type of Property -->
+    <div class="property-filter mb-6">
+      <label class="block text-sm font-medium text-gray-800 mb-3">Type of Property</label>
+      <div class="space-y-2">
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">Residential Apartment</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">Residential Land</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">Studio Apartment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-filter mb-6">
+      <label class="block text-sm font-medium text-gray-800 mb-3">Furnishing</label>
+      <div class="space-y-2">
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700"> Semi</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">Full</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">None</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-filter mb-6">
+      <label class="block text-sm font-medium text-gray-800 mb-3">Parking</label>
+      <div class="space-y-2">
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">  2 Wheeler</span>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <span class="ml-2 text-gray-700">4 Wheeler</span>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="left w-[70%] h-[95%] px-20">
+    <app-property-cards
+      *ngFor="let apartment of products|filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
+      [propertyCard]="apartment" [index]="i">
+    </app-property-cards>
+    <div class="border-top text-white d-md-flex justify-content-center align-items-center p-3 ">
+      <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+    </div>
+  </div>
+
+</section>
