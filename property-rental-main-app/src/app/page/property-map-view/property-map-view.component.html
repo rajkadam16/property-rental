@@ -13,16 +13,15 @@
   
     <!-- Filter by Price -->
     <div class="property-filter mb-6">
-      <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Price</label>
-      <select
+      <label  class="block text-sm font-medium text-gray-800 mb-3">Filter by Price</label>
+      <select id="sort" (change)="onSortChange($event)"
         class="form-select w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <option value="0">Select</option>
-        <option value="1">Price: Low to High</option>
-        <option value="2">Price: High to Low</option>
-        <option value="3">Newest</option>
+
+        <option value="lowToHigh"> Low to High</option>
+        <option value="highToLow"> High to Low</option>
       </select>
     </div>
-  
+ 
     <!-- Filter by Area -->
     <div class="property-filter mb-6">
       <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Area</label>
@@ -46,7 +45,7 @@
       </div>
     </div>
   
-    <!-- Type of Property -->
+
     <div class="property-filter mb-6">
       <label class="block text-sm font-medium text-gray-800 mb-3">Type of Property</label>
       <div class="space-y-2">
@@ -96,7 +95,7 @@
         </div>
       </div>
     </div>
-  
+   
   </div>
 
   <div class="left w-[70%] h-[95%] px-20">

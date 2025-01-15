@@ -15,7 +15,7 @@ export class PropertyMapViewComponent  implements OnInit, OnDestroy  {
   dropDownFilter: any;
   loader: boolean = true;
   subscriptionList: Subscription[] = [];
-  noData:string = 'No Data Found';
+  selectedSortOption: string = 'lowToHigh';
 
 
   constructor(
@@ -24,15 +24,29 @@ export class PropertyMapViewComponent  implements OnInit, OnDestroy  {
   ) {}
 
   ngOnInit(): void {
-    const propertyData = this.apartmentService.getProducts().subscribe((data) => {
+    const propertyData = this.apartmentService.getProducts().subscribe((data:any) => {
         this.products = data;
+        console.log(this.products);
         this.changeDetectionRef.detectChanges();
       });
     this.subscriptionList.push(propertyData);
     this.loader = false;
   }
   
+  get sortedProperties(): any[] {
+    return this.products.sort((a, b) => {
+      if (this.selectedSortOption === 'lowToHigh') {
+        return a.propertyPrice - b.propertyPrice;
+      } else {
+        return b.propertyPrice - a.propertyPrice;
+      }
+    });
+  }
 
+  onSortChange(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectedSortOption = selectElement.value;
+  }
   ngOnDestroy(): void {
     this.subscriptionList.forEach((subscription) => subscription.unsubscribe());
   }
