@@ -2,26 +2,20 @@
   <div class="right w-[30%]  md:w-[30%] md:h-[95%] bg-slate-200 rounded-lg p-6 shadow-md">
     <!-- Search Bar -->
     <div class="mb-6">
-      <input
-        [(ngModel)]="searchText"
+      <input [(ngModel)]="searchText"
         class="form-control w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        type="search"
-        placeholder="Search for a property"
-        aria-label="Search"
-      />
+        type="search" placeholder="Search for a property" aria-label="Search" />
     </div>
-  
+
     <!-- Filter by Price -->
     <div class="property-filter mb-6">
-      <label  class="block text-sm font-medium text-gray-800 mb-3">Filter by Price</label>
-      <select id="sort" (change)="onSortChange($event)"
+      <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Price</label>
+      <select id="sort"(change)="onSortChange($event)"
         class="form-select w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-
-        <option value="lowToHigh"> Low to High</option>
-        <option value="highToLow"> High to Low</option>
+        <option value="lowToHigh">Low to High</option>
+        <option value="highToLow">High to Low</option>
       </select>
     </div>
- 
     <!-- Filter by Area -->
     <div class="property-filter mb-6">
       <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Area</label>
@@ -44,7 +38,7 @@
         </div>
       </div>
     </div>
-  
+
 
     <div class="property-filter mb-6">
       <label class="block text-sm font-medium text-gray-800 mb-3">Type of Property</label>
@@ -87,7 +81,7 @@
       <div class="space-y-2">
         <div class="flex items-center">
           <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
-          <span class="ml-2 text-gray-700">  2 Wheeler</span>
+          <span class="ml-2 text-gray-700"> 2 Wheeler</span>
         </div>
         <div class="flex items-center">
           <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
@@ -95,13 +89,13 @@
         </div>
       </div>
     </div>
-   
+
   </div>
 
   <div class="left w-[70%] h-[95%] px-20">
     <app-property-cards
       *ngFor="let apartment of products|filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
-      [propertyCard]="apartment" [index]="i">
+       [propertyCard]="apartment" [index]="i">
     </app-property-cards>
     <div class="border-top text-white d-md-flex justify-content-center align-items-center p-3 ">
       <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
@@ -109,3 +103,4 @@
   </div>
 
 </section>
+
