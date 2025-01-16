@@ -55,7 +55,7 @@
     "locationhierarchy": "Illinois / Cook County / Chicago / Presidential Towers",
     "propertyName": "Presidential Towers",
     "propertyLocation": "555 W Madison St, Chicago, IL 60661",
-    "propertyPrice": 8000000,
+    "propertyPrice": 80,
     "propertyOverViewImage": "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/115/image.png?p=1",
     "propertyCardImage": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
     "propertyArea": "STUDIO, 1bhk, 546 sq ft",
@@ -486,15 +486,15 @@
       "id": "propertyPhotos",
       "images": [
         {
-          "url": "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+          "url": "https://images2.apartments.com/i2/0rLOkp2XjTflMSkw1XEWiMtT5UdPiHRJTP3uLlsNntI/116/interior-photo.jpg?p=1",
           "alt": "image 1"
         },
         {
-          "url": "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+          "url": "https://images2.apartments.com/i2/CshZjscIzOaGfRaLKr9YPHZj82-Uc_xh8ncnA22Rm5g/116/interior-photo.jpg?p=1",
           "alt": "image 2"
         },
         {
-          "url": "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+          "url": "https://images2.apartments.com/i2/DuFX9lkKXSo6CtQyXz5o8m8Qb-xOBFQDpMxDUwcvUVI/116/interior-photo.jpg?p=1",
           "alt": "image 3"
         }
       ]
@@ -503,55 +503,55 @@
       "id": "propertyFloorPlans",
       "images": [
         {
-          "url": "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
+          "url": "https://images2.apartments.com/i2/KHp3McwoQehM8mDXtYfXltwz-MxEprMeSNJUB9EL_xo/116/floorplan.png?p=1",
           "alt": "image 1"
         },
         {
-          "url": "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/116/presidential-towers-chicago-il-floorplan.png?p=1",
+          "url": "https://images2.apartments.com/i2/Xkh-F2B94eWpCdbOkrN_w3zgG3uC3JpcFVLNZLV1Rqg/116/floorplan.png?p=1",
           "alt": "image 2"
         },
         {
-          "url": "https://images1.apartments.com/i2/seciVErFNvKU6w-h4nAQNHEXvxnLmle-U_AH_pnUauI/116/presidential-towers-chicago-il-floorplan.png?p=1",
+          "url": "https://images2.apartments.com/i2/rFk8IrlCfJdNtGhTNC9hUVBgUtGs1ZQaKlzGbf9pUzg/116/floorplan.png?p=1",
           "alt": "image 3"
         }
       ]
     },
-    "locationhierarchy": "Illinois / Cook County / Chicago / Presidential Towers",
-    "propertyName": "Presidential Towers",
-    "propertyLocation": "555 W Madison St, Chicago, IL 60661",
-    "propertyPrice": 60900000,
-    "propertyOverViewImage": "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/115/image.png?p=1",
-    "propertyCardImage": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
-    "propertyArea": "STUDIO, 1bhk, 546 sq ft",
-    "propertySize": "Studio - 2 Beds ",
+    "locationhierarchy": "California / Los Angeles County / Los Angeles / Skyline Apartments",
+    "propertyName": "Skyline Apartments",
+    "propertyLocation": "123 Skyline Ave, Los Angeles, CA 90015",
+    "propertyPrice": 100,
+    "propertyOverViewImage": "https://images2.apartments.com/i2/KHp3McwoQehM8mDXtYfXltwz-MxEprMeSNJUB9EL_xo/116/overview-image.png?p=1",
+    "propertyCardImage": "assets/images/skyline-apartments-la-living-room.jpg",
+    "propertyArea": "STUDIO, 1bhk, 700 sq ft",
+    "propertySize": "Studio - 3 Beds",
     "propertyAmenities": [
       "Pets Allowed",
       "Fitness Center",
-      "Pool",
-      "Dishwasher",
+      "Swimming Pool",
+      "Microwave",
       "Refrigerator",
-      "Kitchen"
+      "Modern Kitchen"
     ],
     "floorplandetails": {
       "heading": "Highlights",
       "features": [
         {
-          "value": "Air conditioning"
+          "value": "Central Heating"
         },
         {
-          "value": "Washer/Dryer"
+          "value": "Smart Home Features"
         },
         {
-          "value": "Cable ready"
+          "value": "Balcony Access"
         },
         {
-          "value": "Walk-in closets"
+          "value": "Hardwood Flooring"
         },
         {
-          "value": "Window coverings"
+          "value": "Ceiling Fans"
         },
         {
-          "value": "Skylight"
+          "value": "LED Lighting"
         }
       ]
     },
@@ -564,7 +564,7 @@
           "value": "Price"
         },
         {
-          "value": "Square Fit"
+          "value": "Square Feet"
         },
         {
           "value": "Availability"
@@ -572,19 +572,19 @@
       ],
       "unitsdata": [
         {
-          "unit": "Units 1",
-          "price": "₹25,000",
-          "squarefit": "505 sq ft",
-          "Availability": "Available: 15 June",
+          "unit": "Unit A",
+          "price": "₹30,000",
+          "squarefit": "600 sq ft",
+          "Availability": "Available: 20 June",
           "features": [
             {
-              "value": "High Speed Internet Access"
+              "value": "High-Speed Internet"
             },
             {
-              "value": "Wifi"
+              "value": "Smart Lock"
             },
             {
-              "value": "Washer/Dryer"
+              "value": "In-Unit Washer/Dryer"
             },
             {
               "value": "Air Conditioning"
@@ -595,52 +595,52 @@
               "value": "Dishwasher"
             },
             {
-              "value": "Granite Countertops"
+              "value": "Quartz Countertops"
             },
             {
-              "value": "Refrigerator"
+              "value": "Microwave"
             },
             {
-              "value": "Freezer"
+              "value": "Double-Door Refrigerator"
             }
           ]
         },
         {
-          "unit": "Units 2",
-          "price": "₹35,000",
-          "squarefit": "705 sq ft",
-          "Availability": "Available: 09 June",
+          "unit": "Unit B",
+          "price": "₹45,000",
+          "squarefit": "900 sq ft",
+          "Availability": "Available: 01 July",
           "Highlights": {
             "heading": "Highlights",
             "features": [
               {
-                "value": "High Speed Internet Access"
+                "value": "Smart Thermostat"
               },
               {
-                "value": "Wifi"
+                "value": "WiFi Enabled"
               },
               {
-                "value": "Washer/Dryer"
+                "value": "Balcony Access"
               },
               {
-                "value": "Air Conditioning"
+                "value": "Hardwood Floors"
               }
             ]
           },
-          "KitchenFeatures:": {
+          "KitchenFeatures": {
             "heading": "Kitchen Features",
             "features": [
               {
-                "value": "Dishwasher"
+                "value": "Gas Stove"
               },
               {
                 "value": "Granite Countertops"
               },
               {
-                "value": "Refrigerator"
+                "value": "Microwave"
               },
               {
-                "value": "Freezer"
+                "value": "Refrigerator"
               }
             ]
           }
@@ -648,174 +648,74 @@
       ]
     },
     "AboutProperty": {
-      "heading": "About Presidential Towers",
-      "description": "What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!",
+      "heading": "About Skyline Apartments",
+      "description": "Experience luxury living at Skyline Apartments. Enjoy breathtaking views of downtown Los Angeles, state-of-the-art amenities, and a vibrant urban lifestyle. With multiple dining options and cultural hotspots nearby, it's the perfect place to call home.",
       "details": [
-        "Presidential Towers is an apartment community managed by Waterton, located in Cook County and the 60661 ZIP Code. This area is served by the Chicago Public Schools attendance zone."
+        "Skyline Apartments is managed by Premier Living Properties and is located in the heart of Los Angeles. The community offers convenient access to public transportation and entertainment options."
       ]
     },
     "UniqueFeaturesOfProperty": {
       "heading": "Unique Features",
       "features": [
         {
-          "list": "Espresso Cabinetry Option Available"
+          "list": "Panoramic City Views"
         },
         {
-          "list": "Luxer One Package Room"
+          "list": "Rooftop Lounge"
         },
         {
-          "list": "On-site Dining Options"
+          "list": "24/7 Concierge Service"
         },
         {
-          "list": "Renovated Kitchens"
+          "list": "EV Charging Stations"
         },
         {
-          "list": "Bicycle and Additional Personal Storage"
+          "list": "Pet Spa"
         },
         {
-          "list": "Free WiFi in The M Lounge"
+          "list": "Private Movie Theatre"
         },
         {
-          "list": "Newly Remodeled Residences*"
+          "list": "Smart Home Automation"
         },
         {
-          "list": "Oak Cabinetry Options Available"
-        },
-        {
-          "list": "Washer/Dryers*"
-        },
-        {
-          "list": "Cultured Marble Vanities"
-        },
-        {
-          "list": "French Market 0.2 miles away"
-        },
-        {
-          "list": "Guest Suites"
-        },
-        {
-          "list": "Sales Force Tower is a mile away."
-        },
-        {
-          "list": "Ultra-Fast Fiber Internet Up to 1,000 Mbps"
-        },
-        {
-          "list": "DePaul University is 1.3 miles away."
-        },
-        {
-          "list": "Digital Cable and HDTV Packages Available"
-        },
-        {
-          "list": "Millennium Park is 1 mile away"
-        },
-        {
-          "list": "Upgraded Appliances*"
-        },
-        {
-          "list": "Chicago Kent Law School is 0.2 miles away."
-        },
-        {
-          "list": "Decorator Light"
-        },
-        {
-          "list": "Deloitte is 0.7 miles away."
-        },
-        {
-          "list": "Generous Closet Space"
-        },
-        {
-          "list": "Google Office is 0.9 miles away."
-        },
-        {
-          "list": "Granite Countertops*"
-        },
-        {
-          "list": "Large Pets Accepted (breed restrictions)"
-        },
-        {
-          "list": "Ogilvie Station across the street"
-        },
-        {
-          "list": "Stunning City Views*"
-        },
-        {
-          "list": "Trash Chutes on Every Floor"
-        },
-        {
-          "list": "Columbia College is 1.5 miles away."
-        },
-        {
-          "list": "Online Rent Payments"
-        },
-        {
-          "list": "UIC is a mile away."
-        },
-        {
-          "list": "Union Station 0.3 miles away"
-        },
-        {
-          "list": "4 Grocery Stores Within a 5 Minute Walk"
+          "list": "Yoga Studio"
         }
       ]
     },
     "NeighborhoodData": {
       "heading": "Neighborhood",
-      "description": "Chicago’s reputation as one of America’s most distinctive cities owes a lot to the electric atmosphere and vibrant culture that defines Downtown Chicago. Iconic sites like Grant Park, Soldier Field, the Chicago Theatre, Navy Pier, and the Chicago Riverwalk are the most famous landmarks in Downtown, but that barely scratches the surface of what the neighborhood has to offer.",
+      "description": "Located in the heart of Los Angeles, Skyline Apartments places you within walking distance of iconic attractions like Staples Center, The Broad Museum, and the Los Angeles Convention Center. The area boasts a mix of cultural, dining, and entertainment venues.",
       "details": [
-        "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.",
-        "The campuses of Columbia College Chicago, DePaul University, and the Art Institute of Chicago are also located here."
+        "The property is conveniently located near major freeways and public transit stations, making it easy to explore the greater Los Angeles area."
       ]
     },
     "PropertyAmenitie": {
       "heading": "Community Amenities",
       "features": [
         {
-          "list": "Laundry Facilities"
+          "list": "Heated Pool"
         },
         {
-          "list": "Property Manager on Site"
+          "list": "Co-working Spaces"
         },
         {
-          "list": "Doorman"
+          "list": "Rooftop Barbecue Area"
         },
         {
-          "list": "Concierge"
+          "list": "Fitness Studio"
         },
         {
-          "list": "24 Hour Access"
+          "list": "24-Hour Security"
         },
         {
-          "list": "On-Site Retail"
+          "list": "Underground Parking"
         },
         {
-          "list": "Health Club Discount"
+          "list": "Clubhouse"
         },
         {
-          "list": "Public Transportation"
-        },
-        {
-          "list": "Elevator"
-        },
-        {
-          "list": "Lounge"
-        },
-        {
-          "list": "Disposal Chutes"
-        },
-        {
-          "list": "Fitness Center"
-        },
-        {
-          "list": "Pool"
-        },
-        {
-          "list": "Sundeck"
-        },
-        {
-          "list": "Courtyard"
-        },
-        {
-          "list": "Grill"
+          "list": "Game Room"
         }
       ]
     },
@@ -823,52 +723,28 @@
       "heading": "Apartment Features",
       "features": [
         {
-          "list": "Washer/Dryer"
+          "list": "Smart Home System"
         },
         {
-          "list": "Air Conditioning"
+          "list": "Stainless Steel Appliances"
         },
         {
-          "list": "Dishwasher"
+          "list": "Floor-to-Ceiling Windows"
         },
         {
-          "list": "High Speed Internet Access"
+          "list": "Custom Cabinetry"
         },
         {
-          "list": "Wi-Fi"
+          "list": "Spa-Inspired Bathrooms"
         },
         {
-          "list": "Heating"
+          "list": "USB Charging Outlets"
         },
         {
-          "list": "Cable Ready"
-        },
-        {
-          "list": "Granite Countertops"
-        },
-        {
-          "list": "Kitchen"
-        },
-        {
-          "list": "Refrigerator"
-        },
-        {
-          "list": "Freezer"
-        },
-        {
-          "list": "Office"
-        },
-        {
-          "list": "Views"
-        },
-        {
-          "list": "Skylights"
+          "list": "Luxury Vinyl Flooring"
         },
         {
           "list": "Walk-In Closets"
-        },
-        {
-          "list": "Window Coverings"
         }
       ]
     },
@@ -876,44 +752,44 @@
       "heading": "Schools",
       "schoolData": [
         {
-          "schoolName": "Lincoln High School",
-          "schoolAddress": "456 Elm St, Cityville, USA",
-          "schoolDistance": "1.2 miles",
+          "schoolName": "Sunset High School",
+          "schoolAddress": "321 Sunset Blvd, Los Angeles, CA",
+          "schoolDistance": "1.0 miles",
           "schoolType": "Public High School",
+          "schoolRating": "9"
+        },
+        {
+          "schoolName": "Hilltop Middle School",
+          "schoolAddress": "567 Hilltop Rd, Los Angeles, CA",
+          "schoolDistance": "2.2 miles",
+          "schoolType": "Public Middle School",
           "schoolRating": "8"
         },
         {
-          "schoolName": "Greenwood Middle School",
-          "schoolAddress": "789 Maple Ave, Townsville, USA",
-          "schoolDistance": "2.5 miles",
-          "schoolType": "Public Middle School",
+          "schoolName": "Downtown Elementary School",
+          "schoolAddress": "890 Downtown St, Los Angeles, CA",
+          "schoolDistance": "0.7 miles",
+          "schoolType": "Public Elementary School",
           "schoolRating": "7"
         },
         {
-          "schoolName": "Riverside Elementary School",
-          "schoolAddress": "101 River Rd, Lakeside, USA",
-          "schoolDistance": "0.8 miles",
-          "schoolType": "Public Elementary School",
-          "schoolRating": "6"
-        },
-        {
-          "schoolName": "Oakridge Academy",
-          "schoolAddress": "202 Oak St, Forest City, USA",
-          "schoolDistance": "3.1 miles",
+          "schoolName": "Bright Minds Academy",
+          "schoolAddress": "456 Academy Ln, Los Angeles, CA",
+          "schoolDistance": "3.5 miles",
           "schoolType": "Private K-12 School",
           "schoolRating": "10"
         },
         {
-          "schoolName": "Westwood Charter School",
-          "schoolAddress": "303 West Blvd, Uptown, USA",
-          "schoolDistance": "4.0 miles",
+          "schoolName": "Oceanview Charter School",
+          "schoolAddress": "789 Oceanview Dr, Los Angeles, CA",
+          "schoolDistance": "4.5 miles",
           "schoolType": "Charter High School",
           "schoolRating": "9"
         },
         {
-          "schoolName": "Bright Future Preschool",
-          "schoolAddress": "404 Sunshine Ln, Pleasantville, USA",
-          "schoolDistance": "0.3 miles",
+          "schoolName": "Little Scholars Preschool",
+          "schoolAddress": "123 Learning Ln, Los Angeles, CA",
+          "schoolDistance": "0.4 miles",
           "schoolType": "Private Preschool",
           "schoolRating": "9"
         }
@@ -922,10 +798,11 @@
     "contactpropertybox": {
       "isEnabled": true,
       "heading": "Contact This Property",
-      "btn1": "  Request Tour",
-      "btn2": "Send Message",
-      "phone": "(708) 725-1991"
+      "btn1": "Schedule Tour",
+      "btn2": "Send Inquiry",
+      "phone": "(213) 555-1234"
     }
   }
+  
   
 ]

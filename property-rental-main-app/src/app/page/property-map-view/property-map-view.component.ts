@@ -11,12 +11,10 @@ export class PropertyMapViewComponent  implements OnInit, OnDestroy  {
   pageSize = 3;
   currentPage = 1;
   products: any[] = [];
-  searchText: any;
-  dropDownFilter: any;
-  loader: boolean = true;
+  searchText: string = '';
   subscriptionList: Subscription[] = [];
-  selectedSortOption: string = 'lowToHigh';
-
+  sortedProperties: any[] = [];
+  sortOption: string = 'lowToHigh'; 
 
   constructor(
     private readonly apartmentService: CommonUtilitiesService,
@@ -26,26 +24,24 @@ export class PropertyMapViewComponent  implements OnInit, OnDestroy  {
   ngOnInit(): void {
     const propertyData = this.apartmentService.getProducts().subscribe((data:any) => {
         this.products = data;
-        console.log(this.products);
+        this.sortProperties();
         this.changeDetectionRef.detectChanges();
       });
     this.subscriptionList.push(propertyData);
-    this.loader = false;
   }
-  
-  get sortedProperties(): any[] {
-    return this.products.sort((a, b) => {
-      if (this.selectedSortOption === 'lowToHigh') {
-        return a.propertyPrice - b.propertyPrice;
-      } else {
-        return b.propertyPrice - a.propertyPrice;
-      }
-    });
+
+  sortProperties(): void {
+    if (this.sortOption === 'lowToHigh') {
+      this.sortedProperties = this.products.sort((a, b) => a.propertyPrice - b.propertyPrice);
+    } else {
+      this.sortedProperties = this.products.sort((a, b) => b.propertyPrice - a.propertyPrice);
+    }
   }
 
   onSortChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
-    this.selectedSortOption = selectElement.value;
+    this.sortOption = selectElement.value;
+    this.sortProperties();
   }
   ngOnDestroy(): void {
     this.subscriptionList.forEach((subscription) => subscription.unsubscribe());
