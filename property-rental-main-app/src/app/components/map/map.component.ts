@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-map',
@@ -6,16 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent {
-  constructor() { }
+  @Input() lat: any = 0; // Input for latitude
+  @Input() lng: any = 0; // Input for longitude
+  @Input() zoom: any = 15; // Optional input for zoom level
 
-  display: any;
-  center: google.maps.LatLngLiteral = {
-    lat: 19.0760, lng: 72.8777
-  };
-  zoom = 5;
-  options: google.maps.MapOptions = {
-    disableDefaultUI: true,
-    zoomControl: true,
-    fullscreenControl: true,
-  };
+  position: { lat: any; lng: any } = { lat: 0, lng: 0 }; // Default position
+
+  constructor() {}
+
+  ngOnInit(): void {
+    // Update the position when the component initializes
+    this.position = {
+      lat: this.lat,
+      lng: this.lng
+    };
+  }
 }

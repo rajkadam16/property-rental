@@ -23,7 +23,6 @@ import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component
 import { CommonModule } from '@angular/common';
 import { FilterCardsPipe } from './core/pipes/filter-cards.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { DropDownPipe } from './core/pipes/drop-down.pipe';
 import { ImageCarouselComponent } from './components/image-carousel/image-carousel.component';
 import { PropertyDataFacilitiesComponent } from './components/property-data-facilities/property-data-facilities.component';
 import { PropertyDataAdditionalInfoComponent } from './components/property-data-additional-info/property-data-additional-info.component';
@@ -54,9 +53,6 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
     SubNavbarComponent,
     FilterCardsPipe,
     PropertyMapViewComponent,
-    // PropertyMapViewComponent,
-    // ContactUsComponent,
-    DropDownPipe,
     ImageCarouselComponent,
     PropertyDataFacilitiesComponent,
     PropertyDataAdditionalInfoComponent,
