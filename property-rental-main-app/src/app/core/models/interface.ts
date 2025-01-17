@@ -111,3 +111,9 @@ export interface ContactPropertyBox {
   btn2: string;
   phone: string;
 }
+
+
+export interface PropertyMapData {
+  lat: string;
+  lng: string;
+}

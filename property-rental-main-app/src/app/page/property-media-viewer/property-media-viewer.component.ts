@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
@@ -12,24 +12,14 @@ import { PropertyImages } from 'src/app/core/models/interface';
 })
 export class PropertyMediaViewerComponent {
 
-  @Input("propertymedia") propertymedia: any;
-  @Input("media") mediaData: any;
   user: any[] = [];
   propertyName: any[] = [];
   propertyFloorPlans: PropertyImages | undefined;
   propertyPhotos: PropertyImages | undefined;
-  
-  propertyPhotosStyle: any = {
-    'object-fit': 'cover', // Ensures images are cropped to fill the container
-    'max-height': '800px',  // Increased height for the carousel
-    'height': '100%', // Ensures the image will expand to the height of the container
-    'margin': '0 auto', // Center the images horizontally
-    'display': 'block',
-    'max-width': '600px',  // Adjust as needed for your carousel width
+  propertyMapPositionInLong: number = 0;
+  propertyMapPositionInLat: number = 0;
 
-  };
-
-  propertyFloorPlansStyle: any = {
+  propertyImageCarouselStyle: any = {
     'object-fit': 'cover', // Ensures images are cropped to fill the container
     'max-height': '800px',  // Increased height for the carousel
     'height': '100%', // Ensures the image will expand to the height of the container
@@ -37,6 +27,7 @@ export class PropertyMediaViewerComponent {
     'display': 'block',
     'max-width': '600px',  // Adjust as needed for your carousel width
   };
+
 
 
 
@@ -44,9 +35,7 @@ export class PropertyMediaViewerComponent {
     private readonly route: ActivatedRoute,
     private readonly propertyDataService: CommonUtilitiesService
   ) { }
-  backToPreviwsPage() {
-    this.location.back();
-  }
+
 
   ngOnInit(): void {
     const productId = Number(this.route.parent?.snapshot.paramMap.get('id'));
@@ -55,7 +44,13 @@ export class PropertyMediaViewerComponent {
       this.propertyName = response.propertyName;
       this.propertyFloorPlans = response.propertyFloorPlans;
       this.propertyPhotos = response.propertyPhotos;
+      this.propertyMapPositionInLat = parseFloat(response.propertyMapPositionInLat);
+      this.propertyMapPositionInLong = parseFloat(response.propertyMapPositionInLong)
     });
-
   }
+
+  backToPreviwsPage() {
+    this.location.back();
+  }
+
 }

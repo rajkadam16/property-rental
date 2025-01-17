@@ -22,49 +22,48 @@
     <!-- Navigation Tabs -->
     <ul class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link active text-gray-800 fw-bold"
-          id="photo-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#photo"
-          type="button"
-          role="tab"
-          aria-controls="photo"
-          aria-selected="true"
-        >
+        <button class="nav-link active text-gray-800 fw-bold" id="photo-tab" data-bs-toggle="tab"
+          data-bs-target="#photo" type="button" role="tab" aria-controls="photo" aria-selected="true">
           Photos
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button
-          class="nav-link text-gray-800 fw-bold"
-          id="floor-tab"
-          data-bs-toggle="tab"
-          data-bs-target="#floor"
-          type="button"
-          role="tab"
-          aria-controls="floor"
-          aria-selected="false"
-        >
+        <button class="nav-link text-gray-800 fw-bold" id="floor-tab" data-bs-toggle="tab" data-bs-target="#floor"
+          type="button" role="tab" aria-controls="floor" aria-selected="false">
           Floor Plan
         </button>
       </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link text-gray-800 fw-bold" id="map-tab" data-bs-toggle="tab" data-bs-target="#map"
+          type="button" role="tab" aria-controls="map" aria-selected="false">
+          Property Map
+        </button>
+      </li>
     </ul>
-  
+
     <!-- Tab Content -->
     <div class="tab-content rounded-lg shadow-sm p-3" id="myTabContent">
       <div class="tab-pane fade show active" id="photo" role="tabpanel" aria-labelledby="photo-tab">
         <div class="carousel-container">
-          <app-image-carousel [data]="propertyPhotos" [imageStyle]="propertyPhotosStyle"></app-image-carousel>
+          <app-image-carousel [data]="propertyPhotos" [imageStyle]="propertyImageCarouselStyle"></app-image-carousel>
         </div>
       </div>
       <div class="tab-pane fade" id="floor" role="tabpanel" aria-labelledby="floor-tab">
         <div class="carousel-container">
-          <app-image-carousel [data]="propertyFloorPlans" [imageStyle]="propertyFloorPlansStyle"></app-image-carousel>
+          <app-image-carousel [data]="propertyFloorPlans"
+            [imageStyle]="propertyImageCarouselStyle"></app-image-carousel>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+        <div class="carousel-container">
+          <!-- <app-map [lat]="propertyMapPositionInLat" [lng]="propertyMapPositionInLong" [zoom]="14"></app-map> -->
+          <app-map [lat]="19.063813" [lng]="72.915593" [zoom]="14"></app-map>
+          {{propertyMapPositionInLat|json}}
+          {{propertyMapPositionInLong|json}}
         </div>
       </div>
     </div>
   </div>
-  
+
 
 </div>
