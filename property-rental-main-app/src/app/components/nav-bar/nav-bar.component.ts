@@ -8,6 +8,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
+  heading: string = 'SkyRentals';
   navbarData: any[] = []
   username: string | undefined;
   constructor(private readonly navbar: CommonUtilitiesService) { }
