@@ -1,4 +1,4 @@
-<div class="card property-card mt-3">
+<div class="card property-card mt-3" [attr.data-bhk]="propertyCard.bhk">
     <!-- Card Header -->
     <div class="card-header d-flex align-items-center">
       <div>
@@ -28,10 +28,11 @@
             {{ propertyCard.propertyPrice +" "+ "Lakh" || "Not Available"  }}
           </p>
           <p class="property-area">
-            {{ propertyCard.propertyArea || "Not Available" }}
+            {{ propertyCard.propertyArea  +"," +propertyCard.bhk || "Not Available" }}
           </p>
           <p class="property-amenities">
             {{ propertyCard.propertyAmenities || "Not Available" }}
+           
           </p>
           <p class="contact-info">
             {{ propertyCard.contactpropertybox.phone || "Not Available" }}
@@ -47,7 +48,3 @@
       </div>
     </div>
   </div>
-  
-  <!-- Request Tour Form -->
-  <!-- <app-request-tourform></app-request-tourform> -->
-  
