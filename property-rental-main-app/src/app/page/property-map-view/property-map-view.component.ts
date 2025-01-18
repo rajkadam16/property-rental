@@ -19,11 +19,29 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   sortOption: string = 'lowToHigh';
 
   bhkOptions = [
-    { label: '1RK', checked: false }, 
+    { label: '1RK', checked: false },
     { label: '1BHK', checked: false },
-    { label: '2BHK', checked: false },  
-    { label: '3BHK', checked: false } 
+    { label: '2BHK', checked: false },
+    { label: '3BHK', checked: false }
   ];
+  TypeofPropertysOptions = [
+    { label: 'ResidentialApartment', checked: false },
+    { label: 'ResidentialLand', checked: false },
+    { label: 'StudioApartment', checked: false },
+  ];
+
+  FurnishingOptions = [
+    { label: 'Semi', checked: false },
+    { label: 'Full', checked: false },
+    { label: 'None', checked: false }
+  ];
+  ParkingOptions = [
+    { label: '2Wheeler', checked: false },
+    { label: '4Wheeler', checked: false }
+  ];
+
+
+
 
   constructor(
     private readonly apartmentService: CommonUtilitiesService,
@@ -40,16 +58,16 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     this.subscriptionList.push(propertyData);
   }
   //filtering properties based on BHK
-  filterProperties() {
-    const selectedBHKs = this.bhkOptions
-        .filter(option => option.checked)
-        .map(option => option.label);
+  filterProperties(criteria: any, options: any) {
+    const selectedOptions: string[] = options
+      .filter((option: { label: string; checked: boolean }) => option.checked)
+      .map((option: { label: string; checked: boolean }) => option.label);
 
-    this.filteredProperties = this.products.filter(property => 
-        selectedBHKs.length === 0 || selectedBHKs.includes(property.bhk)
+    this.filteredProperties = this.products.filter(property =>
+      selectedOptions.length === 0 || selectedOptions.includes(property[criteria])
     );
-}
-//sorting properties price wise
+  }
+  //sorting properties price wise
   sortProperties(): void {
     if (this.sortOption === 'lowToHigh') {
       this.sortedProperties = this.filteredProperties.sort((a, b) => a.propertyPrice - b.propertyPrice);
