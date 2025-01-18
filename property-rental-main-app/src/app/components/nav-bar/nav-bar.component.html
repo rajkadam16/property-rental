@@ -1,19 +1,21 @@
 
-<nav class="nav nav-pills flex-column flex-sm-row">
-  <div class="container d-flex align-items-center justify-content-center">
-    <a 
-      *ngFor="let nav of navbarData"
-      class="text-black font-bold text-decoration-none px-3 py-2"
-      [attr.data-bs-toggle]="nav.datatoggle" 
-      [attr.data-bs-target]="nav.datatarget" 
-      [routerLink]="nav.routerLink"
-      style="transition: color 0.3s ease-in-out;">
-      {{ nav.displayname }}
-    </a>
-    <span class="ms-3">{{ username }}</span>
-  </div>
-</nav>
-<app-login></app-login>
-<app-signup></app-signup>
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="container position-relative d-flex align-items-center">
 
- 
+    <a routerLink="/" class="logo d-flex align-items-center me-auto">
+      <h1 class="sitename">{{heading}}</h1><span>.</span>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li *ngFor="let nav of navbarData" [attr.data-bs-toggle]="nav.datatoggle"
+          [attr.data-bs-target]="nav.datatarget">
+          <a [routerLink]="nav.routerLink">{{ nav.displayname }}</a>
+        </li>
+      </ul>
+    </nav>
+
+
+  </div>
+</header><app-login></app-login>
+<app-signup></app-signup>
