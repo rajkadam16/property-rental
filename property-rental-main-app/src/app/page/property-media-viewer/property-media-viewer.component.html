@@ -56,10 +56,11 @@
       </div>
       <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
         <div class="carousel-container">
-          <!-- <app-map [lat]="propertyMapPositionInLat" [lng]="propertyMapPositionInLong" [zoom]="14"></app-map> -->
-          <app-map [lat]="19.063813" [lng]="72.915593" [zoom]="14"></app-map>
-          {{propertyMapPositionInLat|json}}
-          {{propertyMapPositionInLong|json}}
+          <!-- when data came from json file map was not working properly so i have hardcoded the lat and long values  -->
+          <!-- <app-map [lat]="propertyMapPositionInLat" [lng]="propertyMapPositionInLong" [zoom]="14"></app-map> --> 
+          <app-map [lat]="19.063813" [lng]="72.915593" [zoom]="14"></app-map> 
+          <!-- {{propertyMapPositionInLat|json}} lat value -->
+          <!-- {{propertyMapPositionInLong|json}} long value -->
         </div>
       </div>
     </div>
