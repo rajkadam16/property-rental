@@ -15,8 +15,8 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   subscriptionList: Subscription[] = [];
   sortedProperties: any[] = [];
   filteredProperties: any[] = [];
-  // properties: any[] = [];
   sortOption: string = 'lowToHigh';
+  noData:boolean = false;
 
   bhkOptions = [
     { label: '1RK', checked: false },
@@ -40,9 +40,6 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     { label: '4Wheeler', checked: false }
   ];
 
-
-
-
   constructor(
     private readonly apartmentService: CommonUtilitiesService,
     private readonly changeDetectionRef: ChangeDetectorRef
@@ -54,8 +51,14 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
       this.filteredProperties = response;
       this.sortProperties();
       this.changeDetectionRef.detectChanges();
+      if (this.filteredProperties.length === 0) {
+        this.noData = true;
+      }
     });
     this.subscriptionList.push(propertyData);
+
+   
+
   }
   //filtering properties based on BHK
   filterProperties(criteria: any, options: any) {
@@ -76,13 +79,11 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     }
   }
 
-
   onSortChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     this.sortOption = selectElement.value;
     this.sortProperties();
   }
-
 
   ngOnDestroy(): void {
     this.subscriptionList.forEach((subscription) => subscription.unsubscribe());
