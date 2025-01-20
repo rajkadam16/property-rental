@@ -64,7 +64,7 @@
           <span>{{ item.unit || "Not Available" }}</span>
           <span>{{ item.price  || "Not Available"}}</span>
           <span>{{ item.squarefit|| "Not Available"}}</span>
-          <span>{{ item.Availability|| "Not Available" }}</span>
+          <span>{{ item.availability|| "Not Available" }}</span>
         </summary>
         <div class="mt-3 text-muted small">
           <p class="fw-bold">Highlights:</p>
@@ -75,7 +75,7 @@
           </ul>
           <p class="mt-3 fw-bold">Kitchen Features:</p>
           <ul class="row list-unstyled g-2">
-            <li class="col-6" *ngFor="let data of item.KitchenFeatures">
+            <li class="col-6" *ngFor="let data of item.kitchenFeatures">
               {{ data.value || "Not Available"}}
             </li>
           </ul>

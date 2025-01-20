@@ -60,8 +60,8 @@
     "propertyCardImage": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
     "propertyArea": "STUDIO, 546 sq ft",
     "bhk": "2BHK",
-    "TypeofProperty":"ResidentialApartment",
-    "Furnishing":"Semi",
+    "typeOfProperty":"ResidentialApartment",
+    "furnishing":"Semi",
     "parking":"2Wheeler",
     "propertySize": "Studio - 2 Beds ",
     "propertyMapPositionInLat": 19.063803,
@@ -109,7 +109,7 @@
           "value": "Square Fit"
         },
         {
-          "value": "Availability"
+          "value": "availability"
         }
       ],
       "unitsdata": [
@@ -117,7 +117,7 @@
           "unit": "Units 1",
           "price": "₹25,000",
           "squarefit": "505 sq ft",
-          "Availability": "Available: 15 June",
+          "availability": "Available: 15 June",
           "features": [
             {
               "value": "High Speed Internet Access"
@@ -132,7 +132,7 @@
               "value": "Air Conditioning"
             }
           ],
-          "KitchenFeatures": [
+          "kitchenFeatures": [
             {
               "value": "Dishwasher"
             },
@@ -151,8 +151,8 @@
           "unit": "Units 2",
           "price": "₹35,000",
           "squarefit": "705 sq ft",
-          "Availability": "Available: 09 June",
-          "Highlights": {
+          "availability": "Available: 09 June",
+          "highlights": {
             "heading": "Highlights",
             "features": [
               {
@@ -169,7 +169,7 @@
               }
             ]
           },
-          "KitchenFeatures:": {
+          "kitchenFeatures:": {
             "heading": "Kitchen Features",
             "features": [
               {
@@ -530,8 +530,8 @@
     "propertyCardImage": "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/102/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
     "propertyArea": "STUDIO,700 sq ft",
     "bhk": "1BHK",
-    "TypeofProperty":"StudioApartment",
-    "Furnishing":"Full",
+    "typeOfProperty":"StudioApartment",
+    "furnishing":"Full",
     "parking":"4Wheeler",
     "propertySize": "Studio - 3 Beds",
     "propertyMapPositionInLat": 19.063813,
@@ -579,7 +579,7 @@
           "value": "Square Feet"
         },
         {
-          "value": "Availability"
+          "value": "availability"
         }
       ],
       "unitsdata": [
@@ -587,7 +587,7 @@
           "unit": "Unit A",
           "price": "₹30,000",
           "squarefit": "600 sq ft",
-          "Availability": "Available: 20 June",
+          "availability": "Available: 20 June",
           "features": [
             {
               "value": "High-Speed Internet"
@@ -602,7 +602,7 @@
               "value": "Air Conditioning"
             }
           ],
-          "KitchenFeatures": [
+          "kitchenFeatures": [
             {
               "value": "Dishwasher"
             },
@@ -621,8 +621,8 @@
           "unit": "Unit B",
           "price": "₹45,000",
           "squarefit": "900 sq ft",
-          "Availability": "Available: 01 July",
-          "Highlights": {
+          "availability": "Available: 01 July",
+          "highlights": {
             "heading": "Highlights",
             "features": [
               {
@@ -639,7 +639,7 @@
               }
             ]
           },
-          "KitchenFeatures": {
+          "kitchenFeatures": {
             "heading": "Kitchen Features",
             "features": [
               {
