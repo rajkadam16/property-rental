@@ -67,11 +67,11 @@ export interface UnitData {
   unit: string;
   price: string;
   squarefit: string;
-  Availability: string;
+  availability: string;
   features: Array<{ value: string }>;
-  KitchenFeatures?: Array<{ value: string }>;
-  Highlights?: FeaturesSection;
-  "KitchenFeatures:"?: FeaturesSection; // Handling the typo in the provided data
+  kitchenFeatures?: Array<{ value: string }>;
+  highlights?: FeaturesSection;
+  "kitchenFeatures:"?: FeaturesSection; // Handling the typo in the provided data
 }
 
 export interface AboutProperty {

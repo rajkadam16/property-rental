@@ -30,7 +30,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     { label: 'StudioApartment', checked: false },
   ];
 
-  FurnishingOptions = [
+  furnishingOptions = [
     { label: 'Semi', checked: false },
     { label: 'Full', checked: false },
     { label: 'None', checked: false }
