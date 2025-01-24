@@ -2,6 +2,7 @@ export const ApiConfig = {
     footer:"assets/master/footer.json",
     featurette:"assets/master/featurette.json",
     faqs:"assets/master/faqs.json",
+    // propertyData:"http://localhost:8080/api/properties",
     propertyData:"assets/master/propertydata.json",
     propertyImgVid:"assets/master/propertyImgVid.json",
     navbar:"assets/master/navbar.json",

@@ -65,12 +65,13 @@
 
   <!-- Property Cards -->
   <div class="left w-[70%] h-[95%] px-20">
-    <div *ngIf="noData">No properties available</div>
-    <app-property-cards 
-      *ngFor="let apartment of filteredProperties|filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
-       [propertyCard]="apartment" [index]="i" >
-       <!-- <div *ngIf="apartment.length==0">No properties available</div> -->
-    </app-property-cards>
+
+<div>
+  <app-property-cards 
+  *ngFor="let apartment of filteredProperties|filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
+   [propertyCard]="apartment" [index]="i"  >
+</app-property-cards>
+</div>
     <div class="border-top text-white d-md-flex justify-content-center align-items-center p-3 ">
       <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
     </div>

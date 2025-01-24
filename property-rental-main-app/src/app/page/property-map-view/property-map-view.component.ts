@@ -16,7 +16,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   sortedProperties: any[] = [];
   filteredProperties: any[] = [];
   sortOption: string = 'lowToHigh';
-  noData:boolean = false;
+  noData:string = 'noData';
 
   bhkOptions = [
     { label: '1RK', checked: false },
@@ -51,9 +51,6 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
       this.filteredProperties = response;
       this.sortProperties();
       this.changeDetectionRef.detectChanges();
-      if (this.filteredProperties.length === 0) {
-        this.noData = true;
-      }
     });
     this.subscriptionList.push(propertyData);
 

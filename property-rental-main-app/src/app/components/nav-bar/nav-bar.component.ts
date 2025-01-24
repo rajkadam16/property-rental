@@ -8,19 +8,15 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  heading: string = 'SkyRentals';
+  heading: string = 'Cityscape rentals';
   navbarData: any[] = []
-  username: string | undefined;
   constructor(private readonly navbar: CommonUtilitiesService) { }
   ngOnInit(): void {
-    this.navbar.parseJsonFile(ApiConfig.navbar).subscribe((response: any) => {
+    this.navbarFunc()
+  }
+  async navbarFunc(){
+  this.navbar.parseJsonFile(ApiConfig.navbar).subscribe((response: any) => {
       this.navbarData = response;
     })
   }
-  isMenuOpen: boolean = false;
-
-  menu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
 }
