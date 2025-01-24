@@ -14,7 +14,7 @@ export class CommonUtilitiesService {
     return this.http.get<any[]>(ApiConfig.propertyData);
   }
 
-  getProductById(id: number): Observable<any | undefined> {
+  getProductById(id: number): Observable<any> {
     return this.getProducts().pipe(
       map((products: any[]) => products.find((product) => product.id === id))
     );

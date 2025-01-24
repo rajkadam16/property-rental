@@ -2,11 +2,6 @@
 
     {
         "isEnabled": true,
-        "displayname":"Home",
-        "routerLink":"/"
-    },
-    {
-        "isEnabled": true,
         "displayname":"Find Property",
         "routerLink":"PropertyMapView"
     },
