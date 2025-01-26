@@ -38,19 +38,22 @@ export class PropertyDataComponent implements OnInit {
 }
 
   fetchPropertyDetails(): void {
-    const productId = Number(this.route.snapshot.paramMap.get('id'));
-    this.productService.getProductById(productId).subscribe((response) => {
-      this.product = response;
-      this.AboutPropertyTowers = response.AboutProperty;
-      this.NeighborhoodDatas = response.NeighborhoodData;
-      this.propertySchoolDatas = response.propertySchoolData;
-      this.UniqueFeaturesOfPropertys = response.UniqueFeaturesOfProperty;
-      this.PropertyAmenities = response.PropertyAmenitie;
-      this.ApartmentFeatures = response.ApartmentFeature;
-      this.floorplandetails = response.floorplandetails;
-      this.propertyunitsdatas = response.propertyunitsdata;
-      this.contactpropertyboxs= response.contactpropertybox;
-      this.propertyImgGallery = response.propertyImgGallery;
+    const productId = this.route.snapshot.params['id']; //backend api
+    // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
+    this.productService.getProductById(productId).subscribe({next: (response) => {
+        this.product = response;
+        this.AboutPropertyTowers = response.aboutProperty;
+        this.NeighborhoodDatas = response.neighborhoodData;
+        this.propertySchoolDatas = response.propertySchoolData;
+        this.UniqueFeaturesOfPropertys = response.uniqueFeaturesOfProperty;
+        this.PropertyAmenities = response.propertyAmenitie;
+        this.ApartmentFeatures = response.apartmentFeature;
+        this.floorplandetails = response.floorplandetails;
+        this.propertyunitsdatas = response.propertyunitsdata;
+        this.contactpropertyboxs= response.contactpropertybox;
+        this.propertyImgGallery = response.propertyImgGallery;
+      },
+      error: (error) => { console.log('Error fetching property details', error); }
     });
   }
 

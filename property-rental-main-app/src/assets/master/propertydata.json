@@ -192,9 +192,8 @@
     "AboutProperty": {
       "heading": "About Presidential Towers",
       "description": "What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!",
-      "details": [
+      "details": 
         "Presidential Towers is an apartment community managed by Waterton, located in Cook County and the 60661 ZIP Code. This area is served by the Chicago Public Schools attendance zone."
-      ]
     },
     "UniqueFeaturesOfProperty": {
       "heading": "Unique Features",
@@ -662,9 +661,9 @@
     "AboutProperty": {
       "heading": "About Skyline Apartments",
       "description": "Experience luxury living at Skyline Apartments. Enjoy breathtaking views of downtown Los Angeles, state-of-the-art amenities, and a vibrant urban lifestyle. With multiple dining options and cultural hotspots nearby, it's the perfect place to call home.",
-      "details": [
+      "details": 
         "Skyline Apartments is managed by Premier Living Properties and is located in the heart of Los Angeles. The community offers convenient access to public transportation and entertainment options."
-      ]
+      
     },
     "UniqueFeaturesOfProperty": {
       "heading": "Unique Features",
@@ -698,9 +697,7 @@
     "NeighborhoodData": {
       "heading": "Neighborhood",
       "description": "Located in the heart of Los Angeles, Skyline Apartments places you within walking distance of iconic attractions like Staples Center, The Broad Museum, and the Los Angeles Convention Center. The area boasts a mix of cultural, dining, and entertainment venues.",
-      "details": [
-        "The property is conveniently located near major freeways and public transit stations, making it easy to explore the greater Los Angeles area."
-      ]
+      "details": "The property is conveniently located near major freeways and public transit stations, making it easy to explore the greater Los Angeles area."
     },
     "PropertyAmenitie": {
       "heading": "Community Amenities",

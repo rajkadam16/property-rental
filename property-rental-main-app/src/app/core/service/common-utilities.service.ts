@@ -8,7 +8,7 @@ import { ApiConfig } from '../constant/ApiConfig';
 })
 export class CommonUtilitiesService {
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient) { }
 
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(ApiConfig.propertyData);
