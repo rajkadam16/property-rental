@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class AvailableUnit {
+public class Unit {
     private String unit;
     private String price;
     private String usableArea;
