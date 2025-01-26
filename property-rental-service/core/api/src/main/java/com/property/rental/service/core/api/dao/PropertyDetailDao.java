@@ -2,18 +2,19 @@ package com.property.rental.service.core.api.dao;
 
 import java.util.List;
 
-import com.property.rental.service.common.model.PropertyDetail;
+import com.property.rental.service.common.model.PropertyDataEntry;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface PropertyDetailDao {
+public interface PropertyDetailDao extends MongoRepository<PropertyDataEntry, String> {
 
-	public PropertyDetail getPropertyDetail(String propertyID);
+	public PropertyDataEntry getPropertyDetail(String propertyID);
 	
-	public List<PropertyDetail> getAllPropertyDetails();
+	public List<PropertyDataEntry> getAllPropertyDetails();
 	
 	public String deletePropertyDetail(String propertyID);
 
-	public String updatePropertyDetail(PropertyDetail propertyDetail);
+	public String updatePropertyDetail(PropertyDataEntry propertyDetail);
 
-	public String addPropertyDetail(PropertyDetail propertyDetail);
+	public String addPropertyDetail(PropertyDataEntry propertyDetail);
 
 }

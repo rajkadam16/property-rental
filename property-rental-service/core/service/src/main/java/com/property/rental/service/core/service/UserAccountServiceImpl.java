@@ -5,11 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.property.rental.service.core.api.dao.PropertyDetailDao;
 import com.property.rental.service.core.api.dao.UserAccountDao;
-import com.property.rental.service.core.api.service.PropertyDetailService;
 import com.property.rental.service.core.api.service.UserAccountService;
-import com.property.rental.service.common.model.PropertyDetail;
+
 import com.property.rental.service.common.model.UserAccount;
 
 @Service("userAccountService")

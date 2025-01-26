@@ -1,4 +1,5 @@
 package com.property.rental.service.rest.controller;
+import com.property.rental.service.common.model.PropertyDataEntry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.property.rental.service.core.api.service.PropertyDetailService;
-import com.property.rental.service.common.model.PropertyDetail;
+
 
 @RestController
 @RequestMapping("property")
@@ -29,12 +30,12 @@ public class PropertyDetailController {
 	}
 	
 	@PostMapping("/add")
-	public Object addPropertyDetail(@RequestBody PropertyDetail propertyDetail) {
+	public Object addPropertyDetail(@RequestBody PropertyDataEntry propertyDetail) {
 		return propertyDetailService.addPropertyDetail(propertyDetail);
 	}
 	
 	@PutMapping("/update")
-	public Object updatePropertyDetail(@RequestBody PropertyDetail propertyDetail) {
+	public Object updatePropertyDetail(@RequestBody PropertyDataEntry propertyDetail) {
 		return propertyDetailService.updatePropertyDetail(propertyDetail);
 	}
 	

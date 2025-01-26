@@ -12,5 +12,16 @@
 
 	<groupId>com.property.rental.service.common</groupId>
 	<artifactId>model</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>bson</artifactId>
+		</dependency>
+	</dependencies>
 
 </project>

@@ -77,7 +77,7 @@ export interface UnitData {
 export interface AboutProperty {
   heading: string;
   description: string;
-  details: string[];
+  details: string;
 }
 
 export interface FeaturesSection {
