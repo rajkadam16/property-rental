@@ -1,42 +1,40 @@
 package com.property.rental.service.core.dao;
 
-import com.property.rental.service.common.model.PropertyDataEntry;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.property.rental.service.common.model.PropertyDataEntry;
 import com.property.rental.service.core.api.dao.PropertyDetailDao;
-
-import java.util.List;
-
+import com.property.rental.service.core.api.db.PropertyDetailRepo;
 
 @Repository("propertyDetailDao")
-public class PropertyDetailDaoImpl  {
+public class PropertyDetailDaoImpl implements PropertyDetailDao {
 
 	@Autowired
-	PropertyDetailDao propertyDetailDao;
-
+	PropertyDetailRepo propertyDetailRepo;
 
 	public PropertyDataEntry getPropertyDetail(String propertyID) {
-		return propertyDetailDao.findById(propertyID).orElse(null);
+		return propertyDetailRepo.findById(propertyID).orElse(null);
 	}
-
 
 	public List<PropertyDataEntry> getAllPropertyDetails() {
-		return propertyDetailDao.findAll();
+		return propertyDetailRepo.findAll();
 	}
-
 
 	public String deletePropertyDetail(String propertyID) {
-		return "";
+		propertyDetailRepo.deleteById(propertyID);
+		return propertyID;
 	}
-
 
 	public String updatePropertyDetail(PropertyDataEntry propertyDetail) {
-		return "";
+		 propertyDetailRepo.save(propertyDetail);
+		 return "";
 	}
 
-
 	public String addPropertyDetail(PropertyDataEntry propertyDetail) {
-		return""; //propertyDetailDao.save(propertyDetail);
+		 propertyDetailRepo.insert(propertyDetail);
+		 return "";
 	}
 }

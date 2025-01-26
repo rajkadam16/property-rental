@@ -3,7 +3,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -11,6 +13,8 @@ import java.util.List;
 @Document(collection = "properties")
 @Data
 @NoArgsConstructor
+@Getter
+@Setter
 public class PropertyDataEntry {
     @Id
     private String id;
