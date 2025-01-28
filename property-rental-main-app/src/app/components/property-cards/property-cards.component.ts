@@ -13,7 +13,7 @@ carouselImageStyle:any = {
   'object-fit': 'cover', // Ensures images are cropped to fill the container
   width: '100%',
   height: '100%',
-  // overflow: 'hidden',
 };
+
 } 
  

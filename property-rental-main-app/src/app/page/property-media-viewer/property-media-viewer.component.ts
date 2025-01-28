@@ -34,8 +34,8 @@ export class PropertyMediaViewerComponent {
   ) { }
 
   ngOnInit(): void {
-    const productId = this.route.snapshot.params['id']; //backend api
-    // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
+    // const productId = this.route.snapshot.params['id']; //backend api
+    const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
     this.propertyDataService.getProductById(productId).subscribe((response: any) => {
       this.user = response;
       this.propertyName = response.propertyName;
