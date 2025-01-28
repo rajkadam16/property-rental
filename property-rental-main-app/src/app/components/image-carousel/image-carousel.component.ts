@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PropertyImages } from 'src/app/core/models/interface';
 
 @Component({
   selector: 'app-image-carousel',
@@ -7,42 +6,36 @@ import { PropertyImages } from 'src/app/core/models/interface';
   styleUrls: ['./image-carousel.component.css']
 })
 export class ImageCarouselComponent implements OnInit {
-  @Input("data") imageCarousel: PropertyImages | undefined;
-  @Input("imageStyle") imageCarouselStyle: PropertyImages | undefined;
+  @Input() data: any; // Input for the carousel data
+  @Input() imageStyle: any; // Input for custom image styles
 
-  currentIndex: number = 0;
-  interval: any;
+ 
+  currentIndex: number = 0; // Track the current image index
+  interval: any; // For auto-slide functionality
 
   ngOnInit(): void {
-    this.startCarousel();
+    this.startCarousel(); // Start the carousel automatically
   }
 
+  // Method to move to the next image
+  nextImage(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.data.images.length;
+  }
+
+  // Method to move to the previous image
+  previousImage(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.data.images.length) % this.data.images.length;
+  }
+
+  // Method to start the auto-slide carousel
   startCarousel(): void {
     this.interval = setInterval(() => {
       this.nextImage();
     }, 3000); // Change image every 3 seconds
   }
 
+  // Method to stop the auto-slide carousel
   stopCarousel(): void {
-    if (this.interval) {
-      clearInterval(this.interval);
-      this.interval = null;
-    }
-  }
-
-  nextImage(): void {
-    if (this.imageCarousel?.images) {
-      this.currentIndex = (this.currentIndex + 1) % this.imageCarousel.images.length;
-    }
-  }
-
-  previousImage(): void {
-    if (this.imageCarousel?.images) {
-      this.currentIndex = (this.currentIndex - 1 + this.imageCarousel.images.length) % this.imageCarousel.images.length;
-    }
-  }
-
-  ngOnDestroy(): void {
-    this.stopCarousel();
+    clearInterval(this.interval);
   }
 }

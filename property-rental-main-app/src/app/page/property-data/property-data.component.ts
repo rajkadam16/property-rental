@@ -16,17 +16,17 @@ export class PropertyDataComponent implements OnInit {
     'max-height': '750px'  // Adjust as needed for your carousel height
   };
 
-  product: PropertyData[] = [];
-  propertyImgGallery:ImageGallery={id:'',images:[]};
-  AboutPropertyTowers:AboutProperty[]=[];
-  NeighborhoodDatas:FloorPlanDetails[]=[];
-  propertySchoolDatas:PropertySchoolData[]=[];
-  UniqueFeaturesOfPropertys:FeaturesSection[]=[];
-  PropertyAmenities:FeaturesSection[]=[];
-  ApartmentFeatures:FeaturesSection[]=[];
+  product: any[] = [];
+  propertyImgGallery:any[]=[];
+  AboutPropertyTowers:any[]=[];
+  NeighborhoodDatas:any[]=[];
+  propertySchoolDatas:any[]=[];
+  UniqueFeaturesOfPropertys:any[]=[];
+  PropertyAmenities:any[]=[];
+  ApartmentFeatures:any[]=[];
   floorplandetails:any[]=[];
   propertyunitsdatas:any[]=[];
-  contactpropertyboxs:ContactPropertyBox[]=[];
+  contactpropertyboxs:any[]=[];
  
   constructor(
     private readonly route: ActivatedRoute,
@@ -38,8 +38,8 @@ export class PropertyDataComponent implements OnInit {
 }
 
   fetchPropertyDetails(): void {
-    const productId = this.route.snapshot.params['id']; //backend api
-    // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
+    // const productId = this.route.snapshot.params['id']; //backend api
+    const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
     this.productService.getProductById(productId).subscribe({next: (response) => {
         this.product = response;
         this.AboutPropertyTowers = response.aboutProperty;
@@ -51,7 +51,7 @@ export class PropertyDataComponent implements OnInit {
         this.floorplandetails = response.floorplandetails;
         this.propertyunitsdatas = response.propertyunitsdata;
         this.contactpropertyboxs= response.contactpropertybox;
-        this.propertyImgGallery = response.propertyImgGallery;
+        this.propertyImgGallery = response.imgGallery;
       },
       error: (error) => { console.log('Error fetching property details', error); }
     });

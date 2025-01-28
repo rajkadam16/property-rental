@@ -1,14 +1,10 @@
-<div class="container">
-  <div class="d-flex flex-column p-4 mx-auto " style="height: 40vh; max-width:400px;">
-    <div class="card shadow-lg rounded overflow-hidden h-100">
-      <div class="card-img-top" style="height: 12rem; overflow: hidden;">
-        <img [src]="product.propertyCardImage" class="w-100 h-100 object-fit-cover" alt="">
-      </div>
-      <div class="card-body p-3">
-        <h4 class="card-title h5 fw-bold mb-2 text-primary">{{product.propertyName}}</h4>
-        <p class="card-text text-center text-muted">{{product.propertyLocation}}</p>
-        <p class="text-center pt-2 small text-dark fw-bold">{{product.propertyPrice}} Lakhs</p>
-      </div>
-    </div>
+<div class="card shadow-lg rounded overflow-hidden h-100">
+  <div class="card-img-top" style="height: 12rem; overflow: hidden;">
+    <img [src]="product.propertyDetails.thumbnail" class="w-100 h-100 object-fit-cover" alt="">
+  </div>
+  <div class="card-body p-3">
+    <h4 class="card-title h5 fw-bold mb-2 text-primary">{{product.propertyDetails.name}}</h4>
+    <p class="card-text text-center text-muted">{{product.propertyDetails.address.address1 + ', ' + product.propertyDetails.address.city}}</p>
+    <p class="text-center pt-2 small text-dark fw-bold">{{product.propertyDetails.size}} Area</p>
   </div>
 </div>
