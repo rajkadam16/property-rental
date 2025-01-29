@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class PropertySchoolCardComponent {
 @Input ('schoolData') school:any;
+
+
 }

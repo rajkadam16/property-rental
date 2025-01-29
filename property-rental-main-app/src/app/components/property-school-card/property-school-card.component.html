@@ -1,18 +1,18 @@
-<h1 class="h2 pt-3 fw-semibold">{{ school.heading|| "Not Available" }}</h1>
+<h1 class="h2 pt-3 fw-semibold">{{ school.title|| "Not Available" }}</h1>
 <div class="container mx-auto p-4">
     <div class="row g-4">
         <!-- Card Template -->
-        <div class="col-12 col-md-6" *ngFor="let data of school.schoolData">
+        <div class="col-12 col-md-6" *ngFor="let data of school.details">
             <div class="card shadow-sm rounded overflow-hidden h-100 d-flex flex-row">
                 <div class="p-3 flex-grow-1">
-                    <h3 class="h5 fw-semibold text-dark text-truncate">{{ data.schoolName || "Not Available"}}</h3>
-                    <p class="text-muted small">{{ data.schoolType || "Not Available"}}</p>
-                    <p class="text-muted small text-truncate">{{ data.schoolAddress|| "Not Available"}}</p>
-                    <p class="text-muted small">{{ data.schoolDistance || "Not Available"}}</p>
+                    <h3 class="h5 fw-semibold text-dark text-truncate">{{ data.name || "Not Available"}}</h3>
+                    <p class="text-muted small">{{ data.type || "Not Available"}}</p>
+                    <p class="text-muted small text-truncate">{{ data.address|| "Not Available"}}</p>
+                    <p class="text-muted small">{{ data.distance || "Not Available"}}</p>
                 </div>
                 <div class="bg-light d-flex align-items-center justify-content-center p-3" style="width: 33%;">
                     <div class="text-center">
-                        <h1 class="display-4 fw-bold text-success">{{ data.schoolRating || "Not Available"}}</h1>
+                        <h1 class="display-4 fw-bold text-success">{{ data.rating || "Not Available"}}</h1>
                         <span class="text-muted small">Out of 10</span>
                     </div>
                 </div>

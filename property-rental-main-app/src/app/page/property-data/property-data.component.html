@@ -1,29 +1,30 @@
 <div class="row">
-  <app-image-carousel [data]="propertyImgGallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+  <!-- <app-image-carousel [data]="propertyImgGallery" [imageStyle]="carouselImageStyle"></app-image-carousel> -->
+  <!-- <ng-container *ngFor="let gallery of propertyImgGallery">
+    <app-image-carousel *ngIf="gallery.type === 'ImageGallery'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+  </ng-container> -->
 </div>
 <div class="row">
   <div class="col-8">
     <div class="property-data w-[75vw] p-6 rounded-lg">
 
-      <app-appartment-data [data]="product" [floorplandetails]="floorplandetails"
-        [unitsData]="propertyunitsdatas"></app-appartment-data>
+      <app-appartment-data [data]="product" [floorplandetails]="product"
+        [unitsData]="product"></app-appartment-data>
 
       <!--  about property -->
       <div class="about-property pt-5">
-        <app-property-data-additional-info [additionalInfo]="AboutPropertyTowers"></app-property-data-additional-info>
-        <app-property-data-facilities [propertyDetalisList]="UniqueFeaturesOfPropertys"></app-property-data-facilities>
-        <app-property-data-additional-info [additionalInfo]="NeighborhoodDatas"></app-property-data-additional-info>
-        <app-property-data-facilities [propertyDetalisList]="PropertyAmenities"></app-property-data-facilities>
-        <app-property-data-facilities [propertyDetalisList]="ApartmentFeatures"></app-property-data-facilities>
-        <app-property-school-card [schoolData]="propertySchoolDatas"></app-property-school-card>
-        <app-property-school-card [schoolData]="propertySchoolDatas"></app-property-school-card>
-        <app-property-school-card [schoolData]="propertySchoolDatas"></app-property-school-card>
+        <app-property-data-additional-info [additionalInfo]="aboutProperty"></app-property-data-additional-info>
+        <app-property-data-facilities [propertyDetalisList]="propertyFeatures"></app-property-data-facilities>
+        <app-property-data-additional-info [additionalInfo]="propertyNeighborHood"></app-property-data-additional-info>
+        <app-property-school-card [schoolData]="propertyEducation" ></app-property-school-card>
+        <app-property-school-card [schoolData]="transportations" ></app-property-school-card>
+        <app-property-school-card [schoolData]="hospitals" ></app-property-school-card>
       </div>
     </div>
 
   </div>
   <div class="col-4">
-    <app-contact-property [propertyContact]="contactpropertyboxs" [propertyHeading]="product"></app-contact-property>
+    <app-contact-property [propertyContact]="product" ></app-contact-property>
 
   </div>
 </div>
