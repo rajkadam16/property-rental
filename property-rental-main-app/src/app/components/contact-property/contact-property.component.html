@@ -5,30 +5,31 @@
       <!-- Heading -->
       <h2 class="text-center text-secondary mb-3">
         <!-- {{propertyContactData.heading || "Not Available"}} -->
-        Contact {{propertyHeading.propertyName}}
+        Contact {{propertyContactData.propertyDetails.name}}
       </h2>
 
       <!-- Buttons -->
       <div class="d-grid gap-3">
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#requestTour">
-          {{propertyContactData.btn1}}
+        Send Message
         </button>
         <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sendMessage">
-          {{propertyContactData.btn2}}
+        Request Tour
         </button>
       </div>
 
       <!-- Phone Number -->
-      <h2 class="text-center text-secondary mt-4">
-        {{propertyContactData.phone || 'Number Not Available'}}
+      <h2 class="text-center mt-4 text-blue-400">
+        {{propertyContactData.propertyDetails.contactUs.phone || 'Number Not Available'}}
+      </h2>
+      <h2 class="text-center text-secondary mt-2">
+        {{propertyContactData.propertyDetails.contactUs.email || 'Number Not Available'}}
       </h2>
     </div>
   </div>
 </aside>
 
 
-<app-send-message [propertyInfo]="propertyHeading"></app-send-message>
-<app-request-tourform [propertyInfo]="propertyHeading"></app-request-tourform>
-<app-send-message></app-send-message>
-<app-request-tourform></app-request-tourform>
+<app-send-message [propertyInfo]="propertyContactData"></app-send-message>
+<app-request-tourform [propertyInfo]="propertyContactData"></app-request-tourform>
 
