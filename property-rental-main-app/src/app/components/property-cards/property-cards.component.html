@@ -5,10 +5,10 @@
     <div class="card-header d-flex align-items-center">
       <div>
         <h2 class="card-title">
-          {{ propertyCard.propertyName || "Not Available" }}
+          {{ propertyCard.propertyDetails.name || "Not Available" }}
         </h2>
         <p class="card-subtitle">
-          {{ propertyCard.propertyLocation || "Not Available" }}
+          {{ propertyCard.propertyDetails.address.address1 + "," + propertyCard.propertyDetails.address.city || "Not Available" }}
         </p>
       </div>
     </div>
@@ -17,7 +17,9 @@
     <div class="card-content d-flex">
       <!-- Image Carousel -->
       <div class="card-image">
-        <app-image-carousel [data]="propertyCard.propertyImgGallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+        <ng-container *ngFor="let gallery of propertyCard.imgGallery">
+          <app-image-carousel *ngIf="gallery.type === 'ImageGallery'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+        </ng-container>
       </div>
   
       <!-- Property Info -->
@@ -27,24 +29,24 @@
       >
         <div class="card-body">
           <p class="property-price">
-            {{ propertyCard.propertyPrice +" "+ "Lakh" || "Not Available"  }}
+            {{ propertyCard.propertyDetails.size || "Not Available"  }}
           </p>
           <p class="property-area">
-            {{ propertyCard.propertyArea  +"," +propertyCard.bhk || "Not Available" }}
+            {{ propertyCard.propertyDetails.area  || "Not Available" }}
           </p>
           <p class="property-amenities">
-            {{ propertyCard.propertyAmenities || "Not Available" }}
+            {{ propertyCard.propertyDetails.amenities || "Not Available" }}
            
           </p>
           <p class="contact-info">
-            {{ propertyCard.contactpropertybox.phone || "Not Available" }}
+            {{ propertyCard.propertyDetails.contactUs.phone || "Not Available" }}
           </p>
           <button
             class="btn btn-primary request-tour-btn"
             data-bs-toggle="modal"
             data-bs-target="#requestTour"
           >
-            {{ propertyCard.contactpropertybox.btn2 || "Not Available" }}
+            {{ propertyCard.propertyDetails.contactUs.title || "Not Available" }}
           </button>
         </div>
       </div>

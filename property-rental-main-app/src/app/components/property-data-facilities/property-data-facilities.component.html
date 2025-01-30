@@ -1,11 +1,11 @@
-<h1 class="h4 pt-3 fw-semibold ">{{ facilities.heading || "Not Available"}}</h1>
+<h1 class="h4 pt-3 fw-semibold">{{ facilities.title || "Not Available" }}</h1>
 
-<div class="features-container d-flex gap-3">
+<div class="features-container d-flex gap-3" *ngIf="facilities?.features">
   <!-- First Column -->
   <div class="features-wrapper pt-3">
     <ul class="features-list list-unstyled">
       <li *ngFor="let property of facilities.features.slice(0, 6)">
-        {{ property.list || "Not Available"}}
+        {{ property || "Not Available" }}
       </li>
     </ul>
   </div>
@@ -14,7 +14,7 @@
   <div class="features-wrapper pt-3">
     <ul class="features-list list-unstyled">
       <li *ngFor="let property of facilities.features.slice(6, 12)">
-        {{ property.list || "Not Available"}}
+        {{ property || "Not Available" }}
       </li>
     </ul>
   </div>
@@ -23,7 +23,7 @@
   <div class="features-wrapper pt-3">
     <ul class="features-list list-unstyled">
       <li *ngFor="let property of facilities.features.slice(12, 18)">
-        {{ property.list || "Not Available"}}
+        {{ property || "Not Available" }}
       </li>
     </ul>
   </div>

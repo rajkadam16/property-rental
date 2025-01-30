@@ -18,7 +18,6 @@ import { PropertyPhotosComponent } from './components/property-photos/property-p
 import { PropertyFloorPlanComponent } from './components/property-floor-plan/property-floor-plan.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PropertyCardsComponent } from './components/property-cards/property-cards.component';
-import { ShowPropertyCardsComponent } from './components/show-property-cards/show-property-cards.component';
 import { SubNavbarComponent } from './components/sub-navbar/sub-navbar.component';
 import { CommonModule } from '@angular/common';
 import { FilterCardsPipe } from './core/pipes/filter-cards.pipe';
@@ -49,7 +48,7 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
     PropertyFloorPlanComponent,
     PropertyCardsComponent,
     PropertyMediaViewerComponent,
-    ShowPropertyCardsComponent,
+    
     SubNavbarComponent,
     FilterCardsPipe,
     PropertyMapViewComponent,

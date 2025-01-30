@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ContactPropertyComponent {
 @Input("propertyContact") propertyContactData:any;
-@Input("propertyHeading") propertyHeading:any;
+
 }

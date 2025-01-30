@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AboutProperty, ContactPropertyBox, FeaturesSection, FloorPlanDetails, ImageGallery, PropertyData, PropertySchoolData } from 'src/app/core/models/interface';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -16,17 +15,18 @@ export class PropertyDataComponent implements OnInit {
     'max-height': '750px'  // Adjust as needed for your carousel height
   };
 
-  product: PropertyData[] = [];
-  propertyImgGallery:ImageGallery={id:'',images:[]};
-  AboutPropertyTowers:AboutProperty[]=[];
-  NeighborhoodDatas:FloorPlanDetails[]=[];
-  propertySchoolDatas:PropertySchoolData[]=[];
-  UniqueFeaturesOfPropertys:FeaturesSection[]=[];
-  PropertyAmenities:FeaturesSection[]=[];
-  ApartmentFeatures:FeaturesSection[]=[];
-  floorplandetails:any[]=[];
-  propertyunitsdatas:any[]=[];
-  contactpropertyboxs:ContactPropertyBox[]=[];
+  hospitalTextColors = {
+    'color': 'red',
+  }
+  
+  product: any[] = [];
+  aboutProperty: any[] = [];
+  propertyFeatures: any[] = [];
+  propertyNeighborHood: any[] = [];
+  propertyEducation: any[] = [];
+  transportations: any[] = [];
+  hospitals: any[] = [];
+
  
   constructor(
     private readonly route: ActivatedRoute,
@@ -40,21 +40,18 @@ export class PropertyDataComponent implements OnInit {
   fetchPropertyDetails(): void {
     const productId = this.route.snapshot.params['id']; //backend api
     // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
-    this.productService.getProductById(productId).subscribe({next: (response) => {
+    this.productService.getProductById(productId).subscribe((response: any) => {
         this.product = response;
-        this.AboutPropertyTowers = response.aboutProperty;
-        this.NeighborhoodDatas = response.neighborhoodData;
-        this.propertySchoolDatas = response.propertySchoolData;
-        this.UniqueFeaturesOfPropertys = response.uniqueFeaturesOfProperty;
-        this.PropertyAmenities = response.propertyAmenitie;
-        this.ApartmentFeatures = response.apartmentFeature;
-        this.floorplandetails = response.floorplandetails;
-        this.propertyunitsdatas = response.propertyunitsdata;
-        this.contactpropertyboxs= response.contactpropertybox;
-        this.propertyImgGallery = response.propertyImgGallery;
+        this.aboutProperty = response.aboutUs;
+        this.propertyFeatures = response.apartmentFeatures;
+        this.propertyNeighborHood = response.neighborHood;
+        this.propertyEducation = response.education;
+        this.transportations = response.transportation;
+        this.hospitals = response.hospital;
+
       },
-      error: (error) => { console.log('Error fetching property details', error); }
-    });
+    );
+    
   }
 
 
