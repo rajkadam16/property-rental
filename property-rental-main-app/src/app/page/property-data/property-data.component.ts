@@ -14,12 +14,9 @@ export class PropertyDataComponent implements OnInit {
     width: '100%',         // Stretches to fit the width
     'max-height': '750px'  // Adjust as needed for your carousel height
   };
-
-  hospitalTextColors = {
-    'color': 'red',
-  }
   
   product: any[] = [];
+  imgGallerys: any[] = [];
   aboutProperty: any[] = [];
   propertyFeatures: any[] = [];
   propertyNeighborHood: any[] = [];
@@ -42,6 +39,7 @@ export class PropertyDataComponent implements OnInit {
     // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
     this.productService.getProductById(productId).subscribe((response: any) => {
         this.product = response;
+        this.imgGallerys = response.imgGallery;
         this.aboutProperty = response.aboutUs;
         this.propertyFeatures = response.apartmentFeatures;
         this.propertyNeighborHood = response.neighborHood;

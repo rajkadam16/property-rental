@@ -1,8 +1,7 @@
 <div class="row">
-  <!-- <app-image-carousel [data]="propertyImgGallery" [imageStyle]="carouselImageStyle"></app-image-carousel> -->
-  <!-- <ng-container *ngFor="let gallery of propertyImgGallery">
-    <app-image-carousel *ngIf="gallery.type === 'ImageGallery'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
-  </ng-container> -->
+  <ng-container *ngFor="let gallery of imgGallerys">
+    <app-image-carousel *ngIf="gallery.type === 'Photos'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+  </ng-container>
 </div>
 <div class="row">
   <div class="col-8">

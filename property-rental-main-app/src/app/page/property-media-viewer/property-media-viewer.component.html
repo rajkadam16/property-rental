@@ -1,13 +1,8 @@
-<div class="relative">
-  <div class="w-full h-[70vh] overflow-hidden">
-    <app-image-carousel [data]="propertyFloorPlans"></app-image-carousel>
-  </div>
-</div>
 <div class="bg-white text-light p-4 fixed inset-0 z-10 shadow-lg overflow-auto">
   <!-- Header Section -->
   <div class="flex justify-between items-center border-b pb-3">
     <div class="text-center w-full">
-      <h1 class="fw-bold text-xl text-gray-800">{{propertyName}}</h1>
+      <!-- <h1 class="fw-bold text-xl text-gray-800">{{propertyName}}</h1> -->
     </div>
     <div class="absolute right-4">
       <button type="button" class="btn btn-success rounded-pill px-4" routerLink="/propertydetails/"
@@ -45,15 +40,18 @@
     <div class="tab-content rounded-lg shadow-sm p-3" id="myTabContent">
       <div class="tab-pane fade show active" id="photo" role="tabpanel" aria-labelledby="photo-tab">
         <div class="carousel-container">
-          <app-image-carousel [data]="propertyPhotos" [imageStyle]="propertyImageCarouselStyle"></app-image-carousel>
+          <ng-container *ngFor="let gallery of imgGallerys">
+            <app-image-carousel *ngIf="gallery.type === 'Photos'" [data]="gallery" [imageStyle]="propertyImageCarouselStyle"></app-image-carousel>
+          </ng-container>
         </div>
       </div>
       <div class="tab-pane fade" id="floor" role="tabpanel" aria-labelledby="floor-tab">
         <div class="carousel-container">
-          <app-image-carousel [data]="propertyFloorPlans"
-            [imageStyle]="propertyImageCarouselStyle"></app-image-carousel>
+          <ng-container *ngFor="let gallery of imgGallerys">
+            <app-image-carousel *ngIf="gallery.type === 'floorPlan'" [data]="gallery" [imageStyle]="propertyImageCarouselStyle"></app-image-carousel>
+          </ng-container>
         </div>
-        {{propertyFloorPlans|json}}
+      
       </div>
       <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
         <div class="carousel-container">
