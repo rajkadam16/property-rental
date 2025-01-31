@@ -18,11 +18,7 @@
         </button>
       </div>
     </div>
-    <!-- <div>
-      <a href="#">
-        <div class="rounded bg-cover bg-no-repeat" style="width: 260px; height:100%; background-image: url({{apartmentData.propertyOverViewImage}});"></div>
-      </a>
-    </div> -->
+
   </div>
 
   <div class="mt-4 group">
@@ -51,7 +47,7 @@
     <details class="border rounded p-3">
       <summary class="d-flex justify-content-between fw-semibold">
         <!-- Column Headers -->
-        <span *ngFor="let col of unitData.cols" class="text-dark">
+        <span *ngFor="let col of unitData.availableUnits.cols" class="text-dark">
           {{ col || "Not Available" }}
         </span>
       </summary>
@@ -59,7 +55,7 @@
     
     <div class="mt-4">
       <!-- Unit Rows -->
-      <details class="border rounded p-3 mb-3" *ngFor="let item of unitData.rows">
+      <details class="border rounded p-3 mb-3" *ngFor="let item of unitData.availableUnits.rows">
         <summary class="d-flex justify-content-between text-primary fw-bold cursor-pointer">
           <span>{{ item.unit || "Not Available" }}</span>
           <span>{{ item.price || "Not Available" }}</span>
@@ -77,6 +73,13 @@
           <ul class="row list-unstyled g-2">
             <li class="col-6" *ngFor="let data of item.kitchen">
               {{ data || "Not Available" }}
+            </li>
+          </ul>
+          <p class="mt-3 fw-bold">furnishing:</p>
+          <ul class="row list-unstyled g-2">
+            <li class="col-6" *ngFor="let data of item.furnishing">
+            <span class="font-semibold">  {{ data.type +":"|| "Not Available" }}</span><br>
+              {{ data.highlights || "Not Available" }}
             </li>
           </ul>
         </div>
