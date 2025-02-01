@@ -26,7 +26,6 @@ export class HomeComponent {
   getData(): void {
     this.data.getProducts().subscribe((data: any) => {
       this.products = data;
-      console.log(this.products);
     });
   }
 }

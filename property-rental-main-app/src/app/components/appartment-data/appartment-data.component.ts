@@ -21,7 +21,7 @@ showFloorPlan: boolean = false;
 constructor() {}
 
 ngOnInit(): void {
-  console.log('Property Data:', this.apartmentData);
+
 }
 
 get unitData() {
