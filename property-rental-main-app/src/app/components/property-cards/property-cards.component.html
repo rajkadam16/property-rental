@@ -23,23 +23,29 @@
       </div>
   
       <!-- Property Info -->
+       
       <div
         class="card-info"
         routerLink="/propertydetails/{{ propertyCard.id }}"
       >
         <div class="card-body">
-          <p class="property-price">
-            {{ propertyCard.propertyDetails.size || "Not Available"  }}
+          <p class="property-price text-lg font-bold text-blue-600">
+            {{ propertyCard.propertyDetails.size || "Not Available" }}
           </p>
-          <p class="property-area">
-            {{ propertyCard.propertyDetails.area  || "Not Available" }}
+  
+          <!-- Area -->
+          <p class="property-area text-sm text-gray-700 mt-1">
+            <span class="font-medium">Area:</span> {{ propertyCard.propertyDetails.area || "Not Available" }}
           </p>
-          <p class="property-amenities">
-            {{ propertyCard.propertyDetails.amenities || "Not Available" }}
-           
+  
+          <!-- Amenities -->
+          <p class="property-amenities text-sm text-gray-700 mt-1">
+            <span class="font-medium">Amenities:</span> {{ propertyCard.propertyDetails.amenities || "Not Available" }}
           </p>
-          <p class="contact-info">
-            {{ propertyCard.propertyDetails.contactUs.phone || "Not Available" }}
+  
+          <!-- Contact Info -->
+          <p class="contact-info text-sm text-gray-700 mt-1">
+            <span class="font-medium">Contact:</span> {{ propertyCard.propertyDetails.contactUs.phone || "Not Available" }}
           </p>
           <button
             class="btn btn-primary request-tour-btn"
