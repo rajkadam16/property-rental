@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AboutUs, ApartmentFeatures, Education, Hospital, ImageGallery, Neighborhood, Transportation } from 'src/app/core/models/interface';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -14,18 +15,15 @@ export class PropertyDataComponent implements OnInit {
     width: '100%',         // Stretches to fit the width
     'max-height': '750px'  // Adjust as needed for your carousel height
   };
-
-  hospitalTextColors = {
-    'color': 'red',
-  }
   
   product: any[] = [];
-  aboutProperty: any[] = [];
-  propertyFeatures: any[] = [];
-  propertyNeighborHood: any[] = [];
-  propertyEducation: any[] = [];
-  transportations: any[] = [];
-  hospitals: any[] = [];
+  imgGallerys: ImageGallery[] = [];
+  aboutProperty: AboutUs[] = [];
+  apartmentFeatures: ApartmentFeatures[] = [];
+  propertyNeighborHood: Neighborhood[] = [];
+  propertyEducation: Education[] = [];
+  transportations: Transportation[] = [];
+  hospitals: Hospital[] = [];
 
  
   constructor(
@@ -42,8 +40,9 @@ export class PropertyDataComponent implements OnInit {
     // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
     this.productService.getProductById(productId).subscribe((response: any) => {
         this.product = response;
+        this.imgGallerys = response.imgGallery;
         this.aboutProperty = response.aboutUs;
-        this.propertyFeatures = response.apartmentFeatures;
+        this.apartmentFeatures = response.apartmentFeatures;
         this.propertyNeighborHood = response.neighborHood;
         this.propertyEducation = response.education;
         this.transportations = response.transportation;

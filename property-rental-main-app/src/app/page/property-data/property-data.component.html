@@ -1,8 +1,7 @@
 <div class="row">
-  <!-- <app-image-carousel [data]="propertyImgGallery" [imageStyle]="carouselImageStyle"></app-image-carousel> -->
-  <!-- <ng-container *ngFor="let gallery of propertyImgGallery">
-    <app-image-carousel *ngIf="gallery.type === 'ImageGallery'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
-  </ng-container> -->
+  <ng-container *ngFor="let gallery of imgGallerys">
+    <app-image-carousel *ngIf="gallery.type === 'Photos'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+  </ng-container>
 </div>
 <div class="row">
   <div class="col-8">
@@ -14,7 +13,7 @@
       <!--  about property -->
       <div class="about-property pt-5">
         <app-property-data-additional-info [additionalInfo]="aboutProperty"></app-property-data-additional-info>
-        <app-property-data-facilities [propertyDetalisList]="propertyFeatures"></app-property-data-facilities>
+        <app-property-data-facilities [propertyDetalisList]="apartmentFeatures"></app-property-data-facilities>
         <app-property-data-additional-info [additionalInfo]="propertyNeighborHood"></app-property-data-additional-info>
         <app-property-school-card [schoolData]="propertyEducation" ></app-property-school-card>
         <app-property-school-card [schoolData]="transportations" ></app-property-school-card>

@@ -137,7 +137,7 @@
                     {
                         "type": "Semi",
                         "highlights": [
-                            "bed"
+                            "bed","Air Conditioning","Washer/Dryer"
                         ]
                     }
                 ],
@@ -293,6 +293,288 @@
                 "name": "Aurora Health",
                 "address": "123 Elm St, Cityville, USA",
                 "distance": "1.2 miles",
+                "type": "Public",
+                "rating": "8"
+            }
+        ]
+    }
+},
+{
+    "id": "2",
+    "imgGallery": [
+        {
+            "id": "a12b34c5-678d-901e-f123-4567890abcde",
+            "type": "ImageGallery",
+            "images": [
+                {
+                    "url": "https://images1.apartments.com/i2/IBKNpzOGlA-nqxsSdcSP6v600_1br1NDdHEF3F9p9bQ/116/elevate-chicago-il-building-photo.jpg?p=1",
+                    "alt": "image 1"
+                },
+                {
+                    "url": "https://images1.apartments.com/i2/Toh4TwPpss6kUmz4Cwut9H2O87DZsBFyOQRgzxf_Weg/116/elevate-chicago-il-lobby-photo.jpg?p=1",
+                    "alt": "image 2"
+                },
+                {
+                    "url": "https://images1.apartments.com/i2/6G2YNy_815nGskH3FEGQBxKa4_Isw1xx1AhCg6hxEUI/116/elevate-chicago-il-building-photo.jpg?p=1",
+                    "alt": "image 3"
+                }
+            ]
+        },
+        {
+            "id": "b23c45d6-789e-012f-g234-567890abcdef",
+            "type": "Photos",
+            "images": [
+                {
+                    "url": "https://images1.apartments.com/i2/wpt3nKoYhOCYM-R8LgXSXFfklEWw6j4wZbg4iTfFMQw/116/elevate-chicago-il-building-photo.jpg?p=1",
+                    "alt": "image 1"
+                },
+                {
+                    "url": "https://images1.apartments.com/i2/AoAoKG5TLQKadDCwwESJE6sh5UW3ysQtllRkpzx0zIo/116/elevate-chicago-il-poolsundeck.jpg?p=1",
+                    "alt": "image 2"
+                },
+                {
+                    "url": "https://images1.apartments.com/i2/ngHj7b_3oq3uDbElkDICmdj5xt4oVBTK7QM1u5Qd_to/116/elevate-chicago-il-rooftop-deck.jpg?p=1",
+                    "alt": "image 3"
+                }
+            ]
+        },
+        {
+            "id": "c34d56e7-890f-123g-h345-67890abcdef1",
+            "type": "floorPlan",
+            "images": [
+                {
+                    "url": "https://images1.apartments.com/i2/NMYoBNyXYjYVkZFKp7ZkkOLccFhgBffbbM5JFKd6bzU/116/elevate-chicago-il-floorplan.jpg?p=1",
+                    "alt": "image 1"
+                },
+                {
+                    "url": "https://images1.apartments.com/i2/J4B-EbfBLQRA36zNKxtrADErFe95maPFmc0nHp_0Vuw/116/elevate-chicago-il-floorplan.jpg?p=1",
+                    "alt": "image 2"
+                },
+                {
+                    "url": "https://images1.apartments.com/i2/PJ-ZMZl70_ZBqctqdG3PuEFJ655dHzFUQcKbFToeym8/116/elevate-chicago-il-floorplan.jpg?p=1",
+                    "alt": "image 3"
+                }
+            ]
+        }
+    ],
+    "propertyDetails": {
+        "name": "Oakwood Apartments",
+        "address": {
+            "address1": "1234 Sunset Blvd",
+            "address2": "",
+            "aptNumber": "201",
+            "city": "Los Angeles",
+            "zipCode": "90028",
+            "state": "CA",
+            "country": "USA"
+        },
+        "thumbnail": "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/117/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
+        "area": "4500 sq ft",
+        "type": "ResidentialApartment",
+        "parking": [
+            "4 Wheeler"
+        ],
+        "size": "1 Bed - 3 Beds",
+        "mapLat": 34.0522,
+        "mapLong": -118.2437,
+        "breadCrumbs": "California / Los Angeles County / Los Angeles / Oakwood Apartments",
+        "amenities": [
+            "Pets Allowed",
+            "Fitness Center",
+            "Pool",
+            "Dishwasher",
+            "Refrigerator",
+            "Balcony"
+        ],
+        "officeHours": {
+            "time": "10:00 am - 7:00 pm",
+            "timeZone": "PST",
+            "workingDays": [
+                "Mon",
+                "Tue",
+                "Wed"
+            ]
+        },
+        "contactUs": {
+            "title": "Contact This Property",
+            "phone": "(213) 555-1234",
+            "email": "oakwoodapartments@gmail.com"
+        }
+    },
+    "aboutUs": {
+        "title": "About Oakwood Apartments",
+        "description": "Oakwood Apartments offers a luxurious living experience in the heart of Los Angeles. With stunning views, modern amenities, and a prime location, Oakwood Apartments is the perfect place to call home.",
+        "details": [
+            "Oakwood Apartments is managed by Oakwood Worldwide, a leader in furnished apartment living. Our community is located in Los Angeles County and the 90028 ZIP Code."
+        ]
+    },
+    "highlights": {
+        "title": "Highlights",
+        "features": [
+            "Air conditioning",
+            "Washer/Dryer",
+            "Cable ready",
+            "Walk-in closets",
+            "Balcony",
+            "Skylight"
+        ]
+    },
+    "availableUnits": {
+        "cols": [
+            "Unit",
+            "Price",
+            "Usable Area",
+            "Availability"
+        ],
+        "rows": [
+            {
+                "unit": "1234-201",
+                "price": "$2,500",
+                "usableArea": "800",
+                "measureUnit": "Ft",
+                "availabilFrom": "1 August 2024",
+                "furnishing": [
+                    {
+                        "type": "Semi",
+                        "highlights": [
+                            "Bed",
+                            "Air Conditioning",
+                            "Washer/Dryer"
+                        ]
+                    }
+                ],
+                "highlights": [
+                    "High Speed Internet Access",
+                    "Wi-Fi",
+                    "Washer/Dryer",
+                    "Air Conditioning"
+                ],
+                "kitchen": [
+                    "Dishwasher",
+                    "Granite Countertops",
+                    "Refrigerator",
+                    "Freezer"
+                ]
+            },
+            {
+                "unit": "1234-301",
+                "price": "$3,000",
+                "usableArea": "1000",
+                "measureUnit": "Ft",
+                "availabilFrom": "15 September 2024",
+                "furnishing": [
+                    {
+                        "type": "Full",
+                        "highlights": [
+                            "Microwave",
+                            "Sofa"
+                        ]
+                    }
+                ],
+                "highlights": [
+                    "High Speed Internet Access",
+                    "Wi-Fi",
+                    "Washer/Dryer",
+                    "Air Conditioning"
+                ],
+                "kitchen": [
+                    "Dishwasher",
+                    "Granite Countertops",
+                    "Refrigerator",
+                    "Freezer"
+                ]
+            }
+        ]
+    },
+    "neighborHood": {
+        "title": "Neighborhood",
+        "description": "Located in the vibrant city of Los Angeles, Oakwood Apartments is surrounded by iconic landmarks, world-class dining, and endless entertainment options. From Hollywood Boulevard to Griffith Park, there's always something to explore.",
+        "details": [
+            "The neighborhood is home to some of the best restaurants, theaters, and shopping centers in the city.",
+            "With easy access to public transportation, commuting is a breeze."
+        ]
+    },
+    "communityAmenities": {
+        "title": "Community Amenities",
+        "features": [
+            "Fitness Center",
+            "Swimming Pool",
+            "Rooftop Lounge"
+        ]
+    },
+    "apartmentFeatures": {
+        "title": "Apartment Features",
+        "features": [
+            "Washer/Dryer",
+            "Air Conditioning",
+            "Dishwasher",
+            "High Speed Internet Access",
+            "Wi-Fi",
+            "Heating",
+            "Cable Ready",
+            "Granite Countertops",
+            "Kitchen",
+            "Refrigerator",
+            "Freezer",
+            "Balcony",
+            "Views",
+            "Skylights",
+            "Walk-In Closets",
+            "Window Coverings"
+        ]
+    },
+    "education": {
+        "title": "Schools",
+        "details": [
+            {
+                "name": "Hollywood High School",
+                "address": "1521 N Highland Ave, Los Angeles, CA 90028",
+                "distance": "0.5 miles",
+                "type": "Public High School",
+                "rating": "8"
+            },
+            {
+                "name": "Los Angeles Middle School",
+                "address": "615 S Lafayette Park Pl, Los Angeles, CA 90057",
+                "distance": "1.2 miles",
+                "type": "Public Middle School",
+                "rating": "7"
+            },
+            {
+                "name": "Sunset Elementary School",
+                "address": "1450 N Hayworth Ave, Los Angeles, CA 90046",
+                "distance": "0.8 miles",
+                "type": "Public Elementary School",
+                "rating": "6"
+            }
+        ]
+    },
+    "transportation": {
+        "title": "Transportation",
+        "details": [
+            {
+                "name": "Metro Red Line",
+                "address": "Hollywood/Highland Station, Los Angeles, CA 90028",
+                "distance": "0.3 miles",
+                "type": "Public Transit",
+                "rating": "9"
+            }
+        ]
+    },
+    "hospital": {
+        "title": "Hospital",
+        "details": [
+            {
+                "name": "Cedars-Sinai Medical Center",
+                "address": "8700 Beverly Blvd, Los Angeles, CA 90048",
+                "distance": "2.5 miles",
+                "type": "Public",
+                "rating": "10"
+            },
+            {
+                "name": "Hollywood Presbyterian Medical Center",
+                "address": "1300 N Vermont Ave, Los Angeles, CA 90027",
+                "distance": "1.5 miles",
                 "type": "Public",
                 "rating": "8"
             }

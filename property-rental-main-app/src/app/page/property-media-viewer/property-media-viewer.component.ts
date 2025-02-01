@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
-import { PropertyImages } from 'src/app/core/models/interface';
+import { ImageGallery } from 'src/app/core/models/interface';
 
 
 @Component({
@@ -12,12 +12,8 @@ import { PropertyImages } from 'src/app/core/models/interface';
 })
 export class PropertyMediaViewerComponent {
 
-  user: any[] = [];
-  propertyName: any[] = [];
-  propertyFloorPlans: PropertyImages | undefined;
-  propertyPhotos: PropertyImages | undefined;
-  propertyMapPositionInLong: number = 0; //latitude 
-  propertyMapPositionInLat: number = 0; //longitude
+
+  imgGallerys: ImageGallery[] = [];
 
   propertyImageCarouselStyle: any = {
     'object-fit': 'cover', // Ensures images are cropped to fill the container
@@ -34,15 +30,10 @@ export class PropertyMediaViewerComponent {
   ) { }
 
   ngOnInit(): void {
-    // const productId = this.route.snapshot.params['id']; //backend api
-    const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
+    const productId = this.route.parent?.snapshot.params['id']; //backend api
+    // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
     this.propertyDataService.getProductById(productId).subscribe((response: any) => {
-      this.user = response;
-      this.propertyName = response.propertyName;
-      this.propertyFloorPlans = response.propertyFloorPlans;
-      this.propertyPhotos = response.propertyPhotos;
-      this.propertyMapPositionInLat = parseFloat(response.propertyMapPositionInLat); //getting the latitude
-      this.propertyMapPositionInLong = parseFloat(response.propertyMapPositionInLong) //getting the longitude
+      this.imgGallerys = response.imgGallery;
     });
   }
 
