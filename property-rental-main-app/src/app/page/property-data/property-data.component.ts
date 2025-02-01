@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AboutUs, ApartmentFeatures, Education, Hospital, ImageGallery, Neighborhood, Transportation } from 'src/app/core/models/interface';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -16,13 +17,13 @@ export class PropertyDataComponent implements OnInit {
   };
   
   product: any[] = [];
-  imgGallerys: any[] = [];
-  aboutProperty: any[] = [];
-  propertyFeatures: any[] = [];
-  propertyNeighborHood: any[] = [];
-  propertyEducation: any[] = [];
-  transportations: any[] = [];
-  hospitals: any[] = [];
+  imgGallerys: ImageGallery[] = [];
+  aboutProperty: AboutUs[] = [];
+  apartmentFeatures: ApartmentFeatures[] = [];
+  propertyNeighborHood: Neighborhood[] = [];
+  propertyEducation: Education[] = [];
+  transportations: Transportation[] = [];
+  hospitals: Hospital[] = [];
 
  
   constructor(
@@ -41,7 +42,7 @@ export class PropertyDataComponent implements OnInit {
         this.product = response;
         this.imgGallerys = response.imgGallery;
         this.aboutProperty = response.aboutUs;
-        this.propertyFeatures = response.apartmentFeatures;
+        this.apartmentFeatures = response.apartmentFeatures;
         this.propertyNeighborHood = response.neighborHood;
         this.propertyEducation = response.education;
         this.transportations = response.transportation;

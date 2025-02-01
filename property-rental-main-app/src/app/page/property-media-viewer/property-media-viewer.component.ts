@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
-import { PropertyImages } from 'src/app/core/models/interface';
+import { ImageGallery } from 'src/app/core/models/interface';
 
 
 @Component({
@@ -12,8 +12,8 @@ import { PropertyImages } from 'src/app/core/models/interface';
 })
 export class PropertyMediaViewerComponent {
 
-  user: any[] = [];
-  imgGallerys: any[] = [];
+
+  imgGallerys: ImageGallery[] = [];
 
   propertyImageCarouselStyle: any = {
     'object-fit': 'cover', // Ensures images are cropped to fill the container
@@ -33,7 +33,6 @@ export class PropertyMediaViewerComponent {
     const productId = this.route.parent?.snapshot.params['id']; //backend api
     // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
     this.propertyDataService.getProductById(productId).subscribe((response: any) => {
-      this.user = response;
       this.imgGallerys = response.imgGallery;
     });
   }
