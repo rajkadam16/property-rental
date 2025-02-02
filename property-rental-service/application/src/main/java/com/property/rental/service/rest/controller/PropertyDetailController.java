@@ -5,38 +5,42 @@ import org.springframework.web.bind.annotation.*;
 
 import com.property.rental.service.core.api.service.PropertyDetailService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 @RestController
-@RequestMapping("property")
+@RequestMapping("property/")
 public class PropertyDetailController {
-
+	private static final Logger logger = LoggerFactory.getLogger(PropertyDetailController.class);
 	@Autowired
 	private PropertyDetailService propertyDetailService;
 
 	@CrossOrigin("http://localhost:4200/")
-	@GetMapping("")
+	@GetMapping("get/all")
 	public Object getAllPropertyDetails() {
 		return propertyDetailService.getAllPropertyDetails();
 	}
 
-	@GetMapping("{propertyID}")
-	public Object getPropertyDetail(String propertyID) {
+	@GetMapping("get/{propertyID}")
+	public Object getPropertyDetail(@PathVariable String propertyID) {
+		logger.info("Info message - getPropertyDetail,propertyID={}",propertyID);
 		return propertyDetailService.getPropertyDetail(propertyID);
 	}
 
 	
-	@PostMapping("/add")
+	@PostMapping("create")
 	public Object addPropertyDetail(@RequestBody PropertyDataEntry propertyDetail) {
 		return propertyDetailService.addPropertyDetail(propertyDetail);
 	}
 	
-	@PutMapping("/update")
+	@PutMapping("update")
 	public Object updatePropertyDetail(@RequestBody PropertyDataEntry propertyDetail) {
 		return propertyDetailService.updatePropertyDetail(propertyDetail);
 	}
-	
-	@DeleteMapping("/delete")
-	public Object deletePropertyDetail( String propertyID) {
+
+	@DeleteMapping("delete/{propertyID}")
+	public Object deletePropertyDetail(@PathVariable String propertyID) {
 		return propertyDetailService.deletePropertyDetail(propertyID);
 	}
 	
