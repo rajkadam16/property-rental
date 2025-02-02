@@ -55,6 +55,17 @@
 		<scope>provided</scope>
 	</dependency>
 
+	<!-- Spring Boot Starter for Logging -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-logging</artifactId>
+	</dependency>
+
+	<!-- SLF4J API -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+	</dependency>
 </dependencies>
 	<build>
 		<extensions>
