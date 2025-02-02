@@ -32,10 +32,9 @@
       <label class="block text-sm font-medium text-gray-800 mb-3">Type of Property</label>
       <div class="space-y-2">
         <div class="flex items-center"  *ngFor="let option of TypeofPropertysOptions">
-          <input  [(ngModel)]="option.checked" (change)="filterProperties('TypeofProperty',this.TypeofPropertysOptions)" type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
+          <input  [(ngModel)]="option.checked" (change)="filterProperties('propertyType',this.TypeofPropertysOptions)" type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
           <span class="ml-2 text-gray-700">{{ option.label }}</span>
         </div>
-
       </div>
     </div>
 

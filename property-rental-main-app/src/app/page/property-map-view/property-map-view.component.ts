@@ -16,7 +16,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   sortedProperties: any[] = [];
   filteredProperties: any[] = [];
   sortOption: string = 'lowToHigh';
-  noData:string = 'noData';
+  noData: string = 'noData';
 
   bhkOptions = [
     { label: '1RK', checked: false },
@@ -24,6 +24,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     { label: '2BHK', checked: false },
     { label: '3BHK', checked: false }
   ];
+
   TypeofPropertysOptions = [
     { label: 'ResidentialApartment', checked: false },
     { label: 'ResidentialLand', checked: false },
@@ -35,6 +36,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     { label: 'Full', checked: false },
     { label: 'None', checked: false }
   ];
+
   ParkingOptions = [
     { label: '2Wheeler', checked: false },
     { label: '4Wheeler', checked: false }
@@ -54,7 +56,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     });
     this.subscriptionList.push(propertyData);
 
-   
+
 
   }
   //filtering properties based on BHK
