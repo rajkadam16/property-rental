@@ -2,7 +2,7 @@ package com.property.rental.service.rest.controller;
 import com.property.rental.service.common.model.PropertyDataEntry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.property.rental.service.core.api.service.PropertyDetailService;
 
 import org.slf4j.Logger;
@@ -28,7 +28,7 @@ public class PropertyDetailController {
 		return propertyDetailService.getPropertyDetail(propertyID);
 	}
 
-	
+	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("create")
 	public Object addPropertyDetail(@RequestBody PropertyDataEntry propertyDetail) {
 		return propertyDetailService.addPropertyDetail(propertyDetail);

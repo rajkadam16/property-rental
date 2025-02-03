@@ -7,6 +7,11 @@
     },
     {
         "isEnabled": true,
+        "displayname":"Add property",
+        "routerLink":"addproperty"
+    },
+    {
+        "isEnabled": true,
         "displayname":"Contact Us",
         "routerLink":"/contactus"
     },
