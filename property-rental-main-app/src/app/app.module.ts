@@ -28,6 +28,7 @@ import { PropertySchoolCardComponent } from './components/property-school-card/p
 import { AppartmentDataComponent } from './components/appartment-data/appartment-data.component';
 import { ContactPropertyComponent } from './components/contact-property/contact-property.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
+import { AddPropertyComponent } from './components/add-property/add-property.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
     PropertySchoolCardComponent,
     AppartmentDataComponent,
     ContactPropertyComponent,
+    AddPropertyComponent,
   ],
   imports: [
     FormsModule,
