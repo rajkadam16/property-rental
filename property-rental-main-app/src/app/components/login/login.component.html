@@ -1,48 +1,75 @@
-<div class="modal fade" id="login" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="fileModalLabel">Sign into your account</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form [formGroup]="LoginForm" (ngSubmit)="submit()">
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email Address" formControlName="username" required>
-              <span class="text-red-500" *ngIf="LoginForm.controls['username'].touched && LoginForm.controls['username'].hasError('required')">
-                Email is required
-              </span>
-              <span class="text-red-500" *ngIf="LoginForm.controls['username'].touched && LoginForm.controls['username'].hasError('email')">
-                Invalid email address
-              </span>
+<section class="vh-100" style="background-color: #bae9f3;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img
+                src="https://images.unsplash.com/photo-1582647509711-c8aa8a8bda71?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb3BlcnR5fGVufDB8fDB8fHww"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
             </div>
-  
-            <div class="mb-3">
-              <input type="password" class="form-control" placeholder="Password" required formControlName="password">
-              <span class="text-red-500" *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('required')">
-                Password is required
-              </span>
-              <span class="text-red-500" *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('minlength')">
-                Password must be at least 6 characters long
-              </span>
-              <span class="text-red-500" *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('maxlength')">
-                Password cannot exceed 46 characters
-              </span>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form [formGroup]="LoginForm" (ngSubmit)="submit()">
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <span class="h1 fw-bold mb-0">Cityscape Rentals</span>
+                  </div>
+
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="email" id="form2Example17" class="form-control form-control-lg"
+                      formControlName="username" />
+                    <label class="form-label" for="form2Example17">Email address</label>
+                    <span class="text-red-500"
+                      *ngIf="LoginForm.controls['username'].touched && LoginForm.controls['username'].hasError('required')">
+                      Email is required
+                    </span>
+                    <span class="text-red-500"
+                      *ngIf="LoginForm.controls['username'].touched && LoginForm.controls['username'].hasError('email')">
+                      Invalid email address
+                    </span>
+                  </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="password" id="form2Example27" class="form-control form-control-lg"
+                      formControlName="password" />
+                    <label class="form-label" for="form2Example27">Password</label>
+                    <span class="text-red-500"
+                      *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('required')">
+                      Password is required
+                    </span>
+                    <span class="text-red-500"
+                      *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('minlength')">
+                      Password must be at least 6 characters long
+                    </span>
+                    <span class="text-red-500"
+                      *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('maxlength')">
+                      Password cannot exceed 46 characters
+                    </span>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block"
+                      type="button" [disabled]="LoginForm.invalid">Login</button>
+                  </div>
+
+                  <a class="small text-muted" href="#!">Forgot password?</a>
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a routerLink="/signup"
+                      style="color: #393f81;">Register here</a></p>
+                  <a href="#!" class="small text-muted">Terms of use.</a>
+                  <a href="#!" class="small text-muted">Privacy policy</a>
+                </form>
+
+              </div>
             </div>
-  
-            <div class="d-flex justify-content-end">
-              <a href="#" class="text-xs text-blue-600">Forgot your password?</a>
-            </div>
-  
-            <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="LoginForm.invalid">Log in</button>
-          </form>
-          <p class="text-center text-xs mt-3">By logging in, I accept the <a href="#">Terms of Use</a>.</p>
-          <p class="text-center text-xs mt-2">Or, <a href="#">create an account</a>.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
+</section>
