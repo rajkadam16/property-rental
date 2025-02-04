@@ -7,6 +7,8 @@ import { PropertyDataComponent } from './page/property-data/property-data.compon
 import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { AddPropertyComponent } from './components/add-property/add-property.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,14 @@ const routes: Routes = [
   {
     path: 'PropertyMapView',
     component: PropertyMapViewComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: 'addproperty',

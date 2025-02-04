@@ -7,8 +7,7 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li *ngFor="let nav of navbarData" [attr.data-bs-toggle]="nav.datatoggle"
-          [attr.data-bs-target]="nav.datatarget">
+        <li *ngFor="let nav of navbarData">
           <a [routerLink]="nav.routerLink">{{ nav.displayname }}</a>
         </li>
       </ul>
@@ -16,5 +15,4 @@
 
 
   </div>
-</header><app-login></app-login>
-<app-signup></app-signup>
+</header>

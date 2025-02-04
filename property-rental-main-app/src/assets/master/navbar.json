@@ -18,15 +18,13 @@
     {
         "isEnabled": true,
         "displayname":"Sign Up",
-        "routerLink":"/",
-        "datatoggle":"modal",
+        "routerLink":"/signup",
         "datatarget":"#signup"
     },
     {
         "isEnabled": true,
         "displayname":"Log In",
-        "routerLink":"/",
-        "datatoggle":"modal",
+        "routerLink":"/login",
         "datatarget":"#login"
         
     }
