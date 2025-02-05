@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators,  } from '@angular/forms';
-import emailjs from '@emailjs/browser';
+import { FormControl,FormGroup,Validators,  } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -13,17 +12,9 @@ export class SignupComponent {
   signUp: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     username: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
-    // confirmPassword: new FormControl('', [Validators.required, Validators.minLength(8)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8)])
   }, 
-  // { validators: this.passwordMatchValidator }
 );
-  
-  // passwordMatchValidator(control: AbstractControl): ValidationErrors | null {
-  //   const password = control.get('password')?.value;
-  //   const confirmPassword = control.get('confirmPassword')?.value;
-  //   return password === confirmPassword ? null : { mismatch: true };
-  // }
   
   onSubmit() {
     this.valid = true;
@@ -31,21 +22,19 @@ export class SignupComponent {
       return;
     }
   }
-  
-  //  async sendEmail(){
-  //   emailjs.init('okGSde90IJRSKKcdy')
-  //  let response = await   emailjs.send("service_8ngt4aj","template_jj9hwlb",{
-  //       from_name: this.from_name,
-  //       to_name: this.signUp.value.firstName,
-  //       first_name: this.signUp.value.firstName,
-  //       last_name: this.signUp.value.lastName,
-  //       reply_to: this.signUp.value.firstName && this.signUp.value.lastName,
-  //       email:this.signUp.value.email
-  //       });;
-  //   }
-
     reset() {
       this.signUp.reset();
       this.valid = false; 
     }
+
+    // auth process
+    // user = { username: '', email: '', password: '' };
+
+    // constructor(private authService: CommonUtilitiesService) {}
+  
+    // register() {
+    //   this.authService.signup(this.user).subscribe(response => {
+    //     alert(response);
+    //   });
+    // }
 }
