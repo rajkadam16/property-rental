@@ -7,7 +7,8 @@ import { ApiConfig } from '../constant/ApiConfig';
   providedIn: 'root',
 })
 export class CommonUtilitiesService {
-  private apiUrl = 'http://localhost:8080/auth';
+  private baseUrl = 'http://localhost:8080/auth';
+
   constructor(private readonly http: HttpClient) { }
 
   getProducts(): Observable<any[]> {
@@ -24,12 +25,12 @@ export class CommonUtilitiesService {
     return this.http.post(ApiConfig.addProperty, propertyData);
   }
 
-  signup(user: any): Observable<string> {
-    return this.http.post<string>(`${this.apiUrl}/signup`, user);
+  signup(user: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/signup`, user);
   }
 
-  login(credentials: any): Observable<string> {
-    return this.http.post<string>(`${this.apiUrl}/login`, credentials);
+  login(credentials: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/login`, credentials);
   }
   parseJsonFile(path: string) {
     return this.http.get(path);

@@ -26,5 +26,18 @@ export class LoginComponent {
     this.fromvalue = false;
     this.LoginForm.reset();
   }
+
+
+
+  // auth process
+  // credentials = { email: '', password: '' };
+
+  // constructor(private authService: CommonUtilitiesService) {}
+
+  // login() {
+  //   this.authService.login(this.credentials).subscribe(response => {
+  //     alert(response);
+  //   });
+  // }
   
 }
