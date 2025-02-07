@@ -13,7 +13,7 @@ export class AddPropertyComponent {
   parkingOptions = ['2 Wheeler', '4 Wheeler'];
   daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-  constructor(private fb: FormBuilder,private readonly propertyService: CommonUtilitiesService) {
+  constructor(private readonly fb: FormBuilder,private readonly propertyService: CommonUtilitiesService) {
     this.propertyForm = this.fb.group({
       imgGallery: this.fb.array([this.createImageGalleryGroup()]),
       propertyDetails: this.createPropertyDetailsGroup(),
@@ -25,7 +25,7 @@ export class AddPropertyComponent {
   createImageGalleryGroup(): FormGroup {
     return this.fb.group({
       id: [''], // You can generate UUIDs here if needed
-      type: ['ImageGallery', ],
+      type: ['ImageGallery', 'Photos','floorPlan'],
       images: this.fb.array([this.createImageGroup()])
     });
   }

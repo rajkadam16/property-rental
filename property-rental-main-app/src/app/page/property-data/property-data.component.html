@@ -1,29 +1,53 @@
 <div class="row">
   <ng-container *ngFor="let gallery of imgGallerys">
-    <app-image-carousel *ngIf="gallery.type === 'Photos'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
+    <app-image-carousel *ngIf="gallery.type === 'Photos'" [data]="gallery"
+      [imageStyle]="carouselImageStyle"></app-image-carousel>
   </ng-container>
 </div>
 <div class="row">
   <div class="col-8">
     <div class="property-data w-[75vw] p-6 rounded-lg">
 
-      <app-appartment-data [data]="product" [floorplandetails]="product"
-        [unitsData]="product"></app-appartment-data>
+      <app-appartment-data [data]="product" [floorplandetails]="product" [unitsData]="product"></app-appartment-data>
 
       <!--  about property -->
-      <div class="about-property pt-5">
-        <app-property-data-additional-info [additionalInfo]="aboutProperty"></app-property-data-additional-info>
-        <app-property-data-facilities [propertyDetalisList]="apartmentFeatures"></app-property-data-facilities>
-        <app-property-data-additional-info [additionalInfo]="propertyNeighborHood"></app-property-data-additional-info>
-        <app-property-school-card [schoolData]="propertyEducation" ></app-property-school-card>
-        <app-property-school-card [schoolData]="transportations" ></app-property-school-card>
-        <app-property-school-card [schoolData]="hospitals" ></app-property-school-card>
+      <div class="about-property container pt-5">
+        <div class="mb-4">
+          <h2 class="fs-2 fw-semibold">About Property</h2>
+          <app-property-data-additional-info [additionalInfo]="aboutProperty"></app-property-data-additional-info>
+        </div>
+      
+        <div class="mb-4">
+          <h2 class="fs-2 fw-semibold">Apartment Features</h2>
+          <app-property-data-facilities [propertyDetalisList]="apartmentFeatures"></app-property-data-facilities>
+        </div>
+      
+        <div class="mb-4">
+          <h2 class="fs-2 fw-semibold">Neighborhood</h2>
+          <app-property-data-additional-info [additionalInfo]="propertyNeighborHood"></app-property-data-additional-info>
+        </div>
+      
+        <div class="mb-4">
+          <h2 class="fs-2 fw-semibold">Education</h2>
+          <app-property-school-card [schoolData]="propertyEducation"></app-property-school-card>
+        </div>
+      
+        <div class="mb-4">
+          <h2 class="fs-2 fw-semibold">Transportation</h2>
+          <app-property-school-card [schoolData]="transportations"></app-property-school-card>
+        </div>
+      
+        <div class="mb-4">
+          <h2 class="fs-2 fw-semibold">Hospitals</h2>
+          <app-property-school-card [schoolData]="hospitals"></app-property-school-card>
+        </div>
       </div>
+      
     </div>
 
   </div>
   <div class="col-4">
-    <app-contact-property [propertyContact]="product" ></app-contact-property>
+    <app-contact-property [propertyContact]="product"></app-contact-property>
 
   </div>
 </div>
