@@ -1,60 +1,54 @@
-
 <div class="card property-card mt-3" [attr.data-bhk]="propertyCard.bhk">
 
-    <!-- Card Header -->
-    <div class="card-header d-flex align-items-center">
-      <div>
-        <h2 class="card-title">
-          {{ propertyCard.propertyDetails.name || "Not Available" }}
-        </h2>
-        <p class="card-subtitle">
-          {{ propertyCard.propertyDetails.address.address1 + "," + propertyCard.propertyDetails.address.city || "Not Available" }}
-        </p>
-      </div>
+  <!-- Card Header -->
+  <div class="card-header d-flex align-items-center">
+    <div>
+      <h2 class="card-title">
+        {{ propertyCard.propertyDetails.name || "Not Available" }}
+      </h2>
+      <p class="card-subtitle">
+        {{ propertyCard.propertyDetails.address.address1 + "," + propertyCard.propertyDetails.address.city || "NotAvailable" }}
+      </p>
     </div>
-  
-    <!-- Card Content -->
-    <div class="card-content d-flex">
-      <!-- Image Carousel -->
-      <div class="card-image">
-        <ng-container *ngFor="let gallery of propertyCard.imgGallery">
-          <app-image-carousel *ngIf="gallery.type === 'ImageGallery'" [data]="gallery" [imageStyle]="carouselImageStyle"></app-image-carousel>
-        </ng-container>
-      </div>
-  
-      <!-- Property Info -->
-       
-      <div
-        class="card-info"
-        routerLink="/propertydetails/{{ propertyCard.id }}"
-      >
-        <div class="card-body">
-          <p class="property-price text-lg font-bold text-blue-600">
-            {{ propertyCard.propertyDetails.size || "Not Available" }}
-          </p>
-  
-          <!-- Area -->
-          <p class="property-area text-sm text-gray-700 mt-1">
-            <span class="font-medium">Area:</span> {{ propertyCard.propertyDetails.area || "Not Available" }}
-          </p>
-  
-          <!-- Amenities -->
-          <p class="property-amenities text-sm text-gray-700 mt-1">
-            <span class="font-medium">Amenities:</span> {{ propertyCard.propertyDetails.amenities || "Not Available" }}
-          </p>
-  
-          <!-- Contact Info -->
-          <p class="contact-info text-sm text-gray-700 mt-1">
-            <span class="font-medium">Contact:</span> {{ propertyCard.propertyDetails.contactUs.phone || "Not Available" }}
-          </p>
-          <button
-            class="btn btn-primary request-tour-btn"
-            data-bs-toggle="modal"
-            data-bs-target="#requestTour"
-          >
-            {{ propertyCard.propertyDetails.contactUs.title || "Not Available" }}
-          </button>
-        </div>
+  </div>
+
+  <!-- Card Content -->
+  <div class="card-content d-flex">
+    <!-- Image Carousel -->
+    <div class="card-image">
+      <ng-container *ngFor="let gallery of propertyCard.imgGallery">
+        <app-image-carousel *ngIf="gallery.type === 'ImageGallery'" [data]="gallery"
+          [imageStyle]="carouselImageStyle"></app-image-carousel>
+      </ng-container>
+    </div>
+
+    <!-- Property Info -->
+
+    <div class="card-info" routerLink="/propertydetails/{{ propertyCard.id }}">
+      <div class="card-body">
+        <p class="property-price text-lg font-bold text-blue-600">
+          {{ propertyCard.propertyDetails.size || "Not Available" }}
+        </p>
+
+        <!-- Area -->
+        <p class="property-area text-sm text-gray-700 mt-1">
+          <span class="font-medium">Area:</span> {{ propertyCard.propertyDetails.area || "Not Available" }}
+        </p>
+
+        <!-- Amenities -->
+        <p class="property-amenities text-sm text-gray-700 mt-1">
+          <span class="font-medium">Amenities:</span> {{ propertyCard.propertyDetails.amenities || "Not Available" }}
+        </p>
+
+        <!-- Contact Info -->
+        <p class="contact-info text-sm text-gray-700 mt-1">
+          <span class="font-medium">Contact:</span> {{ propertyCard.propertyDetails.contactUs.phone || "Not Available"
+          }}
+        </p>
+        <button class="btn btn-primary request-tour-btn" data-bs-toggle="modal" data-bs-target="#requestTour">
+          Contact This Property
+        </button>
       </div>
     </div>
   </div>
+</div>
