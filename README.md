@@ -12,3 +12,19 @@ Features for Apartment Rental Project
 - https://www.apartments.com/
 - https://www.canva.com/
 - https://undraw.co/illustrations
+
+
+
+## Deployment
+
+To run this project on your system 
+
+Frontend 
+```bash
+nmp install 
+Ng server 
+```
+backend
+```bash
+mvn spring-boot:run
+```
