@@ -21,7 +21,7 @@ To run this project on your system
 
 Frontend 
 ```bash
-nmp install 
+npm install 
 Ng server 
 ```
 backend
