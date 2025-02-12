@@ -1,4 +1,4 @@
-#Cityscapes Rental
+# Cityscapes Rental
 
 ## 📌 Project Overview
 The **Property Rental Management System** is a web application designed to manage rental properties efficiently. It provides features for property listing, user authentication, and rental management. The system is built using **Angular 16** for the frontend, **Spring Boot** for the backend, and **MongoDB** as the database.
