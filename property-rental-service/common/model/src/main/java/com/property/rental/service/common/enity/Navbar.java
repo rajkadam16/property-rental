@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.property.rental.service.common.enity;
 
 import lombok.Data;
@@ -10,24 +7,15 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Objects;
-
-/**
- *
- */
-@Document(collection = "user-account-detail")
+@Document(collection = "navbar-Items")
 @Data
 @NoArgsConstructor
 @Getter
 @Setter
-public class UserAccountEntity {
-	@Id
-	private String id;
-	private String firstName;
-	private String lastName;
-	private  String contactNumber;
-	private String emailAddress;
-	private String password;
-
+public class Navbar {
+    @Id
+    private String navbarId;
+    private String title;
+    private String routerLink;
 
 }

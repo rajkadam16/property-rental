@@ -11,12 +11,12 @@ import lombok.Setter;
 import java.util.List;
 
 
-@Document(collection = "properties")
+@Document(collection = "property-detail")
 @Data
 @NoArgsConstructor
 @Getter
 @Setter
-public class PropertyDataEntry {
+public class PropertyDataEntity {
     @Id
     private String id;
     private List<ImageGallery> imgGallery;

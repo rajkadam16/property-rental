@@ -2,18 +2,18 @@ package com.property.rental.service.core.api.dao;
 
 import java.util.List;
 
-import com.property.rental.service.common.model.PropertyDataEntry;
+import com.property.rental.service.common.enity.PropertyDataEntity;
 
 public interface PropertyDetailDao {
 
-	public PropertyDataEntry getPropertyDetail(String propertyID);
+	public PropertyDataEntity getPropertyDetail(String propertyID);
 	
-	public List<PropertyDataEntry> getAllPropertyDetails();
+	public List<PropertyDataEntity> getAllPropertyDetails();
 	
 	public String deletePropertyDetail(String propertyID);
 
-	public String updatePropertyDetail(PropertyDataEntry propertyDetail);
+	public String updatePropertyDetail(PropertyDataEntity propertyDetail);
 
-	public String addPropertyDetail(PropertyDataEntry propertyDetail);
+	public String addPropertyDetail(PropertyDataEntity propertyDetail);
 
 }

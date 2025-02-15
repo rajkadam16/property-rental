@@ -2,8 +2,8 @@ package com.property.rental.service.core.api.db;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.property.rental.service.common.model.PropertyDataEntry;
+import com.property.rental.service.common.enity.PropertyDataEntity;
 
-public interface PropertyDetailRepo extends MongoRepository<PropertyDataEntry, String> {
+public interface PropertyDetailRepo extends MongoRepository<PropertyDataEntity, String> {
 
 }

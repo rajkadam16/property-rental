@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -29,6 +29,7 @@ import { AppartmentDataComponent } from './components/appartment-data/appartment
 import { ContactPropertyComponent } from './components/contact-property/contact-property.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { AddPropertyComponent } from './components/add-property/add-property.component';
+import { JwtInterceptor } from './core/service/jwt-interceptor.service';
 
 
 @NgModule({
@@ -68,7 +69,9 @@ import { AddPropertyComponent } from './components/add-property/add-property.com
     GoogleMapsModule, 
     NgxPaginationModule ,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

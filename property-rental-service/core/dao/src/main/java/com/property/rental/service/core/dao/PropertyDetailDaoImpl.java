@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.property.rental.service.common.model.PropertyDataEntry;
+import com.property.rental.service.common.enity.PropertyDataEntity;
 import com.property.rental.service.core.api.dao.PropertyDetailDao;
 import com.property.rental.service.core.api.db.PropertyDetailRepo;
 
@@ -13,13 +13,13 @@ import com.property.rental.service.core.api.db.PropertyDetailRepo;
 public class PropertyDetailDaoImpl implements PropertyDetailDao {
 
 	@Autowired
-	PropertyDetailRepo propertyDetailRepo;
+ 	private	PropertyDetailRepo propertyDetailRepo;
 
-	public PropertyDataEntry getPropertyDetail(String propertyID) {
+	public PropertyDataEntity getPropertyDetail(String propertyID) {
 		return propertyDetailRepo.findById(propertyID).orElse(null);
 	}
 
-	public List<PropertyDataEntry> getAllPropertyDetails() {
+	public List<PropertyDataEntity> getAllPropertyDetails() {
 		return propertyDetailRepo.findAll();
 	}
 
@@ -28,12 +28,12 @@ public class PropertyDetailDaoImpl implements PropertyDetailDao {
 		return propertyID;
 	}
 
-	public String updatePropertyDetail(PropertyDataEntry propertyDetail) {
+	public String updatePropertyDetail(PropertyDataEntity propertyDetail) {
 		 propertyDetailRepo.save(propertyDetail);
 		 return "";
 	}
 
-	public String addPropertyDetail(PropertyDataEntry propertyDetail) {
+	public String addPropertyDetail(PropertyDataEntity propertyDetail) {
 		 propertyDetailRepo.insert(propertyDetail);
 		 return "";
 	}
