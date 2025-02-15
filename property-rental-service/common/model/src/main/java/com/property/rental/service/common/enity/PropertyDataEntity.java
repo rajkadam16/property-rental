@@ -1,4 +1,5 @@
-package com.property.rental.service.common.model;
+package com.property.rental.service.common.enity;
+import com.property.rental.service.common.model.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
