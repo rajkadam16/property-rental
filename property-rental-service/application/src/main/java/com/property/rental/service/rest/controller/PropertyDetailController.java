@@ -1,5 +1,5 @@
 package com.property.rental.service.rest.controller;
-import com.property.rental.service.common.model.PropertyDataEntry;
+import com.property.rental.service.common.enity.PropertyDataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -30,12 +30,12 @@ public class PropertyDetailController {
 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("create")
-	public Object addPropertyDetail(@RequestBody PropertyDataEntry propertyDetail) {
+	public Object addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
 		return propertyDetailService.addPropertyDetail(propertyDetail);
 	}
 	
 	@PutMapping("update")
-	public Object updatePropertyDetail(@RequestBody PropertyDataEntry propertyDetail) {
+	public Object updatePropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
 		return propertyDetailService.updatePropertyDetail(propertyDetail);
 	}
 

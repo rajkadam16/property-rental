@@ -2,18 +2,19 @@ package com.property.rental.service.core.api.dao;
 
 import java.util.List;
 
-import com.property.rental.service.common.model.UserAccount;
+import com.property.rental.service.common.enity.UserAccountEntity;
 
 public interface UserAccountDao {
 
-	public UserAccount getUserAccount(String userID);
+	public UserAccountEntity getUserAccount(String userID);
 
-	public List<UserAccount> getAllUserAccounts();
+	public List<UserAccountEntity> getAllUserAccounts();
 
 	public String deleteUserAccount(String userID);
 
-	public String updateUserAccount(UserAccount userAccount);
+	public String updateUserAccount(UserAccountEntity userAccount);
 
-	public String createUserAccount(UserAccount userAccount);
+	public String createUserAccount(UserAccountEntity userAccount);
+
 
 }

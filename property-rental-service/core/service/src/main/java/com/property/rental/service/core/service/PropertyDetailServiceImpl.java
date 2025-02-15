@@ -2,8 +2,7 @@ package com.property.rental.service.core.service;
 
 import java.util.List;
 
-import com.property.rental.service.common.model.PropertyDataEntry;
-import com.property.rental.service.core.dao.PropertyDetailDaoImpl;
+import com.property.rental.service.common.enity.PropertyDataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +14,15 @@ import com.property.rental.service.core.api.service.PropertyDetailService;
 public class PropertyDetailServiceImpl implements PropertyDetailService  {
 
 	@Autowired
-	private PropertyDetailDaoImpl propertyDetailDao;
+	private PropertyDetailDao propertyDetailDao;
 
 	@Override
-	public PropertyDataEntry getPropertyDetail(String propertyID) {
+	public PropertyDataEntity getPropertyDetail(String propertyID) {
 		return propertyDetailDao.getPropertyDetail(propertyID);
 	}
 
 	@Override
-	public List<PropertyDataEntry> getAllPropertyDetails() {
+	public List<PropertyDataEntity> getAllPropertyDetails() {
 		return propertyDetailDao.getAllPropertyDetails();
 	}
 
@@ -33,12 +32,12 @@ public class PropertyDetailServiceImpl implements PropertyDetailService  {
 	}
 
 	@Override
-	public String updatePropertyDetail(PropertyDataEntry propertyDetail) {
+	public String updatePropertyDetail(PropertyDataEntity propertyDetail) {
 		return propertyDetailDao.updatePropertyDetail(propertyDetail);
 	}
 
 	@Override
-	public String addPropertyDetail(PropertyDataEntry propertyDetail) {
+	public String addPropertyDetail(PropertyDataEntity propertyDetail) {
 		return propertyDetailDao.addPropertyDetail(propertyDetail);
 	}
 	

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.property.rental.service.core.api.dao.UserAccountDao;
 import com.property.rental.service.core.api.service.UserAccountService;
 
-import com.property.rental.service.common.model.UserAccount;
+import com.property.rental.service.common.enity.UserAccountEntity;
 
 @Service("userAccountService")
 public class UserAccountServiceImpl implements UserAccountService {
@@ -17,12 +17,12 @@ public class UserAccountServiceImpl implements UserAccountService {
 	private UserAccountDao userAccountDao;
 
 	@Override
-	public UserAccount getUserAccount(String userID) {
+	public UserAccountEntity getUserAccount(String userID) {
 		return this.userAccountDao.getUserAccount(userID);
 	}
 
 	@Override
-	public List<UserAccount> getAllUserAccounts() {
+	public List<UserAccountEntity> getAllUserAccounts() {
 		return this.userAccountDao.getAllUserAccounts();
 	}
 
@@ -32,12 +32,12 @@ public class UserAccountServiceImpl implements UserAccountService {
 	}
 
 	@Override
-	public String updateUserAccount(UserAccount userAccount) {
+	public String updateUserAccount(UserAccountEntity userAccount) {
 		return this.userAccountDao.updateUserAccount(userAccount);
 	}
 
 	@Override
-	public String createUserAccount(UserAccount userAccount) {
+	public String createUserAccount(UserAccountEntity userAccount) {
 		return this.userAccountDao.createUserAccount(userAccount);
 	}
 

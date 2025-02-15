@@ -1,31 +1,24 @@
 [
 
     {
-        "isEnabled": true,
-        "displayname":"Find Property",
+        "title":"Find Property",
         "routerLink":"PropertyMapView"
     },
     {
-        "isEnabled": true,
-        "displayname":"Add property",
+        "title":"Add property",
         "routerLink":"addproperty"
     },
     {
-        "isEnabled": true,
-        "displayname":"Contact Us",
+        "title":"Contact Us",
         "routerLink":"/contactus"
     },
     {
-        "isEnabled": true,
-        "displayname":"Sign Up",
-        "routerLink":"/signup",
-        "datatarget":"#signup"
+        "title":"Sign Up",
+        "routerLink":"/signup"
     },
     {
-        "isEnabled": true,
-        "displayname":"Log In",
-        "routerLink":"/login",
-        "datatarget":"#login"
+        "title":"Log In",
+        "routerLink":"/login"
         
     }
 ]

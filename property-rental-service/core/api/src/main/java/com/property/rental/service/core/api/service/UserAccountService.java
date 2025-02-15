@@ -2,18 +2,20 @@ package com.property.rental.service.core.api.service;
 
 import java.util.List;
 
-import com.property.rental.service.common.model.UserAccount;
+import com.property.rental.service.common.enity.UserAccountEntity;
 
 public interface UserAccountService {
 
-    public UserAccount getUserAccount(String userID);
+    public UserAccountEntity getUserAccount(String userID);
 	
-	public List<UserAccount> getAllUserAccounts();
+	public List<UserAccountEntity> getAllUserAccounts();
 	
 	public String deleteUserAccount(String userID);
 
-	public String updateUserAccount(UserAccount userAccount);
+	public String updateUserAccount(UserAccountEntity userAccount);
 
-	public String createUserAccount(UserAccount userAccount);
+	public String createUserAccount(UserAccountEntity userAccount);
+
+//	public UserAccountEntity login(String emailAddress, String password);
 
 }

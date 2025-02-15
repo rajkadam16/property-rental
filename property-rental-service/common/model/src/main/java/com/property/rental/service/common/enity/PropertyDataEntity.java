@@ -1,4 +1,5 @@
-package com.property.rental.service.common.model;
+package com.property.rental.service.common.enity;
+import com.property.rental.service.common.model.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,12 +11,12 @@ import lombok.Setter;
 import java.util.List;
 
 
-@Document(collection = "properties")
+@Document(collection = "property-detail")
 @Data
 @NoArgsConstructor
 @Getter
 @Setter
-public class PropertyDataEntry {
+public class PropertyDataEntity {
     @Id
     private String id;
     private List<ImageGallery> imgGallery;

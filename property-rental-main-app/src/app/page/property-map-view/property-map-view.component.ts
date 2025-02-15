@@ -17,6 +17,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   filteredProperties: any[] = [];
   sortOption: string = 'lowToHigh';
   noData: string = 'noData';
+  loader: boolean=false;
 
   bhkOptions = [
     { label: '1RK', checked: false },
@@ -48,7 +49,9 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.loader=true;
     const propertyData = this.apartmentService.getProducts().subscribe((response: any) => {
+      this.loader=false;
       this.products = response;
       this.filteredProperties = response;
       this.sortProperties();

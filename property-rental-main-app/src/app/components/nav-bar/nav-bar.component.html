@@ -8,7 +8,7 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li *ngFor="let nav of navbarData">
-          <a [routerLink]="nav.routerLink">{{ nav.displayname }}</a>
+          <a [routerLink]="nav.routerLink">{{ nav.title }}</a>
         </li>
       </ul>
     </nav>
