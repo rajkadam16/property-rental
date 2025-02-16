@@ -2,12 +2,12 @@
 
     {
         "title":"Find Property",
-        "routerLink":"PropertyMapView"
+        "routerLink":"/PropertyMapView"
     },
-    {
+{
         "title":"Add property",
-        "routerLink":"addproperty"
-    },
+        "routerLink":"/addproperty"
+},
     {
         "title":"Contact Us",
         "routerLink":"/contactus"

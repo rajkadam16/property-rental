@@ -37,7 +37,6 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     { label: 'Full', checked: false },
     { label: 'None', checked: false }
   ];
-
   ParkingOptions = [
     { label: '2Wheeler', checked: false },
     { label: '4Wheeler', checked: false }
@@ -55,8 +54,11 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
       this.products = response;
       this.filteredProperties = response;
       this.sortProperties();
+      
       this.changeDetectionRef.detectChanges();
+   
     });
+  
     this.subscriptionList.push(propertyData);
 
 
