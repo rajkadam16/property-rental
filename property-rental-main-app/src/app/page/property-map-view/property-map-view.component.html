@@ -57,7 +57,7 @@
       <label class="block text-sm font-medium text-gray-800 mb-3">Parking</label>
       <div class="space-y-2">
         <div class="flex items-center" *ngFor="let option of ParkingOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('parking',this.ParkingOptions)" type="checkbox"
+          <input [(ngModel)]="option.checked" (change)="filterProperties('parking',ParkingOptions)" type="checkbox"
             class="form-checkbox h-5 w-5 text-blue-600" />
           <span class="ml-2 text-gray-700">{{ option.label }}</span>
         </div>
