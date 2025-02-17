@@ -1,1 +1,65 @@
-working
+
+
+<div class="card">
+    <div class="card-header"> Add New property?</div>
+  <div class="card-body">
+     <form>
+      <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Basic-Info" type="button" role="tab" aria-controls="Basic-Info" aria-selected="true">Basic-Info</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Property-Details" type="button" role="tab" aria-controls="#Property-Details" aria-selected="false">Property-Details</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#About-property" type="button" role="tab" aria-controls="About-property" aria-selected="false">About-property</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Neighbourhood" type="button" role="tab" aria-controls="Neighbourhood" aria-selected="false">Neighbourhood</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Units" type="button" role="tab" aria-controls="Units" aria-selected="false">units</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Images" type="button" role="tab" aria-controls="Images" aria-selected="false">Images</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <!--tab1-->
+          <div class="tab-pane fade show active" id="Basic-Info" role="tabpanel" aria-labelledby="home-tab">
+            <div class="">
+              <label for="phone" class="block">phone no*</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4} " class="border-2 border-red-600" required />
+              </div>
+              <div>
+              <label for="email" class="block">email address*</label>
+              <input type="email" id="email" pattern=".+@example.com" size="30" required class="border-2 border-red-600" />
+             </div>
+            <div>
+              <button type="button" class="btn btn-primary">next</button>
+            </div>
+
+          </div>
+          <!--tab2-->
+          <div class="tab-pane fade" id="Property-Details" role="tabpanel" aria-labelledby="profile-tab">
+            <div>
+              <label for="ImageGallery" class="">picture of room</label>
+              <input type="file" id="ImageGallery" class="" accept="image/*" />
+              <input type="file" id="ImageGallery" class="" accept="image/*" />
+              <input type="file" id="ImageGallery" class="" accept="image/*" />
+            </div>
+            <div>
+              <label for="floorPlan" class="">Picture of Floor-Plan</label>
+              
+              <input type="file" id="ImageGallery" class="" accept="image/*" />
+
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="About-property" role="tabpanel" aria-labelledby="contact-tab">.hello3</div>
+        </div>
+      </div>
+     </form>
+  </div>
+  </div>

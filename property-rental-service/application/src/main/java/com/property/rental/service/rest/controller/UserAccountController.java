@@ -1,7 +1,7 @@
 package com.property.rental.service.rest.controller;
 
+import com.property.rental.service.common.enity.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.property.rental.service.common.enity.UserAccountEntity;
@@ -13,11 +13,16 @@ public class UserAccountController {
 
 	@Autowired
 	private UserAccountService userAccountService;
-	
+
+
+	@GetMapping("getAll")
+	public Object getUserAll() {
+		return userAccountService.getAllUserAccounts();
+	}
 
 	@GetMapping("get/{userId}")
 	public Object getUser(@PathVariable String userId) {
-		return userAccountService.getAllUserAccounts();
+		return userAccountService.getUserAccount(userId);
 	}
 	
 	@PostMapping("signup")
@@ -35,4 +40,8 @@ public class UserAccountController {
 		return userAccountService.deleteUserAccount(userId);
 	}
 
+	@PostMapping("login")
+	public String login(@RequestParam String email, @RequestParam String password) {
+		return userAccountService.login(email, password);
+	}
 }

@@ -17,17 +17,13 @@ import java.util.Objects;
  */
 @Document(collection = "user-account-detail")
 @Data
-@NoArgsConstructor
-@Getter
-@Setter
+
 public class UserAccountEntity {
 	@Id
 	private String id;
 	private String firstName;
 	private String lastName;
 	private  String contactNumber;
-	private String emailAddress;
+	private String email;
 	private String password;
-
-
 }

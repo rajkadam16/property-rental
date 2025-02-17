@@ -1,8 +1,8 @@
 package com.property.rental.service.core.api.service;
 
 import java.util.List;
-
 import com.property.rental.service.common.enity.UserAccountEntity;
+import com.property.rental.service.common.enity.LoginRequest;
 
 public interface UserAccountService {
 
@@ -16,6 +16,8 @@ public interface UserAccountService {
 
 	public String createUserAccount(UserAccountEntity userAccount);
 
-//	public UserAccountEntity login(String emailAddress, String password);
+	public String login(String email, String password);
+
+
 
 }

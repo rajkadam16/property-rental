@@ -2,6 +2,7 @@ package com.property.rental.service.core.service;
 
 import java.util.List;
 
+import com.property.rental.service.common.enity.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +40,11 @@ public class UserAccountServiceImpl implements UserAccountService {
 	@Override
 	public String createUserAccount(UserAccountEntity userAccount) {
 		return this.userAccountDao.createUserAccount(userAccount);
+	}
+
+	@Override
+	public String login(String email, String password) {
+		return this.login(email,password);
 	}
 
 }
