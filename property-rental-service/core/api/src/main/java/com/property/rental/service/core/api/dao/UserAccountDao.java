@@ -3,6 +3,7 @@ package com.property.rental.service.core.api.dao;
 import java.util.List;
 
 import com.property.rental.service.common.enity.UserAccountEntity;
+import com.property.rental.service.common.enity.LoginRequest;
 
 public interface UserAccountDao {
 
@@ -16,5 +17,6 @@ public interface UserAccountDao {
 
 	public String createUserAccount(UserAccountEntity userAccount);
 
+	public String login(String email, String password);
 
 }
