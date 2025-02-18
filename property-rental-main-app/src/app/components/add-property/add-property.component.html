@@ -1,65 +1,425 @@
-
-
 <div class="card">
-    <div class="card-header"> Add New property?</div>
+  <div class="card-header">Add New property?</div>
   <div class="card-body">
-     <form>
-      <div class="container">
+    <form>
+      <div class="container bg-[#ecf3f9] h-[87vh] w-[76vw] rounded-md">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Basic-Info" type="button" role="tab" aria-controls="Basic-Info" aria-selected="true">Basic-Info</button>
+            <button class="nav-link active" id="propertyDetails-tab" data-bs-toggle="tab"
+              data-bs-target="#Property-Details" type="button" role="tab" aria-controls="#Property-Details"
+              aria-selected="true">
+              <i class="fa-sharp-duotone fa-solid fa-house fa-lg"></i>
+              <span class="pl-3 font-bold">Property-Details</span>
+            </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Property-Details" type="button" role="tab" aria-controls="#Property-Details" aria-selected="false">Property-Details</button>
+            <button class="nav-link" id="AboutProperty-tab" data-bs-toggle="tab" data-bs-target="#About-property"
+              type="button" role="tab" aria-controls="About-property" aria-selected="false">
+              <i class="fa-solid fa-circle-info fa-lg"></i>
+              <span class="pl-3 font-bold">About-Property </span>
+            </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#About-property" type="button" role="tab" aria-controls="About-property" aria-selected="false">About-property</button>
+            <button class="nav-link" id="Neighbourhood-tab" data-bs-toggle="tab" data-bs-target="#Neighbourhood"
+              type="button" role="tab" aria-controls="Neighbourhood" aria-selected="false">
+              <i class="fa-solid fa-location-crosshairs fa-lg"></i>
+              <span class="pl-3 font-bold">Neighbourhood</span>
+            </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Neighbourhood" type="button" role="tab" aria-controls="Neighbourhood" aria-selected="false">Neighbourhood</button>
+            <button class="nav-link" id="Units-tab" data-bs-toggle="tab" data-bs-target="#Units" type="button"
+              role="tab" aria-controls="Units" aria-selected="false">
+              <i class="fa-brands fa-unity fa-lg"></i>
+              <span class="pl-3 font-bold"> Units </span>
+            </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Units" type="button" role="tab" aria-controls="Units" aria-selected="false">units</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Images" type="button" role="tab" aria-controls="Images" aria-selected="false">Images</button>
+            <button class="nav-link" id="Images-tab" data-bs-toggle="tab" data-bs-target="#Images" type="button"
+              role="tab" aria-controls="Images" aria-selected="false">
+              <i class="fa-regular fa-image fa-lg"></i>
+              <span class="pl-3 font-bold">Images</span>
+            </button>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-          <!--tab1-->
-          <div class="tab-pane fade show active" id="Basic-Info" role="tabpanel" aria-labelledby="home-tab">
-            <div class="">
-              <label for="phone" class="block">phone no*</label>
-              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4} " class="border-2 border-red-600" required />
+          <!--FIRSTtab:personal details-->
+
+          <div class="ml-4 tab-pane fade active" id="Property-Details" role="tabpanel" aria-labelledby="propertyDetails-tab">
+            <!--propertyname-->
+            <div class="mt-3">
+              <label for="name" class="">Property-Name :</label>
+              <input type="text" id="name" name="name" required minlength="10" maxlength="20" size="10"
+                placeholder="ex.shanti niketan"
+                class="ml-3 pl-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+            </div>
+            <!--propertyadress-->
+            <div class="mt-4 flex gap-44">
+              <div>
+                <label for="adress1" class="block">Address1:</label>
+                <textarea name="address1"
+                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
               </div>
               <div>
-              <label for="email" class="block">email address*</label>
-              <input type="email" id="email" pattern=".+@example.com" size="30" required class="border-2 border-red-600" />
-             </div>
-            <div>
-              <button type="button" class="btn btn-primary">next</button>
+                <label for="aptno" class="block">AptNumber :</label>
+                <input type="number" id="aptNumber" name="aptno" required
+                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
             </div>
+            <!--for city/state/countryy-->
+            <div class="mt-3 flex gap-16">
+              <div>
+                <label for="city" class="block">City :</label>
+                <select name="city" id="city " class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
+                  <option value="">--Please choose an option--</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Nashik">Nashik</option>
+                  <option value="Delhi">Delhi</option>
+                </select>
+              </div>
 
+              <div>
+                <label for="state" class="block">state :</label>
+                <select name="state" id="state" class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
+                  <option value="">--Please choose an option--</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="karnataka">karnataka</option>
+                  <option value="Goa">Goa</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="country" class="block">Country :</label>
+                <select name="country" id="country"
+                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
+                  <option value="">--Please choose an option--</option>
+                  <option value="Maharashtra">India</option>
+                </select>
+              </div>
+            </div>
+            <!--zipcode and area-->
+            <div class="mt-3 flex gap-16">
+              <div>
+                <label for="zipcode" class="block">zipcode :</label>
+                <input type="number" id="zipcode" name="zipcode" max="9" required
+                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+              <div>
+                <label for="area" class="block">area :</label>
+                <input type="text" id="area" name="area" required
+                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+            </div>
+            <!--appttype-->
+            <div class="mt-2">
+              <label for="type" class="block">Appartment Type :</label>
+              <div class="mt-3 flex gap-10">
+                <span>
+                  <input type="radio" id="type" name="type" value="Residental-appartment" required /><label
+                    class="ml-2">Residental-appartment</label></span>
+                <span><input type="radio" id="type" name="type" value="Penthouse" required /><label
+                    class="ml-2">Penthouse</label></span>
+                <span><input type="radio" id="type" name="type" value="Luxury appartmnet" required /><label
+                    class="ml-2">Luxury appartmnet</label></span>
+                <span><input type="radio" id="type" name="type" value="Studio-appartment" required /><label
+                    class="ml-2">Studio-appartment</label></span>
+              </div>
+            </div>
+            <!--ammenities-->
+            <div class="mt-2">
+              <label for="amenities" class="block">Available-amenities :</label>
+              <div class="mt-2 flex gap-10">
+                <span><input type="checkbox" id="amenities" name="amenities" value="Parking" /><label
+                    class="ml-2">Parking</label></span>
+                <span><input type="checkbox" id="amenities" name="amenities" value="Laundry" /><label
+                    class="ml-2">Laundry</label></span>
+                <span><input type="checkbox" id="amenities" name="amenities" value="Fitness Area" /><label
+                    class="ml-2">Fitness Area</label></span>
+                <span><input type="checkbox" id="amenities" name="amenities" value="Playing Area" /><label
+                    class="ml-2">Playing Area</label></span>
+                <span><input type="checkbox" id="amenities" name="amenities" value="Security" /><label
+                    class="ml-2">Security</label></span>
+                <span><input type="checkbox" id="amenities" name="amenities" value="Internet" /><label
+                    class="ml-2">Internet Acess</label></span>
+                <span><input type="checkbox" id="amenities" name="amenities" value="Pool" /><label
+                    class="ml-2">Pool</label></span>
+              </div>
+            </div>
+            <!--contact at-->
+            <div class="mt-3">
+              <label for="officeHours" class="block">Contact this property at :</label>
+              <div class="mt-2 flex gap-10">
+                <div>
+                  <label>Phone :</label><input type="tel" id="officeHours" name="officeHours" pattern="[6-9][0-9]{9}"
+                    class="block" required placeholder="9*********"
+                    class="w-64 h-8 pl-2 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+                </div>
+                <div>
+                  <label>Email : </label>
+                  <input type="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" size="30"
+                    required placeholder="abc123@gmail.com"
+                    class="pl-3 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+                </div>
+              </div>
+            </div>
           </div>
-          <!--tab2-->
-          <div class="tab-pane fade" id="Property-Details" role="tabpanel" aria-labelledby="profile-tab">
+          <!--Third tab :About propertyy-->
+          <div class="ml-4 mt-3 tab-pane fade" id="About-property" role="tabpanel" aria-labelledby="AboutProperty-tab">
+            <!--property name-->
             <div>
-              <label for="ImageGallery" class="">picture of room</label>
-              <input type="file" id="ImageGallery" class="" accept="image/*" />
-              <input type="file" id="ImageGallery" class="" accept="image/*" />
-              <input type="file" id="ImageGallery" class="" accept="image/*" />
+              <label for="title" class="block">Property-Name :</label>
+              <input type="text" id="title" name="title" required
+                class="mt-2 pl-3 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
             </div>
-            <div>
-              <label for="floorPlan" class="">Picture of Floor-Plan</label>
-              
-              <input type="file" id="ImageGallery" class="" accept="image/*" />
-
+            <!--property-description-->
+            <div class="mt-5">
+              <label for="description" class="block">Property-Description :</label>
+              <textarea name="description" required placeholder="....Write details about your property... "
+                class="mt-2 pl-3 w-96 h-24 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
             </div>
-
+            <!--property feature-->
+            <div class="mt-5">
+              <label for="features" class="block">Appartment features :</label>
+              <textarea name="features" required placeholder="....write the features of your appartmnet..."
+                class="mt-2 pl-3 w-96 h-24 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
+            </div>
           </div>
-          <div class="tab-pane fade" id="About-property" role="tabpanel" aria-labelledby="contact-tab">.hello3</div>
+          <!--FOURTH tab :neighourhood-->
+          <div class="ml-4 mt-3 tab-pane fade" id="Neighbourhood" role="tabpanel" aria-labelledby="Neighbourhood-tab">
+            <!--neihbourhood description-->
+            <div>
+              <label for="description" class="block mt-3">Neighbourhood Details :</label>
+              <textarea name="description" required
+                placeholder="....write the Neighbourhood /surrounding's of your appartmnet..."
+                class="mt-2 pl-3 pt-1 w-96 h-20 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
+            </div>
+            <!--school details-->
+            <div>
+              <label class="block"> School's Name :</label><input type="text" id=" school"
+                placeholder="School nearby.. " required
+                class="pl-1 pt-1 bg-[#e2dfd2] rounded-md border-gray-600 shadow-sm" />
+            </div>
+            <!--schl-address and distance-->
+            <div class="mt-2 flex gap-40">
+              <div>
+                <label class="block">School Address :</label>
+                <textarea name="features" required placeholder="....Address of school..."
+                  class="mt-2 pl-3 pt-1 w-96 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
+              </div>
+              <div>
+                <label class="block">Distance :</label>
+                <input type="text" id="schools" placeholder="ex. 2km" required
+                  class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+            </div>
+            <!--schltype and distance-->
+            <div class="mt-2 flex gap-[310px]">
+              <div>
+                <label for="type" class="block">School Type :</label>
+                <select name="type" id="type"
+                  class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
+                  <option value="">--Please choose an option--</option>
+                  <option value="Public High School">Public High School</option>
+                  <option value="Government School">Government School</option>
+                  <option value="Convent School">Convent School</option>
+                  <option value="International School">
+                    International School
+                  </option>
+                </select>
+              </div>
+              <div>
+                <label for="rating" class="block">School-Rating [0-10] :</label>
+                <input type="number" id="rating" name="rating" min="0" max="10"
+                  class="mt-2 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+            </div>
+            <!--hospital details-->
+            <div class="mt-2">
+              <label class="block"> Hospital Name :</label>
+              <input type="text" id=" hospital" placeholder="Hospital nearby.. " required
+                class="mt-2 pl-1 pt-1 bg-[#e2dfd2] rounded-md border-gray-600 shadow-sm" />
+            </div>
+            <!--hospital adress and distance-->
+            <div class="mt-2 flex gap-40">
+              <div>
+                <label class="block"> Hospital-Address</label>
+                <textarea name="features" required placeholder="....Address of school..."
+                  class="mt-2 pl-3 pt-1 w-96 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
+              </div>
+              <div>
+                <label class="block">Distance :</label>
+                <input type="text" id="hospital" placeholder="ex. 2km" required
+                  class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+            </div>
+            <!--hospital type and rating-->
+            <div class="flex gap-[310px]">
+              <div>
+                <label for="hospital" class="block">Hospital Type :</label>
+                <select name="hospital" id="hospital"
+                  class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
+                  <option value="">--Please choose an option--</option>
+                  <option value="Public hospital">Public hospital</option>
+                  <option value="Government hospital">
+                    Government hospital
+                  </option>
+                </select>
+              </div>
+              <div>
+                <label class="block">Hospital Ratings [0-10] :</label>
+                <input type="number" id="hospital" name="highlights" min="0" max="10" required
+                  class="mt-2 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+            </div>
+          </div>
+          <!--FIFTH TAB : units-->
+          <div class="ml-4 mt-3 tab-pane fade" id="Units" role="tabpanel" aria-labelledby="Units-tab">
+            <div class="mt-3 flex gap-24">
+              <!--price-->
+              <div class="">
+                <label for="price" class="block">Price :</label>
+                <input type="number" id="price" name="price" required placeholder="ex :50,00,000"
+                  class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" /><span>&#x20b9;</span>
+              </div>
+              <!--usable are-->
+              <div>
+                <label for="area" class="block">Usable-area :</label>
+                <input type="number" id="usableArea" name="usableArea" required placeholder="ex:615"
+                  class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+              <!--measureunit-->
+              <div>
+                <label for="Measure unit" class="block">Measure unit:</label>
+                <input type="text" id="measureUnit" name="measureUnit" required placeholder="ex.Sqft"
+                  class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+              </div>
+            </div>
+            <!--date time-->
+            <div class="mt-3">
+              <label for="avaialble" class="block">Avaialble From :</label>
+              <input type="datetime-local" id="avaialbleFrom" name="avaialbleFrom" required
+                class="mt-2 h-10 pl-2 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+            </div>
+            <!--furnishing-->
+            <div class="mt-3">
+              <label for="furnishing" class="block">Furnishing :</label>
+              <div class="mt-2 ml-3 flex gap-8">
+                <div>
+                  <input type="radio" id="type" name="type" value="" />
+                  <label for="type1" class="ml-2"> Semi-Furnished</label><br />
+                </div>
+                <div>
+                  <input type="radio" id="type" name="type" value="" />
+                  <label for="type2" class="ml-2"> Fully-Furnished</label><br />
+                </div>
+              </div>
+            </div>
+            <!--highlights-->
+            <div class="mt-3">
+              <label for="highlights" class="block">Highlights :</label>
+              <div class="mt-2 flex gap-24">
+                <div class="space-y-3 ml-3">
+                  <div>
+                    <input type="checkbox" id="highlights" name="highlights" value="Bed" />
+                    <label for="HL1" class="ml-2"><i class="fa-solid fa-bed"></i> Bed</label><br />
+                  </div>
+                  <div>
+                    <input type="checkbox" id="highlights" name="highlights" value="Air Conditionig" />
+                    <label for="HL2" class="ml-2">
+                      <i class="fa-solid fa-wind"></i> Air Conditionig</label><br />
+                  </div>
+                  <div>
+                    <input type="checkbox" id="highlights" name="highlights" value="Wifi" />
+                    <label for="HL3" class="ml-2">
+                      <i class="fa-solid fa-wifi"></i> Wifi</label><br />
+                  </div>
+                  <div>
+                    <input type="checkbox" id="highlights" name="highlights" value="High Speed Internet Acess" />
+                    <label for="HL4" class="ml-2">
+                      <i class="fa-brands fa-internet-explorer"></i> High Speed
+                      Internet Acess</label><br />
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div>
+                    <input type="checkbox" id="highlights" name="highlights" value="Washer/Dryer" />
+                    <label for="HL5" class="ml-2">
+                      <i class="fa-solid fa-sink"></i> Washer/Dryer</label><br />
+                  </div>
+                  <div class="flex">
+                    <input type="checkbox" id="highlights" name="highlights" value="Refrigerator" />
+                    <div class="ml-1 flex">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="18" height="18" x="0" y="0" viewBox="0 0 512 512"
+                        style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                        <g>
+                          <path
+                            d="M370.939 0H141.061c-15.844 0-28.735 12.89-28.735 28.735V512h47.02v-31.347h193.306V512h47.02V28.735C399.673 12.89 386.783 0 370.939 0zM143.673 496.327H128v-15.673h15.673v15.673zm240.327 0h-15.673v-15.673H384v15.673zm0-31.347H128V219.514h256V464.98zm0-261.139H128v-10.449h256v10.449zm0-26.123H128V28.735c0-7.202 5.859-13.061 13.061-13.061h229.878c7.201 0 13.061 5.859 13.061 13.061v148.983z"
+                            fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                          <path
+                            d="M180.277 61.735c-10.659 0-19.331 8.672-19.331 19.331v60.604c0 10.659 8.672 19.331 19.331 19.331 10.659 0 19.331-8.672 19.331-19.331V81.065c0-10.659-8.672-19.33-19.331-19.33zm3.657 79.934a3.661 3.661 0 0 1-3.657 3.657 3.661 3.661 0 0 1-3.657-3.657V81.065a3.661 3.661 0 0 1 3.657-3.657 3.661 3.661 0 0 1 3.657 3.657v60.604zM180.277 236.233c-10.659 0-19.331 8.672-19.331 19.331v60.604c0 10.659 8.672 19.331 19.331 19.331 10.659 0 19.331-8.672 19.331-19.331v-60.604c0-10.66-8.672-19.331-19.331-19.331zm3.657 79.934a3.661 3.661 0 0 1-3.657 3.657 3.661 3.661 0 0 1-3.657-3.657v-60.604a3.661 3.661 0 0 1 3.657-3.657 3.661 3.661 0 0 1 3.657 3.657v60.604z"
+                            fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                        </g>
+                      </svg>
+                      <label for="HL6" class="ml-2">Refrigerator</label><br />
+                    </div>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="highlights" name="highlights" value="Freezer" />
+                    <label for="HL7" class="ml-2">
+                      <i class="fa-solid fa-toilet"></i> Toilets</label><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Other highlights-->
+            <div class="mt-2">
+              <label for="" class="block"> Any other highlights :</label>
+              <textarea name="highlights" required placeholder="....write other Highlights of your appartmnet..."
+                class="mt-2 pl-3 pt-1 w-96 h-20 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
+            </div>
+          </div>
+          <!--SIXTH TAB : IMAGES-->
+          <div class="tab-pane fade" id="Images" role="tabpanel" aria-labelledby="Images-tab">
+            <div class="mt-6 h-96 border-2 text-center">
+              <div>
+                <label for="ImageGallery" class="block text-lg">---Picture of Room---</label>
+              </div>
+              <!--first three images-->
+              <div
+                class="ml-[15vh] mt-3 pl-10 h-28 w-[60vw] flex justify-center items-center bg-[#e6e6fa] border-dotted border-2 border-gray-600">
+                <div>
+                  <input type="file" id="ImageGallery" class="" accept="image/*" />
+                </div>
+                <div>
+                  <input type="file" id="ImageGallery" class="" accept="image/*" />
+                </div>
+                <div>
+                  <input type="file" id="ImageGallery" class="" accept="image/*" />
+                </div>
+              </div>
+              <!--floor plan-->
+              <div class="mt-3">
+                <div>
+                  <label for="floorPlan" class="block text-lg">---Picture of Floor-Plan--</label>
+                </div>
+                <div class="mt-3 h-16 w-[60vw] ml-[15vh] border-dotted border-2 border-gray-600 bg-[#e6e6fa]">
+                  <input type="file" id="ImageGallery" class="mt-3 ml-24" accept="image/*" />
+                </div>
+              </div>
+            </div>
+
+            <!--button and submit-->
+            <div class="mt-4 text-right">
+              <button type="button" class="btn btn-success">
+                Submit <i class="fa-solid fa-check"></i>
+              </button>
+            </div>
+          </div>
         </div>
+  
       </div>
-     </form>
+    </form>
   </div>
-  </div>
+</div>
