@@ -7,7 +7,7 @@ import { ApiConfig } from '../constant/ApiConfig';
   providedIn: 'root',
 })
 export class CommonUtilitiesService {
-  private apiUrl = 'http://localhost:8080/auth';
+  private readonly apiUrl = 'http://localhost:8080/auth';
 
   constructor(private readonly http: HttpClient) { }
 
@@ -25,7 +25,6 @@ export class CommonUtilitiesService {
     return this.http.post(ApiConfig.addProperty, propertyData);
   }
 
-
   signup(user: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/signup`, user);
   }
@@ -33,6 +32,7 @@ export class CommonUtilitiesService {
   login(username: string, password: string): Observable<string> {
     return this.http.post(`${this.apiUrl}/login`, { username, password }, { responseType: 'text' });
   }
+
   parseJsonFile(path: string) {
     return this.http.get(path);
   }
