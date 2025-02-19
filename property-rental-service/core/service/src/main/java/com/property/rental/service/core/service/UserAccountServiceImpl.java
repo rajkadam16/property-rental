@@ -1,8 +1,10 @@
 package com.property.rental.service.core.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.property.rental.service.common.enity.LoginRequest;
+import com.property.rental.service.core.api.db.UserAccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,9 @@ import com.property.rental.service.common.enity.UserAccountEntity;
 
 @Service("userAccountService")
 public class UserAccountServiceImpl implements UserAccountService {
+
+	@Autowired
+	private UserAccountRepo userAccountRepo;
 
 	@Autowired
 	private UserAccountDao userAccountDao;
@@ -44,7 +49,17 @@ public class UserAccountServiceImpl implements UserAccountService {
 
 	@Override
 	public String login(String email, String password) {
-		return this.login(email,password);
+		Optional<UserAccountEntity> userOptional = userAccountRepo.findByEmail(email);
+		if (userOptional.isPresent()) {
+			UserAccountEntity user = userOptional.get();
+			if (user.getPassword().equals(password)) {
+				return "Login successful!";
+			} else {
+				return "Invalid password!";
+			}
+		} else {
+			return "User not found!";
+		}
 	}
 
 }
