@@ -40,27 +40,18 @@ public class UserAccountDaoImpl implements UserAccountDao {
 
 	@Override
 	public String createUserAccount(UserAccountEntity userAccount) {
+		// Check if email already exists
+		if (userAccountRepo.findByEmail(userAccount.getEmail()).isPresent()) {
+			return "Email already registered!";
+		}
 		userAccountRepo.save(userAccount);
-		return "created";
+		return "Account created successfully!";
 	}
 
 	@Override
 	public String login(String email, String password) {
-		Optional<UserAccountEntity> userOptional = userAccountRepo.findByEmail(email);
-
-		if (userOptional.isPresent()) {
-			UserAccountEntity user = userOptional.get();
-
-			if (user.getPassword().equals(password)) {
-				return "Login successful!";
-			} else {
-				return "Invalid password!";
-			}
-		} else {
-			return "User not found!";
-		}
+		return "";
 	}
-
 
 }
 
