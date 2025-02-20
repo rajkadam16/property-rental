@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/service/auth.service';
 
 @Component({
@@ -7,21 +9,26 @@ import { AuthService } from 'src/app/core/service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  loginForm: FormGroup;
+  message: string | undefined;
 
-  email: string = '';
-  password: string = '';
-  message: string = '';
-
-  constructor(private readonly authService: AuthService) {}
-
-  onLogin() {
-    this.authService.login(this.email, this.password).subscribe({
-      next: (response) => {
-        this.message = response; // Show response from backend
-      },
-      error: (error) => {
-        this.message = 'Login failed! Check your credentials.';
-      }
+  constructor(private readonly fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     });
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      this.authService.login(this.loginForm.value).subscribe(response => {
+        this.message = response; // Handle the text response
+        console.log('Login successful', response);
+        this.router.navigate(['/home']); // Redirect to home page
+      }, error => {
+        console.error('Login error', error);
+        this.message = 'Login failed!';
+      });
+    }
   }
 }

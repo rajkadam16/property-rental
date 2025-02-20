@@ -9,12 +9,15 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
 import { AddPropertyComponent } from './components/add-property/add-property.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './home/home/home.component';
+import { authguardGuard } from './core/guards/authguard.guard';
 
 
 const routes: Routes = [
-  { path: '',
+  {
+    path: '',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
-     },
+  },
   {
     path: 'propertydetails/:id',
     component: PropertyDataComponent,
@@ -23,28 +26,25 @@ const routes: Routes = [
         path: 'PropertyMediaView',
         component: PropertyMediaViewerComponent,
       },
-      ]
+    ]
   },
 
   {
     path: 'PropertyMapView',
     component: PropertyMapViewComponent,
   },
-  {
-    path: 'signup',
-    component: SignupComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent }, // Ensure you have a HomeComponent
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'addproperty',
     component: AddPropertyComponent,
+    // canActivate: [authguardGuard],
   },
   {
     path: 'contactus',
-    loadChildren:()=> import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
   },
   { path: '**', component: PageNotFoundComponent },
   {
@@ -58,5 +58,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 

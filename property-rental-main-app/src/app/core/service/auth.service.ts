@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -7,17 +7,22 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private readonly baseUrl = 'http://localhost:8080/account'; // Update if backend URL is different
+  private readonly baseUrl = 'http://localhost:8080/account'; // Update this with your backend URL
 
-  constructor(private readonly http: HttpClient) {}
+  constructor(private readonly http: HttpClient) { }
 
-  login(email: string, password: string): Observable<any> {
-    const loginData = { email, password };
-    return this.http.post(`${this.baseUrl}/login`, loginData);
+  signup(user: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(`${this.baseUrl}/signup`, user, { headers, responseType: 'text' });
   }
-  signup(firstName: string, lastName: string, contactNumber: string, email: string, password: string): Observable<any> {
-    const signupData = { firstName, lastName, contactNumber, email, password };
-    return this.http.post(`${this.baseUrl}/signup`, signupData);
+
+  login(credentials: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(`${this.baseUrl}/login`, credentials, { headers, responseType: 'text' });
   }
-  
+  isLoggedIn(): boolean {
+    // Implement your logic to check if the user is logged in
+    // For example, check if a token exists in local storage
+    return !!localStorage.getItem('token');
+  }
 }

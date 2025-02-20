@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/service/auth.service';
 
 
@@ -8,33 +10,29 @@ import { AuthService } from 'src/app/core/service/auth.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  firstName: string = '';
-  lastName: string = '';
-  contactNumber: string = '';
-  email: string = '';
-  password: string = '';
-  message: string = '';  // ✅ Message to display on the UI
-  isError: boolean = false; // ✅ Track if it's an error message
-  isSubmitting: boolean = false; // ✅ Prevent multiple clicks
+  signupForm: FormGroup;
+  message: string | undefined;
 
-  constructor(private authService: AuthService) {}
-
-  onSignup() {
-    if (this.isSubmitting) return; // ✅ Prevents multiple clicks
-
-    this.isSubmitting = true;
-
-    this.authService.signup(this.firstName, this.lastName, this.contactNumber, this.email, this.password).subscribe({
-      next: (response) => {
-        this.message = response.message; // ✅ Show success message
-        this.isError = false; // ✅ Reset error flag
-        this.isSubmitting = false;
-      },
-      error: (error) => {
-        this.message = error.error.message || 'Signup failed. Try again!';
-        this.isError = true; // ✅ Set error flag
-        this.isSubmitting = false;
-      }
+  constructor(private readonly fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) {
+    this.signupForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      contactNumber: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     });
+  }
+
+  onSubmit() {
+    if (this.signupForm.valid) {
+      this.authService.signup(this.signupForm.value).subscribe(response => {
+        this.message = response; // Handle the text response
+        console.log('Signup successful', response);
+        this.router.navigate(['/home']); // Redirect to home page
+      }, error => {
+        console.error('Signup error', error);
+        this.message = 'Signup failed!';
+      });
+    }
   }
 }

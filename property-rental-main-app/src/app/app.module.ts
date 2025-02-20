@@ -30,6 +30,7 @@ import { ContactPropertyComponent } from './components/contact-property/contact-
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { AddPropertyComponent } from './components/add-property/add-property.component';
 import { JwtInterceptor } from './core/service/jwt-interceptor.service';
+import { AuthService } from './core/service/auth.service';
 
 
 @NgModule({
@@ -70,7 +71,7 @@ import { JwtInterceptor } from './core/service/jwt-interceptor.service';
     NgxPaginationModule ,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
