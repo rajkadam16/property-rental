@@ -30,17 +30,15 @@ const routes: Routes = [
   },
 
   {
-    path: 'PropertyMapView',
+    path: 'FindProperty',
     component: PropertyMapViewComponent,
   },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent }, // Ensure you have a HomeComponent
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'addproperty',
-    component: AddPropertyComponent,
-    // canActivate: [authguardGuard],
+    component: AddPropertyComponent
   },
   {
     path: 'contactus',

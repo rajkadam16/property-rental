@@ -31,6 +31,7 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
 import { AddPropertyComponent } from './components/add-property/add-property.component';
 import { JwtInterceptor } from './core/service/jwt-interceptor.service';
 import { AuthService } from './core/service/auth.service';
+import { authguardGuard } from './core/guards/authguard.guard';
 
 
 @NgModule({

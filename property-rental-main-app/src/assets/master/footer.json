@@ -20,7 +20,7 @@
           {
             "isEnabled": true,
             "name": "Browse Propertie",
-            "routerlink": "/PropertyMapView"
+            "routerlink": "/FindProperty"
           },
           {
             "isEnabled": true,

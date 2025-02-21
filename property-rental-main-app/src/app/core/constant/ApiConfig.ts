@@ -6,6 +6,6 @@ export const ApiConfig = {
     // propertyData:"assets/master/propertydata.json", //json file
     addProperty: "http://localhost:8080/property/create",//backend api
     // navbar:"assets/master/navbar.json",  //json file
-    navbar: "http://localhost:8080/navbar/get/all", //backend api
+    navbar: "http://localhost:8080/navbar", //backend api
     pageNotFound: "assets/master/pagenotfound.json",
 }
