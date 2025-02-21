@@ -11,27 +11,26 @@ import { AuthService } from 'src/app/core/service/auth.service';
 })
 export class SignupComponent {
   signupForm: FormGroup;
-  message: string | undefined;
 
   constructor(private readonly fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) {
     this.signupForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      contactNumber: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      contactNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]], // Assuming 10 digit contact number
+      password: ['', [Validators.required,Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$'),]] // Minimum 8 character
     });
   }
 
+  
   onSubmit() {
     if (this.signupForm.valid) {
       this.authService.signup(this.signupForm.value).subscribe(response => {
-        this.message = response; // Handle the text response
-        console.log('Signup successful', response);
-        this.router.navigate(['/home']); // Redirect to home page
+        alert(response);
+        this.router.navigate(['/']); // Redirect to home page
       }, error => {
         console.error('Signup error', error);
-        this.message = 'Signup failed!';
+        alert('Signup failed');
       });
     }
   }
