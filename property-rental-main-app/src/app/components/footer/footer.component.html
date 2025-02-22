@@ -16,7 +16,7 @@
                 <div *ngFor="let section of sections" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 *ngIf="section.isEnabled" class="text-uppercase fw-bold mb-4">{{ section.title || "Not Available" }}</h6>
                     <p *ngFor="let sectionname of section.links">
-                        <a *ngIf="sectionname.isEnabled" [routerLink]="sectionname.routerlink" class="text-reset">{{ sectionname.name  || "Not Available"}}</a>
+                        <a *ngIf="sectionname.isEnabled"  [routerLink]="sectionname.routerlink" class="text-reset">{{ sectionname.name  || "Not Available"}}</a>
                     </p>
                 </div>               
             </div>

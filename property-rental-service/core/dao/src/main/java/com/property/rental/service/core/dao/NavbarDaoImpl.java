@@ -1,6 +1,6 @@
 package com.property.rental.service.core.dao;
 
-import com.property.rental.service.common.enity.Navbar;
+import com.property.rental.service.common.enity.NavbarEntity;
 import com.property.rental.service.core.api.dao.NavbarDao;
 import com.property.rental.service.core.api.db.NavbarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +14,7 @@ public class NavbarDaoImpl implements NavbarDao {
     private NavbarRepository navbarRepository;
 
     @Override
-    public Navbar getNavbarItemById(String navbarId) {
-        return navbarRepository.findById(navbarId).orElse(null);
-    }
-
-    @Override
-    public List<Navbar> getAllNavbarItems() {
+    public List<NavbarEntity> getAllNavbarItems() {
         return navbarRepository.findAll();
     }
 
@@ -31,8 +26,10 @@ public class NavbarDaoImpl implements NavbarDao {
 
 
     @Override
-    public String createNavbarItem(Navbar navbarItem) {
-         navbarRepository.save(navbarItem);
+    public String createNavbarItem(List<NavbarEntity> navbarItems) {
+        for (NavbarEntity navbarItem : navbarItems) {
+            navbarRepository.save(navbarItem);
+        }
          return "created";
     }
 }

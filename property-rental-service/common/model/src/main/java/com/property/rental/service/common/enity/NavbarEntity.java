@@ -7,15 +7,14 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "navbar-Items")
+@Document(collection = "navbar-items")
 @Data
 @NoArgsConstructor
 @Getter
 @Setter
-public class Navbar {
+public class NavbarEntity {
     @Id
     private String navbarId;
     private String title;
     private String routerLink;
-
 }

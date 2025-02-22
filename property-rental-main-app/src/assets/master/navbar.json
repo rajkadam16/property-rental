@@ -1,24 +1,22 @@
 [
-
-    {
-        "title":"Find Property",
-        "routerLink":"/FindProperty"
-    },
-{
-        "title":"Add property",
-        "routerLink":"/addproperty"
-},
-    {
-        "title":"Contact Us",
-        "routerLink":"/contactus"
-    },
-    {
-        "title":"Sign Up",
-        "routerLink":"/signup"
-    },
-    {
-        "title":"Log In",
-        "routerLink":"/login"
-        
-    }
+  {
+    "title": "Find Property",
+    "routerLink": "/FindProperty"
+  },
+  {
+    "title": "Add property",
+    "routerLink": "/addproperty"
+  },
+  {
+    "title": "Contact Us",
+    "routerLink": "/contactus"
+  },
+  {
+    "title": "Sign Up",
+    "routerLink": "/signup"
+  },
+  {
+    "title": "Log In",
+    "routerLink": "/login"
+  }
 ]

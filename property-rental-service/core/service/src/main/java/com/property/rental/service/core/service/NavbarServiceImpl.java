@@ -1,6 +1,6 @@
 package com.property.rental.service.core.service;
 
-import com.property.rental.service.common.enity.Navbar;
+import com.property.rental.service.common.enity.NavbarEntity;
 
 import com.property.rental.service.core.api.dao.NavbarDao;
 import com.property.rental.service.core.api.service.NavbarService;
@@ -15,13 +15,9 @@ public class NavbarServiceImpl implements NavbarService {
     @Autowired
     private NavbarDao navbarDao;
 
-    @Override
-    public Navbar getNavbarItemById(String navbarId) {
-        return this.navbarDao.getNavbarItemById(navbarId);
-    }
 
     @Override
-    public List<Navbar> getAllNavbarItems() {
+    public List<NavbarEntity> getAllNavbarItems() {
         return this.navbarDao.getAllNavbarItems();
     }
 
@@ -33,7 +29,7 @@ public class NavbarServiceImpl implements NavbarService {
 
 
     @Override
-    public String createNavbarItem(Navbar navbarItem) {
-        return this.navbarDao.createNavbarItem(navbarItem);
+    public String createNavbarItem(List<NavbarEntity> navbarItems) {
+        return this.navbarDao.createNavbarItem(navbarItems);
     }
 }

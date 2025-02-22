@@ -11,7 +11,8 @@ public class Unit {
     private String price;
     private String usableArea;
     private String measureUnit;
-    private String availabilFrom;
+    private String availableFrom;
+    private String configuration;
     private List<Furnishing> furnishing;
     private List<String> highlights;
     private List<String> kitchen;

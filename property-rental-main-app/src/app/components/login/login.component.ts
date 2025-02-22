@@ -9,28 +9,6 @@ import { AuthService } from 'src/app/core/service/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  // loginForm: FormGroup;
-
-  // constructor(private readonly fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) {
-  //   this.loginForm = this.fb.group({
-  //     email: ['', [Validators.required, Validators.email]],
-  //     password: ['', Validators.required]
-  //   });
-  // }
-
-  // onSubmit() {
-  //   if (this.loginForm.valid) {
-  //     this.authService.login(this.loginForm.value).subscribe(response => {
-  //       console.log('Login successful', response);
-  //       alert('Login successful');
-  //       this.router.navigate(['/']); // Redirect to home page
-  //     }, error => {
-  //       console.error('Login error', error);
-  //       alert('Login failed');
-  //     });
-  //   }
-  // }
-
   loginForm: FormGroup;
 
   constructor(private readonly fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) {

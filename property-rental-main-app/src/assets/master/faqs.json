@@ -26,12 +26,12 @@
       "answer": "Yes, you can list your property without worrying about the account verification. As part of property verification we will verify your account as well."
     },
     {
-      "isEnabled": true,
+      "isEnabled": false,
       "question": "What happens once I list the property?",
       "answer": "NoBroker team will check your property and verify all the details once you post your advert, they will then activate the advert and will be live on our website. Any tenant interested in your property will directly contact you through mail."
     },
     {
-      "isEnabled": true,
+      "isEnabled": false,
       "question": "Will Relationship Manager be present during the house visit?",
       "answer": "We help our customers shortlist properties and speak with owners on their behalf to set up meeting appointments. Hence, there is no need to get on the field. Once the appointment is fixed all that you would have to do is to visit the property and we will finalise the deal."
     }

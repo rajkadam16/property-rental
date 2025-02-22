@@ -6,7 +6,6 @@ import com.property.rental.service.common.enity.PropertyDataEntity;
 
 public interface PropertyDetailDao {
 
-	public PropertyDataEntity getPropertyDetail(String propertyID);
 	
 	public List<PropertyDataEntity> getAllPropertyDetails();
 	
