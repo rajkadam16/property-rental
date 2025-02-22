@@ -19,9 +19,15 @@ public class PropertyDetailController {
 
 	@CrossOrigin("http://localhost:4200/")
 	@GetMapping("get/all")
-	public ResponseEntity<PropertyDataResponse> getAllPropertyDetails() {
-		return ResponseEntity.ok(propertyDetailService.getAllPropertyDetails());
+	public Object getAllPropertyDetails() {
+		return propertyDetailService.getAllPropertyDetails();
 	}
+
+//	@GetMapping("get/{propertyID}")
+//	public Object getPropertyDetail(@PathVariable String propertyID) {
+//		logger.info("Info message - getPropertyDetail,propertyID={}",propertyID);
+//		return propertyDetailService.getPropertyDetail(propertyID);
+//	}
 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("create")

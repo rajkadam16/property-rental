@@ -41,6 +41,8 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     { label: '2Wheeler', checked: false },
     { label: '4Wheeler', checked: false }
   ];
+  filterBy: any[] = [];
+  data: any[] = [];
 
   constructor(
     private readonly apartmentService: CommonUtilitiesService,
@@ -50,9 +52,15 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.loader=true;
     const propertyData = this.apartmentService.getProducts().subscribe((response: any) => {
+
+      this.filterBy = response.filterBy;
+      this.data = response.data;  
+
+      console.log('filterBy', this.filterBy);
+      console.log('data', this.data);
       this.loader=false;
-      this.products = response;
-      this.filteredProperties = response;
+      this.products = response.data; 
+      this.filteredProperties = response.data;
       this.sortProperties();
       
       this.changeDetectionRef.detectChanges();
