@@ -1,8 +1,12 @@
 package com.property.rental.service.core.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import com.property.rental.service.common.enity.PropertyDataEntity;
+import com.property.rental.service.common.model.PropertyDataResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,14 +20,15 @@ public class PropertyDetailServiceImpl implements PropertyDetailService  {
 	@Autowired
 	private PropertyDetailDao propertyDetailDao;
 
-	@Override
-	public PropertyDataEntity getPropertyDetail(String propertyID) {
-		return propertyDetailDao.getPropertyDetail(propertyID);
-	}
 
 	@Override
-	public List<PropertyDataEntity> getAllPropertyDetails() {
-		return propertyDetailDao.getAllPropertyDetails();
+	public PropertyDataResponse getAllPropertyDetails() {
+		PropertyDataResponse propertyDataResponse = new PropertyDataResponse();
+		List<PropertyDataEntity> propertyDataEntities=propertyDetailDao.getAllPropertyDetails();
+		propertyDataResponse.setData(propertyDataEntities);
+		Map<String, Set<String>> filterBy= new HashMap<>();
+		propertyDataResponse.setFilterBy(filterBy);
+		return propertyDataResponse;
 	}
 
 	@Override

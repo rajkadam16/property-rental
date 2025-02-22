@@ -1,4 +1,4 @@
-package com.property.rental.service.common.enity;
+package com.property.rental.service.common.model;
 
 import lombok.Data;
 

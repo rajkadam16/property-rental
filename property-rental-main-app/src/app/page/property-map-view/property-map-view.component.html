@@ -18,7 +18,7 @@
     </div>
     <!-- Filter by Area/Size -->
     <div class="property-filter mb-6">
-      <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Area</label>
+      <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Configuration</label>
       <div class="space-y-2">
         <div class="flex items-center" *ngFor="let option of bhkOptions">
           <input [(ngModel)]="option.checked" (change)="filterProperties('bhk',this.bhkOptions)" type="checkbox"

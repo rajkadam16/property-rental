@@ -1,16 +1,15 @@
 package com.property.rental.service.core.api.dao;
 
-import com.property.rental.service.common.enity.Navbar;
+import com.property.rental.service.common.enity.NavbarEntity;
 
 import java.util.List;
 
 public interface NavbarDao {
-    public Navbar getNavbarItemById(String navbarId);
 
-    public List<Navbar> getAllNavbarItems();
+    public List<NavbarEntity> getAllNavbarItems();
 
     public String deleteNavbarItem(String navbarId);
 
-    public String createNavbarItem(Navbar navbarItem);
+    public String createNavbarItem(List<NavbarEntity> navbarItems);
 
 }

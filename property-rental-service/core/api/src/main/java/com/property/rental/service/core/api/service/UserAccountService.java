@@ -2,7 +2,6 @@ package com.property.rental.service.core.api.service;
 
 import java.util.List;
 import com.property.rental.service.common.enity.UserAccountEntity;
-import com.property.rental.service.common.enity.LoginRequest;
 
 public interface UserAccountService {
 
