@@ -9,5 +9,6 @@ import java.util.Set;
 @Data
 public class PropertyDataResponse {
     private List<PropertyDataEntity> data;
-    private Map<String, Set<String>> filterBy;
+
+    private  List<PropertyFilter> propertyFilter;
 }

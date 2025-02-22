@@ -24,7 +24,8 @@ export class PropertyDataComponent implements OnInit {
   propertyEducation: Education[] = [];
   transportations: Transportation[] = [];
   hospitals: Hospital[] = [];
-
+  filterBy:any[]=[];
+  data:any[] = [];  
  
   constructor(
     private readonly route: ActivatedRoute,
@@ -39,6 +40,13 @@ export class PropertyDataComponent implements OnInit {
     const productId = this.route.snapshot.params['id']; //backend api
     // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
     this.productService.getProductById(productId).subscribe((response: any) => {
+      this.filterBy = response.filterBy;
+      this.data = response.data;  
+
+      console.log('filterBy', this.filterBy);
+      console.log('data', this.data);
+
+
         this.product = response;
         this.imgGallerys = response.imgGallery;
         this.aboutProperty = response.aboutUs;
@@ -47,8 +55,9 @@ export class PropertyDataComponent implements OnInit {
         this.propertyEducation = response.education;
         this.transportations = response.transportation;
         this.hospitals = response.hospital;
-
+      
       },
+      
     );
     
   }
