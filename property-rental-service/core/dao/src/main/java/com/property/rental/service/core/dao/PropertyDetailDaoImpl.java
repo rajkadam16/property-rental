@@ -9,6 +9,7 @@ import com.property.rental.service.common.enity.PropertyDataEntity;
 import com.property.rental.service.core.api.dao.PropertyDetailDao;
 import com.property.rental.service.core.api.db.PropertyDetailRepo;
 
+
 @Repository("propertyDetailDao")
 public class PropertyDetailDaoImpl implements PropertyDetailDao {
 

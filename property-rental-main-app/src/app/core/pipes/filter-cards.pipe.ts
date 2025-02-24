@@ -14,7 +14,7 @@ export class FilterCardsPipe implements PipeTransform {
 
     return propertyCard.filter(propertyCard => {
       return propertyCard.propertyDetails.name.toLowerCase().includes(searchText) ||
-        propertyCard.propertyDetails.address.address1.toLowerCase().includes(searchText)
+        propertyCard.propertyDetails.address.city.toLowerCase().includes(searchText)
 
     });
   }

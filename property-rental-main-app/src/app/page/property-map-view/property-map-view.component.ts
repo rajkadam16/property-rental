@@ -54,13 +54,13 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     const propertyData = this.apartmentService.getProducts().subscribe((response: any) => {
 
       this.filterBy = response.filterBy;
-      this.data = response.data;  
+      this.data = response;  
 
       console.log('filterBy', this.filterBy);
       console.log('data', this.data);
       this.loader=false;
-      this.products = response.data; 
-      this.filteredProperties = response.data;
+      this.products = response; 
+      this.filteredProperties = response;
       this.sortProperties();
       
       this.changeDetectionRef.detectChanges();
@@ -73,15 +73,40 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
 
   }
   //filtering properties based on BHK
-  filterProperties(criteria: any, options: any) {
+  // filterProperties(criteria: any, options: any) {
+  //   const selectedOptions: string[] = options
+  //     .filter((option: { label: string; checked: boolean }) => option.checked)
+  //     .map((option: { label: string; checked: boolean }) => option.label);
+
+  //   this.filteredProperties = this.products.filter(property =>
+  //     selectedOptions.length === 0 || selectedOptions.includes(property[criteria])
+  //   );
+  // }
+
+  filterProperties(criteria: string, options: any) {
     const selectedOptions: string[] = options
       .filter((option: { label: string; checked: boolean }) => option.checked)
       .map((option: { label: string; checked: boolean }) => option.label);
-
+  
     this.filteredProperties = this.products.filter(property =>
-      selectedOptions.length === 0 || selectedOptions.includes(property[criteria])
+      selectedOptions.length === 0 || this.includesNestedProperty(property, criteria, selectedOptions)
     );
   }
+  
+  includesNestedProperty(property: any, criteria: string, selectedOptions: string[]): boolean {
+    const keys = criteria.split('.');
+    let nestedProperty = property;
+  
+    for (const key of keys) {
+      if (nestedProperty[key] === undefined) {
+        return false;
+      }
+      nestedProperty = nestedProperty[key];
+    }
+  
+    return selectedOptions.includes(nestedProperty);
+  }
+
   //sorting properties price wise
   sortProperties(): void {
     if (this.sortOption === 'lowToHigh') {
