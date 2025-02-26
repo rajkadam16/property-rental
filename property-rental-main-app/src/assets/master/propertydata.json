@@ -114,14 +114,15 @@
       ]
     },
     "availableUnits": {
-      "cols": ["Unit", "Price", "Usable Area", "Availability"],
+      "cols": ["Unit", "Price", "Usable Area","configuration", "Availability"],
       "rows": [
         {
           "unit": "2404-108",
           "price": "₹25,000",
           "usableArea": "505",
           "measureUnit": "Ft",
-          "availabilFrom": "15 June 2025",
+          "configuration": "1 BHK",
+          "availableFrom": "15 June 2025",
           "furnishing": [
             {
               "type": "Semi",
@@ -146,7 +147,8 @@
           "price": "50,000",
           "usableArea": "605",
           "measureUnit": "Ft",
-          "availabilFrom": "15 July 2025",
+          "configuration": "2 BHK",
+          "availableFrom": "19 May 2024",
           "furnishing": [
             {
               "type": "Full",
@@ -395,14 +397,15 @@
       ]
     },
     "availableUnits": {
-      "cols": ["Unit", "Price", "Usable Area", "Availability"],
+      "cols": ["Unit", "Price", "Usable Area","configuration", "Availability"],
       "rows": [
         {
           "unit": "1234-201",
           "price": "$2,500",
           "usableArea": "800",
           "measureUnit": "Ft",
-          "availabilFrom": "1 August 2024",
+          "configuration": "2 BHK",
+          "availableFrom": "17 June 2024",
           "furnishing": [
             {
               "type": "Semi",
@@ -427,7 +430,8 @@
           "price": "$3,000",
           "usableArea": "1000",
           "measureUnit": "Ft",
-          "availabilFrom": "15 September 2024",
+          "configuration": "1 BHK",
+          "availableFrom": "1 May 2024",
           "furnishing": [
             {
               "type": "Full",
