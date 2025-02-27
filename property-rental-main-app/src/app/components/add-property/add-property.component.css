@@ -1,4 +1,4 @@
-button {
+/* button {
     padding: 10px 15px;
     border: none;
     background: #007bff;
@@ -7,4 +7,30 @@ button {
     cursor: pointer;
     border-radius: 4px;
     margin-top: 10px;
-}
+} */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  form div {
+    margin-bottom: 12px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  
