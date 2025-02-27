@@ -1,115 +1,98 @@
-<!-- <form >
-  <label >First Name:</label>
-  <input id="firstName" >
-
-  <label >Last Name:</label>
-  <input id="lastName" >
-
-  <label >Contact Number:</label>
-  <input id="contactNumber" >
-
-  <label for="email">Email:</label>
-  <input id="email"  type="email">
-
-  <label>Password:</label>
-  <input id="password"  type="password">
-
-  <button type="submit">Sign Up</button>
-</form>
--->
-
 <!-- Section: Design Block -->
-<section class="">
+<section class="h-screen w-full flex justify-center items-center bg-gray-100">
   <!-- Jumbotron -->
-  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+  <div class="px-4 py-5 text-center text-lg-start">
     <div class="container">
-      <div class="row gx-lg-5 align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="my-5 display-3 fw-bold ls-tight">
-            "Rent smarter, <br />
-            <span class="text-primary">live better."</span>
+      <div class="row flex flex-col lg:flex-row items-center justify-center lg:justify-between">
+        <div class="col-lg-6 mb-5 lg:mb-0">
+          <h1 class="my-5 text-4xl font-bold leading-tight">
+            Rent smarter, <br />
+            <span class="text-orange-500">live better..</span>
           </h1>
-          <p style="color: hsl(217, 10%, 50.8%)">
+          <p class="text-gray-600 leading-relaxed">
             Our property rental system is designed to make renting easy, fast, and secure.
-             With a seamless process for listing properties and finding rentals, we bridge
-              the gap between landlords and tenants effortlessly. Whether you're looking to
-               rent out a property or find a perfect place to stay, our platform ensures a
-                smooth and reliable experience for everyone.
+            With a seamless process for listing properties and finding rentals, we bridge
+            the gap between landlords and tenants effortlessly. Whether you're looking to
+            rent out a property or find a perfect place to stay, our platform ensures a
+            smooth and reliable experience for everyone.
           </p>
         </div>
 
-        <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="col-lg-6">
           <div class="card">
-            <div class="card-body py-5 px-md-5">
-              <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row">
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1" formControlName="firstName" class="form-control" />
-                      <label class="form-label" for="firstName">First name</label>
-                      <small class="text-danger" *ngIf="signupForm.controls['firstName'].touched && signupForm.controls['firstName'].hasError('required')">
-                        First name is required
-                      </small>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example2" formControlName="lastName" class="form-control" />
-                      <label class="form-label" for="lastName">Last name</label>
-                      <small class="text-danger" *ngIf="signupForm.controls['lastName'].touched && signupForm.controls['lastName'].hasError('required')">
-                        Last name is required
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              
-                <!-- Email input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="email" id="form3Example3" formControlName="email" class="form-control" />
-                  <label class="form-label" for="form3Example3">Email address</label>
-                  <small class="text-danger" *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('required')">
-                    Email is required
+            <div class="d-logo flex justify-center items-center">
+              <img class="logo" src="assets/images/favicon.png" alt="logo">
+            </div>
+            <div class="title">
+              <h2>One account</h2>
+              <h2>Many possibilities</h2>
+            </div>
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+              <section class="form">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="text" class="form-control" formControlName="firstName"
+                    placeholder="Enter your First Name" />
+                  <small class="text-danger"
+                    *ngIf="signupForm.controls['firstName'].touched && signupForm.controls['firstName'].hasError('required')">
+                    First name is required
                   </small>
-                  <small class="text-danger" *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('email')">
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" class="form-control" formControlName="lastName"
+                    placeholder="Enter your Last Name" />
+                  <small class="text-danger"
+                    *ngIf="signupForm.controls['lastName'].touched && signupForm.controls['lastName'].hasError('required')">
+                    Last name is required
+                  </small>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" class="form-control" formControlName="email"
+                    placeholder="Enter your Email" />
+                  <small class="text-danger"
+                    *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('email')">
                     Please enter a valid email address
                   </small>
                 </div>
-              
-                <!-- contact number -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="number" id="form3Example5" formControlName="contactNumber" class="form-control" />
-                  <label class="form-label" for="contactNumber">Contact Number</label>
-                  <small class="text-danger" *ngIf="signupForm.controls['contactNumber'].touched && signupForm.controls['contactNumber'].hasError('required')">
+                <div class="form-group">
+                  <label for="contactNumber">Contact Number</label>
+                  <input type="number" id="contactNumber" class="form-control" formControlName="contactNumber"
+                    placeholder="Enter your Contact Number" />
+                  <small class="text-danger"
+                    *ngIf="signupForm.controls['contactNumber'].touched && signupForm.controls['contactNumber'].hasError('required')">
                     Contact number is required
                   </small>
-                  <small class="text-danger" *ngIf="signupForm.controls['contactNumber'].touched && signupForm.controls['contactNumber'].hasError('pattern')">
+                  <small class="text-danger"
+                    *ngIf="signupForm.controls['contactNumber'].touched && signupForm.controls['contactNumber'].hasError('pattern')">
                     Please enter a valid Contact number
                   </small>
                 </div>
-              
-                <!-- Password input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                  <input type="password" id="form3Example4" formControlName="password" class="form-control" />
-                  <label class="form-label" for="password">Password</label>
-                  <small class="text-danger" *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].hasError('required')">
-                    Password is required
-                  </small>
-                  <small class="text-danger" *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].hasError('pattern')">
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" class="form-control" formControlName="password"
+                    placeholder="Enter your password" />
+                  <small class="text-danger"
+                    *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].hasError('pattern')">
                     Password should contain at least 8 characters
                   </small>
                 </div>
-                <!-- Submit button -->
-                <button type="submit" [disabled]="signupForm.invalid" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
-                  Sign up
-                </button>
-              </form>
-            </div>
+
+              </section>
+
+              <section class="buttons">
+                <button type="submit" [disabled]="signupForm.invalid" class="button button-primary">Sign Up</button>
+              </section>
+
+              <section class="not-member">
+                <span>Already member? <a class="link" routerLink="/login">Login</a></span>
+              </section>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Jumbotron -->
 </section>
-<!-- Section: Design Block -->
