@@ -7,184 +7,165 @@ import { FormGroup, FormArray, FormBuilder } from '@angular/forms';
 })
 export class AddPropertyComponent {
   propertyForm!: FormGroup;
-  apartmnetFeaturesList = ['Washer/Dryer',
-    'Air Conditioning',
-    'Dishwasher',
-    'High Speed Internet Access',
-    'Wi-Fi',
-    'Heating',
-    'Cable Ready',
-    'Granite Countertops',
-    'Kitchen',
-    'Refrigerator',
-    'Freezer',
-    'Office',
-    'Views',
-    'Skylights',
-    'Walk-In Closets',
-    'Window Coverings'];
-    kitchenList=['Washer/Dryer',
-    'Air Conditioning',
-    'Dishwasher',
-    'High Speed Internet Access',
-    'Wi-Fi',
-    'Heating',
-    'Cable Ready',]
-  amenitiesList = ['Pets care', 'Laundry', 'Fitness Area', 'Playing Area','pool','club house','CourtYard'];
-  featureList = ['WiFi', 'Air Conditioner', 'Pets Allowed', 'Balcony', 'Modular Kitchen', 
-                  'Wheel Chair Access', 'Internet Access', 'Watchman', 'Transport'];
- highlightList:string[]=['Good Connectivity','Dry Cleaning Service','Lounge','Closets','Good view','Super Markets']
+  apartmnetFeaturesList = ['Washer/Dryer', 'Air Conditioning','Dishwasher','High Speed Internet Access','Wi-Fi','Window Coverings',
+    'Heating','Cable Ready','Granite Countertops','Kitchen','Refrigerator','Freezer','Office','Views','Skylights','Walk-In Closets',];
 
-  constructor(private readonly fb: FormBuilder) {}
+  kitchenList = ['Washer/Dryer','Air Conditioning','Dishwasher','High Speed Internet Access','Wi-Fi','Heating','Cable Ready']
+
+  amenitiesList = ['Pets care', 'Laundry', 'Fitness Area', 'Playing Area', 'pool', 'club house', 'CourtYard'];
+
+  featureList = ['WiFi', 'Air Conditioner', 'Pets Allowed', 'Balcony', 'Modular Kitchen',];
+
+  highlightList: string[] = ['Good Connectivity', 'Dry Cleaning Service', 'Lounge', 'Closets', 'Good view', 'Super Markets']
+  
+  constructor(private readonly fb: FormBuilder) { }
 
   ngOnInit() {
     this.propertyForm = this.fb.group({
-      
-      propertyDetails:this.fb.group({
-        name: ['', ],
+
+      propertyDetails: this.fb.group({
+        name: ['',],
         address: this.fb.group({
-        address1: ['', ],
-        aptNumber: ['', ],
-        city: ['', ],
-        zipCode: ['', ],
-        state: ['', ],
-        country: ['', ]
-       }),
-       thumbnail:['',],
-        area:['',],
-        type:['',],
-        parking:['',],
-        size:['',],
-       amenities: this.fb.array(this.amenitiesList.map(() => this.fb.control(false))),
-
-       officeHours: this.fb.group({
-        time: ['', ],
-        timeZone: ['CST', ],
-        workingDays: this.fb.array(['Monday','tuesday'])
-      }),
-      contactUs: this.fb.group({   
-        phone: ['', ],
-        email: ['', ]
-          }),
-     }),
-      
-      apartmnetFeatures:this.fb.group({
-        features:this.fb.array(this.apartmnetFeaturesList.map(() => this.fb.control(false)))
-
-      }),
-      
-      aboutUs: this.fb.group({
-        description: ['', ],
-        details:['',],
-         }),
-
-      highlights:this.fb.group({
-        features:this.fb.array(this.featureList.map(() => this.fb.control(false)))
-      }),
-      
-      //Tab 4
-      neighborHood: this.fb.group({
-        description: ['', ],
-        details:['',],
+          address1: ['',],
+          aptNumber: ['',],
+          city: ['',],
+          zipCode: ['',],
+          state: ['',],
+          country: ['',]
         }),
+        thumbnail: ['',],
+        area: ['',],
+        type: ['',],
+        parking: ['',],
+        size: ['',],
+        amenities: this.fb.array(this.amenitiesList.map(() => this.fb.control(false))),
+
+        officeHours: this.fb.group({
+          time: ['',],
+          timeZone: ['CST',],
+          workingDays: this.fb.array(['Monday', 'tuesday'])
+        }),
+        contactUs: this.fb.group({
+          phone: ['',],
+          email: ['',]
+        }),
+      }),
+
+      apartmnetFeatures: this.fb.group({
+        features: this.fb.array(this.apartmnetFeaturesList.map(() => this.fb.control(false)))
+
+      }),
+
+      aboutUs: this.fb.group({
+        description: ['',],
+        details: ['',],
+      }),
+
+      highlights: this.fb.group({
+        features: this.fb.array(this.featureList.map(() => this.fb.control(false)))
+      }),
+
+      neighborHood: this.fb.group({
+        description: ['',],
+        details: ['',],
+      }),
 
       education: this.fb.group({
-        title: ['schools', ],
+        title: ['schools',],
         details: this.fb.array([
           this.createNeighborHoodGroup(),
         ])
-         }),
-         
-      hospital: this.fb.group({
-          title: ['hospital', ],
-          details: this.fb.array([
-            this.createNeighborHoodGroup(),
-          ])
-        }),
+      }),
 
-      transportation:this.fb.group({
-        title:['Transportation',],
-        details:this.fb.array([this.createNeighborHoodGroup()])
+      hospital: this.fb.group({
+        title: ['hospital',],
+        details: this.fb.array([
+          this.createNeighborHoodGroup(),
+        ])
+      }),
+
+      transportation: this.fb.group({
+        title: ['Transportation',],
+        details: this.fb.array([this.createNeighborHoodGroup()])
 
       }),
 
-      availableUnits:this.fb.group({
-        rows:this.fb.array([
+      availableUnits: this.fb.group({
+        rows: this.fb.array([
           this.createAvailableUnitsGroup()])
-       }),
+      }),
 
-      imgGallery:this.fb.group({
-        imageGallery:this.fb.array([
+      imgGallery: this.fb.group({
+        imageGallery: this.fb.array([
           this.createImageGalleryGroup('ImageGallery'),
           this.createImageGalleryGroup('Photos'),
           this.createImageGalleryGroup('floorplan')
         ]),
       })
 
-
     });
 
   }
 
 
-  createNeighborHoodGroup():FormGroup{
+  createNeighborHoodGroup(): FormGroup {
     return this.fb.group({
-      name: ['', ],
-      address: ['', ],
-      distance: ['', ],
-      type: ['', ],
-      rating: ['', ]
+      name: ['',],
+      address: ['',],
+      distance: ['',],
+      type: ['',],
+      rating: ['',]
 
     })
   }
 
-  createAvailableUnitsGroup():FormGroup{
+  createAvailableUnitsGroup(): FormGroup {
     return this.fb.group({
-      unit:['',],
-      price:['',],
-      usableArea:['',],
-      measureUnit:['',],
-      configuration:['',],
-      availableFrom:['',],
-      furnishing:this.fb.group({
-        type:['',]
+      unit: ['',],
+      price: ['',],
+      usableArea: ['',],
+      measureUnit: ['',],
+      configuration: ['',],
+      availableFrom: ['',],
+      furnishing: this.fb.group({
+        type: ['',]
       }),
-      highlights:this.fb.array(this.highlightList.map(() => this.fb.control(false))),
-      kitchen:this.fb.array(this.kitchenList.map(() => this.fb.control(false))),
+      highlights: this.fb.array(this.highlightList.map(() => this.fb.control(false))),
+      kitchen: this.fb.array(this.kitchenList.map(() => this.fb.control(false))),
 
     })
-    }
+  }
 
-    createImageGalleryGroup(type:string):FormGroup{
-     return this.fb.group({
-       type:[type],
-       images:this.fb.array([
+  createImageGalleryGroup(type: string): FormGroup {
+    return this.fb.group({
+      type: [type],
+      images: this.fb.array([
         this.fb.group({
-          url:['',],
-          alt:['',]
+          url: ['',],
+          alt: ['',]
         })
-       ])
-     })
-    }
-    get imageGalleryFormArray() {
-      return this.propertyForm.get('imgGallery.imageGallery') as FormArray;
-    }
-  
-    getImagesFormArray(index: number) {
-      return this.imageGalleryFormArray.at(index).get('images') as FormArray;
-    }
-  
-    addImage(index: number) {
-      this.getImagesFormArray(index).push(this.fb.group({
-        url: [''],
-        alt: ['']
-      }));
-    }
-  
-    removeImage(groupIndex: number, imageIndex: number) {
-      this.getImagesFormArray(groupIndex).removeAt(imageIndex);
-    }
-  
+      ])
+    })
+  }
+  get imageGalleryFormArray() {
+    return this.propertyForm.get('imgGallery.imageGallery') as FormArray;
+  }
+
+  getImagesFormArray(index: number) {
+    return this.imageGalleryFormArray.at(index).get('images') as FormArray;
+  }
+
+  addImage(index: number) {
+    this.getImagesFormArray(index).push(this.fb.group({
+      url: [''],
+      alt: ['']
+    }));
+  }
+
+  removeImage(groupIndex: number, imageIndex: number) {
+    this.getImagesFormArray(groupIndex).removeAt(imageIndex);
+  }
+
   //amenities
   get amenities() {
     return this.propertyForm.get('propertyDetails.amenities') as FormArray;
@@ -195,36 +176,36 @@ export class AddPropertyComponent {
       .filter(value => value !== null);
     return selectedAmenities;
   }
-//features 
-  get features(){
+  //features 
+  get highlights() {
     return this.propertyForm.get('highlights.features') as FormArray;
   }
 
-  get apartmnetFeatures(){
+  get apartmnetFeatures() {
     return this.propertyForm.get('apartmnetFeatures.features') as FormArray;
   }
-  logselectedFeatures(){
-    const selectedFeatures =this.features.controls
+  highlightsFeature(){
+    const selectedFeatures =this.highlights.controls
     .map((control,i) => control.value ? this.featureList[i] :null)
     .filter(value => value!== null);
     return selectedFeatures;
   }
-  logselectedApartmnetFeatures(){
+  logApartmnetFeatures(){
     const selectedFeatures =this.apartmnetFeatures.controls
-    .map((control,i) => control.value ? this.featureList[i] :null)
+    .map((control,i) => control.value ? this.apartmnetFeaturesList[i] :null)
     .filter(value => value!== null);
     return selectedFeatures;
   }
-///parking
-  get parking(){
+  ///parking
+  get parking() {
     return this.propertyForm.get('propertyDetails.parking') as FormArray;
   }
 
   //education
-  get educationDetails(){
+  get educationDetails() {
     return this.propertyForm.get('education.details') as FormArray;
   }
-  addeducationDetail(){
+  addeducationDetail() {
     this.educationDetails.push(this.createNeighborHoodGroup());
   }
   removeEduDetail(index: number) {
@@ -234,34 +215,34 @@ export class AddPropertyComponent {
   }
 
   //hospital
-  get hospitalDetails(){
+  get hospitalDetails() {
     return this.propertyForm.get('hospital.details') as FormArray;
   }
-  addhospitalDetail(){
+  addhospitalDetail() {
     this.hospitalDetails.push(this.createNeighborHoodGroup());
   }
-  removeHosDetail(index:number){
-    if(index > 0){
+  removeHosDetail(index: number) {
+    if (index > 0) {
       this.hospitalDetails.removeAt(index);
     }
   }
 
   //tranposrtation
-  get transportDetails(){
+  get transportDetails() {
     return this.propertyForm.get('transportation.details') as FormArray;
   }
-  addTransport(){
+  addTransport() {
     this.transportDetails.push(this.createNeighborHoodGroup());
   }
-  removeTransDetail(index:number){
-    if(index >0){
+  removeTransDetail(index: number) {
+    if (index > 0) {
       this.transportDetails.removeAt(index);
     }
   }
-// available units
-  get availableUnits(){
+  // available units
+  get availableUnits() {
     return this.propertyForm.get('availableUnits.rows') as FormArray;
-   }
+  }
 
   getHighlightsForRow(rowIndex: number) {
     return (this.availableUnits.at(rowIndex) as FormGroup).get('highlights') as FormArray;
@@ -270,55 +251,48 @@ export class AddPropertyComponent {
     return (this.availableUnits.at(rowIndex) as FormGroup).get('kitchen') as FormArray;
   }
 
-   logselectedHighlights(rowIndex:number){
+  logselectedHighlights(rowIndex: number) {
     const row = (this.propertyForm.get('availableUnits.rows') as FormArray).at(rowIndex);
     const highlightsArray = row.get('highlights') as FormArray;
 
     const selectedhighlights = highlightsArray.controls
-    .map((control, i) => control.value ? this.highlightList[i] : null)
-    .filter(value => value !== null);
-    
-  return selectedhighlights;
-   }
-   logselectedKitchen(rowIndex:number){
+      .map((control, i) => control.value ? this.highlightList[i] : null)
+      .filter(value => value !== null);
+
+    return selectedhighlights;
+  }
+  logselectedKitchen(rowIndex: number) {
     const row = (this.propertyForm.get('availableUnits.rows') as FormArray).at(rowIndex);
     const kitchenArray = row.get('kitchen') as FormArray;
 
     const selectedhighlights = kitchenArray.controls
-    .map((control, i) => control.value ? this.highlightList[i] : null)
-    .filter(value => value !== null);
-    
-  return selectedhighlights;
-   }
+      .map((control, i) => control.value ? this.highlightList[i] : null)
+      .filter(value => value !== null);
 
-   addHighlights(){
+    return selectedhighlights;
+  }
+
+  addHighlights() {
     this.availableUnits.push(this.createAvailableUnitsGroup());
-   }
-   removeHighlights(index:number){
-    
-      this.availableUnits.removeAt(index);
-    
-   }
-//images
+  }
+  removeHighlights(index: number) {
 
+    this.availableUnits.removeAt(index);
 
-
+  }
 
   onSubmit() {
     const formValue = this.propertyForm.value;
     formValue.propertyDetails.amenities = this.logSelectedAmenities();
-    formValue.highlights.features=this.logselectedFeatures();
-    formValue.apartmnetFeatures.features=this.logselectedApartmnetFeatures();
+    formValue.highlights.features=this.highlightsFeature();
+    formValue.apartmnetFeatures.features = this.logApartmnetFeatures();
     this.availableUnits.controls.forEach((row, index) => {
       formValue.availableUnits.rows[index].highlights = this.logselectedHighlights(index);
       formValue.availableUnits.rows[index].kitchen = this.logselectedKitchen(index);
     });
     
-    
-    
     alert("Form Submitted!");
-   
-  console.log(this.propertyForm.value);
-  
+    console.log(this.propertyForm.value);
+
   }
 }
