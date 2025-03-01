@@ -74,7 +74,7 @@
           <div formGroupName="address" class="ml-4"><!--adress group(adress,aptno,city,state,country,zipcode)-->
             <div class="mt-3 flex gap-14">
               <div class="mt-2">
-                <label for="address1 " class="block">Address :</label>
+                <label for="address1 " class="block"> Apartment Address :</label>
                 <textarea name="address1" formControlName="address1"
                   class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm"></textarea>
               </div>
@@ -83,13 +83,19 @@
                 <input type="number" name="aptNumber" formControlName="aptNumber" required
                   class="mt-2 w-40 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
               </div>
+    
+              <div>
+                <label for="zipCode" class="block">zipcode :</label>
+                <input type="number" id="zipCode" formControlName="zipCode" name="" required
+                  class="mt-2 w-32 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
+              </div>
             </div>
             <div class="flex gap-14 mt-3">
               <div>
                 <label for="city" class="block">City :</label>
                 <select name="city" id="city " formControlName="city"
                   class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
-                  <option value="">--Please choose an option--</option>
+                  <option value="">select city</option>
                   <option value="Mumbai">Mumbai</option>
                   <option value="Pune">Pune</option>
                   <option value="Nashik">Nashik</option>
@@ -100,7 +106,7 @@
                 <label for="state" class="block">State :</label>
                 <select name="state" id="state" formControlName="state"
                   class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
-                  <option value="">--Please choose an option--</option>
+                  <option value="">select state</option>
                   <option value="Maharashtra">Maharashtra</option>
                   <option value="Gujarat">Gujarat</option>
                   <option value="karnataka">karnataka</option>
@@ -111,22 +117,23 @@
                 <label for="country" class="block">Country :</label>
                 <select name="country" id="country" formControlName="country"
                   class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
-                  <option value="">--Please choose an option--</option>
+                  <option value="">select country</option>
                   <option value="India">India</option>
                 </select>
               </div>
-              <div>
-                <label for="zipCode" class="block">zipcode :</label>
-                <input type="number" id="zipCode" formControlName="zipCode" name="" required
-                  class="mt-2 w-32 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
-              </div>
+          
             </div>
           </div> <!--end adres group-->
           <!--area-->
           <div class="ml-4 mt-2">
             <label for="area" class="block">Area :</label>
-            <input type="number" id="area" formControlName="area" name="" required
+            <input type="number" id="area" formControlName="area" name="" required placeholder="ex:5000 sq ft"
               class="mt-2 w-32 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
+          </div>
+          <div class="mt-2">
+            <label for="size" class="block">Apartment Size :</label>
+            <input type="text" name="size" formControlName="size" required placeholder="ex: Studio - 2 Beds "
+              class="mt-2 w-52 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
           </div>
           <div class="mt-3 ml-4"><!--name-->
             <label for="thumbnail">thumbnail:</label>
@@ -156,7 +163,7 @@
           </div>
           <!--amenities-->
           <div formArrayName="amenities" class="ml-4 mt-3">
-            <label> Available Amenities :</label>
+            <label> Appartment Amenities :</label>
             <div *ngFor="let amenity of amenities.controls; let i=index">
               <input [formControlName]="i" type="checkbox" [id]="'amenities' + i" />
               <label [for]="'amenities' + i" class="ml-2 ">{{ amenitiesList[i] }}</label>
@@ -167,7 +174,7 @@
         <div formGroupName="highlights" class="ml-4">
           <div formArrayName="features">
             <label> Appartment highlights :</label>
-            <div *ngFor="let feature of features.controls ; let i=index">
+            <div *ngFor="let feature of highlights.controls ; let i=index">
               <input [formControlName]="i" type="checkbox" [id]="'feature'+ 'i'" />
               <label [for]="'feature'+ 'i'" class="ml-2">{{featureList[i]}}</label>
             </div>
@@ -195,7 +202,7 @@
 
         <div formGroupName="apartmnetFeatures" class="ml-4">
           <div formArrayName="features">
-            <label> Available features :</label>
+            <label> Appartment Features :</label>
             <div *ngFor="let feature of apartmnetFeatures.controls ; let i=index">
               <input [formControlName]="i" type="checkbox" [id]="'feature'+ 'i'" />
               <label [for]="'feature'+ 'i'" class="ml-2">{{apartmnetFeaturesList[i]}}</label>
@@ -249,7 +256,7 @@
                   <label class="block">School Type :</label>
                   <select name="type" id="type" formControlName="type" required
                     class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
-                    <option value="">--Please choose an option--</option>
+                    <option value="">select school type</option>
                     <option value="Public High School"> Public High School</option>
                     <option value="Government School">Government School</option>
                     <option value="Convent School">Convent School</option>
@@ -299,7 +306,7 @@
                   <label class="block">Hospital Type :</label>
                   <select name="type" id="type" formControlName="type" required
                     class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
-                    <option value="">--Please choose an option--</option>
+                    <option value="">select hospital type</option>
                     <option value="Public High School"> Private Hospital</option>
                     <option value="Government School">Government School</option>
                   </select>
@@ -348,7 +355,7 @@
                   <label class="block">Transport's Type :</label>
                   <select name="type" id="type" formControlName="type" required
                     class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm">
-                    <option value="">--Please choose an option--</option>
+                    <option value="">select transport type</option>
                     <option value="BUS Station"> BUS Station</option>
                     <option value="Railway Station">Railway Station</option>
                     <option value="Airport">Airport</option>
@@ -381,7 +388,7 @@
             <div *ngFor="let unit of availableUnits.controls; let i = index" [formGroupName]="i">
               <div class="flex gap-5 ">
                 <div>
-                  <label for="unit" class="block">Unit:</label>
+                  <label for="unit" class="block">Unit No:</label>
                   <input type="text" id="unit" formControlName="unit" required placeholder="unit"
                     class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
                 </div>
@@ -400,6 +407,11 @@
                   <input type="text" id="measureUnit" formControlName="measureUnit" placeholder="Ft"
                     class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
                 </div>
+                <div>
+                  <label for="configuration" class="block">Configuration:</label>
+                  <input type="text" id="configuration" formControlName="configuration" placeholder="ex:2BHK"
+                    class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
+                </div>
               </div>
               <div class="mt-3">
                 <label for="availableFrom" class="block ">Available From:</label>
@@ -407,7 +419,7 @@
                   class="mt-2 h-10 pl-2 bg-[#E2DFD2] rounded-md border-gray-600 shadow-sm" />
               </div>
               <div formArrayName="highlights" class="mt-3">
-                <label class="block">Available highlights :</label>
+                <label class="block">Unit highlights :</label>
                 <div class="flex flex-wrap mt-3">
                   <div *ngFor="let highlight of getHighlightsForRow(i).controls; let j=index" class="flex items-center">
                     <input [formControlName]="j" type="checkbox" [id]="'highlight-' + i + '-' + j" />
@@ -424,6 +436,15 @@
                   </div>
                 </div>
               </div>
+              <div class=" mt-2 flex gap-2" formGroupName="furnishing">
+                <label for="furnishing" class="block ">furnishing Type :</label>
+                <input type="radio" id="furnishing1" formControlName="type" name="type" value="Semi Furnish "
+                  required><label>Semi Furnish </label>
+                <input type="radio" id="furnishing12" formControlName="type" name="type" value="Fully Furnish"
+                  required><label>Fully Furnish</label>
+                <input type="radio" id="furnishing3" formControlName="type" name="type" value="Unfurnished"
+                  required><label>Unfurnished</label>
+              </div>
               <div>
                 <div *ngIf="i ===availableUnits.length - 1">
                   <button type="button" (click)="addHighlights()">Add more Units</button>
@@ -433,15 +454,7 @@
                 </div>
               </div>
 
-              <div class="ml-4 mt-2 flex gap-2" formGroupName="furnishing">
-                <label for="furnishing" class="block ">furnishing Type :</label>
-                <input type="radio" id="furnishing1" formControlName="type" name="type" value="Semi Furnish "
-                  required><label>Semi Furnish </label>
-                <input type="radio" id="furnishing12" formControlName="type" name="type" value="Fully Furnish"
-                  required><label>Fully Furnish</label>
-                <input type="radio" id="furnishing3" formControlName="type" name="type" value="Unfurnished"
-                  required><label>Unfurnished</label>
-              </div>
+
             </div>
           </div>
         </div>

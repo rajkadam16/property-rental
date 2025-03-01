@@ -17,12 +17,11 @@ export class SignupComponent {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      contactNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]], // Assuming 10 digit contact number
-      password: ['', [Validators.required,Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$'),]] // Minimum 8 character
+      contactNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 
-  
   onSubmit() {
     if (this.signupForm.valid) {
       this.authService.signup(this.signupForm.value).subscribe(response => {

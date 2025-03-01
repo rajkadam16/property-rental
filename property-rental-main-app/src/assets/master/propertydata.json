@@ -69,7 +69,7 @@
         "country": "USA"
       },
       "thumbnail": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
-      "area": "5000 sq ft",
+      "area": "5000",
       "type": "ResidentialApartment",
       "parking": ["2 Wheeler", "4 Wheeler"],
       "size": "Studio - 2 Beds ",
@@ -348,7 +348,7 @@
         "country": "USA"
       },
       "thumbnail": "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/117/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
-      "area": "4500 sq ft",
+      "area": "4500",
       "type": "ResidentialLand",
       "parking": ["4 Wheeler"],
       "size": "1 Bed - 3 Beds",
@@ -456,10 +456,6 @@
         "The neighborhood is home to some of the best restaurants, theaters, and shopping centers in the city.",
         "With easy access to public transportation, commuting is a breeze."
       ]
-    },
-    "communityAmenities": {
-      "title": "Community Amenities",
-      "features": ["Fitness Center", "Swimming Pool", "Rooftop Lounge"]
     },
     "apartmentFeatures": {
       "title": "Apartment Features",

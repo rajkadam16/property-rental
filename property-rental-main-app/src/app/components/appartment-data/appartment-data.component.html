@@ -3,7 +3,8 @@
   <div class="d-flex justify-content-between">
     <div>
       <div class="property-location small mb-2 text-muted">
-        {{ apartmentData.propertyDetails.breadCrumbs || "Not Available" }}
+        <!-- {{ apartmentData.propertyDetails.breadCrumbs || "Not Available" }} -->
+          {{apartmentData.propertyDetails.name + " / " + apartmentData.propertyDetails.address.city + " / " + apartmentData.propertyDetails.address.state + " / " + apartmentData.propertyDetails.address.country || "Not Available"}}
     
       </div>
       <h1 class="h1 fw-bold">{{ apartmentData.propertyDetails.name || "Not Available" }}</h1>
