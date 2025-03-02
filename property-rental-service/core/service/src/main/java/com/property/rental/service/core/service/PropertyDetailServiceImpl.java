@@ -2,6 +2,7 @@ package com.property.rental.service.core.service;
 
 import java.util.*;
 
+import com.property.rental.service.common.enity.NavbarEntity;
 import com.property.rental.service.common.enity.PropertyDataEntity;
 import com.property.rental.service.common.model.PropertyDataResponse;
 import com.property.rental.service.common.model.PropertyFilter;
@@ -21,48 +22,52 @@ public class PropertyDetailServiceImpl implements PropertyDetailService  {
 	@Autowired
 	private PropertyDetailDao propertyDetailDao;
 
+//	public List<NavbarEntity> getAllNavbarItems() {
+//		return this.navbarDao.getAllNavbarItems();
+//	}
 
 	@Override
-	public PropertyDataResponse getAllPropertyDetails() {
-
-		PropertyDataResponse propertyDataResponse = new PropertyDataResponse();
-		List<PropertyDataEntity> propertyDataEntities=propertyDetailDao.getAllPropertyDetails();
-		propertyDataResponse.setData(propertyDataEntities);
-		List<PropertyFilter> propertyFilterList = new ArrayList<>();
-
-		for (PropertyDataEntity propertyDataEntity : propertyDataEntities) {
-			Map<String, Set<String>> filterBy= new HashMap<>();
-			PropertyFilter propertyFilter = new PropertyFilter();
-			Set<String> propertyConfigurationSet = new HashSet<>();
-			String propertyId = propertyDataEntity.getId();
-			//filter By Configuration
-			List<Unit> units =propertyDataEntity.getAvailableUnits().getRows();
-			for (Unit unit : units) {
-				String configuration = unit.getConfiguration();
-				if (null != configuration){
-				if(filterBy.containsKey(configuration))
-				{
-					Set<String> propertyValueSet = filterBy.get(configuration);
-					propertyValueSet.add(propertyId);
-					filterBy.put(configuration, propertyValueSet);
-				}
-				else
-				{
-					//1bhk,set<"12","23">
-					//2bhk,set<"12","23">
-					propertyConfigurationSet.add(propertyId);
-					filterBy.put(configuration, propertyConfigurationSet);
-				}
-					logger.info("@RJ,filterBy {}",filterBy);
-				propertyFilter.setFilterBy(filterBy);
-				propertyFilter.setFilterType("CONFIGURATION");
-				propertyFilterList.add(propertyFilter);
-				}
-			}
-		}
-
-		propertyDataResponse.setPropertyFilter(propertyFilterList);
-		return propertyDataResponse;
+	public List<PropertyDataEntity> getAllPropertyDetails() {
+		return  this.propertyDetailDao.getAllPropertyDetails();
+//
+//		PropertyDataResponse propertyDataResponse = new PropertyDataResponse();
+//		List<PropertyDataEntity> propertyDataEntities=propertyDetailDao.getAllPropertyDetails();
+//		propertyDataResponse.setData(propertyDataEntities);
+//		List<PropertyFilter> propertyFilterList = new ArrayList<>();
+//
+//		for (PropertyDataEntity propertyDataEntity : propertyDataEntities) {
+//			Map<String, Set<String>> filterBy= new HashMap<>();
+//			PropertyFilter propertyFilter = new PropertyFilter();
+//			Set<String> propertyConfigurationSet = new HashSet<>();
+//			String propertyId = propertyDataEntity.getId();
+//			//filter By Configuration
+//			List<Unit> units =propertyDataEntity.getAvailableUnits().getRows();
+//			for (Unit unit : units) {
+//				String configuration = unit.getConfiguration();
+//				if (null != configuration){
+//				if(filterBy.containsKey(configuration))
+//				{
+//					Set<String> propertyValueSet = filterBy.get(configuration);
+//					propertyValueSet.add(propertyId);
+//					filterBy.put(configuration, propertyValueSet);
+//				}
+//				else
+//				{
+//					//1bhk,set<"12","23">
+//					//2bhk,set<"12","23">
+//					propertyConfigurationSet.add(propertyId);
+//					filterBy.put(configuration, propertyConfigurationSet);
+//				}
+//					logger.info("@RJ,filterBy {}",filterBy);
+//				propertyFilter.setFilterBy(filterBy);
+//				propertyFilter.setFilterType("CONFIGURATION");
+//				propertyFilterList.add(propertyFilter);
+//				}
+//			}
+//		}
+//
+//		propertyDataResponse.setPropertyFilter(propertyFilterList);
+//		return propertyDataResponse;
 	}
 
 	@Override

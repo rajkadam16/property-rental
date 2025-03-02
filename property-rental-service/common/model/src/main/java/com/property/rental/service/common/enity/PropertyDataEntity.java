@@ -25,7 +25,6 @@ public class PropertyDataEntity {
     private Highlights highlights;
     private AvailableUnits availableUnits;
     private NeighborHood neighborHood;
-    private CommunityAmenities communityAmenities;
     private ApartmentFeatures apartmentFeatures;
     private Education education;
     private Transportation transportation;

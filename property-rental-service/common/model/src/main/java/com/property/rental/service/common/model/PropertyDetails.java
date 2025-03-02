@@ -12,11 +12,12 @@ public class PropertyDetails {
     private String thumbnail;
     private String area;
     private String type;
-    private List<String> parking;
+    private String parking;
+    private String configuration;
+    private String furnishing;
     private String size;
     private double mapLat;
     private double mapLong;
-    private String breadCrumbs;
     private List<String> amenities;
     private OfficeHours officeHours;
     private ContactUs contactUs;
