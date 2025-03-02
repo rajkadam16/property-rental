@@ -23,12 +23,6 @@ public class PropertyDetailController {
 		return propertyDetailService.getAllPropertyDetails();
 	}
 
-//	@GetMapping("get/{propertyID}")
-//	public Object getPropertyDetail(@PathVariable String propertyID) {
-//		logger.info("Info message - getPropertyDetail,propertyID={}",propertyID);
-//		return propertyDetailService.getPropertyDetail(propertyID);
-//	}
-
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("create")
 	public Object addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {

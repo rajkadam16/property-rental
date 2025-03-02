@@ -7,17 +7,20 @@ import { FormGroup, FormArray, FormBuilder } from '@angular/forms';
 })
 export class AddPropertyComponent {
   propertyForm!: FormGroup;
-  apartmnetFeaturesList = ['Washer/Dryer', 'Air Conditioning','Dishwasher','High Speed Internet Access','Wi-Fi','Window Coverings',
-    'Heating','Cable Ready','Granite Countertops','Kitchen','Refrigerator','Freezer','Office','Views','Skylights','Walk-In Closets',];
+  apartmnetFeaturesList = ['Washer/Dryer', 'Air Conditioning', 'Dishwasher', 'High Speed Internet Access', 'Wi-Fi', 'Window Coverings',
+    'Heating', 'Cable Ready', 'Granite Countertops', 'Kitchen', 'Refrigerator', 'Freezer', 'Office', 'Views', 'Skylights', 'Walk-In Closets',];
 
-  kitchenList = ['Washer/Dryer','Air Conditioning','Dishwasher','High Speed Internet Access','Wi-Fi','Heating','Cable Ready']
+  kitchenList = ['Washer/Dryer', 'Air Conditioning', 'Dishwasher', 'High Speed Internet Access', 'Wi-Fi', 'Heating', 'Cable Ready']
 
-  amenitiesList = ['Pets care', 'Laundry', 'Fitness Area', 'Playing Area', 'pool', 'club house', 'CourtYard'];
+  amenitiesList = ['Pets care', 'Laundry', 'Fitness Area', 'Playing Area', 'Pool', 'Club house', 'CourtYard'];
 
   featureList = ['WiFi', 'Air Conditioner', 'Pets Allowed', 'Balcony', 'Modular Kitchen',];
 
-  highlightList: string[] = ['Good Connectivity', 'Dry Cleaning Service', 'Lounge', 'Closets', 'Good view', 'Super Markets']
-  
+  highlightList: string[] = ['Good Connectivity', 'Dry Cleaning Service', 'Lounge', 'Closets', 'Good view', 'Super Markets'];
+
+  WeeksList = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Whole-weeks']
+
+
   constructor(private readonly fb: FormBuilder) { }
 
   ngOnInit() {
@@ -43,7 +46,7 @@ export class AddPropertyComponent {
         officeHours: this.fb.group({
           time: ['',],
           timeZone: ['CST',],
-          workingDays: this.fb.array(['Monday', 'tuesday'])
+          workingDays: this.fb.array([this.fb.control('')])
         }),
         contactUs: this.fb.group({
           phone: ['',],
@@ -184,22 +187,32 @@ export class AddPropertyComponent {
   get apartmnetFeatures() {
     return this.propertyForm.get('apartmnetFeatures.features') as FormArray;
   }
-  highlightsFeature(){
-    const selectedFeatures =this.highlights.controls
-    .map((control,i) => control.value ? this.featureList[i] :null)
-    .filter(value => value!== null);
+  highlightsFeature() {
+    const selectedFeatures = this.highlights.controls
+      .map((control, i) => control.value ? this.featureList[i] : null)
+      .filter(value => value !== null);
     return selectedFeatures;
   }
-  logApartmnetFeatures(){
-    const selectedFeatures =this.apartmnetFeatures.controls
-    .map((control,i) => control.value ? this.apartmnetFeaturesList[i] :null)
-    .filter(value => value!== null);
+  logApartmnetFeatures() {
+    const selectedFeatures = this.apartmnetFeatures.controls
+      .map((control, i) => control.value ? this.apartmnetFeaturesList[i] : null)
+      .filter(value => value !== null);
     return selectedFeatures;
   }
   ///parking
   get parking() {
     return this.propertyForm.get('propertyDetails.parking') as FormArray;
   }
+  //weeks
+  get weeks(): FormArray {
+    return this.propertyForm.get('propertyDetails.officeHours.workingDays') as FormArray;
+  }
+  logWorkingDays() {
+    const selecteddays = this.weeks.value.filter((value: string) => value !== '');
+    return selecteddays;
+  }
+
+
 
   //education
   get educationDetails() {
@@ -284,13 +297,14 @@ export class AddPropertyComponent {
   onSubmit() {
     const formValue = this.propertyForm.value;
     formValue.propertyDetails.amenities = this.logSelectedAmenities();
-    formValue.highlights.features=this.highlightsFeature();
+    formValue.highlights.features = this.highlightsFeature();
     formValue.apartmnetFeatures.features = this.logApartmnetFeatures();
+    formValue.propertyDetails.officeHours.workingDays = this.logWorkingDays();
     this.availableUnits.controls.forEach((row, index) => {
       formValue.availableUnits.rows[index].highlights = this.logselectedHighlights(index);
       formValue.availableUnits.rows[index].kitchen = this.logselectedKitchen(index);
     });
-    
+
     alert("Form Submitted!");
     console.log(this.propertyForm.value);
 

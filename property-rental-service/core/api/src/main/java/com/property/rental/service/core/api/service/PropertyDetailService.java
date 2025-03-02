@@ -9,7 +9,7 @@ import com.property.rental.service.common.model.PropertyDataResponse;
 public interface PropertyDetailService {
 
 	
-	public PropertyDataResponse getAllPropertyDetails();
+	public List<PropertyDataEntity> getAllPropertyDetails();
 	
 	public String deletePropertyDetail(String propertyID);
 

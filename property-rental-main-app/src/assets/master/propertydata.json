@@ -7,15 +7,15 @@
         "type": "ImageGallery",
         "images": [
           {
-            "url": "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+            "url": "https://imagecdn.99acres.com/media1/27496/4/549924551O-1735979636819.jpg",
             "alt": "image 1"
           },
           {
-            "url": "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
+            "url": "https://imagecdn.99acres.com/media1/27347/10/546950035O-1735657874464.jpg",
             "alt": "image 2"
           },
           {
-            "url": "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+            "url": "https://imagecdn.99acres.com/media1/27496/4/549924559O-1735979694887.jpg",
             "alt": "image 3"
           }
         ]
@@ -25,16 +25,36 @@
         "type": "Photos",
         "images": [
           {
-            "url": "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+            "url": "https://imagecdn.99acres.com/media1/27347/10/546950751O-1735657996940.jpg",
             "alt": "image 1"
           },
           {
-            "url": "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+            "url": "https://newprojects.99acres.com/projects/unknown/diamond_gardens/images/59zwi0dy.jpg",
             "alt": "image 2"
           },
           {
-            "url": "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+            "url": "https://newprojects.99acres.com/projects/unknown/diamond_gardens/images/i6ljzvmh.jpg",
             "alt": "image 3"
+          },
+		  {
+            "url": "https://newprojects.99acres.com/projects/unknown/diamond_gardens/images/04u4a63h.jpeg",
+            "alt": "image 4"
+          },
+		  {
+            "url": "https://imagecdn.99acres.com/media1/27347/10/546950799O-1735657999571.jpg",
+            "alt": "image 5"
+          },
+		       {
+            "url": "https://imagecdn.99acres.com/media1/27496/4/549924551O-1735979636819.jpg",
+            "alt": "image 6"
+          },
+          {
+            "url": "https://imagecdn.99acres.com/media1/27347/10/546950035O-1735657874464.jpg",
+            "alt": "image 7"
+          },
+          {
+            "url": "https://imagecdn.99acres.com/media1/27496/4/549924559O-1735979694887.jpg",
+            "alt": "image 8"
           }
         ]
       },
@@ -43,41 +63,42 @@
         "type": "floorPlan",
         "images": [
           {
-            "url": "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
+            "url": "https://images1.apartments.com/i2/5V83opPk5NdV_swVKFYE6gcvA7GbM7p6M1Ua6AXZoOM/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
             "alt": "image 1"
           },
           {
-            "url": "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/116/presidential-towers-chicago-il-floorplan.png?p=1",
+            "url": "https://images1.apartments.com/i2/VCDhAkTJoWO6cAgu2lcutFRKX9s-fZEWaCSMM_7XTME/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
             "alt": "image 2"
           },
           {
-            "url": "https://images1.apartments.com/i2/seciVErFNvKU6w-h4nAQNHEXvxnLmle-U_AH_pnUauI/116/presidential-towers-chicago-il-floorplan.png?p=1",
+            "url": "https://images1.apartments.com/i2/4YVPEF-dKp7d1Sk6KiTtUfsczYGTTn5J5X0IkEV-cFE/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
             "alt": "image 3"
+          },
+		        {
+            "url": "https://images1.apartments.com/i2/qAEqR2TEFSpW8CWK9NQmee4UeRmKoTgvc4SOBdMqsY8/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
+            "alt": "image 4"
           }
         ]
       }
     ],
     "propertyDetails": {
-      "name": "Presidential Towers",
+      "name": "Archer Towers",
       "address": {
-        "address1": "2404, Springdale Rd",
+        "address1": "Diamond Garden, Chembur East",
         "address2": "",
         "aptNumber": "108",
-        "city": "Waukesha",
-        "zipCode": "53186",
-        "state": "WI",
-        "country": "USA"
+        "city": "Mumbai",
+        "zipCode": "400087",
+        "state": "Maharashtra",
+        "country": "India"
       },
       "thumbnail": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
-      "area": "5000",
+      "area": "750",
       "type": "ResidentialApartment",
       "parking": "2Wheeler",
-      "configuration":"1BHK",
+      "configuration":"2BHK",
       "furnishing":"SemiFurnish",
       "size": "Studio - 2 Beds ",
-      "mapLat": 19.063803,
-      "mapLong": 72.915595,
-      "breadCrumbs": "Illinois / Cook County / Chicago / Presidential Towers",
       "amenities": [
         "Pets Allowed",
         "Fitness Center",
@@ -88,20 +109,20 @@
       ],
       "officeHours": {
         "time": "9:00 am - 6:00 pm",
-        "timeZone": "CST",
+        "timeZone": "IND",
         "workingDays": ["Mon", "Tue"]
       },
       "contactUs": {
         "title": "Contact This Property",
         "phone": "(708) 725-1991",
-        "email": "PringstonTower@gmail.com"
+        "email": "archertower@gmail.com"
       }
     },
     "aboutUs": {
       "title": "About Presidential Towers",
-      "description": "What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!",
+      "description": "A spacious 2 bhk flat for rent is available in chembur east in diamond garden, central mumbai. Property has attached 2 bathrooms with 2 rooms set in 750 sq.Ft. Carpet area. The flat consists of 2 bedrooms, built on 750 sq.Ft. Society provides 1 covered parking with this flat. Property is 5-10 years old. This is a furnished flat. Furnishing options provided - 3 ac, 2 bed, 2 wardrobe and 1 modular kitchen. Ready to occupy from sat, 25 jan 2025, this property is ideal for single men and family on any agreement type. The expected rent is 85,000 monthly. Electricity & water charges are excluded. Security deposit of 250000 is required. The property comes with reserved parking, feng shui / vaastu compliant, piped-Gas, internet/wi-Fi connectivity, etc",
       "details": [
-        "Presidential Towers is an apartment community managed by Waterton, located in Cook County and the 60661 ZIP Code. This area is served by the Chicago Public Schools attendance zone."
+        "Archer Towers is an apartment community managed by Waterton, located in Cook County and the 400082 ZIP Code. This area is served by the Chembur Public Schools attendance zone."
       ]
     },
     "highlights": {
@@ -119,7 +140,7 @@
       "cols": ["Unit", "Price", "Usable Area","configuration", "Availability"],
       "rows": [
         {
-          "unit": "2404-108",
+          "unit": "8191",
           "price": "25,000",
           "usableArea": "505",
           "measureUnit": "Ft",
@@ -145,7 +166,7 @@
           ]
         },
         {
-          "unit": "2404-208",
+          "unit": "2404",
           "price": "50,000",
           "usableArea": "605",
           "measureUnit": "Ft",
@@ -154,7 +175,7 @@
           "furnishing": [
             {
               "type": "Full",
-              "highlights": ["Microveare", "sofa"]
+              "highlights": ["Microveare", "sofa","2 Bed","2 Wardrobe","3 AC"]
             }
           ],
           "highlights": [
@@ -183,102 +204,124 @@
     "apartmentFeatures": {
       "title": "Apartment Features",
       "features": [
-        "Washer/Dryer",
-        "Air Conditioning",
-        "Dishwasher",
-        "High Speed Internet Access",
-        "Wi-Fi",
-        "Heating",
-        "Cable Ready",
-        "Granite Countertops",
-        "Kitchen",
-        "Refrigerator",
-        "Freezer",
-        "Office",
-        "Views",
-        "Skylights",
-        "Walk-In Closets",
-        "Window Coverings"
+        "Power Back-up",
+        "Lift(s)",
+		"Feng Shui / Vaastu Compliant",
+		"Maintenance Staff",
+		"Water Storage",
+		"Piped-gas",
+		"Security Personnel",
+		"Natural Light",
+		"Internet/wi-fi connectivity",
+		"Airy Rooms",
+		"Fitness Centre / GYM",
+		"Waste Disposal",
+		"Rain Water Harvesting",
+		"Club house / Community Center"
       ]
     },
+    
     "education": {
-      "title": "Schools",
-      "details": [
-        {
-          "name": "Lincoln High School",
-          "address": "456 Elm St, Cityville, USA",
-          "distance": "1.2 miles",
-          "type": "Public High School",
-          "rating": "8"
-        },
-        {
-          "name": "Greenwood Middle School",
-          "address": "789 Maple Ave, Townsville, USA",
-          "distance": "2.5 miles",
-          "type": "Public Middle School",
-          "rating": "7"
-        },
-        {
-          "name": "Riverside Elementary School",
-          "address": "101 River Rd, Lakeside, USA",
-          "distance": "0.8 miles",
-          "type": "Public Elementary School",
-          "rating": "6"
-        },
-        {
-          "name": "Oakridge Academy",
-          "address": "202 Oak St, Forest City, USA",
-          "distance": "3.1 miles",
-          "type": "Private K-12 School",
-          "rating": "10"
-        },
-        {
-          "name": "Westwood Charter School",
-          "address": "303 West Blvd, Uptown, USA",
-          "distance": "4.0 miles",
-          "type": "Charter High School",
-          "rating": "9"
-        },
-        {
-          "name": "Bright Future Preschool",
-          "address": "404 Sunshine Ln, Pleasantville, USA",
-          "distance": "0.3 miles",
-          "type": "Private Preschool",
-          "rating": "9"
-        }
-      ]
+        "title": "Schools",
+        "details": [
+            {
+                "name": "St. Xavier's High School",
+                "address": "Fort, Mumbai, Maharashtra, India",
+                "distance": "1.5 km",
+                "type": "Public High School",
+                "rating": "8"
+            },
+            {
+                "name": "Podar International School",
+                "address": "Santacruz West, Mumbai, Maharashtra, India",
+                "distance": "2.8 km",
+                "type": "Private School",
+                "rating": "9"
+            },
+            {
+                "name": "Don Bosco High School",
+                "address": "Matunga, Mumbai, Maharashtra, India",
+                "distance": "1.2 km",
+                "type": "Public High School",
+                "rating": "8"
+            },
+            {
+                "name": "Dhirubhai Ambani International School",
+                "address": "Bandra Kurla Complex, Mumbai, Maharashtra, India",
+                "distance": "5.3 km",
+                "type": "Private K-12 School",
+                "rating": "10"
+            },
+            {
+                "name": "Cathedral and John Connon School",
+                "address": "Fort, Mumbai, Maharashtra, India",
+                "distance": "2.0 km",
+                "type": "Private School",
+                "rating": "10"
+            },
+            {
+                "name": "EuroKids Preschool",
+                "address": "Andheri West, Mumbai, Maharashtra, India",
+                "distance": "1.0 km",
+                "type": "Private Preschool",
+                "rating": "9"
+            }
+        ]
     },
     "transportation": {
-      "title": "Trasportation",
-      "details": [
-        {
-          "name": "Bus",
-          "address": "456 Elm St, Cityville, USA",
-          "distance": "1.2 miles",
-          "type": "Public",
-          "rating": "8"
-        }
-      ]
+        "title": "Transportation",
+        "details": [
+            {
+                "name": "Mumbai Local Train - Andheri Station",
+                "address": "Andheri East, Mumbai, Maharashtra, India",
+                "distance": "1.2 km",
+                "type": "Public",
+                "rating": "8"
+            },
+            {
+                "name": "BEST Bus Stop - Bandra Station",
+                "address": "Bandra West, Mumbai, Maharashtra, India",
+                "distance": "3.5 km",
+                "type": "Public",
+                "rating": "7"
+            }
+        ]
     },
     "hospital": {
-      "title": "Hospital",
-      "details": [
-        {
-          "name": "Pro Health",
-          "address": "456 Elm St, Cityville, USA",
-          "distance": "1.2 miles",
-          "type": "Public",
-          "rating": "8"
-        },
-        {
-          "name": "Aurora Health",
-          "address": "123 Elm St, Cityville, USA",
-          "distance": "1.2 miles",
-          "type": "Public",
-          "rating": "8"
-        }
-      ]
+        "title": "Hospitals",
+        "details": [
+            {
+                "name": "Lilavati Hospital",
+                "address": "Bandra West, Mumbai, Maharashtra, India",
+                "distance": "4.0 km",
+                "type": "Private",
+                "rating": "9"
+            },
+            {
+                "name": "Nanavati Hospital",
+                "address": "Vile Parle West, Mumbai, Maharashtra, India",
+                "distance": "3.0 km",
+                "type": "Private",
+                "rating": "9"
+            },
+            {
+                "name": "Sion Hospital",
+                "address": "Sion East, Mumbai, Maharashtra, India",
+                "distance": "5.5 km",
+                "type": "Public",
+                "rating": "8"
+            },
+            {
+                "name": "KEM Hospital",
+                "address": "Parel, Mumbai, Maharashtra, India",
+                "distance": "7.2 km",
+                "type": "Public",
+                "rating": "8"
+            }
+        ]
     }
+
+
   },
   {
     "id": "2",
@@ -358,7 +401,6 @@
       "size": "1 Bed - 3 Beds",
       "mapLat": 34.0522,
       "mapLong": -118.2437,
-      "breadCrumbs": "California / Los Angeles County / Los Angeles / Oakwood Apartments",
       "amenities": [
         "Pets Allowed",
         "Fitness Center",
