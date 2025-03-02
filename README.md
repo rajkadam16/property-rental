@@ -4,11 +4,9 @@
 The **Property Rental Management System** is a web application designed to manage rental properties efficiently. It provides features for property listing, user authentication, and rental management. The system is built using **Angular 16** for the frontend, **Spring Boot** for the backend, and **MongoDB** as the database.
 
 ## 🚀 Features
-- User authentication (Login/Signup) with JWT
+- User authentication (Login/Signup) 
 - Property listing and management
 - Search and filter properties
-- User dashboard to manage rentals
-- Role-based access control (Admin, Owner, Tenant)
 - RESTful API integration
 
 ## 🛠️ Tech Stack
@@ -40,11 +38,11 @@ The **Property Rental Management System** is a web application designed to manag
 ### Backend (Spring Boot)
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/property-rental-system.git
+   git clone https://github.com/rajkadam16/property-rental
    ```
 2. Navigate to the backend folder:
    ```sh
-   cd property-rental-system/backend
+   cd property-rental-system/property-rental-service
    ```
 3. Configure **application.properties**:
    ```properties
@@ -61,7 +59,7 @@ The **Property Rental Management System** is a web application designed to manag
 ### Frontend (Angular 16)
 1. Navigate to the frontend folder:
    ```sh
-   cd ../frontend
+   cd ../property-rental-main-app
    ```
 2. Install dependencies:
    ```sh
@@ -90,7 +88,6 @@ The **Property Rental Management System** is a web application designed to manag
 ## 📌 Future Enhancements
 - Payment gateway integration
 - Reviews & ratings for properties
-- Email & SMS notifications
 - Advanced search with AI recommendations
 
 ## 🤝 Contributing
@@ -100,14 +97,3 @@ Contributions are welcome! To contribute:
 3. Commit your changes (`git commit -m 'Add new feature'`).
 4. Push to the branch (`git push origin feature-name`).
 5. Open a Pull Request.
-
-## 📜 License
-This project is licensed under the **MIT License**.
-
----
-### 👨‍💻 Developed By:
-**Your Name**  
-📧 Email: your.email@example.com  
-🔗 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)  
-🚀 Happy Coding!
-
