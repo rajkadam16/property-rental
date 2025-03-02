@@ -71,7 +71,9 @@
       "thumbnail": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
       "area": "5000",
       "type": "ResidentialApartment",
-      "parking": ["2 Wheeler", "4 Wheeler"],
+      "parking": "2Wheeler",
+      "configuration":"1BHK",
+      "furnishing":"SemiFurnish",
       "size": "Studio - 2 Beds ",
       "mapLat": 19.063803,
       "mapLong": 72.915595,
@@ -118,7 +120,7 @@
       "rows": [
         {
           "unit": "2404-108",
-          "price": "₹25,000",
+          "price": "25,000",
           "usableArea": "505",
           "measureUnit": "Ft",
           "configuration": "1 BHK",
@@ -350,7 +352,550 @@
       "thumbnail": "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/117/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
       "area": "4500",
       "type": "ResidentialLand",
-      "parking": ["4 Wheeler"],
+      "parking": "4Wheeler",
+      "configuration":"2BHK",
+      "furnishing":"FullyFurnish",
+      "size": "1 Bed - 3 Beds",
+      "mapLat": 34.0522,
+      "mapLong": -118.2437,
+      "breadCrumbs": "California / Los Angeles County / Los Angeles / Oakwood Apartments",
+      "amenities": [
+        "Pets Allowed",
+        "Fitness Center",
+        "Pool",
+        "Dishwasher",
+        "Refrigerator",
+        "Balcony"
+      ],
+      "officeHours": {
+        "time": "10:00 am - 7:00 pm",
+        "timeZone": "PST",
+        "workingDays": ["Mon", "Tue", "Wed"]
+      },
+      "contactUs": {
+        "title": "Contact This Property",
+        "phone": "(213) 555-1234",
+        "email": "oakwoodapartments@gmail.com"
+      }
+    },
+    "aboutUs": {
+      "title": "About Oakwood Apartments",
+      "description": "Oakwood Apartments offers a luxurious living experience in the heart of Los Angeles. With stunning views, modern amenities, and a prime location, Oakwood Apartments is the perfect place to call home.",
+      "details": [
+        "Oakwood Apartments is managed by Oakwood Worldwide, a leader in furnished apartment living. Our community is located in Los Angeles County and the 90028 ZIP Code."
+      ]
+    },
+    "highlights": {
+      "title": "Highlights",
+      "features": [
+        "Air conditioning",
+        "Washer/Dryer",
+        "Cable ready",
+        "Walk-in closets",
+        "Balcony",
+        "Skylight"
+      ]
+    },
+    "availableUnits": {
+      "cols": ["Unit", "Price", "Usable Area","configuration", "Availability"],
+      "rows": [
+        {
+          "unit": "1234-201",
+          "price": "$2,500",
+          "usableArea": "800",
+          "measureUnit": "Ft",
+          "configuration": "2 BHK",
+          "availableFrom": "17 June 2024",
+          "furnishing": [
+            {
+              "type": "Semi",
+              "highlights": ["Bed", "Air Conditioning", "Washer/Dryer"]
+            }
+          ],
+          "highlights": [
+            "High Speed Internet Access",
+            "Wi-Fi",
+            "Washer/Dryer",
+            "Air Conditioning"
+          ],
+          "kitchen": [
+            "Dishwasher",
+            "Granite Countertops",
+            "Refrigerator",
+            "Freezer"
+          ]
+        },
+        {
+          "unit": "1234-301",
+          "price": "$3,000",
+          "usableArea": "1000",
+          "measureUnit": "Ft",
+          "configuration": "1 BHK",
+          "availableFrom": "1 May 2024",
+          "furnishing": [
+            {
+              "type": "Full",
+              "highlights": ["Microwave", "Sofa"]
+            }
+          ],
+          "highlights": [
+            "High Speed Internet Access",
+            "Wi-Fi",
+            "Washer/Dryer",
+            "Air Conditioning"
+          ],
+          "kitchen": [
+            "Dishwasher",
+            "Granite Countertops",
+            "Refrigerator",
+            "Freezer"
+          ]
+        }
+      ]
+    },
+    "neighborHood": {
+      "title": "Neighborhood",
+      "description": "Located in the vibrant city of Los Angeles, Oakwood Apartments is surrounded by iconic landmarks, world-class dining, and endless entertainment options. From Hollywood Boulevard to Griffith Park, there's always something to explore.",
+      "details": [
+        "The neighborhood is home to some of the best restaurants, theaters, and shopping centers in the city.",
+        "With easy access to public transportation, commuting is a breeze."
+      ]
+    },
+    "apartmentFeatures": {
+      "title": "Apartment Features",
+      "features": [
+        "Washer/Dryer",
+        "Air Conditioning",
+        "Dishwasher",
+        "High Speed Internet Access",
+        "Wi-Fi",
+        "Heating",
+        "Cable Ready",
+        "Granite Countertops",
+        "Kitchen",
+        "Refrigerator",
+        "Freezer",
+        "Balcony",
+        "Views",
+        "Skylights",
+        "Walk-In Closets",
+        "Window Coverings"
+      ]
+    },
+    "education": {
+      "title": "Schools",
+      "details": [
+        {
+          "name": "Hollywood High School",
+          "address": "1521 N Highland Ave, Los Angeles, CA 90028",
+          "distance": "0.5 miles",
+          "type": "Public High School",
+          "rating": "8"
+        },
+        {
+          "name": "Los Angeles Middle School",
+          "address": "615 S Lafayette Park Pl, Los Angeles, CA 90057",
+          "distance": "1.2 miles",
+          "type": "Public Middle School",
+          "rating": "7"
+        },
+        {
+          "name": "Sunset Elementary School",
+          "address": "1450 N Hayworth Ave, Los Angeles, CA 90046",
+          "distance": "0.8 miles",
+          "type": "Public Elementary School",
+          "rating": "6"
+        }
+      ]
+    },
+    "transportation": {
+      "title": "Transportation",
+      "details": [
+        {
+          "name": "Metro Red Line",
+          "address": "Hollywood/Highland Station, Los Angeles, CA 90028",
+          "distance": "0.3 miles",
+          "type": "Public Transit",
+          "rating": "9"
+        }
+      ]
+    },
+    "hospital": {
+      "title": "Hospital",
+      "details": [
+        {
+          "name": "Cedars-Sinai Medical Center",
+          "address": "8700 Beverly Blvd, Los Angeles, CA 90048",
+          "distance": "2.5 miles",
+          "type": "Public",
+          "rating": "10"
+        },
+        {
+          "name": "Hollywood Presbyterian Medical Center",
+          "address": "1300 N Vermont Ave, Los Angeles, CA 90027",
+          "distance": "1.5 miles",
+          "type": "Public",
+          "rating": "8"
+        }
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "imgGallery": [
+      {
+        "id": "d51c4098-4b11-4c43-a6f5-489d7dca9f15",
+        "type": "ImageGallery",
+        "images": [
+          {
+            "url": "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+            "alt": "image 3"
+          }
+        ]
+      },
+      {
+        "id": "97f17d55-4632-4f57-a6cd-04b287ff6019",
+        "type": "Photos",
+        "images": [
+          {
+            "url": "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+            "alt": "image 3"
+          }
+        ]
+      },
+      {
+        "id": "46764e2e-fe97-4b7f-bd72-57ef4a722ec1",
+        "type": "floorPlan",
+        "images": [
+          {
+            "url": "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/116/presidential-towers-chicago-il-floorplan.png?p=1",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/seciVErFNvKU6w-h4nAQNHEXvxnLmle-U_AH_pnUauI/116/presidential-towers-chicago-il-floorplan.png?p=1",
+            "alt": "image 3"
+          }
+        ]
+      }
+    ],
+    "propertyDetails": {
+      "name": "Presidential Towers",
+      "address": {
+        "address1": "2404, Springdale Rd",
+        "address2": "",
+        "aptNumber": "108",
+        "city": "Waukesha",
+        "zipCode": "53186",
+        "state": "WI",
+        "country": "USA"
+      },
+      "thumbnail": "assets/images/regents-park-chicago-il-diningliving-room.jpg",
+      "area": "5000",
+      "type": "StudioApartment",
+      "parking": "2Wheeler",
+      "configuration":"3BHK",
+      "furnishing":"Unfurnished",
+      "size": "Studio - 2 Beds ",
+      "mapLat": 19.063803,
+      "mapLong": 72.915595,
+      "breadCrumbs": "Illinois / Cook County / Chicago / Presidential Towers",
+      "amenities": [
+        "Pets Allowed",
+        "Fitness Center",
+        "Pool",
+        "Dishwasher",
+        "Refrigerator",
+        "Kitchen"
+      ],
+      "officeHours": {
+        "time": "9:00 am - 6:00 pm",
+        "timeZone": "CST",
+        "workingDays": ["Mon", "Tue"]
+      },
+      "contactUs": {
+        "title": "Contact This Property",
+        "phone": "(708) 725-1991",
+        "email": "PringstonTower@gmail.com"
+      }
+    },
+    "aboutUs": {
+      "title": "About Presidential Towers",
+      "description": "What do you want to do tonight? The simple question holds such anticipation, especially here at Presidential Towers, where you can get just about anywhere on foot. With a Fitness Formula Club, a relaxing sundeck, and several restaurants in the building, the options are endless. So go ahead, live life on your terms. Schedule a tour of our apartments in Chicago near the West Loop today!",
+      "details": [
+        "Presidential Towers is an apartment community managed by Waterton, located in Cook County and the 60661 ZIP Code. This area is served by the Chicago Public Schools attendance zone."
+      ]
+    },
+    "highlights": {
+      "title": "Highlights",
+      "features": [
+        "Air conditioning",
+        "Washer/Dryer",
+        "Cable ready",
+        "Walk-in closets",
+        "Window coverings",
+        "Skylight"
+      ]
+    },
+    "availableUnits": {
+      "cols": ["Unit", "Price", "Usable Area","configuration", "Availability"],
+      "rows": [
+        {
+          "unit": "2404-108",
+          "price": "₹25,000",
+          "usableArea": "505",
+          "measureUnit": "Ft",
+          "configuration": "1 BHK",
+          "availableFrom": "15 June 2025",
+          "furnishing": [
+            {
+              "type": "Semi",
+              "highlights": ["bed", "Air Conditioning", "Washer/Dryer"]
+            }
+          ],
+          "highlights": [
+            "High Speed Internet Access",
+            "Wifi",
+            "Washer/Dryer",
+            "Air Conditioning"
+          ],
+          "kitchen": [
+            "Dishwasher",
+            "Granite Countertops",
+            "Refrigerator",
+            "Freezer"
+          ]
+        },
+        {
+          "unit": "2404-208",
+          "price": "50,000",
+          "usableArea": "605",
+          "measureUnit": "Ft",
+          "configuration": "2 BHK",
+          "availableFrom": "19 May 2024",
+          "furnishing": [
+            {
+              "type": "Full",
+              "highlights": ["Microveare", "sofa"]
+            }
+          ],
+          "highlights": [
+            "High Speed Internet Access",
+            "Wifi",
+            "Washer/Dryer",
+            "Air Conditioning"
+          ],
+          "kitchen": [
+            "Dishwasher",
+            "Granite Countertops",
+            "Refrigerator",
+            "Freezer"
+          ]
+        }
+      ]
+    },
+    "neighborHood": {
+      "title": "Neighborhood",
+      "description": "Chicago’s reputation as one of America’s most distinctive cities owes a lot to the electric atmosphere and vibrant culture that defines Downtown Chicago. Iconic sites like Grant Park, Soldier Field, the Chicago Theatre, Navy Pier, and the Chicago Riverwalk are the most famous landmarks in Downtown, but that barely scratches the surface of what the neighborhood has to offer.",
+      "details": [
+        "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.",
+        "The campuses of Columbia College Chicago, DePaul University, and the Art Institute of Chicago are also located here."
+      ]
+    },
+    "apartmentFeatures": {
+      "title": "Apartment Features",
+      "features": [
+        "Washer/Dryer",
+        "Air Conditioning",
+        "Dishwasher",
+        "High Speed Internet Access",
+        "Wi-Fi",
+        "Heating",
+        "Cable Ready",
+        "Granite Countertops",
+        "Kitchen",
+        "Refrigerator",
+        "Freezer",
+        "Office",
+        "Views",
+        "Skylights",
+        "Walk-In Closets",
+        "Window Coverings"
+      ]
+    },
+    "education": {
+      "title": "Schools",
+      "details": [
+        {
+          "name": "Lincoln High School",
+          "address": "456 Elm St, Cityville, USA",
+          "distance": "1.2 miles",
+          "type": "Public High School",
+          "rating": "8"
+        },
+        {
+          "name": "Greenwood Middle School",
+          "address": "789 Maple Ave, Townsville, USA",
+          "distance": "2.5 miles",
+          "type": "Public Middle School",
+          "rating": "7"
+        },
+        {
+          "name": "Riverside Elementary School",
+          "address": "101 River Rd, Lakeside, USA",
+          "distance": "0.8 miles",
+          "type": "Public Elementary School",
+          "rating": "6"
+        },
+        {
+          "name": "Oakridge Academy",
+          "address": "202 Oak St, Forest City, USA",
+          "distance": "3.1 miles",
+          "type": "Private K-12 School",
+          "rating": "10"
+        },
+        {
+          "name": "Westwood Charter School",
+          "address": "303 West Blvd, Uptown, USA",
+          "distance": "4.0 miles",
+          "type": "Charter High School",
+          "rating": "9"
+        },
+        {
+          "name": "Bright Future Preschool",
+          "address": "404 Sunshine Ln, Pleasantville, USA",
+          "distance": "0.3 miles",
+          "type": "Private Preschool",
+          "rating": "9"
+        }
+      ]
+    },
+    "transportation": {
+      "title": "Trasportation",
+      "details": [
+        {
+          "name": "Bus",
+          "address": "456 Elm St, Cityville, USA",
+          "distance": "1.2 miles",
+          "type": "Public",
+          "rating": "8"
+        }
+      ]
+    },
+    "hospital": {
+      "title": "Hospital",
+      "details": [
+        {
+          "name": "Pro Health",
+          "address": "456 Elm St, Cityville, USA",
+          "distance": "1.2 miles",
+          "type": "Public",
+          "rating": "8"
+        },
+        {
+          "name": "Aurora Health",
+          "address": "123 Elm St, Cityville, USA",
+          "distance": "1.2 miles",
+          "type": "Public",
+          "rating": "8"
+        }
+      ]
+    }
+  },
+  {
+    "id": "4",
+    "imgGallery": [
+      {
+        "id": "a12b34c5-678d-901e-f123-4567890abcde",
+        "type": "ImageGallery",
+        "images": [
+          {
+            "url": "https://images1.apartments.com/i2/IBKNpzOGlA-nqxsSdcSP6v600_1br1NDdHEF3F9p9bQ/116/elevate-chicago-il-building-photo.jpg?p=1",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/Toh4TwPpss6kUmz4Cwut9H2O87DZsBFyOQRgzxf_Weg/116/elevate-chicago-il-lobby-photo.jpg?p=1",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/6G2YNy_815nGskH3FEGQBxKa4_Isw1xx1AhCg6hxEUI/116/elevate-chicago-il-building-photo.jpg?p=1",
+            "alt": "image 3"
+          }
+        ]
+      },
+      {
+        "id": "b23c45d6-789e-012f-g234-567890abcdef",
+        "type": "Photos",
+        "images": [
+          {
+            "url": "https://images1.apartments.com/i2/wpt3nKoYhOCYM-R8LgXSXFfklEWw6j4wZbg4iTfFMQw/116/elevate-chicago-il-building-photo.jpg?p=1",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/AoAoKG5TLQKadDCwwESJE6sh5UW3ysQtllRkpzx0zIo/116/elevate-chicago-il-poolsundeck.jpg?p=1",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/ngHj7b_3oq3uDbElkDICmdj5xt4oVBTK7QM1u5Qd_to/116/elevate-chicago-il-rooftop-deck.jpg?p=1",
+            "alt": "image 3"
+          }
+        ]
+      },
+      {
+        "id": "c34d56e7-890f-123g-h345-67890abcdef1",
+        "type": "floorPlan",
+        "images": [
+          {
+            "url": "https://images1.apartments.com/i2/NMYoBNyXYjYVkZFKp7ZkkOLccFhgBffbbM5JFKd6bzU/116/elevate-chicago-il-floorplan.jpg?p=1",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/J4B-EbfBLQRA36zNKxtrADErFe95maPFmc0nHp_0Vuw/116/elevate-chicago-il-floorplan.jpg?p=1",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://images1.apartments.com/i2/PJ-ZMZl70_ZBqctqdG3PuEFJ655dHzFUQcKbFToeym8/116/elevate-chicago-il-floorplan.jpg?p=1",
+            "alt": "image 3"
+          }
+        ]
+      }
+    ],
+    "propertyDetails": {
+      "name": "Oakwood Apartments",
+      "address": {
+        "address1": "1234 Sunset Blvd",
+        "address2": "",
+        "aptNumber": "201",
+        "city": "Los Angeles",
+        "zipCode": "90028",
+        "state": "CA",
+        "country": "USA"
+      },
+      "thumbnail": "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/117/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
+      "area": "4500",
+      "type": "ResidentialLand",
+      "parking": "4Wheeler",
+      "configuration":"2BHK",
+      "furnishing":"FullyFurnish",
       "size": "1 Bed - 3 Beds",
       "mapLat": 34.0522,
       "mapLong": -118.2437,

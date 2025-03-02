@@ -1,5 +1,5 @@
-<section class="container flex justify-center items-center px-10  h-full w-screen">
-  <div class="right w-[30%]  md:w-[30%] md:h-[95%] bg-slate-200 rounded-lg p-6 shadow-md">
+  <section class="container flex justify-center items-center px-10  h-full w-screen">
+  <div class="right max-h-[90vh] w-[30%]  md:w-[30%] md:h-[95%] bg-slate-200 rounded-lg p-6 shadow-md ">
     <!-- filtering data by Search Bar -->
     <div class="mb-6">
       <input [(ngModel)]="searchText"
@@ -8,20 +8,20 @@
     </div>
 
     <!-- Filter by Price -->
-    <div class="property-filter mb-6">
+    <!-- <div class="property-filter mb-6">
       <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Price</label>
       <select id="sort" (change)="onSortChange($event)"
         class="form-select w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         <option value="lowToHigh">Low to High</option>
         <option value="highToLow">High to Low</option>
       </select>
-    </div>
+    </div> -->
     <!-- Filter by Area/Size -->
     <div class="property-filter mb-6">
       <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Configuration</label>
       <div class="space-y-2">
         <div class="flex items-center" *ngFor="let option of bhkOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('bhk',this.bhkOptions)" type="checkbox"
+          <input [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.configuration',this.bhkOptions)" type="checkbox"
             class="form-checkbox h-5 w-5 text-blue-600" />
           <span class="ml-2 text-gray-700">{{ option.label }}</span>
         </div>
@@ -45,7 +45,7 @@
       <label class="block text-sm font-medium text-gray-800 mb-3">Furnishing</label>
       <div class="space-y-2">
         <div class="flex items-center" *ngFor="let option of furnishingOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('furnishing',this.furnishingOptions)"
+          <input [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.furnishing',this.furnishingOptions)"
             type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
           <span class="ml-2 text-gray-700"> {{ option.label }}</span>
         </div>
@@ -57,7 +57,7 @@
       <label class="block text-sm font-medium text-gray-800 mb-3">Parking</label>
       <div class="space-y-2">
         <div class="flex items-center" *ngFor="let option of ParkingOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('parking', ParkingOptions)" type="checkbox"
+          <input [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.parking', ParkingOptions)" type="checkbox"
             class="form-checkbox h-5 w-5 text-blue-600" />
           <span class="ml-2 text-gray-700">{{ option.label }}</span>
         </div>
@@ -91,7 +91,7 @@
       </ng-container>
 
     </div>
-    <div class="border-top text-white d-md-flex justify-content-center align-items-center p-3 ">
+    <div class="border-top text-black font-bold d-md-flex justify-content-center align-items-center p-6 ">
       <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
     </div>
   </div>
