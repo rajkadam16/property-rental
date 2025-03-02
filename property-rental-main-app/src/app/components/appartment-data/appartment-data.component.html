@@ -58,7 +58,7 @@
       <details class="border rounded p-3 mb-3" *ngFor="let item of unitData.availableUnits.rows">
         <summary class="d-flex justify-content-between text-primary fw-bold cursor-pointer">
           <span>{{ item.unit || "Not Available" }}</span>
-          <span>{{ item.price || "Not Available" }}</span>
+          <span>{{"₹"+ item.price || "Not Available" }}</span>
           <span>{{ item.usableArea + ' ' + item.measureUnit || "Not Available" }}</span>
           <span>{{ item.configuration || "Not Available" }}</span>
           <span>{{ item.availableFrom || "Not Available" }}</span>

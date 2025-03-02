@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { catchError, of } from 'rxjs';
 import { AboutUs, ApartmentFeatures, Education, Hospital, ImageGallery, Neighborhood, Transportation } from 'src/app/core/models/interface';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
@@ -24,9 +25,9 @@ export class PropertyDataComponent implements OnInit {
   propertyEducation: Education[] = [];
   transportations: Transportation[] = [];
   hospitals: Hospital[] = [];
-  filterBy:any[]=[];
-  data:any[] = [];  
- 
+  // filterBy: any[] = [];
+  // data: any[] = [];  
+
   constructor(
     private readonly route: ActivatedRoute,
     private readonly productService: CommonUtilitiesService
@@ -34,34 +35,39 @@ export class PropertyDataComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchPropertyDetails();
-}
-
-  fetchPropertyDetails(): void {
-    const productId = this.route.snapshot.params['id']; //backend api
-    // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
-    this.productService.getProductById(productId).subscribe((response: any) => {
-      this.filterBy = response.filterBy;
-      this.data = response.data;  
-
-      console.log('filterBy', this.filterBy);
-      console.log('data', this.data);
-
-
-        this.product = response;
-        this.imgGallerys = response.imgGallery;
-        this.aboutProperty = response.aboutUs;
-        this.apartmentFeatures = response.apartmentFeatures;
-        this.propertyNeighborHood = response.neighborHood;
-        this.propertyEducation = response.education;
-        this.transportations = response.transportation;
-        this.hospitals = response.hospital;
-      
-      },
-      
-    );
-    
   }
 
+  fetchPropertyDetails(): void {
+    const productId = this.route.snapshot.params['id']; 
+    this.productService.getProductById(productId).pipe(
+      catchError(error => {
+        console.error('Error fetching property details:', error);
+        // Handle the error here, you can return a default value or empty arrays
+        return of({
+          // filterBy: [],
+          // data: [],
+          imgGallery: [],
+          aboutUs: [],
+          apartmentFeatures: [],
+          neighborHood: [],
+          education: [],
+          transportation: [],
+          hospital: []
+        });
+      })
+    ).subscribe((response: any) => {
+      // this.filterBy = response.filterBy;
+      // this.data = response.data;  
+      this.product = response;
+      this.imgGallerys = response.imgGallery;
+      this.aboutProperty = response.aboutUs;
+      this.apartmentFeatures = response.apartmentFeatures;
+      this.propertyNeighborHood = response.neighborHood;
+      this.propertyEducation = response.education;
+      this.transportations = response.transportation;
+      this.hospitals = response.hospital;
+    });
+  }
 
 
 }

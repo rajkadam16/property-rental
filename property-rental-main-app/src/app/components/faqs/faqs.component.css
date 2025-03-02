@@ -1,6 +1,6 @@
 
 .accordion-item {
-  background-color: #1f2937; /* Dark background */
+  background-color: #f86d34; /* Dark background */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -16,8 +16,8 @@
   width: 100%;
   text-align: left;
   padding: 1rem;
-  background-color: #374151; /* Slightly lighter dark background */
-  color: #ffffff;
+  background-color: #f86d34; /* Slightly lighter dark background */
+  color: #d1d5db;
   font-size: 1.125rem; /* 18px */
   font-weight: 500;
   border: none;
@@ -30,11 +30,11 @@
 }
 
 .accordion-button:hover {
-  background-color: #4b5563; /* Lighter dark background on hover */
+  background-color: #F86F03; /* Lighter dark background on hover */
 }
 
 .accordion-button.collapsed {
-  color: #d1d5db; /* Light gray for collapsed state */
+  color: #FFF6F4; /* Light gray for collapsed state */
 }
 
 /* Accordion Icon */
@@ -50,7 +50,7 @@
 
 /* Accordion Body */
 .accordion-collapse {
-  background-color: #374151; /* Same as button background */
+  background-color: #FFA41B; /* Same as button background */
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
 }

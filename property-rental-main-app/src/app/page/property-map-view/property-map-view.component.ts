@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { catchError, of, Subscription } from 'rxjs';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./property-map-view.component.css']
 })
 export class PropertyMapViewComponent implements OnInit, OnDestroy {
-  pageSize = 3;
+  pageSize = 2;
   currentPage = 1;
   products: any[] = [];
   searchText: string = '';
@@ -33,56 +33,37 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
   ];
 
   furnishingOptions = [
-    { label: 'Semi', checked: false },
-    { label: 'Full', checked: false },
-    { label: 'None', checked: false }
+    { label: 'SemiFurnish', checked: false },
+    { label: 'FullyFurnish', checked: false },
+    { label: 'Unfurnished', checked: false }
   ];
   ParkingOptions = [
     { label: '2Wheeler', checked: false },
     { label: '4Wheeler', checked: false }
   ];
-  filterBy: any[] = [];
-  data: any[] = [];
 
   constructor(
     private readonly apartmentService: CommonUtilitiesService,
     private readonly changeDetectionRef: ChangeDetectorRef
   ) { }
-
   ngOnInit(): void {
     this.loader=true;
-    const propertyData = this.apartmentService.getProducts().subscribe((response: any) => {
-
-      this.filterBy = response.filterBy;
-      this.data = response;  
-
-      console.log('filterBy', this.filterBy);
-      console.log('data', this.data);
+    const propertyData = this.apartmentService.getProducts().pipe(
+      catchError(error => {
+        console.error('Error fetching property details:', error);
+        return of([]);
+      })
+    ).subscribe((response: any) => {
       this.loader=false;
       this.products = response; 
       this.filteredProperties = response;
-      this.sortProperties();
-      
       this.changeDetectionRef.detectChanges();
-   
     });
-  
     this.subscriptionList.push(propertyData);
 
 
 
   }
-  //filtering properties based on BHK
-  // filterProperties(criteria: any, options: any) {
-  //   const selectedOptions: string[] = options
-  //     .filter((option: { label: string; checked: boolean }) => option.checked)
-  //     .map((option: { label: string; checked: boolean }) => option.label);
-
-  //   this.filteredProperties = this.products.filter(property =>
-  //     selectedOptions.length === 0 || selectedOptions.includes(property[criteria])
-  //   );
-  // }
-
   filterProperties(criteria: string, options: any) {
     const selectedOptions: string[] = options
       .filter((option: { label: string; checked: boolean }) => option.checked)
@@ -107,20 +88,7 @@ export class PropertyMapViewComponent implements OnInit, OnDestroy {
     return selectedOptions.includes(nestedProperty);
   }
 
-  //sorting properties price wise
-  sortProperties(): void {
-    if (this.sortOption === 'lowToHigh') {
-      this.sortedProperties = this.filteredProperties.sort((a, b) => a.propertyPrice - b.propertyPrice);
-    } else {
-      this.sortedProperties = this.filteredProperties.sort((a, b) => b.propertyPrice - a.propertyPrice);
-    }
-  }
 
-  onSortChange(event: Event): void {
-    const selectElement = event.target as HTMLSelectElement;
-    this.sortOption = selectElement.value;
-    this.sortProperties();
-  }
 
   ngOnDestroy(): void {
     this.subscriptionList.forEach((subscription) => subscription.unsubscribe());
