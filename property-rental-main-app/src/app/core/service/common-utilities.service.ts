@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { ApiConfig } from '../constant/ApiConfig';
 
@@ -10,18 +10,26 @@ export class CommonUtilitiesService {
 
   constructor(private readonly http: HttpClient) { }
 
+  // backend
   getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(ApiConfig.propertyData);
+    return this.http.get<any[]>(`${ApiConfig.propertyData}/get/all`);
   }
 
+  // through json
+  // getProducts(): Observable<any[]> {
+  //   return this.http.get<any[]>(`${ApiConfig.propertyData}`);
+  // }
+  
   getProductById(id: number): Observable<any> {
     return this.getProducts().pipe(
       map((products: any[]) => products.find((product) => product.id === id))
     );
   }
 
-  addProperty(propertyData: any): Observable<any> {
-    return this.http.post(ApiConfig.addProperty, propertyData);
+
+  addProperty(property: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(`${ApiConfig.propertyData}/create`, property, { headers });
   }
 
   parseJsonFile(path: string) {

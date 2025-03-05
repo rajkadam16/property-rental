@@ -9,6 +9,9 @@ import com.property.rental.service.core.api.service.PropertyDetailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @RestController
 @RequestMapping("property/")
@@ -25,10 +28,13 @@ public class PropertyDetailController {
 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("create")
-	public Object addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
-		return propertyDetailService.addPropertyDetail(propertyDetail);
+	public ResponseEntity<?> addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
+		propertyDetailService.addPropertyDetail(propertyDetail);
+		Map<String, String> response = new HashMap<>();
+		response.put("message", "Property created successfully");
+		return ResponseEntity.ok(response);
 	}
-	
+
 	@PutMapping("update")
 	public Object updatePropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
 		return propertyDetailService.updatePropertyDetail(propertyDetail);

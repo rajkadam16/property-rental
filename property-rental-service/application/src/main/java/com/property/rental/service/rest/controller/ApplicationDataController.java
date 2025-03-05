@@ -24,6 +24,8 @@ public class ApplicationDataController {
     public ResponseEntity<String> createNavbarItem(@RequestBody List<NavbarEntity>  navbarItems) {
         return ResponseEntity.ok(navbarService.createNavbarItem(navbarItems));
     }
+
+
     @DeleteMapping("delete/{navbarId}")
     public ResponseEntity<Void> deleteNavbarItem(@PathVariable String navbarId) {
         navbarService.deleteNavbarItem(navbarId);

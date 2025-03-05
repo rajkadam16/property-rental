@@ -13,7 +13,7 @@ public class Unit {
     private String measureUnit;
     private String availableFrom;
     private String configuration;
-    private List<Furnishing> furnishing;
+    private String furnishing;
     private List<String> highlights;
     private List<String> kitchen;
 }

@@ -121,9 +121,8 @@
     "aboutUs": {
       "title": "About Presidential Towers",
       "description": "A spacious 2 bhk flat for rent is available in chembur east in diamond garden, central mumbai. Property has attached 2 bathrooms with 2 rooms set in 750 sq.Ft. Carpet area. The flat consists of 2 bedrooms, built on 750 sq.Ft. Society provides 1 covered parking with this flat. Property is 5-10 years old. This is a furnished flat. Furnishing options provided - 3 ac, 2 bed, 2 wardrobe and 1 modular kitchen. Ready to occupy from sat, 25 jan 2025, this property is ideal for single men and family on any agreement type. The expected rent is 85,000 monthly. Electricity & water charges are excluded. Security deposit of 250000 is required. The property comes with reserved parking, feng shui / vaastu compliant, piped-Gas, internet/wi-Fi connectivity, etc",
-      "details": [
-        "Archer Towers is an apartment community managed by Waterton, located in Cook County and the 400082 ZIP Code. This area is served by the Chembur Public Schools attendance zone."
-      ]
+      "details": "Archer Towers is an apartment community managed by Waterton, located in Cook County and the 400082 ZIP Code. This area is served by the Chembur Public Schools attendance zone."
+      
     },
     "highlights": {
       "title": "Highlights",
@@ -146,12 +145,7 @@
           "measureUnit": "Ft",
           "configuration": "1 BHK",
           "availableFrom": "15 June 2025",
-          "furnishing": [
-            {
-              "type": "Semi",
-              "highlights": ["bed", "Air Conditioning", "Washer/Dryer"]
-            }
-          ],
+          "furnishing": "SemiFurnish",
           "highlights": [
             "High Speed Internet Access",
             "Wifi",
@@ -172,12 +166,7 @@
           "measureUnit": "Ft",
           "configuration": "2 BHK",
           "availableFrom": "19 May 2024",
-          "furnishing": [
-            {
-              "type": "Full",
-              "highlights": ["Microveare", "sofa","2 Bed","2 Wardrobe","3 AC"]
-            }
-          ],
+          "furnishing": "FullyFurnish",
           "highlights": [
             "High Speed Internet Access",
             "Wifi",
@@ -196,10 +185,9 @@
     "neighborHood": {
       "title": "Neighborhood",
       "description": "Chicago’s reputation as one of America’s most distinctive cities owes a lot to the electric atmosphere and vibrant culture that defines Downtown Chicago. Iconic sites like Grant Park, Soldier Field, the Chicago Theatre, Navy Pier, and the Chicago Riverwalk are the most famous landmarks in Downtown, but that barely scratches the surface of what the neighborhood has to offer.",
-      "details": [
-        "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.",
-        "The campuses of Columbia College Chicago, DePaul University, and the Art Institute of Chicago are also located here."
-      ]
+      "details": 
+        "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.The campuses of Columbia College Chicago, DePaul University, and the Art Institute of Chicago are also located here."
+      
     },
     "apartmentFeatures": {
       "title": "Apartment Features",
@@ -465,12 +453,7 @@
                   "measureUnit": "Sq Ft",
                   "configuration": "3 BHK",
                   "availableFrom": "20 June 2024",
-                  "furnishing": [
-                      {
-                          "type": "Semi",
-                          "highlights": ["Bed", "Air Conditioning", "Washer/Dryer"]
-                      }
-                  ],
+                 "furnishing": "SemiFurnish",
                   "highlights": [
                       "High Speed Internet Access",
                       "Wi-Fi",
@@ -491,12 +474,7 @@
                   "measureUnit": "Sq Ft",
                   "configuration": "2 BHK",
                   "availableFrom": "5 May 2024",
-                  "furnishing": [
-                      {
-                          "type": "Full",
-                          "highlights": ["Microwave", "Sofa"]
-                      }
-                  ],
+                  "furnishing": "FullyFurnish",
                   "highlights": [
                       "High Speed Internet Access",
                       "Wi-Fi",
@@ -732,12 +710,7 @@
               "measureUnit": "Sq Ft",
               "configuration": "2 BHK",
               "availableFrom": "17 June 2024",
-              "furnishing": [
-                  {
-                      "type": "Semi",
-                      "highlights": ["Bed", "Air Conditioning", "Washer/Dryer"]
-                  }
-              ],
+            "furnishing": "SemiFurnish",
               "highlights": [
                   "High Speed Internet Access",
                   "Wi-Fi",
@@ -758,12 +731,7 @@
               "measureUnit": "Sq Ft",
               "configuration": "1 BHK",
               "availableFrom": "1 May 2024",
-              "furnishing": [
-                  {
-                      "type": "Full",
-                      "highlights": ["Microwave", "Sofa"]
-                  }
-              ],
+             "furnishing": "SemiFurnish",
               "highlights": [
                   "High Speed Internet Access",
                   "Wi-Fi",
@@ -872,5 +840,290 @@
           }
       ]
   }
+  },
+  {
+    "id": "97f17d55-4632-4f57-a6cd-04b287ff601dsd9",
+    "imgGallery": [
+      {
+        "id": "d51c4098-4b11-4c43-a6f5-489d7dca9f15",
+        "type": "ImageGallery",
+        "images": [
+          {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947143882_ba20bcbf31b1853a47dabc1495acfca7/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_one.jpg",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947200171_147096cb627567bd47e5f8f12e3c2326/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_one.jpg",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947215188_6983a5d9dd490593d70643f5bd095acf/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_two.jpg",
+            "alt": "image 3"
+          }
+        ]
+      },
+      {
+        "id": "97f17d55-4632-4f57-a6cd-04b287ff6019",
+        "type": "Photos",
+        "images": [
+          {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947124365_f08794fd7ff32e58d9d14bc96c62d194/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947183884_f54ba1f64d2ce8c5a6dd85737ab64059/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947149999_540f35c8914f7c62cbf1a5dea14e92af/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bathroom_one.jpg",
+            "alt": "image 3"
+          },
+		  {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947135073_80bef49cf53c72eb36ad9646ba025d61/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-kitchen.jpg",
+            "alt": "image 4"
+          },
+		  {
+            "url": "https://housing-images.n7net.in/01c16c28/1739947169345_c055f88e15ca04380ee938149b76fd93/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bathroom_two.jpg",
+            "alt": "image 5"
+          }
+         ]
+      },
+      {
+        "id": "46764e2e-fe97-4b7f-bd72-57ef4a722ec1",
+        "type": "floorPlan",
+        "images": [
+          {
+            "url": "https://housing-images.n7net.in/012c1500/07ccd45f516b3e0042a47c00261b01cd/v2/fs.jpeg",
+            "alt": "image 1"
+          },
+          {
+            "url": "https://housing-images.n7net.in/012c1500/0996c2e2bd587d1df85b55fd1942ef42/v2/fs.jpeg",
+            "alt": "image 2"
+          },
+          {
+            "url": "https://housing-images.n7net.in/012c1500/0a251ad775024b4896d65172aeee005c/v2/fs.jpeg",
+            "alt": "image 3"
+          }
+		               ]
+      }
+    ],
+    "propertyDetails": {
+      "name": "Godrej The Trees",
+      "address": {
+        "address1": "Pirojshanagar, Vikhroli East, Mumbai",
+        "address2": "",
+        "aptNumber": "110",
+        "city": "Mumbai",
+        "zipCode": "400079",
+        "state": "Maharashtra",
+        "country": "India"
+      },
+      "thumbnail": "https://housing-images.n7net.in/4f2250e8/488041f5d1878dc5872173cc45e79b4d/v0/fs.jpeg",
+      "area": "1050.00",
+      "type": "Luxury Apartment",
+      "parking": "4Wheeler",
+      "configuration":"2BHK",
+      "furnishing":"SemiFurnish",
+      "size": "Studio - 2 Beds ",
+      "amenities": [
+        "Pets Allowed",
+        "Fitness Center",
+        "Pool",
+        "Dishwasher",
+        "Refrigerator",
+        "Kitchen"
+      ],
+      "officeHours": {
+        "time": "9:00 am - 6:00 pm",
+        "timeZone": "IND",
+        "workingDays": ["Mon", "Tue"]
+      },
+      "contactUs": {
+        "title": "Contact This Property",
+        "phone": "(708) 725-1991",
+        "email": "godrejthetrees.com"
+      }
+    },
+    "aboutUs": {
+      "title": "About Presidential Towers",
+      "description": "Located in the popular residential address of Vikhroli east, Central mumbai, Godrej The Trees is one of the most preferred destination for apartments in Central Mumbai. This 2 BHK flat is your ticket to be a part of this community. Containing 2 bedroom(s), 2 bathrooms , this flat is spread over a Carpet Area of 750 sq.ft. This flat lies on the 10th level of a 18 storey building. Being a ready to move project, you can expect immediate possession of this 1-5 years old property. All the modern amenities such as Swimming Pool, Fitness Centre / GYM, Club house / Community Center, Park, Shopping Centre, Grocery Shop and Lift(s) will make life easier for you.",
+      "details": [
+        "Godrej The Trees Towers is an apartment community managed by Waterton, located in Cook County and the 400079 ZIP Code. This area is served by the good amenities around."      ]
+    },
+    "highlights": {
+      "title": "Highlights",
+      "features": [
+        "Air conditioning",
+        "Washer/Dryer",
+        "Cable ready",
+        "Walk-in closets",
+        "Window coverings",
+        "Skylight"
+      ]
+    },
+    "availableUnits": {
+      "cols": ["Unit", "Price", "Usable Area","configuration", "Availability"],
+      "rows": [
+        {
+          "unit": "5211",
+          "price": "25,000",
+          "usableArea": "715",
+          "measureUnit": "Ft",
+          "configuration": "2 BHK",
+          "availableFrom": "15 march 2025",
+         "furnishing": "FullyFurnish",
+          "highlights": [
+            "High Speed Internet Access",
+            "Wifi",
+            "Washer/Dryer",
+            "Air Conditioning"
+          ],
+          "kitchen": [
+            "Dishwasher",
+            "Granite Countertops",
+            "Refrigerator",
+            "Freezer"
+          ]
+        },
+        {
+          "unit": "2404",
+          "price": "50,000",
+          "usableArea": "605",
+          "measureUnit": "Ft",
+          "configuration": "2 BHK",
+          "availableFrom": "19 May 2024",
+         "furnishing": "",
+          "highlights": [
+            "High Speed Internet Access",
+            "Wifi",
+            "Washer/Dryer",
+            "Air Conditioning",
+            "Super Markets"
+          ],
+          "kitchen": [
+            "Dishwasher",
+            "Granite Countertops",
+            "Refrigerator",
+            "Freezer",
+             "Heating"
+          ]
+        }
+      ]
+    },
+    "neighborHood": {
+      "title": "Neighborhood",
+      "description": "Vikhroli East lies within Mumbai City in the Mumbai Suburban District in Maharashtra. Its coordinates are 19.1142° N, 72.9358° E. It is also governed by the Brihanmumbai Municipal Corporation. Vikhroli East is also located in close proximity to major IT Parks, SEZs and other areas like Powai, Ghatkopar and Mulund to name a few.",
+      "details": [
+        "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.",
+        "The campuses of somaiya college, mumbai University, and the Art Institute of mumbai are also located here."
+      ]
+    },
+    "apartmentFeatures": {
+      "title": "Apartment Features",
+      "features": [
+        "Power Back-up",
+        "Lift(s)",
+		"Feng Shui / Vaastu Compliant",
+		"Maintenance Staff",
+		"Water Storage",
+		"Piped-gas",
+		"Security Personnel",
+		"Natural Light",
+		"Internet/wi-fi connectivity",
+		"Airy Rooms",
+		"Fitness Centre / GYM",
+		"Waste Disposal",
+		"Rain Water Harvesting",
+		"Club house / Community Center"
+      ]
+    },
+    
+    "education": {
+        "title": "Schools",
+        "details": [
+            {
+                "name": "Udayachal High School",
+                "address": "Pirojshanagar, Vikhroli, Mumbai, Maharashtra 400079",
+                "distance": "1.5 km",
+                "type": "Public High School",
+                "rating": "8"
+            },
+            {
+                "name": "ORCHIDS The International School",
+                "address": "Rajiv Gandhi Nagar, Vikhroli, Mumbai, Maharashtra 400083",
+                "distance": "2.8 km",
+                "type": "International School",
+                "rating": "9"
+            },
+            {
+                "name": "St. Joseph's High School",
+                "address": "Godrej & Boyce Industry Estate, Vikhroli West, Mumbai, Maharashtra 400079",
+                "distance": "1.2 km",
+                "type": "Public High School",
+                "rating": "8"
+            },
+            {
+                "name": "Abhay International School",
+                "address": "B Wing, Kannamwar Nagar I, Vikhroli, Mumbai, Maharashtra 400083",
+                "distance": "5.3 km",
+                "type": "International School",
+                "rating": "10"
+            }
+                     ]
+    },
+    "transportation": {
+        "title": "Transportation",
+        "details": [
+            {
+                "name": "Mumbai Local Train - vikhroli Station",
+                "address": "Vikhroli East, Mumbai, Maharashtra, India",
+                "distance": "1.2 km",
+                "type": "Railway Station",
+                "rating": "8"
+            },
+            {
+                "name": "BEST Bus Stop - Ghatkoper Station",
+                "address": "Ghatkoper West, Mumbai, Maharashtra, India",
+                "distance": "1.3 km",
+                "type": "Railway Station",
+                "rating": "8"
+            }
+        ]
+    },
+    "hospital": {
+        "title": "Hospitals",
+        "details": [
+            {
+                "name": "Apollo Spectra Hospital",
+                "address": "Deonar Bus Depot Main GAte, MBPT Colony, Best Colony, Chembur, Mumbai, Maharashtra 400088",
+                "distance": "4.0 km",
+                "type": "Private",
+                "rating": "9"
+            },
+            {
+                "name": "Nanavati Hospital",
+                "address": "Vile Parle West, Mumbai, Maharashtra, India",
+                "distance": "3.0 km",
+                "type": "Private",
+                "rating": "9"
+            },
+            {
+                "name": "Sion Hospital",
+                "address": "Sion East, Mumbai, Maharashtra, India",
+                "distance": "5.5 km",
+                "type": "Public",
+                "rating": "8"
+            },
+            {
+                "name": "KEM Hospital",
+                "address": "Parel, Mumbai, Maharashtra, India",
+                "distance": "7.2 km",
+                "type": "Public",
+                "rating": "8"
+            }
+        ]
+    }
+
+
   }
 ]

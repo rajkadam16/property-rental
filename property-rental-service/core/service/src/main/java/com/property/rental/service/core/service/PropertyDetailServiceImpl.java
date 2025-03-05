@@ -21,11 +21,6 @@ public class PropertyDetailServiceImpl implements PropertyDetailService  {
 	private static final Logger logger = LoggerFactory.getLogger(PropertyDetailServiceImpl.class);
 	@Autowired
 	private PropertyDetailDao propertyDetailDao;
-
-//	public List<NavbarEntity> getAllNavbarItems() {
-//		return this.navbarDao.getAllNavbarItems();
-//	}
-
 	@Override
 	public List<PropertyDataEntity> getAllPropertyDetails() {
 		return  this.propertyDetailDao.getAllPropertyDetails();

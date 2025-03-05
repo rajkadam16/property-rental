@@ -8,5 +8,5 @@ import java.util.List;
 public class AboutUs {
     private String title;
     private String description;
-    private List<String> details;
+    private String details;
 }
