@@ -7,5 +7,4 @@ import java.util.List;
 @Data
 public class Furnishing {
     private String type;
-    private List<String> highlights;
 }

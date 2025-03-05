@@ -33,7 +33,7 @@ public class PropertyDetailDaoImpl implements PropertyDetailDao {
 	}
 
 	public String addPropertyDetail(PropertyDataEntity propertyDetail) {
-		 propertyDetailRepo.insert(propertyDetail);
+		 propertyDetailRepo.save(propertyDetail);
 		 return "";
 	}
 }

@@ -6,7 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./appartment-data.component.css']
 })
 export class AppartmentDataComponent {
-@Input("data") apartmentData:any;
+//   @Input() apartmentData: any = {
+//     propertyDetails: {
+//         name: "",
+//     }
+// };
+@Input() apartmentData: any ;
+
 @Input() unitsData: any = { cols: [], rows: [] };
 @Input("floorplandetails") floorDetails:any;
 
@@ -20,24 +26,10 @@ showFloorPlan: boolean = false;
 
 constructor() {}
 
-ngOnInit(): void {
-
-}
-
 get unitData() {
   return this.unitsData || { cols: [], rows: [] };
 }
-toggleFloorPlan(): void {
-  this.showFloorPlan = !this.showFloorPlan;
-}
 
-getFormattedAddress(): string {
-  const address = this.apartmentData?.propertyDetails?.address;
-  if (!address) return 'Not Available';
-  return `${address.address1}, ${address.city}, ${address.state} ${address.zipCode}`;
-}
 
-getThumbnailUrl(): string {
-  return this.apartmentData?.imgGallery?.[0]?.images?.[0]?.url || '/assets/placeholder.jpg';
-}
+
 }
