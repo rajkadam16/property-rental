@@ -9,7 +9,7 @@ h4 {
 
 .card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color:  #FFF6F4; /* Card background for contrast with black background */
+    background-color:  #E8F9FF; /* Card background for contrast with black background */
     color: #000000; /* Text color for contrast */
   }
   
