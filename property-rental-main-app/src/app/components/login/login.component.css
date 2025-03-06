@@ -62,11 +62,11 @@ input {
 
 input:focus {
     outline: none;
-    border-color: #f86d34;
+    border-color: #C5BAFF;
 }
 
 small.text-danger {
-    color: #d9534f;
+    color: #C5BAFF;
     font-size: 12px;
     display: block;
     margin-top: 3px;
@@ -84,7 +84,7 @@ small.text-danger {
 
 .link {
     font-size: 12px;
-    color: #f86d34;
+    color: #C5BAFF;
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
@@ -109,13 +109,13 @@ small.text-danger {
 }
 
 .button-primary {
-    background-color: #2a2c30;
+    background-color: #C5BAFF;
     color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .button-primary:hover {
-    background-color: #f86d34;
+    background-color: #C4D9FF;
 }
 
 .not-member {
@@ -124,7 +124,7 @@ small.text-danger {
 }
 
 .not-member a {
-    color: #f86d34;
+    color: #C5BAFF;
     text-decoration: none;
     font-weight: 500;
 }

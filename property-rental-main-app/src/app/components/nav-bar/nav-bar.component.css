@@ -1,7 +1,7 @@
 
   .header {
     color: var(--default-color);
-    background-color: var(--background-color);
+    background-color: #E8F9FF;
     padding: 10px 0;
     transition: all 0.5s;
     z-index: 997;
@@ -43,13 +43,8 @@
     font-size: 16px;
   }
   
-  .header .header-social-links a:hover {
-    color: var(--accent-color);
-  }
-  
-  .header .header-social-links a i {
-    line-height: 0px;
-  }
+
+
   
   @media (max-width: 1200px) {
     .header .logo {
@@ -60,11 +55,7 @@
       font-size: 24px;
     }
   
-    .header .header-social-links {
-      order: 2;
-      padding: 0 15px 0 0;
-    }
-  
+
     .header .navmenu {
       order: 3;
     }

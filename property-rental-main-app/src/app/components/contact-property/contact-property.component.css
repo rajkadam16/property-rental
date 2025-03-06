@@ -11,11 +11,11 @@
 }
 
 .button-primary {
-    background-color: #2a2c30;
-    color: #fff;
+    background-color: #C5BAFF;
+    color: #000;
     transition: background-color 0.3s ease;
 }
 
 .button-primary:hover {
-    background-color: #f86d34;
+    background-color: #C4D9FF;
 }
