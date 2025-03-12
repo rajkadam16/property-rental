@@ -11,14 +11,14 @@ export class CommonUtilitiesService {
   constructor(private readonly http: HttpClient) { }
 
   // backend
-  getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(`${ApiConfig.propertyData}/get/all`);
-  }
+  // getProducts(): Observable<any[]> {
+  //   return this.http.get<any[]>(`${ApiConfig.propertyData}/get/all`);
+  // }
 
   // through json
-  // getProducts(): Observable<any[]> {
-  //   return this.http.get<any[]>(`${ApiConfig.propertyData}`);
-  // }
+  getProducts(): Observable<any[]> {
+    return this.http.get<any[]>(`${ApiConfig.propertyData}`);
+  }
   
   getProductById(id: number): Observable<any> {
     return this.getProducts().pipe(
@@ -30,6 +30,10 @@ export class CommonUtilitiesService {
   addProperty(property: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post(`${ApiConfig.propertyData}/create`, property, { headers });
+  }
+
+  getUserProperties(userId: string): Observable<any[]> {
+    return this.http.get<any[]>(`${ApiConfig.propertyData}/user/${userId}`);
   }
 
   parseJsonFile(path: string) {

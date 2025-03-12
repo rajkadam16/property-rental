@@ -29,9 +29,8 @@ import { AppartmentDataComponent } from './components/appartment-data/appartment
 import { ContactPropertyComponent } from './components/contact-property/contact-property.component';
 import { PropertyMapViewComponent } from './page/property-map-view/property-map-view.component';
 import { AddPropertyComponent } from './components/add-property/add-property.component';
-import { JwtInterceptor } from './core/service/jwt-interceptor.service';
 import { AuthService } from './core/service/auth.service';
-import { authguardGuard } from './core/guards/authguard.guard';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -60,6 +59,7 @@ import { authguardGuard } from './core/guards/authguard.guard';
     AppartmentDataComponent,
     ContactPropertyComponent,
     AddPropertyComponent,
+    DashboardComponent
   ],
   imports: [
     FormsModule,
