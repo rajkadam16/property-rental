@@ -11,6 +11,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './home/home/home.component';
 import { authguardGuard } from './core/guards/authguard.guard';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
     component: PropertyMapViewComponent,
   },
   { path: 'signup', component: SignupComponent },
+  { path: 'dahboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {

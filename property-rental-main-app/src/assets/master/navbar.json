@@ -8,6 +8,10 @@
     "routerLink": "/addproperty"
   },
   {
+    "title": "Dashboard",
+    "routerLink": "/dahboard"
+  },
+  {
     "title": "Contact Us",
     "routerLink": "/contactus"
   },
