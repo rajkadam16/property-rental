@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
 import { ApiConfig } from '../constant/ApiConfig';
 
 @Injectable({
@@ -32,10 +32,21 @@ export class CommonUtilitiesService {
     return this.http.post(`${ApiConfig.propertyData}/create`, property, { headers });
   }
 
-  getUserProperties(userId: string): Observable<any[]> {
-    return this.http.get<any[]>(`${ApiConfig.propertyData}/user/${userId}`);
+  getUserProperties(userId: string): Observable<any> {
+    const url = `${ApiConfig.propertyData}/user/${userId}`;
+    console.log('Fetching user properties from:', url); // Debugging log
+  
+    return this.http.get(url).pipe(
+      catchError(error => {
+        console.error('Error fetching properties:', error);
+        return throwError(error);
+      })
+    );
   }
-
+  
+  deleteProperty(propertyId: string): Observable<any> {
+    return this.http.delete(`${ApiConfig.propertyData}/${propertyId}`);
+  }
   parseJsonFile(path: string) {
     return this.http.get(path);
   }

@@ -75,7 +75,7 @@ export class AddPropertyComponent {
     'Sunday',
     'Whole-weeks',
   ];
-
+userId=localStorage.getItem('userId');
   generateUUID(): string {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
       /[xy]/g,
@@ -148,6 +148,7 @@ export class AddPropertyComponent {
         ),
       }),
 
+      userId:this.userId,
       neighborHood: this.fb.group({
         title: ['neighborHood'],
         description: [''],

@@ -12,11 +12,10 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { authGuardGuard } from './core/guards/auth-guard.guard';
 
-
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'propertydetails/:id',
@@ -26,7 +25,7 @@ const routes: Routes = [
         path: 'PropertyMediaView',
         component: PropertyMediaViewerComponent,
       },
-    ]
+    ],
   },
 
   {
@@ -34,16 +33,22 @@ const routes: Routes = [
     component: PropertyMapViewComponent,
   },
   { path: 'signup', component: SignupComponent },
-  { path: 'dashboard', component: DashboardComponent , canActivate: [authGuardGuard]},
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [authGuardGuard],
+  },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'addproperty',
-    component: AddPropertyComponent
+    component: AddPropertyComponent,
+    canActivate: [authGuardGuard],
   },
   {
     path: 'contactus',
-    loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    loadChildren: () =>
+      import('./contact-us/contact-us.module').then((m) => m.ContactUsModule),
   },
   { path: '**', component: PageNotFoundComponent },
   {
@@ -57,5 +62,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
-
+export class AppRoutingModule {}

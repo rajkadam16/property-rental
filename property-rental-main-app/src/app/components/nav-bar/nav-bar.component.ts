@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiConfig } from 'src/app/core/constant/ApiConfig';
-import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/service/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,14 +9,23 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 })
 export class NavBarComponent implements OnInit {
   heading: string = 'Cityscape rentals';
-  navbarData: any[] = []
-  constructor(private readonly navbar: CommonUtilitiesService) { }
-  ngOnInit(): void {
-    this.navbarFunc()
+  isLoggedIn = false;
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit() {
+    // Check if user is logged in (if user ID exists in local storage)
+    this.isLoggedIn = !!localStorage.getItem('userId');
+
+    // Listen for changes in login status
+    this.authService.loginStatus$.subscribe(status => {
+      this.isLoggedIn = status;
+    });
   }
-  async navbarFunc(){
-  this.navbar.parseJsonFile(ApiConfig.navbar).subscribe((response: any) => {
-      this.navbarData = response;
-    })
+
+  logout() {
+    this.authService.logout();
+    this.isLoggedIn = false;
+    this.router.navigate(['/login']);
   }
 }
