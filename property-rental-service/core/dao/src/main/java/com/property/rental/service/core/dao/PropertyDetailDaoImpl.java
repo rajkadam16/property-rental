@@ -17,7 +17,9 @@ public class PropertyDetailDaoImpl implements PropertyDetailDao {
  	private	PropertyDetailRepo propertyDetailRepo;
 
 
-
+	public List<PropertyDataEntity> getUserProperties(String userId) {
+		return propertyDetailRepo.findByUserId(userId);
+	}
 	public List<PropertyDataEntity> getAllPropertyDetails() {
 		return propertyDetailRepo.findAll();
 	}

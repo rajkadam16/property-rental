@@ -14,7 +14,7 @@ export class authGuardGuard implements CanActivate {
     if (userId) {
       return true; // User is logged in, allow access
     } else {
-      alert("You must be logged in to access the dashboard!");
+      alert("You must be logged in to accses this page!");
       this.router.navigate(['/login']); // Redirect to login page
       return false; // Block access
     }

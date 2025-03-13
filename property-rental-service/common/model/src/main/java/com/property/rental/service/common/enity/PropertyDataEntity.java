@@ -29,6 +29,7 @@ public class PropertyDataEntity {
     private Education education;
     private Transportation transportation;
     private Hospital hospital;
+    private String userId;
 
 }
 

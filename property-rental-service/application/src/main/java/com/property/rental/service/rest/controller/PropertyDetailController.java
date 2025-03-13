@@ -10,23 +10,29 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("property/")
 public class PropertyDetailController {
 	private static final Logger logger = LoggerFactory.getLogger(PropertyDetailController.class);
 	@Autowired
 	private PropertyDetailService propertyDetailService;
 
-	@CrossOrigin("http://localhost:4200/")
 	@GetMapping("get/all")
 	public Object getAllPropertyDetails() {
 		return propertyDetailService.getAllPropertyDetails();
 	}
 
-	@CrossOrigin(origins = "http://localhost:4200")
+	@GetMapping("user/{userId}")
+	public ResponseEntity<?> getUserProperties(@PathVariable String userId) {
+		List<PropertyDataEntity> properties = propertyDetailService.getUserProperties(userId);
+		return ResponseEntity.ok(properties);
+	}
+
 	@PostMapping("create")
 	public ResponseEntity<?> addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
 		propertyDetailService.addPropertyDetail(propertyDetail);
