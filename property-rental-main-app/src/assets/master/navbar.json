@@ -9,7 +9,7 @@
   },
   {
     "title": "Dashboard",
-    "routerLink": "/dahboard"
+    "routerLink": "/dashboard"
   },
   {
     "title": "Contact Us",

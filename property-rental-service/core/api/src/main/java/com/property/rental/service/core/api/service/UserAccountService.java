@@ -1,22 +1,11 @@
 package com.property.rental.service.core.api.service;
 
-import java.util.List;
+import java.util.Map;
+
 import com.property.rental.service.common.enity.UserAccountEntity;
 
 public interface UserAccountService {
 
-    public UserAccountEntity getUserAccount(String userID);
-	
-	public List<UserAccountEntity> getAllUserAccounts();
-	
-	public String deleteUserAccount(String userID);
-
-	public String updateUserAccount(UserAccountEntity userAccount);
-
-	public String createUserAccount(UserAccountEntity userAccount);
-
-	public String login(String email, String password);
-
-
-
+	Map<String, String> registerUser(UserAccountEntity userAccount);
+	Map<String, String> loginUser(String email, String password);
 }

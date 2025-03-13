@@ -21,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="checksum" options="-parameters" />
+      <module name="common" options="" />
       <module name="common-utility" options="-parameters" />
       <module name="dao" options="-parameters" />
       <module name="model" options="-parameters" />

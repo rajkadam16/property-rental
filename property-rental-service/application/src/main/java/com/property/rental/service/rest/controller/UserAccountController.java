@@ -1,11 +1,14 @@
 package com.property.rental.service.rest.controller;
 
+import com.property.rental.service.common.model.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.property.rental.service.common.enity.UserAccountEntity;
 import com.property.rental.service.core.api.service.UserAccountService;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -16,41 +19,34 @@ public class UserAccountController {
 	@Autowired
 	private UserAccountService userAccountService;
 
-
-	@GetMapping("getAll")
-	public Object getUserAll() {
-		return userAccountService.getAllUserAccounts();
-	}
-
-	@GetMapping("get/{userId}")
-	public Object getUser(@PathVariable String userId) {
-		return userAccountService.getUserAccount(userId);
-	}
-	@CrossOrigin("http://localhost:4200/")
 	@PostMapping("/signup")
-	public Object signup(@RequestBody UserAccountEntity userAccount) {
-		return userAccountService.createUserAccount(userAccount);
+	public Map<String, String> registerUser(@RequestBody UserAccountEntity userAccount) {
+		return userAccountService.registerUser(userAccount);
 	}
 
-	@PutMapping("update")
-	public Object updateUser(@RequestBody UserAccountEntity userAccount) {
-		return userAccountService.updateUserAccount(userAccount);
-	}
-	
-	@DeleteMapping("delete/{userId}")
-	public Object deleteUser(@PathVariable String userId) {
-		return userAccountService.deleteUserAccount(userId);
-	}
-	@CrossOrigin("http://localhost:4200/")
-	@PostMapping("/login")
-	public String login(@RequestBody Map<String, String> loginRequest) {
-		String email = loginRequest.get("email");
-		String password = loginRequest.get("password");
+//	@PostMapping("/login")
+//	public Map<String, String> loginUser(@RequestBody Map<String, String> loginRequest) {
+//		String email = loginRequest.get("email");
+//		String password = loginRequest.get("password");
+//
+//		if (email == null || password == null) {
+//			Map<String, String> response = new HashMap<>();
+//			response.put("message", "Email and Password are required!");
+//			response.put("userId", null);
+//			return response;
+//		}
+//		return userAccountService.loginUser(email, password);
+//	}
+@PostMapping("/login")
+public ResponseEntity<Map<String, Object>> login(@RequestBody LoginRequest loginRequest) {
+	Map<String, String> daoResponse = userAccountService.loginUser(loginRequest.getEmail(), loginRequest.getPassword());
 
-		if (email == null || password == null) {
-			return "Email and Password are required!";
-		}
+	Map<String, Object> response = new HashMap<>();
+	response.put("success", daoResponse.get("userId") != null);
+	response.put("message", daoResponse.get("message"));
+	response.put("userId", daoResponse.get("userId"));
 
-		return userAccountService.login(email, password);
-	}
+	return ResponseEntity.ok(response);
+}
+
 }
