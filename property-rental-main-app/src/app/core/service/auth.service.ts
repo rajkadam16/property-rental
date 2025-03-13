@@ -14,27 +14,39 @@ export class AuthService {
 
   signup(user: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(`${this.baseUrl}/signup`, user, { headers, responseType: 'text' });
+    return this.http.post(`${this.baseUrl}/signup`, user, { headers });
   }
+  
 
   login(credentials: any): Observable<any> {
-
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(`${this.baseUrl}/login`, credentials, { headers, responseType: 'text' }).pipe(
-      map(response => {
-        // Convert plain text response to JSON format
-        if (response === 'Login successful!') {
-          return { success: true, message: response };
+    
+    return this.http.post(`${this.baseUrl}/login`, credentials, { headers }).pipe(
+      map((response: any) => {
+        // Response is already a JSON object, no need to manually parse
+        if (response.success) {
+          return { success: true, message: response.message, userId: response.userId };
         } else {
-          return { success: false, message: response };
+          return { success: false, message: response.message };
         }
       })
     );
-
   }
+  
   isLoggedIn(): boolean {
     // Implement your logic to check if the user is logged in
     // For example, check if a token exists in local storage
     return !!localStorage.getItem('token');
+  }
+  saveUserId(userId: string) {
+    localStorage.setItem('userId', userId);
+  }
+
+  getUserId(): string | null {
+    return localStorage.getItem('userId');
+  }
+
+  logout() {
+    localStorage.removeItem('userId');
   }
 }

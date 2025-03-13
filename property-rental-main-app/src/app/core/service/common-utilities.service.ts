@@ -11,14 +11,14 @@ export class CommonUtilitiesService {
   constructor(private readonly http: HttpClient) { }
 
   // backend
-  // getProducts(): Observable<any[]> {
-  //   return this.http.get<any[]>(`${ApiConfig.propertyData}/get/all`);
-  // }
+  getProducts(): Observable<any[]> {
+    return this.http.get<any[]>(`${ApiConfig.propertyData}/get/all`);
+  }
 
   // through json
-  getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(`${ApiConfig.propertyData}`);
-  }
+  // getProducts(): Observable<any[]> {
+  //   return this.http.get<any[]>(`${ApiConfig.propertyData}`);
+  // }
   
   getProductById(id: number): Observable<any> {
     return this.getProducts().pipe(

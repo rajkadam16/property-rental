@@ -17,15 +17,17 @@ export class LoginComponent {
       password: ['', Validators.required]
     });
   }
-
-onSubmit() {
+  onSubmit() {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe(response => {
         console.log('Server response:', response);
+  
         if (response.success) {
           console.log('Login successful', response);
-          alert('Login successful');
-          this.router.navigate(['/']); // Redirect to home page
+  
+          localStorage.setItem('userId', response.userId); // Store user ID
+          alert(response.message);
+          this.router.navigate(['/dashboard']); // Redirect to dashboard
         } else {
           console.error('Login error', response);
           alert('Login failed: ' + response.message);
@@ -36,4 +38,7 @@ onSubmit() {
       });
     }
   }
+  
+  
+  
 }

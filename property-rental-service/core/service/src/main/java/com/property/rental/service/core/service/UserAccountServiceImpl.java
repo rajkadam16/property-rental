@@ -1,6 +1,8 @@
 package com.property.rental.service.core.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import com.property.rental.service.core.api.db.UserAccountRepo;
@@ -22,43 +24,13 @@ public class UserAccountServiceImpl implements UserAccountService {
 	private UserAccountDao userAccountDao;
 
 	@Override
-	public UserAccountEntity getUserAccount(String userID) {
-		return this.userAccountDao.getUserAccount(userID);
+	public Map<String, String> registerUser(UserAccountEntity userAccount) {
+		return userAccountDao.registerUser(userAccount);
 	}
 
 	@Override
-	public List<UserAccountEntity> getAllUserAccounts() {
-		return this.userAccountDao.getAllUserAccounts();
-	}
-
-	@Override
-	public String deleteUserAccount(String userID) {
-		return this.userAccountDao.deleteUserAccount(userID);
-	}
-
-	@Override
-	public String updateUserAccount(UserAccountEntity userAccount) {
-		return this.userAccountDao.updateUserAccount(userAccount);
-	}
-
-	@Override
-	public String createUserAccount(UserAccountEntity userAccount) {
-		return this.userAccountDao.createUserAccount(userAccount);
-	}
-
-	@Override
-	public String login(String email, String password) {
-		Optional<UserAccountEntity> userOptional = userAccountRepo.findByEmail(email);
-		if (userOptional.isPresent()) {
-			UserAccountEntity user = userOptional.get();
-			if (user.getPassword().equals(password)) {
-				return "Login successful!";
-			} else {
-				return "Invalid password!";
-			}
-		} else {
-			return "User not found!";
-		}
+	public Map<String, String> loginUser(String email, String password) {
+		return userAccountDao.loginUser(email, password);
 	}
 
 }
