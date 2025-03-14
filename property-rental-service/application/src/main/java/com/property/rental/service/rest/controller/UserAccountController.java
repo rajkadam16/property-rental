@@ -24,19 +24,7 @@ public class UserAccountController {
 		return userAccountService.registerUser(userAccount);
 	}
 
-//	@PostMapping("/login")
-//	public Map<String, String> loginUser(@RequestBody Map<String, String> loginRequest) {
-//		String email = loginRequest.get("email");
-//		String password = loginRequest.get("password");
-//
-//		if (email == null || password == null) {
-//			Map<String, String> response = new HashMap<>();
-//			response.put("message", "Email and Password are required!");
-//			response.put("userId", null);
-//			return response;
-//		}
-//		return userAccountService.loginUser(email, password);
-//	}
+	
 @PostMapping("/login")
 public ResponseEntity<Map<String, Object>> login(@RequestBody LoginRequest loginRequest) {
 	Map<String, String> daoResponse = userAccountService.loginUser(loginRequest.getEmail(), loginRequest.getPassword());

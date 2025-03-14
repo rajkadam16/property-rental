@@ -31,6 +31,10 @@ import { PropertyMapViewComponent } from './page/property-map-view/property-map-
 import { AddPropertyComponent } from './components/add-property/add-property.component';
 import { AuthService } from './core/service/auth.service';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { PropertiesComponent } from './page/dashboard/sections/properties/properties.component';
+import { BookingsComponent } from './page/dashboard/sections/bookings/bookings.component';
+import { EarningsComponent } from './page/dashboard/sections/earnings/earnings.component';
+import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.component';
 
 
 @NgModule({
@@ -59,7 +63,11 @@ import { DashboardComponent } from './page/dashboard/dashboard.component';
     AppartmentDataComponent,
     ContactPropertyComponent,
     AddPropertyComponent,
-    DashboardComponent
+    DashboardComponent,
+    PropertiesComponent,
+    BookingsComponent,
+    EarningsComponent,
+    ReviewsComponent
   ],
   imports: [
     FormsModule,
