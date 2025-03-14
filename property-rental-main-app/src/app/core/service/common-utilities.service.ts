@@ -34,8 +34,6 @@ export class CommonUtilitiesService {
 
   getUserProperties(userId: string): Observable<any> {
     const url = `${ApiConfig.propertyData}/user/${userId}`;
-    console.log('Fetching user properties from:', url); // Debugging log
-  
     return this.http.get(url).pipe(
       catchError(error => {
         console.error('Error fetching properties:', error);

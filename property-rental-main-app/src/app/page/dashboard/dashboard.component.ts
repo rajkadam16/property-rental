@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import {  Router } from '@angular/router';
 import { AuthService } from 'src/app/core/service/auth.service';
-import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,60 +9,12 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  // userProperties = [
-  //   { id: 1, name: 'Luxury Villa', location: 'Los Angeles', price: 5000, status: 'Occupied' },
-  //   { id: 2, name: 'Downtown Apartment', location: 'New York', price: 3500, status: 'Available' },
-  //   { id: 3, name: 'Beach House', location: 'Miami', price: 6000, status: 'Occupied' },
-  //   { id: 4, name: 'Mountain Cabin', location: 'Colorado', price: 4500, status: 'Available' },
-  //   { id: 5, name: 'City Condo', location: 'Chicago', price: 3200, status: 'Occupied' }
-  // ];
-  // occupiedProperties: number = 0;
-  // totalRevenue: number = 0;
 
-  // constructor(private propertyService: CommonUtilitiesService) {}
-
-  // ngOnInit() {
-  //   this.loadUserProperties();
-  // }
-
-  // loadUserProperties() {
-  //   const userId = localStorage.getItem('userId'); // Get logged-in user ID
-  //   if (userId) {
-  //     this.propertyService.getUserProperties(userId).subscribe(data => {
-  //       this.userProperties = data;
-  //       this.calculateStats();
-  //     });
-  //   }
-  // }
-
-  // calculateStats() {
-  //   this.occupiedProperties = this.userProperties.filter(p => p.status === 'Occupied').length;
-  //   this.totalRevenue = this.userProperties.reduce((sum, p) => sum + p.price, 0);
-  // }
-
-  properties: any[] = [];
-
-  constructor(private readonly propertyService: CommonUtilitiesService, private readonly authService: AuthService) {}
-
-  ngOnInit() {
-    const userId = this.authService.getUserId(); // Get user ID from local storage
-    if (userId) {
-      this.propertyService.getUserProperties(userId).subscribe(response => {
-        this.properties = response;
-      });
-    }
+  isLoggedIn = false;
+constructor(private readonly authService: AuthService,private readonly router:Router) { }
+  logout() {
+    this.authService.logout();
+    this.isLoggedIn = false;
+    this.router.navigate(['/login']);
   }
-
-  deleteProperty(propertyId: string) {
-    this.propertyService.deleteProperty(propertyId).subscribe(() => {
-      this.properties = this.properties.filter(p => p.id !== propertyId);
-    });
-  }
-
-  getStatusClass(status: string) {
-    return status === 'Occupied' ? 'bg-success text-white px-2 rounded' :
-           status === 'Available' ? 'bg-warning text-dark px-2 rounded' : '';
-  }
-  
-
 }

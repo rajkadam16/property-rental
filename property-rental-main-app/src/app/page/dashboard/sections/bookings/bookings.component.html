@@ -1,0 +1,44 @@
+<div class="bg-white p-6 rounded-lg shadow-md">
+  <h2 class="text-2xl font-bold mb-4">📅 Booking Management</h2>
+
+  <!-- Filters -->
+  <div class="mb-4 flex space-x-2">
+    <button class="bg-blue-500 text-white px-4 py-2 rounded" (click)="filterStatus('all')">All</button>
+    <button class="bg-yellow-500 text-white px-4 py-2 rounded" (click)="filterStatus('pending')">Pending</button>
+    <button class="bg-green-500 text-white px-4 py-2 rounded" (click)="filterStatus('accepted')">Accepted</button>
+    <button class="bg-red-500 text-white px-4 py-2 rounded" (click)="filterStatus('rejected')">Rejected</button>
+  </div>
+
+  <!-- Booking List -->
+  <table class="table-auto w-full border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="border p-2">Tenant Name</th>
+        <th class="border p-2">Property</th>
+        <th class="border p-2">Date</th>
+        <th class="border p-2">Status</th>
+        <th class="border p-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of filteredBookings" class="border">
+        <td class="p-2">{{ booking.tenant }}</td>
+        <td class="p-2">{{ booking.property }}</td>
+        <td class="p-2">{{ booking.date }}</td>
+        <td class="p-2">
+          <span [ngClass]="{
+            'text-yellow-500': booking.status === 'Pending',
+            'text-green-500': booking.status === 'Accepted',
+            'text-red-500': booking.status === 'Rejected'
+          }">
+            {{ booking.status }}
+          </span>
+        </td>
+        <td class="p-2">
+          <button *ngIf="booking.status === 'Pending'" class="bg-green-500 text-white px-3 py-1 rounded" (click)="updateStatus(booking, 'Accepted')">Accept</button>
+          <button *ngIf="booking.status === 'Pending'" class="bg-red-500 text-white px-3 py-1 rounded" (click)="updateStatus(booking, 'Rejected')">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
