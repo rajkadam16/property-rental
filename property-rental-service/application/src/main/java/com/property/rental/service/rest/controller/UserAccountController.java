@@ -24,7 +24,7 @@ public class UserAccountController {
 		return userAccountService.registerUser(userAccount);
 	}
 
-	
+
 @PostMapping("/login")
 public ResponseEntity<Map<String, Object>> login(@RequestBody LoginRequest loginRequest) {
 	Map<String, String> daoResponse = userAccountService.loginUser(loginRequest.getEmail(), loginRequest.getPassword());

@@ -17,6 +17,10 @@ export class LoginComponent {
       password: ['', Validators.required]
     });
   }
+  // reloadComponent() {
+  //   window.location.;
+  // }
+  
   onSubmit() {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe(response => {
@@ -27,7 +31,9 @@ export class LoginComponent {
   
           localStorage.setItem('userId', response.userId); // Store user ID
           alert(response.message);
-          this.router.navigate(['/dashboard']); // Redirect to dashboard
+          // this.reloadComponent()
+          // this.router.navigate(['/dashboard']); // Redirect to dashboard
+          window.location.assign('/dashboard');
         } else {
           console.error('Login error', response);
           alert('Login failed: ' + response.message);

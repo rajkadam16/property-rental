@@ -182,12 +182,11 @@
                 class="pl-2 mt-2 w-52 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
             </div>
           </div>
-          <div class="mt-4 ml-4">
-    
+          <!-- <div class="mt-4 ml-4">
             <label for="thumbnail" class="block">Thumbnail:</label>
             <input id="thumbnail" formControlName="thumbnail" placeholder="upload thumbnail"
               class="ml-2 pl-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-          </div>
+          </div> -->
           <div class="ml-4 mt-6 flex gap-3">
             <label for="type" class="block">Appartment Type :</label>
             <input type="radio" id="Appartment1" formControlName="type" name="type" value="Residential Apartment"
@@ -590,6 +589,21 @@
       </div> -->
       <div class="tab-pane fade" id="Images" role="tabpanel" aria-labelledby="Images-tab">
 
+        <select>
+          <option value="Thumbnail">Thumbnail</option>
+          <option value="ImageGallery">ImageGallery</option>
+          <option value="Photos">Photos</option>
+          <option value="floorPlan">floorPlan</option>
+        </select>
+        <div formGroupName="propertyDetails">
+          <div class="mt-4 ml-4">
+            <label for="thumbnail" class="block">Thumbnail:</label>
+            <input type="file" id="thumbnail" formControlName="thumbnail" placeholder="upload thumbnail"
+              class="ml-2 pl-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
+          </div>
+        </div>
+        
+       
         <div formArrayName="imgGallery" class="gallery-container">
       
           <div *ngFor="let gallery of imageGalleryFormArray.controls; let i = index" 
@@ -605,7 +619,7 @@
       
                 <div class="form-row mb-2">
                   <label class="form-label">Image URL:</label>
-                  <input type="text" class="form-control" formControlName="url" placeholder="Enter Image URL" />
+                  <input type="file" class="form-control" formControlName="url" placeholder="Enter Image URL" />
                 </div>
       
                 <div class="form-row mb-2">

@@ -11,8 +11,11 @@
         <li><a routerLink="/addproperty">Add Property</a></li>
         <li><a routerLink="/dashboard">Dashboard</a></li>
         <li><a routerLink="/contactus">Contact Us</a></li>
-        <li ><a routerLink="/signup">Sign Up</a></li>
-        <li ><a routerLink="/login">Log In</a></li>
+        <ng-container *ngIf="!isLoggedIn"> 
+          <li><a routerLink="/signup">Sign Up</a></li>
+          <li><a routerLink="/login">Log In</a></li>
+        </ng-container>
+          
     
       </ul>
     </nav>  

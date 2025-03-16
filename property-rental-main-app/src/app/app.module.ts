@@ -37,6 +37,7 @@ import { EarningsComponent } from './page/dashboard/sections/earnings/earnings.c
 import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,8 @@ import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.comp
     PropertiesComponent,
     BookingsComponent,
     EarningsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    
   ],
   imports: [
     FormsModule,

@@ -10,7 +10,7 @@ export const ApiConfig = {
     //user authentication
     auth: "http://localhost:8080/account",
 
-//    backend api
+    //    backend api
     propertyData: "http://localhost:8080/property",
        navbar: "http://localhost:8080/navbar/get/all",
 }
