@@ -30,6 +30,5 @@ public class PropertyDataEntity {
     private Transportation transportation;
     private Hospital hospital;
     private String userId;
-
 }
 

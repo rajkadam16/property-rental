@@ -149,6 +149,7 @@ userId=localStorage.getItem('userId');
       }),
 
       userId:this.userId,
+      status : 'pending',
       neighborHood: this.fb.group({
         title: ['neighborHood'],
         description: [''],
