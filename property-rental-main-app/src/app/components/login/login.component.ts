@@ -17,9 +17,7 @@ export class LoginComponent {
       password: ['', Validators.required]
     });
   }
-  // reloadComponent() {
-  //   window.location.;
-  // }
+
   
   onSubmit() {
     if (this.loginForm.valid) {
@@ -31,8 +29,6 @@ export class LoginComponent {
   
           localStorage.setItem('userId', response.userId); // Store user ID
           alert(response.message);
-          // this.reloadComponent()
-          // this.router.navigate(['/dashboard']); // Redirect to dashboard
           window.location.assign('/dashboard');
         } else {
           console.error('Login error', response);

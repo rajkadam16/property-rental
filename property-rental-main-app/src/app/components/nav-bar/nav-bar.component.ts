@@ -11,7 +11,7 @@ export class NavBarComponent implements OnInit {
   heading: string = 'Cityscape rentals';
   isLoggedIn = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private readonly authService: AuthService, private readonly router: Router) {}
 
   ngOnInit() {
     // Check if user is logged in (if user ID exists in local storage)
