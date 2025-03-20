@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class BookingsComponent {
   bookings = [
-    { tenant: 'John Doe', property: 'Luxury Apartment', date: '2025-03-15', status: 'Pending' },
-    { tenant: 'Alice Smith', property: 'Beach House', date: '2025-03-16', status: 'Pending' },
-    { tenant: 'Robert Brown', property: 'Downtown Condo', date: '2025-03-17', status: 'Pending' },
-    { tenant: 'Emma Johnson', property: 'Cozy Studio', date: '2025-03-18', status: 'Pending' }
+    { tenant: 'Raj Kadam', property: 'Archer Towers', date: '2025-03-15', status: 'Pending' },
+    { tenant: 'Chetan Mohite', property: 'Oakwood Apartments', date: '2025-03-16', status: 'Accepted' },
+    { tenant: 'Ayan Pathan', property: 'Godrej The Trees', date: '2025-03-17', status: 'Pending' },
+    { tenant: 'Sandesh Babar', property: 'The Urban Oasis', date: '2025-03-18', status: 'Rejected' }
   ];
 
   

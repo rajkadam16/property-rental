@@ -1,6 +1,5 @@
 package com.property.rental.service.rest.controller;
 import com.property.rental.service.common.enity.PropertyDataEntity;
-import com.property.rental.service.common.model.PropertyDataResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

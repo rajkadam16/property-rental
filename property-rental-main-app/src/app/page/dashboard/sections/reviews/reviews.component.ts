@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ReviewsComponent {
   reviews = [
-    { user: 'John Doe', property: 'Luxury Apartment', rating: 5, feedback: 'Amazing experience! Highly recommended.' },
-    { user: 'Alice Smith', property: 'Beach House', rating: 4, feedback: 'Great stay, but the WiFi was slow.' },
-    { user: 'Robert Brown', property: 'Downtown Condo', rating: 3, feedback: 'Decent place, but a bit noisy at night.' },
-    { user: 'Emma Johnson', property: 'Cozy Studio', rating: 5, feedback: 'Perfect! Very clean and comfortable.' }
+    {  tenant: 'Raj Kadam', property: 'Archer Towers', rating: 5, feedback: 'Amazing experience! Highly recommended.' },
+    {  tenant: 'Chetan Mohite', property: 'Oakwood Apartments', rating: 4, feedback: 'Great stay, but the WiFi was slow.' },
+    { tenant: 'Ayan Pathan', property: 'Godrej The Trees', rating: 3, feedback: 'Decent place, but a bit noisy at night.' },
+    { tenant: 'Sandesh Babar', property: 'The Urban Oasis', rating: 5, feedback: 'Perfect! Very clean and comfortable.' }
   ];
 
   get averageRating(): number {
