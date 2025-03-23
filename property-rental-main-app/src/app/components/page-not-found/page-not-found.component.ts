@@ -10,7 +10,7 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 export class PageNotFoundComponent implements OnInit {
 
   pagenotfoundData:any[]=[];
-  constructor(private pageNotFound:CommonUtilitiesService) { }
+  constructor(private readonly pageNotFound:CommonUtilitiesService) { }
   ngOnInit(): void {
     this.pageNotFound.parseJsonFile(ApiConfig.pageNotFound).subscribe((data:any)=>{
       this.pagenotfoundData=data;

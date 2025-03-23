@@ -13,8 +13,14 @@ export class FeaturetteComponent {
   constructor(private readonly featurette: CommonUtilitiesService) { }
 
   ngOnInit(): void {
-    this.featurette.parseJsonFile(ApiConfig.featurette).subscribe((res: any) => {
-      this.featuretteData = res;
+    this.featurette.parseJsonFile(ApiConfig.featurette).subscribe({
+      next: (res: any) => {
+        this.featuretteData = res;
+      },
+      error: (err: any) => {
+        console.error("Error loading featurette data:", err);
+        this.featuretteData = []; // Set to empty array to prevent undefined errors
+      }
     });
 
   }

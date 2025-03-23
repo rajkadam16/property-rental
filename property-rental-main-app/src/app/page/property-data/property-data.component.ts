@@ -25,8 +25,6 @@ export class PropertyDataComponent implements OnInit {
   propertyEducation: Education[] = [];
   transportations: Transportation[] = [];
   hospitals: Hospital[] = [];
-  // filterBy: any[] = [];
-  // data: any[] = [];  
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -44,8 +42,6 @@ export class PropertyDataComponent implements OnInit {
         console.error('Error fetching property details:', error);
         // Handle the error here, you can return a default value or empty arrays
         return of({
-          // filterBy: [],
-          // data: [],
           imgGallery: [],
           aboutUs: [],
           apartmentFeatures: [],
@@ -56,8 +52,6 @@ export class PropertyDataComponent implements OnInit {
         });
       })
     ).subscribe((response: any) => {
-      // this.filterBy = response.filterBy;
-      // this.data = response.data;  
       this.product = response;
       this.imgGallerys = response.imgGallery;
       this.aboutProperty = response.aboutUs;

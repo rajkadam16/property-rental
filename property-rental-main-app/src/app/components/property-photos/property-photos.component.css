@@ -1,8 +1,0 @@
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  background-color: black; /* Makes the icons black */
-  width: 50px; /* Increases icon width */
-  height: 50px; /* Increases icon height */
-  border-radius: 50%; /* Makes the icons circular (optional) */
-}

@@ -10,13 +10,15 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
 })
 export class PropertiesComponent {
   properties: any[] = [];
-
+  loader: boolean = false;
   constructor(private readonly propertyService: CommonUtilitiesService, private readonly authService: AuthService,private readonly router:Router) {}
 
   ngOnInit() {
+    this.loader = true;
     const userId = this.authService.getUserId(); // Get user ID from local storage
     if (userId) {
       this.propertyService.getUserProperties(userId).subscribe(response => {
+        this.loader = false;  
         this.properties = response;
       });
     }
