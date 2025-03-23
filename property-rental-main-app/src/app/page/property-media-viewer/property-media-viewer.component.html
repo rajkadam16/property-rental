@@ -2,7 +2,6 @@
   <!-- Header Section -->
   <div class="flex justify-between items-center border-b pb-3">
     <div class="text-center w-full">
-      <!-- <h1 class="fw-bold text-xl text-gray-800">{{propertyName}}</h1> -->
     </div>
     <div class="absolute right-4">
       <button type="button" class="btn btn-success rounded-pill px-4" routerLink="/propertydetails/"
@@ -15,7 +14,7 @@
   <!-- Tabs Section -->
   <div class="tabs mt-4">
     <!-- Navigation Tabs -->
-    <ul class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
+    <div class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active text-gray-800 fw-bold" id="photo-tab" data-bs-toggle="tab"
           data-bs-target="#photo" type="button" role="tab" aria-controls="photo" aria-selected="true">
@@ -34,7 +33,7 @@
           Property Map
         </button>
       </li>
-    </ul>
+    </div>
 
     <!-- Tab Content -->
     <div class="tab-content rounded-lg shadow-sm p-3" id="myTabContent">
@@ -55,11 +54,7 @@
       </div>
       <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
         <div class="carousel-container">
-          <!-- when data came from json file map was not working properly so i have hardcoded the lat and long values  -->
-          <!-- <app-map [lat]="propertyMapPositionInLat" [lng]="propertyMapPositionInLong" [zoom]="14"></app-map> --> 
           <app-map [lat]="19.063813" [lng]="72.915593" [zoom]="14"></app-map> 
-          <!-- {{propertyMapPositionInLat|json}} lat value -->
-          <!-- {{propertyMapPositionInLong|json}} long value -->
         </div>
       </div>
     </div>

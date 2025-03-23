@@ -13,10 +13,17 @@ export class FaqsComponent {
   constructor(public faq: CommonUtilitiesService) { }
 
   ngOnInit(): void {
-    this.faq.parseJsonFile(ApiConfig.faqs).subscribe((res: any) => {
-      this.faqData = res.mainfaqs;
+    this.faq.parseJsonFile(ApiConfig.faqs).subscribe({
+      next: (res: any) => {
+        this.faqData = res.mainfaqs;
+      },
+      error: (err: any) => {
+        console.error("Error loading FAQ data:", err);
+        this.faqData = []; // Set to empty array to prevent undefined errors
+      }
     });
   }
+  
   togglePanel(panel: any) {
     panel.isOpen = !panel.isOpen;
   }

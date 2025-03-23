@@ -14,9 +14,14 @@ export class FooterComponent {
   constructor(private readonly footer3: CommonUtilitiesService) { }
   
   ngOnInit(): void {
-    this.footer3.parseJsonFile(ApiConfig.footer).subscribe((res: any) => {
-      this.mains = res.main;
-      this.sections = res.sections;
+    this.footer3.parseJsonFile(ApiConfig.footer).subscribe({
+      next: (data:any) => {
+        this.mains = data.main;
+        this.sections = data.sections;
+      },
+      error: (error) => {
+        console.error('There was an error!', error);
+      }
     });
   }
 }

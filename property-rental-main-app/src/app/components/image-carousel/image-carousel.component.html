@@ -1,35 +1,7 @@
-<!-- <div *ngIf="imageCarousel" [id]="imageCarousel.id" class="carousel slide" 
-     (mouseenter)="stopCarousel()" 
-     (mouseleave)="startCarousel()" 
-     [attr.data-bs-ride]="imageCarousel.id">
-  <div class="carousel-inner">
-    <div *ngFor="let image of imageCarousel.images; let i = index" 
-         class="carousel-item h-100" 
-         [ngClass]="{ 'active': i === currentIndex }" width="150px" height="100px">
-      <img [src]="image.url" class="" [alt]="image.alt || 'Image'" [style]="imageCarouselStyle"
-      class="img-fluid" >
-    </div>
-  </div>
-  <button class="carousel-control-prev" (click)="previousImage()" role="button" aria-label="Previous">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" (click)="nextImage()" role="button" aria-label="Next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
- -->
-
- <div *ngIf="data" [id]="data.id" class="carousel slide" 
- (mouseenter)="stopCarousel()" 
- (mouseleave)="startCarousel()" 
- [attr.data-bs-ride]="data.id">
+<div *ngIf="data" [id]="data.id" class="carousel slide" (mouseenter)="stopCarousel()" (mouseleave)="startCarousel()" [attr.data-bs-ride]="data.id">
 <div class="carousel-inner">
-<div *ngFor="let image of data.images; let i = index" 
-     class="carousel-item h-100" 
-     [ngClass]="{ 'active': i === currentIndex }">
-  <img [src]="image.url" class="img-fluid" [alt]="image.alt || 'Image'" [style]="imageStyle">
+<div *ngFor="let image of data.images; let i = index" class="carousel-item h-100" [ngClass]="{ 'active': i === currentIndex }">
+  <img [src]="image.url" class="img-fluid" [alt]="image.alt" [style]="imageStyle">
 </div>
 </div>
 <button class="carousel-control-prev" (click)="previousImage()" role="button" aria-label="Previous">

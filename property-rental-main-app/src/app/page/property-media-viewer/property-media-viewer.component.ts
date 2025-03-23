@@ -11,8 +11,6 @@ import { ImageGallery } from 'src/app/core/models/interface';
   styleUrls: ['./property-media-viewer.component.css']
 })
 export class PropertyMediaViewerComponent {
-
-
   imgGallerys: ImageGallery[] = [];
 
   propertyImageCarouselStyle: any = {
@@ -31,9 +29,13 @@ export class PropertyMediaViewerComponent {
 
   ngOnInit(): void {
     const productId = this.route.parent?.snapshot.params['id']; //backend api
-    // const productId = Number(this.route.snapshot.paramMap.get('id')); //json file
-    this.propertyDataService.getProductById(productId).subscribe((response: any) => {
-      this.imgGallerys = response.imgGallery;
+    this.propertyDataService.getProductById(productId).subscribe({
+      next: (data) => {
+        this.imgGallerys = data.imgGallery;
+      },
+      error: (error) => {
+        console.error('There was an error!', error);
+      }
     });
   }
 

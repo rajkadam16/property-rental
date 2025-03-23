@@ -6,11 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./appartment-data.component.css']
 })
 export class AppartmentDataComponent {
-//   @Input() apartmentData: any = {
-//     propertyDetails: {
-//         name: "",
-//     }
-// };
 @Input() apartmentData: any ;
 
 @Input() unitsData: any = { cols: [], rows: [] };

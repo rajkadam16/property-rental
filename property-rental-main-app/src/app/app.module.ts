@@ -14,8 +14,6 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MapComponent } from './components/map/map.component';
 import { PropertyDataComponent } from './page/property-data/property-data.component';
 import { PropertyMediaViewerComponent } from './page/property-media-viewer/property-media-viewer.component';
-import { PropertyPhotosComponent } from './components/property-photos/property-photos.component';
-import { PropertyFloorPlanComponent } from './components/property-floor-plan/property-floor-plan.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { PropertyCardsComponent } from './components/property-cards/property-cards.component';
 import { CommonModule } from '@angular/common';
@@ -35,6 +33,7 @@ import { PropertiesComponent } from './page/dashboard/sections/properties/proper
 import { BookingsComponent } from './page/dashboard/sections/bookings/bookings.component';
 import { EarningsComponent } from './page/dashboard/sections/earnings/earnings.component';
 import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.component';
+import { LoderComponent } from './components/loder/loder.component';
 
 
 
@@ -51,8 +50,6 @@ import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.comp
     MapComponent,
     PropertyDataComponent,
     PropertyMediaViewerComponent,
-    PropertyPhotosComponent,
-    PropertyFloorPlanComponent,
     PropertyCardsComponent,
     PropertyMediaViewerComponent,
     FilterCardsPipe,
@@ -69,6 +66,7 @@ import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.comp
     BookingsComponent,
     EarningsComponent,
     ReviewsComponent,
+    LoderComponent,
     
   ],
   imports: [
