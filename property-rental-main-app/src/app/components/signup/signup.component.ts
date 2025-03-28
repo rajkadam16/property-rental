@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AlertService } from 'src/app/core/service/alert.service';
 import { AuthService } from 'src/app/core/service/auth.service';
 
 
@@ -12,7 +13,7 @@ import { AuthService } from 'src/app/core/service/auth.service';
 export class SignupComponent {
   signupForm: FormGroup;
 
-  constructor(private readonly fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) {
+  constructor(private readonly fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router,private readonly alertService: AlertService) {
     this.signupForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -25,12 +26,14 @@ export class SignupComponent {
   onSubmit() {
     if (this.signupForm.valid) {
       this.authService.signup(this.signupForm.value).subscribe(response => {
-        alert(response);
-        this.router.navigate(['/']); // Redirect to home page
+        console.log('Signup successful:', response);
+        this.alertService.showAlert('Signup successful! 🎉'); // Fix message
+        this.router.navigate(['/']);
       }, error => {
         console.error('Signup error', error);
-        alert('Signup failed');
+        this.alertService.showAlert('Signup failed!');
       });
     }
   }
+  
 }

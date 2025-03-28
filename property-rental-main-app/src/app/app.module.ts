@@ -34,6 +34,7 @@ import { BookingsComponent } from './page/dashboard/sections/bookings/bookings.c
 import { EarningsComponent } from './page/dashboard/sections/earnings/earnings.component';
 import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.component';
 import { LoderComponent } from './components/loder/loder.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 
@@ -67,6 +68,7 @@ import { LoderComponent } from './components/loder/loder.component';
     EarningsComponent,
     ReviewsComponent,
     LoderComponent,
+    AlertComponent,
     
   ],
   imports: [
