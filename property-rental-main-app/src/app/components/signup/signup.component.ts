@@ -22,18 +22,16 @@ export class SignupComponent {
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
-
   onSubmit() {
     if (this.signupForm.valid) {
       this.authService.signup(this.signupForm.value).subscribe(response => {
-        console.log('Signup successful:', response);
-        this.alertService.showAlert('Signup successful! 🎉'); // Fix message
+        this.alertService.showAlert('Signup successful! 🎉', 'success'); // Green
         this.router.navigate(['/']);
       }, error => {
-        console.error('Signup error', error);
-        this.alertService.showAlert('Signup failed!');
+        this.alertService.showAlert('Signup failed! Try again.', 'error'); // Red
       });
     }
   }
+  
   
 }

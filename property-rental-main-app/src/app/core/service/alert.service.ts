@@ -4,16 +4,17 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AlertService {
-  private readonly alertMessage = new BehaviorSubject<string | null>('Welcome to Property Management! 🚀');
+  private alertMessage = new BehaviorSubject<string | null>(null);
   alertMessage$ = this.alertMessage.asObservable();
 
-  constructor() {
-    // Automatically clear the welcome message after 3 seconds
-    setTimeout(() => this.clearAlert(), 3000);
-  }
+  private alertType = new BehaviorSubject<string>('success'); // Default is success
+  alertType$ = this.alertType.asObservable();
 
-  showAlert(message: string) {
+  showAlert(message: string, type: 'success' | 'error' | 'warning' = 'success') {
     this.alertMessage.next(message);
+    this.alertType.next(type);
+
+    // Hide after 3 seconds
     setTimeout(() => this.clearAlert(), 3000);
   }
 

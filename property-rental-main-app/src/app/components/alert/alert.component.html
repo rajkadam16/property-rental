@@ -1,4 +1,6 @@
-<div *ngIf="message$ | async as message" class="alert-box">
-  <p>{{ message }}</p>
-  <span class="close-btn" (click)="closeAlert()">×</span>
+<div *ngIf="message$ | async as message">
+  <div *ngIf="alertType$ | async as type" [ngClass]="['alert-box', type]">
+    <p>{{ message }}</p>
+    <span class="close-btn" (click)="closeAlert()">×</span>
+  </div>
 </div>
