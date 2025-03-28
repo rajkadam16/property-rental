@@ -16,7 +16,7 @@ constructor(private readonly authService: AuthService,private readonly router:Ro
   logout() {
     this.authService.logout();
     this.isLoggedIn = false;
-    this.alertService.showAlert('Logout successful! 🎉');
+    this.alertService.showAlert('Logout successful! 🎉','success');
     this.router.navigate(['/login']);
   }
 }

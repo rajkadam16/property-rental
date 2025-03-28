@@ -8,8 +8,9 @@ import { AlertService } from 'src/app/core/service/alert.service';
 })
 export class AlertComponent {
   message$ = this.alertService.alertMessage$;
+  alertType$ = this.alertService.alertType$;
 
-  constructor(private readonly alertService: AlertService) {}
+  constructor(private alertService: AlertService) {}
 
   closeAlert() {
     this.alertService.clearAlert();
