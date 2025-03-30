@@ -10,7 +10,7 @@ export class AlertComponent {
   message$ = this.alertService.alertMessage$;
   alertType$ = this.alertService.alertType$;
 
-  constructor(private alertService: AlertService) {}
+  constructor(private readonly alertService: AlertService) {}
 
   closeAlert() {
     this.alertService.clearAlert();
