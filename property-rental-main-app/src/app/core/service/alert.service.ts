@@ -4,10 +4,10 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AlertService {
-  private alertMessage = new BehaviorSubject<string | null>(null);
+  private readonly alertMessage = new BehaviorSubject<string | null>(null);
   alertMessage$ = this.alertMessage.asObservable();
 
-  private alertType = new BehaviorSubject<string>('success'); // Default is success
+  private readonly alertType = new BehaviorSubject<string>('success'); // Default is success
   alertType$ = this.alertType.asObservable();
 
   showAlert(message: string, type: 'success' | 'error' | 'warning' = 'success') {
