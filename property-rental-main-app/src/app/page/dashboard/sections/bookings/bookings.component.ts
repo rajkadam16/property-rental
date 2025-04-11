@@ -43,7 +43,7 @@ export class BookingsComponent {
       );
   
       const data: unknown = await response.json();
-      console.log(data);
+      // console.log(data);
   
       if (!response.ok) {
         throw new Error("Failed to update request status");

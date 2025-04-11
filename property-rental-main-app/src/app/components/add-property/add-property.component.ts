@@ -399,16 +399,16 @@ userId=localStorage.getItem('userId');
         formValue.availableUnits.rows[index].kitchen = this.logselectedKitchen(index);
     });
 
-    console.log('Final Form Data:', formValue);  // Log the processed data
+    // console.log('Final Form Data:', formValue);  // Log the processed data
 
   if (this.propertyForm.valid) {
     const propertyData = this.propertyForm.value;
     this.propertyService.addProperty(propertyData).subscribe({
         next: (response) => {
-            console.log('Property saved:', response);
+            // console.log('Property saved:', response);
         },
         error: (error) => {
-            console.error('Error saving property:', error);
+            // console.error('Error saving property:', error);
         }
     });
 }
