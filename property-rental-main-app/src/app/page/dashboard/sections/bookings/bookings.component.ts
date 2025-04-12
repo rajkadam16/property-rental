@@ -24,10 +24,6 @@ export class BookingsComponent {
     }
   }
 
-  // updateStatus(booking: any, newStatus: string) {
-  //   booking.status = newStatus;
-  //   this.filterStatus('all'); // Refresh list
-  // }
   async updateStatus(requestId: any, status: string): Promise<void> {
     try {
       const response: Response = await fetch(
@@ -36,14 +32,12 @@ export class BookingsComponent {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
-            // Authorization: "Bearer ADMIN_TOKEN",
           },
           body: JSON.stringify({ status }),
         }
       );
   
       const data: unknown = await response.json();
-      // console.log(data);
   
       if (!response.ok) {
         throw new Error("Failed to update request status");

@@ -47,12 +47,10 @@
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
-
       <div class="ml-4 tab-pane fade show active" id="Basic-Info" role="tabpanel" aria-labelledby="home-tab">
         <div formGroupName="propertyDetails">
           <div formGroupName="contactUs">
             <div class="mt-3">
-
               <label for="phone" class="block text-lg pl-4">Phone number :</label>
               <input type="tel" formControlName="phone" id="phone" name="phone" pattern="^[7-9]{1}[0-9]{9}$"
                 placeholder="9123456789" class="ml-4 pl-2 mt-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
@@ -67,7 +65,6 @@
           <div formGroupName="officeHours" class="ml-4 mt-4">
             <label>Your Availableness :</label>
             <div>
-
               <label for="contact at">Available time :</label>
               <select formControlName="time" name="" id="time"
                 class="mt-2 ml-5 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md">
@@ -89,7 +86,6 @@
                 </option>
               </select>
             </div>
-
             <div formArrayName="workingDays" class="mt-3">
               <label for="weeks">Available Days:</label>
               <select [formControlName]="0" id="weeks" class="mt-2 ml-5 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md"
@@ -104,7 +100,6 @@
         </div>
         <hr class="mt-10" />
       </div>
-
       <div class="ml-4 tab-pane fade" id="Property-Details" role="tabpanel" aria-labelledby="propertyDetails-tab">
         <div formGroupName="propertyDetails">
           <div class="mt-3 ml-4">
@@ -114,7 +109,6 @@
               class="ml-3 pl-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
           </div>
           <div formGroupName="address" class="ml-4">
-
             <div class="mt-3 flex gap-14">
               <div class="mt-2">
                 <label for="address1 " class="block">
@@ -127,7 +121,6 @@
                 <input type="text" name="aptNumber" formControlName="aptNumber"
                   class="mt-2 w-40 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
               </div>
-
               <div class="mt-2">
                 <label for="zipCode" class="block">zipcode :</label>
                 <input type="text" id="zipCode" formControlName="zipCode" name=""
@@ -167,8 +160,6 @@
               </div>
             </div>
           </div>
-
-
           <div class="mt-3 flex">
             <div class="ml-4 mt-2">
               <label for="area" class="block">Area :</label>
@@ -199,7 +190,6 @@
             <input type="radio" id="Appartment5" formControlName="type" name="type" value="Luxury Apartment" /><label>
               Luxury Apartment</label>
           </div>
-
           <div class="ml-4 mt-3 flex gap-2">
             <label for="parking" class="block">Parking :</label>
             <input type="radio" id="parking1" formControlName="parking" name="parking" value="2 wheeler" /><label>2
@@ -209,7 +199,6 @@
             <input type="radio" id="parking3" formControlName="parking" name="parking" value="Not allowed" /><label>Not
               allowed</label>
           </div>
-
           <div formArrayName="amenities" class="ml-4 mt-3">
             <label class="block"> Appartment Amenities :</label>
             <div class="flex flex-wrap mt-2">
@@ -237,9 +226,7 @@
         </div>
         <hr />
       </div>
-
       <div class="ml-4 mt-3 tab-pane fade" id="About-property" role="tabpanel" aria-labelledby="AboutProperty-tab">
-
         <div formGroupName="aboutUs" class="ml-4">
           <div class="">
             <label class="block"> About Property :</label>
@@ -254,8 +241,6 @@
               class="mt-2 pl-3 w-[30vw] h-20 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
           </div>
         </div>
-
-
         <div formGroupName="apartmentFeatures" class="ml-4 mt-4">
           <div formArrayName="features">
             <label> Appartment Features :</label>
@@ -272,10 +257,8 @@
             </div>
           </div>
         </div>
-
         <hr class="mt-16" />
       </div>
-
       <div class="ml-4 mt-3 mb-4 tab-pane fade" id="Neighbourhood" role="tabpanel" aria-labelledby="Neighbourhood-tab">
         <div formGroupName="neighborHood" class="ml-4">
           <div>
@@ -290,8 +273,6 @@
               class="mt-2 pl-3 w-[30vw] h-20 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
           </div>
         </div>
-
-
         <div formGroupName="education" class="mt-2 ml-4">
           <div formArrayName="details">
             <div *ngFor="let detail of educationDetails.controls; let i = index" [formGroupName]="i">
@@ -301,7 +282,6 @@
                   <input type="text" formControlName="name" id="name" placeholder="School nearby.. "
                     class="pl-1 pt-1 mt-2 h-8 bg-[#e2dfd2] rounded-md shadow-md" />
                 </div>
-
                 <div>
                   <label class="block">School Adress:</label>
                   <textarea formControlName="address" id="adress" placeholder="....Address of school..."
@@ -406,7 +386,6 @@
             </div>
           </div>
         </div>
-
         <div formGroupName="transportation" class="mt-2 ml-4">
           <div formArrayName="details">
             <div *ngFor="let transport of transportDetails.controls; let i = index" [formGroupName]="i">
@@ -522,7 +501,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="mt-3 flex gap-2">
                 <label for="furnishing" class="block">Furnishing Type:</label>
 
@@ -535,8 +513,6 @@
                 <input type="radio" formControlName="furnishing" value="Unfurnished" id="furnishing3">
                 <label for="furnishing3">Unfurnished</label>
               </div>
-
-
               <div class="flex gap-[80vh]">
                 <div *ngIf="i === availableUnits.length - 1">
                   <button type="button" (click)="addHighlights()">
@@ -554,17 +530,11 @@
           </div>
         </div>
       </div>
-
       <div class="tab-pane fade" id="Images" role="tabpanel" aria-labelledby="Images-tab">
-
-
         <div formArrayName="imgGallery" class="gallery-container">
-
           <div *ngFor="let gallery of imageGalleryFormArray.controls; let i = index" [formGroupName]="i"
             class="gallery-section border rounded p-3 mb-4 shadow-sm">
-
             <h5 class="text-primary mb-3">Gallery {{ i + 1 }}</h5>
-
             <div formArrayName="images">
               <div *ngFor="let image of getImagesFormArray(i).controls; let j = index" [formGroupName]="j"
                 class="image-group mb-3 p-3 border rounded bg-light">
@@ -593,16 +563,12 @@
                 + Add Image
               </button>
             </div>
-
           </div>
         </div>
-
         <div class="text-center mt-4">
           <button type="submit" class="btn btn-success">Add property</button>
         </div>
-
       </div>
-
     </div>
   </div>
 </form>

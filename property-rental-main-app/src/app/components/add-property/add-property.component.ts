@@ -1,4 +1,3 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
