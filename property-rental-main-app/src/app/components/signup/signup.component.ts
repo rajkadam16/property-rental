@@ -26,7 +26,7 @@ export class SignupComponent {
     if (this.signupForm.valid) {
       this.authService.signup(this.signupForm.value).subscribe(response => {
         this.alertService.showAlert('Signup successful! 🎉', 'success'); // Green
-        this.router.navigate(['/']);
+        setTimeout(() => this.router.navigate(['/login']), 2000);
       }, error => {
         this.alertService.showAlert('Signup failed! Try again.', 'error'); // Red
       });

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormArray, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlertService } from 'src/app/core/service/alert.service';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 @Component({
   selector: 'app-add-property',
@@ -88,7 +90,9 @@ userId=localStorage.getItem('userId');
 
   constructor(
     private readonly fb: FormBuilder,
-    private readonly propertyService: CommonUtilitiesService
+    private readonly propertyService: CommonUtilitiesService,
+    private readonly alert:AlertService,
+    private readonly router: Router
   ) {}
 
   ngOnInit() {
@@ -403,12 +407,20 @@ userId=localStorage.getItem('userId');
   if (this.propertyForm.valid) {
     const propertyData = this.propertyForm.value;
     this.propertyService.addProperty(propertyData).subscribe({
-        next: (response) => {
-            // console.log('Property saved:', response);
-        },
-        error: (error) => {
-            // console.error('Error saving property:', error);
-        }
+      next: (response) => {
+        console.log('Property added successfully:', response);
+        this.alert.showAlert('Property added successfully!', 'success'); // Green
+        this.propertyForm.reset();
+        this.router.navigate(['/dashboard']); // Redirect to the desired page after successful submission
+
+      },
+      error: (error) => {
+        console.error('Error adding property:', error);
+        this.alert.showAlert('Error adding property. Please try again.', 'error'); // Red
+      },
+      complete: () => {
+        console.log('Property addition process completed.');
+      }
     });
 }
 }

@@ -28,8 +28,6 @@ export class LoginComponent {
         } else {
           this.alertService.showAlert('Login failed!', 'error'); // Red
         }
-      }, error => {
-        this.alertService.showAlert('Server error, try again later!', 'error'); // Red
       });
     }
   }
