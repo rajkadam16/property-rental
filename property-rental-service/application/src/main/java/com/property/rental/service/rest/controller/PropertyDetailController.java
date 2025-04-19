@@ -1,6 +1,7 @@
 package com.property.rental.service.rest.controller;
 import com.property.rental.service.common.enity.PropertyDataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -45,10 +46,21 @@ public class PropertyDetailController {
 		return propertyDetailService.updatePropertyDetail(propertyDetail);
 	}
 
-	@DeleteMapping("delete/{propertyID}")
-	public Object deletePropertyDetail(@PathVariable String propertyID) {
-		return propertyDetailService.deletePropertyDetail(propertyID);
+
+
+	@DeleteMapping("/delete/{propertyID}")
+	public ResponseEntity<Map<String, String>> deleteProperty(@PathVariable("propertyID") String propertyID) {
+		try {
+			String result = propertyDetailService.deletePropertyDetail(propertyID);
+			Map<String, String> response = new HashMap<>();
+			response.put("message", result);
+			return ResponseEntity.ok(response);
+		} catch (Exception e) {
+			Map<String, String> response = new HashMap<>();
+			response.put("error", e.getMessage());
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+		}
 	}
-	
+
 
 }
