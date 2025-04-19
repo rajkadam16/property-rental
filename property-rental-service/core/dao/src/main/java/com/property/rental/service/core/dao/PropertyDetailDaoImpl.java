@@ -24,9 +24,11 @@ public class PropertyDetailDaoImpl implements PropertyDetailDao {
 		return propertyDetailRepo.findAll();
 	}
 
-	public String deletePropertyDetail(String propertyID) {
-		propertyDetailRepo.deleteById(propertyID);
-		return propertyID;
+	public boolean existsById(String propertyID) {
+		return propertyDetailRepo.existsById(propertyID);
+	}
+	public void deleteById(String propertyID) {
+	  propertyDetailRepo.deleteById(propertyID);
 	}
 
 	public String updatePropertyDetail(PropertyDataEntity propertyDetail) {

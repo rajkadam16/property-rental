@@ -34,9 +34,13 @@ public class PropertyDetailServiceImpl implements PropertyDetailService  {
 
 	@Override
 	public String deletePropertyDetail(String propertyID) {
-		return propertyDetailDao.deletePropertyDetail(propertyID);
+		if (propertyDetailDao.existsById(propertyID)) {
+			propertyDetailDao.deleteById(propertyID);
+			return "Property deleted successfully!";
+		} else {
+			return "Property not found!";
+		}
 	}
-
 	@Override
 	public String updatePropertyDetail(PropertyDataEntity propertyDetail) {
 		return propertyDetailDao.updatePropertyDetail(propertyDetail);

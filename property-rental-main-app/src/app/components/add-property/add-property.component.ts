@@ -402,16 +402,18 @@ userId=localStorage.getItem('userId');
         formValue.availableUnits.rows[index].kitchen = this.logselectedKitchen(index);
     });
 
-    // console.log('Final Form Data:', formValue);  // Log the processed data
+
 
   if (this.propertyForm.valid) {
     const propertyData = this.propertyForm.value;
     this.propertyService.addProperty(propertyData).subscribe({
       next: (response) => {
         console.log('Property added successfully:', response);
-        this.alert.showAlert('Property added successfully!', 'success'); // Green
-        this.propertyForm.reset();
-        this.router.navigate(['/dashboard']); // Redirect to the desired page after successful submission
+        this.alert.showAlert('Property added successfully', 'success'); // Show success alert
+        setTimeout(() => {
+          this.propertyForm.reset();
+          this.router.navigate(['/dashboard']);
+        }, 2000); // Redirect after 2 seconds
 
       },
       error: (error) => {

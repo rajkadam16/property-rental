@@ -15,10 +15,6 @@ export class CommonUtilitiesService {
     return this.http.get<any[]>(`${ApiConfig.propertyData}/get/all`);
   }
 
-  // through json
-  // getProducts(): Observable<any[]> {
-  //   return this.http.get<any[]>(`${ApiConfig.propertyData}`);
-  // }
   
   getProductById(id: number): Observable<any> {
     return this.getProducts().pipe(
@@ -42,9 +38,17 @@ export class CommonUtilitiesService {
     );
   }
   
-  deleteProperty(propertyId: string): Observable<any> {
-    return this.http.delete(`${ApiConfig.propertyData}/${propertyId}`);
+  // deleteProperty(propertyId: string): Observable<any> {
+  //   return this.http.delete(`${ApiConfig.propertyData}/delete/${propertyId}`);
+  // }
+  deleteProperty(id: string): Observable<any> {
+    return this.http.delete(`http://localhost:8080/property/delete/${id}`,{
+      responseType: 'text' as 'json'
+    });
+    
   }
+  
+  
   parseJsonFile(path: string) {
     return this.http.get(path);
   }

@@ -9,10 +9,12 @@ public interface PropertyDetailDao {
 	List<PropertyDataEntity> getUserProperties(String userId);
 	public List<PropertyDataEntity> getAllPropertyDetails();
 	
-	public String deletePropertyDetail(String propertyID);
+	public void deleteById(String propertyID);
 
 	public String updatePropertyDetail(PropertyDataEntity propertyDetail);
 
 	public String addPropertyDetail(PropertyDataEntity propertyDetail);
+
+	public boolean existsById(String propertyID);
 
 }
