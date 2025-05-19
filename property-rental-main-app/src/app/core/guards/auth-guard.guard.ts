@@ -9,13 +9,13 @@ export class authGuardGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(): boolean {
-    const userId = localStorage.getItem('userId'); // Check if user ID is stored
+    const token = localStorage.getItem('token'); // ✅ Check for JWT token
 
-    if (userId) {
-      return true; // User is logged in, allow access
+    if (token) {
+      return true; // Token exists, allow access
     } else {
-      alert("You must be logged in to accses this page!");
-      this.router.navigate(['/login']); // Redirect to login page
+      alert("You must be logged in to access this page!");
+      this.router.navigate(['/login']); // Redirect to login
       return false; // Block access
     }
   }

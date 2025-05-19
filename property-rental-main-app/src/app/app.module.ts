@@ -35,6 +35,7 @@ import { EarningsComponent } from './page/dashboard/sections/earnings/earnings.c
 import { ReviewsComponent } from './page/dashboard/sections/reviews/reviews.component';
 import { LoderComponent } from './components/loder/loder.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { JwtInterceptor } from './core/service/jwt-interceptor.service';
 
 
 
@@ -82,7 +83,7 @@ import { AlertComponent } from './components/alert/alert.component';
     NgxPaginationModule ,
   ],
   providers: [
-    AuthService
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

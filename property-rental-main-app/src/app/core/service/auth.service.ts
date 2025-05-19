@@ -8,8 +8,9 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
 export class AuthService {
 
   private readonly baseUrl = 'http://localhost:8080/account'; // Update this with your backend URL
-  private readonly loginStatus = new BehaviorSubject<boolean>(!!localStorage.getItem('userId'));
+  private readonly loginStatus = new BehaviorSubject<boolean>(!!localStorage.getItem('token'));
   loginStatus$ = this.loginStatus.asObservable();
+  
   constructor(private readonly http: HttpClient) { }
 
 
@@ -19,24 +20,33 @@ export class AuthService {
   }
   
 
+
+
   login(credentials: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    
+  
     return this.http.post(`${this.baseUrl}/login`, credentials, { headers }).pipe(
       map((response: any) => {
-        // Response is already a JSON object, no need to manually parse
-        if (response.success) {
-          return { success: true, message: response.message, userId: response.userId };
+        if (response.token && response.userId) {
+          localStorage.setItem('token', response.token);
+          localStorage.setItem('userId', response.userId);
+          return { success: true };
         } else {
-          return { success: false, message: response.message };
+          return { success: false };
         }
       })
     );
   }
   
-
-  saveUserId(userId: string) {
+  saveLoginData(userId: string, token: string) {
     localStorage.setItem('userId', userId);
+    localStorage.setItem('token', token);
+    this.loginStatus.next(true);
+  }
+  
+  
+  saveUserId(userId: string) {
+    localStorage.setItem('token', userId);
     this.loginStatus.next(true); // Update login status
   }
 
@@ -45,6 +55,7 @@ export class AuthService {
   }
 
   logout() {
+    localStorage.removeItem('token');
     localStorage.removeItem('userId');
     this.loginStatus.next(false); // Update login status
   }

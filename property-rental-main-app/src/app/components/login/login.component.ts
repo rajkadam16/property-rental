@@ -18,15 +18,30 @@ export class LoginComponent {
     });
   }
 
+  // onSubmit() {
+  //   if (this.loginForm.valid) {
+  //     this.authService.login(this.loginForm.value).subscribe(response => {
+  //       if (response.success) {
+  //         localStorage.setItem('userId', response.userId);
+  //         localStorage.setItem('token', response.token); // Also store token
+  //         // this.authService.loginStatus.next(true);
+  //         this.alertService.showAlert('Login successful 🎉', 'success');
+  //         setTimeout(() => window.location.assign('/dashboard'), 2000);
+  //       }
+  //       else {
+  //         this.alertService.showAlert('Login failed!', 'error'); // Red
+  //       }
+  //     });
+  //   }
+  // }
   onSubmit() {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe(response => {
         if (response.success) {
-          localStorage.setItem('userId', response.userId);
-          this.alertService.showAlert('Login successful 🎉', 'success'); // Green
+          this.alertService.showAlert('Login successful 🎉', 'success');
           setTimeout(() => window.location.assign('/dashboard'), 2000);
         } else {
-          this.alertService.showAlert('Login failed!', 'error'); // Red
+          this.alertService.showAlert('Login failed!', 'error');
         }
       });
     }

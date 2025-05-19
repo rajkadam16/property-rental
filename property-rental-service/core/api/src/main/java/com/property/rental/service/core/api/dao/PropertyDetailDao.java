@@ -6,15 +6,10 @@ import com.property.rental.service.common.enity.PropertyDataEntity;
 
 public interface PropertyDetailDao {
 
-	List<PropertyDataEntity> getUserProperties(String userId);
-	public List<PropertyDataEntity> getAllPropertyDetails();
-	
-	public void deleteById(String propertyID);
-
-	public String updatePropertyDetail(PropertyDataEntity propertyDetail);
-
-	public String addPropertyDetail(PropertyDataEntity propertyDetail);
-
-	public boolean existsById(String propertyID);
+List<PropertyDataEntity> findByUserId(String userId);
+	List<PropertyDataEntity> findAll();
+	boolean existsById(String propertyID);
+	void deleteById(String propertyID);
+	void save(PropertyDataEntity propertyDetail);
 
 }

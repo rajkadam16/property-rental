@@ -24,23 +24,30 @@ export class CommonUtilitiesService {
 
 
   addProperty(property: any): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(`${ApiConfig.propertyData}/create`, property, { headers });
-  }
-
+    return this.http.post(`${ApiConfig.propertyData}/create`, property, {
+      withCredentials: true // Ensure credentials like cookies are sent
+    });
+}
+  
   getUserProperties(userId: string): Observable<any> {
     const url = `${ApiConfig.propertyData}/user/${userId}`;
-    return this.http.get(url).pipe(
+    const token = localStorage.getItem('token');
+  
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${token}`
+    });
+  
+    return this.http.get(url, { headers }).pipe(
       catchError(error => {
         console.error('Error fetching properties:', error);
-        return throwError(error);
+        return throwError(() => error);
       })
     );
   }
   
-  // deleteProperty(propertyId: string): Observable<any> {
-  //   return this.http.delete(`${ApiConfig.propertyData}/delete/${propertyId}`);
-  // }
+  
+  
+
   deleteProperty(id: string): Observable<any> {
     return this.http.delete(`http://localhost:8080/property/delete/${id}`,{
       responseType: 'text' as 'json'
