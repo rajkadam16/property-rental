@@ -6,61 +6,52 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import com.property.rental.service.core.api.service.PropertyDetailService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("property/")
+@RequestMapping("/property")
 public class PropertyDetailController {
-	private static final Logger logger = LoggerFactory.getLogger(PropertyDetailController.class);
 	@Autowired
 	private PropertyDetailService propertyDetailService;
 
-	@GetMapping("get/all")
-	public Object getAllPropertyDetails() {
-		return propertyDetailService.getAllPropertyDetails();
+	@GetMapping("/get/all")
+	public ResponseEntity<List<PropertyDataEntity>> getAllPropertyDetails() {
+		return ResponseEntity.ok(propertyDetailService.getAllPropertyDetails());
+	}
+	@GetMapping("/secure")
+	public ResponseEntity<String> secureEndpoint() {
+		return ResponseEntity.ok("You accessed a secured API!");
+	}
+	@CrossOrigin(origins = "http://localhost:4200")
+	@GetMapping("/user/{userId}")
+	public ResponseEntity<List<PropertyDataEntity>> getUserProperties(@PathVariable String userId) {
+		return ResponseEntity.ok(propertyDetailService.getUserProperties(userId));
 	}
 
-	@GetMapping("user/{userId}")
-	public ResponseEntity<?> getUserProperties(@PathVariable String userId) {
-		List<PropertyDataEntity> properties = propertyDetailService.getUserProperties(userId);
-		return ResponseEntity.ok(properties);
-	}
-
-	@PostMapping("create")
-	public ResponseEntity<?> addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
-		propertyDetailService.addPropertyDetail(propertyDetail);
+	@PostMapping("/create")
+	public ResponseEntity<Map<String, String>> addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
+		String message = propertyDetailService.addPropertyDetail(propertyDetail);
 		Map<String, String> response = new HashMap<>();
-		response.put("message", "Property created successfully");
+		response.put("message", message);
 		return ResponseEntity.ok(response);
 	}
 
-	@PutMapping("update")
-	public Object updatePropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
-		return propertyDetailService.updatePropertyDetail(propertyDetail);
+	@PutMapping("/update")
+	public ResponseEntity<Map<String, String>> updatePropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
+		String message = propertyDetailService.updatePropertyDetail(propertyDetail);
+		Map<String, String> response = new HashMap<>();
+		response.put("message", message);
+		return ResponseEntity.ok(response);
 	}
-
-
 
 	@DeleteMapping("/delete/{propertyID}")
 	public ResponseEntity<Map<String, String>> deleteProperty(@PathVariable("propertyID") String propertyID) {
-		try {
-			String result = propertyDetailService.deletePropertyDetail(propertyID);
-			Map<String, String> response = new HashMap<>();
-			response.put("message", result);
-			return ResponseEntity.ok(response);
-		} catch (Exception e) {
-			Map<String, String> response = new HashMap<>();
-			response.put("error", e.getMessage());
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
-		}
+		String message = propertyDetailService.deletePropertyDetail(propertyID);
+		Map<String, String> response = new HashMap<>();
+		response.put("message", message);
+		return ResponseEntity.ok(response);
 	}
-
-
 }

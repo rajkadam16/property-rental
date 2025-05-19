@@ -13,31 +13,32 @@ import com.property.rental.service.core.api.db.PropertyDetailRepo;
 @Repository("propertyDetailDao")
 public class PropertyDetailDaoImpl implements PropertyDetailDao {
 
-	@Autowired
- 	private	PropertyDetailRepo propertyDetailRepo;
+@Autowired
+private PropertyDetailRepo propertyDetailRepo;
 
-
-	public List<PropertyDataEntity> getUserProperties(String userId) {
+	@Override
+	public List<PropertyDataEntity> findByUserId(String userId) {
 		return propertyDetailRepo.findByUserId(userId);
 	}
-	public List<PropertyDataEntity> getAllPropertyDetails() {
+
+	@Override
+	public List<PropertyDataEntity> findAll() {
 		return propertyDetailRepo.findAll();
 	}
 
+	@Override
 	public boolean existsById(String propertyID) {
 		return propertyDetailRepo.existsById(propertyID);
 	}
+
+	@Override
 	public void deleteById(String propertyID) {
-	  propertyDetailRepo.deleteById(propertyID);
+		propertyDetailRepo.deleteById(propertyID);
 	}
 
-	public String updatePropertyDetail(PropertyDataEntity propertyDetail) {
-		 propertyDetailRepo.save(propertyDetail);
-		 return "";
+	@Override
+	public void save(PropertyDataEntity propertyDetail) {
+		propertyDetailRepo.save(propertyDetail);
 	}
 
-	public String addPropertyDetail(PropertyDataEntity propertyDetail) {
-		 propertyDetailRepo.save(propertyDetail);
-		 return "";
-	}
 }

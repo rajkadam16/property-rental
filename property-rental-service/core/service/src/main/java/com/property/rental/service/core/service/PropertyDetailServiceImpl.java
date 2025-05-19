@@ -18,38 +18,44 @@ import com.property.rental.service.core.api.service.PropertyDetailService;
 
 @Service("propertyDetailService")
 public class PropertyDetailServiceImpl implements PropertyDetailService  {
-	private static final Logger logger = LoggerFactory.getLogger(PropertyDetailServiceImpl.class);
+
+
 	@Autowired
 	private PropertyDetailDao propertyDetailDao;
 
 	@Override
 	public List<PropertyDataEntity> getUserProperties(String userId) {
-		return this.propertyDetailDao.getUserProperties(userId);
+		return propertyDetailDao.findByUserId(userId);
 	}
 
 	@Override
 	public List<PropertyDataEntity> getAllPropertyDetails() {
-		return  this.propertyDetailDao.getAllPropertyDetails();
+		return propertyDetailDao.findAll();
 	}
 
 	@Override
 	public String deletePropertyDetail(String propertyID) {
-		if (propertyDetailDao.existsById(propertyID)) {
+		boolean exists = propertyDetailDao.existsById(propertyID);
+		if (exists) {
 			propertyDetailDao.deleteById(propertyID);
 			return "Property deleted successfully!";
 		} else {
 			return "Property not found!";
 		}
 	}
+
 	@Override
 	public String updatePropertyDetail(PropertyDataEntity propertyDetail) {
-		return propertyDetailDao.updatePropertyDetail(propertyDetail);
+		propertyDetailDao.save(propertyDetail);
+		return "Property updated successfully!";
 	}
 
 	@Override
 	public String addPropertyDetail(PropertyDataEntity propertyDetail) {
-		return propertyDetailDao.addPropertyDetail(propertyDetail);
+		propertyDetailDao.save(propertyDetail);
+		return "Property added successfully!";
 	}
-	
+
+
 
 }

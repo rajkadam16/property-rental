@@ -53,6 +53,8 @@ export class PropertiesComponent {
         this.loader = false;
       }
     });
+    console.log('Stored token:', localStorage.getItem('token'));
+console.log('Stored userId:', localStorage.getItem('userId'));
   }
   
 }
