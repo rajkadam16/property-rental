@@ -1,0 +1,341 @@
+# Postman Test Data - Authentication & Authorization
+
+## 📍 Base URL
+```
+http://localhost:8080
+```
+
+---
+
+## 1️⃣ SIGNUP - Register New User
+
+### Endpoint
+```
+POST http://localhost:8080/account/signup
+```
+
+### Headers
+```
+Content-Type: application/json
+```
+
+### Test User 1 (Regular User)
+```json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "password123",
+  "contactNumber": "9876543210"
+}
+```
+
+### Test User 2 (Another User)
+```json
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@example.com",
+  "password": "securePass456",
+  "contactNumber": "9876543211"
+}
+```
+
+### Test User 3 (Admin - for future use)
+```json
+{
+  "firstName": "Admin",
+  "lastName": "User",
+  "email": "admin@example.com",
+  "password": "admin123",
+  "contactNumber": "9876543212"
+}
+```
+
+### Expected Response
+```json
+{
+  "message": "User registered successfully"
+}
+```
+
+---
+
+## 2️⃣ LOGIN - Get JWT Token
+
+### Endpoint
+```
+POST http://localhost:8080/account/login
+```
+
+### Headers
+```
+Content-Type: application/json
+```
+
+### Login User 1
+```json
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+```
+
+### Login User 2
+```json
+{
+  "email": "jane.smith@example.com",
+  "password": "securePass456"
+}
+```
+
+### Login Admin
+```json
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+```
+
+### Expected Response
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoxNzAwMDg2NDAwfQ.xxxxx",
+  "userId": "507f1f77bcf86cd799439011"
+}
+```
+
+**💡 Copy the `token` value - you'll need it for protected endpoints!**
+
+---
+
+## 3️⃣ GET ALL PROPERTIES (Public - No Auth)
+
+### Endpoint
+```
+GET http://localhost:8080/property/get/all
+```
+
+### Headers
+```
+(No headers needed - public endpoint)
+```
+
+---
+
+## 4️⃣ CREATE PROPERTY (Protected - Requires Auth)
+
+### Endpoint
+```
+POST http://localhost:8080/property/create
+```
+
+### Headers
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+```
+
+**⚠️ Replace `YOUR_JWT_TOKEN_HERE` with the actual token from login response**
+
+### Property 1 - Luxury Apartment
+```json
+{
+  "propertyName": "Luxury Apartment in Mumbai",
+  "propertyType": "Apartment",
+  "price": 25000,
+  "location": "Bandra, Mumbai",
+  "description": "3BHK luxury apartment with sea view",
+  "userId": "YOUR_USER_ID_HERE"
+}
+```
+
+### Property 2 - Villa
+```json
+{
+  "propertyName": "Modern Villa",
+  "propertyType": "Villa",
+  "price": 50000,
+  "location": "Pune",
+  "description": "4BHK villa with private garden",
+  "userId": "YOUR_USER_ID_HERE"
+}
+```
+
+### Property 3 - Office Space
+```json
+{
+  "propertyName": "Commercial Office Space",
+  "propertyType": "Office",
+  "price": 75000,
+  "location": "BKC, Mumbai",
+  "description": "2000 sq ft office space",
+  "userId": "YOUR_USER_ID_HERE"
+}
+```
+
+**⚠️ Replace `YOUR_USER_ID_HERE` with the actual userId from login response**
+
+---
+
+## 5️⃣ GET USER PROPERTIES (Protected - Requires Auth)
+
+### Endpoint
+```
+GET http://localhost:8080/property/user/YOUR_USER_ID_HERE
+```
+
+### Headers
+```
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+```
+
+**⚠️ Replace both `YOUR_USER_ID_HERE` and `YOUR_JWT_TOKEN_HERE`**
+
+---
+
+## 6️⃣ UPDATE PROPERTY (Protected - Requires Auth)
+
+### Endpoint
+```
+PUT http://localhost:8080/property/update
+```
+
+### Headers
+```
+Content-Type: application/json
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+```
+
+### Body
+```json
+{
+  "id": "PROPERTY_ID_HERE",
+  "propertyName": "Updated Luxury Apartment",
+  "propertyType": "Apartment",
+  "price": 30000,
+  "location": "Bandra, Mumbai",
+  "description": "Updated 3BHK luxury apartment with sea view and parking",
+  "userId": "YOUR_USER_ID_HERE"
+}
+```
+
+---
+
+## 7️⃣ DELETE PROPERTY (Protected - Requires Auth)
+
+### Endpoint
+```
+DELETE http://localhost:8080/property/delete/PROPERTY_ID_HERE
+```
+
+### Headers
+```
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+```
+
+**⚠️ Replace `PROPERTY_ID_HERE` with actual property ID**
+
+---
+
+## 🧪 Test Scenarios in Postman
+
+### Scenario 1: Complete User Flow
+1. **Signup** with User 1 data
+2. **Login** with User 1 credentials → Save token
+3. **Create Property** using the token
+4. **Get User Properties** to verify creation
+5. **Get All Properties** (public) to see all listings
+
+### Scenario 2: Test Authentication
+1. Try **Create Property** WITHOUT token → Should get 401 Unauthorized
+2. **Login** to get token
+3. Try **Create Property** WITH token → Should succeed
+
+### Scenario 3: Test Invalid Credentials
+1. **Login** with wrong password:
+```json
+{
+  "email": "john.doe@example.com",
+  "password": "wrongpassword"
+}
+```
+→ Should get 401 Unauthorized
+
+### Scenario 4: Test Invalid Token
+1. **Create Property** with fake token:
+```
+Authorization: Bearer fake_invalid_token_12345
+```
+→ Should get 401 Unauthorized
+
+---
+
+## 📝 Postman Collection Setup
+
+### Create Collection: "Property Rental Auth"
+
+#### Environment Variables (Optional)
+Create environment with:
+- `baseUrl`: `http://localhost:8080`
+- `token`: (will be set after login)
+- `userId`: (will be set after login)
+
+#### Auto-Save Token Script
+In Login request, add to **Tests** tab:
+```javascript
+var jsonData = pm.response.json();
+pm.environment.set("token", jsonData.token);
+pm.environment.set("userId", jsonData.userId);
+```
+
+Then use in other requests:
+```
+Authorization: Bearer {{token}}
+```
+
+---
+
+## ✅ Expected Results Checklist
+
+- [ ] Signup creates user with encrypted password
+- [ ] Login returns JWT token and userId
+- [ ] Public endpoints work without token
+- [ ] Protected endpoints fail without token (401)
+- [ ] Protected endpoints work with valid token
+- [ ] Invalid credentials return 401
+- [ ] Invalid token returns 401
+- [ ] Token expires after 24 hours
+
+---
+
+## 🎯 Quick Copy-Paste for Postman
+
+**Signup:**
+```
+POST http://localhost:8080/account/signup
+Content-Type: application/json
+
+{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"password123","contactNumber":"9876543210"}
+```
+
+**Login:**
+```
+POST http://localhost:8080/account/login
+Content-Type: application/json
+
+{"email":"john.doe@example.com","password":"password123"}
+```
+
+**Create Property (replace token and userId):**
+```
+POST http://localhost:8080/property/create
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{"propertyName":"Luxury Apartment","propertyType":"Apartment","price":25000,"location":"Mumbai","userId":"YOUR_USER_ID"}
+```
+
+---
+
+## 🚀 Ready to test! Start your application and use these in Postman!

@@ -1,4 +1,5 @@
 package com.property.rental.service.rest.controller;
+
 import com.property.rental.service.common.enity.PropertyDataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/property")
 public class PropertyDetailController {
 	@Autowired
@@ -21,11 +21,12 @@ public class PropertyDetailController {
 	public ResponseEntity<List<PropertyDataEntity>> getAllPropertyDetails() {
 		return ResponseEntity.ok(propertyDetailService.getAllPropertyDetails());
 	}
+
 	@GetMapping("/secure")
 	public ResponseEntity<String> secureEndpoint() {
 		return ResponseEntity.ok("You accessed a secured API!");
 	}
-	@CrossOrigin(origins = "http://localhost:4200")
+
 	@GetMapping("/user/{userId}")
 	public ResponseEntity<List<PropertyDataEntity>> getUserProperties(@PathVariable String userId) {
 		return ResponseEntity.ok(propertyDetailService.getUserProperties(userId));

@@ -10,12 +10,11 @@ import com.property.rental.service.core.api.service.UserAccountService;
 import java.util.Map;
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
 @RequestMapping("/account")
 public class UserAccountController {
 
-@Autowired
-private UserAccountService userAccountService;
+	@Autowired
+	private UserAccountService userAccountService;
 	@Autowired
 	private JwtUtil jwtUtil;
 
@@ -26,6 +25,6 @@ private UserAccountService userAccountService;
 
 	@PostMapping("/login")
 	public ResponseEntity<?> login(@RequestBody LoginRequest request) {
-		return  userAccountService.login(request);
+		return userAccountService.login(request);
 	}
 }
