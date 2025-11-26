@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.property.rental.service.common.enity;
 
@@ -7,7 +7,9 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Objects;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -20,7 +22,10 @@ public class UserAccountEntity {
 	private String id;
 	private String firstName;
 	private String lastName;
-	private  String contactNumber;
+	private String contactNumber;
 	private String email;
 	private String password;
+	private List<String> roles = new ArrayList<>();
+	private boolean enabled = true;
+	private LocalDateTime createdAt = LocalDateTime.now();
 }
