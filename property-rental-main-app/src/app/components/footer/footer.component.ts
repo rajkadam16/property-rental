@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiConfig } from 'src/app/core/constant/ApiConfig';
 import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.service';
 
@@ -7,21 +7,33 @@ import { CommonUtilitiesService } from 'src/app/core/service/common-utilities.se
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent {
-  mains:any[]=[]
-  sections:any[]=[]
-  forms:any[]=[]
-  constructor(private readonly footer3: CommonUtilitiesService) { }
-  
+export class FooterComponent implements OnInit {
+  currentYear = new Date().getFullYear();
+
+  footerLinks: { heading: string; links: { label: string; href: string }[] }[] = [
+    {
+      heading: 'Quick Links',
+      links: [
+        { label: 'Home', href: '/' },
+        { label: 'Find Property', href: '/FindProperty' },
+        { label: 'Add Property', href: '/addproperty' },
+        { label: 'Dashboard', href: '/dashboard' },
+      ]
+    },
+    {
+      heading: 'Support',
+      links: [
+        { label: 'Contact Us', href: '/contactus' },
+        { label: 'FAQs', href: '/' },
+        { label: 'Help Center', href: '/' },
+        { label: 'Report an Issue', href: '/contactus' },
+      ]
+    }
+  ];
+
+  constructor(private readonly footerService: CommonUtilitiesService) {}
+
   ngOnInit(): void {
-    this.footer3.parseJsonFile(ApiConfig.footer).subscribe({
-      next: (data:any) => {
-        this.mains = data.main;
-        this.sections = data.sections;
-      },
-      error: (error) => {
-        console.error('There was an error!', error);
-      }
-    });
+    // data service available if needed
   }
 }

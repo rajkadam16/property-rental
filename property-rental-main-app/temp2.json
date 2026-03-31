@@ -1,0 +1,2408 @@
+﻿{
+    "value":  [
+                  {
+                      "id":  "6803d5f04c1bab22ae7a4317",
+                      "imgGallery":  [
+                                         {
+                                             "id":  "d51c4098-4b11-4c43-a6f5-489d7dca9f154",
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060278040_2f8047a77174e40ad0fb48a3b99f523f/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060334245_b08683a917170cbd1bd5633040afa194/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060342822_cd8622d0849e8e2c3a196546fd18a201/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "97f17d55-4632-4f57-a6cd-04b287ff60194",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060294732_741a5574e5f7fd00452ffd4df4ec7c04/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_one.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060310737_ab0b7da909a73c3871b18711681a4a6a/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_two.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060285857_4d94f428177d32fa32225ee4e65945ad/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-kitchen.jpg",
+                                                                "alt":  "image 3"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060301645_4b580226fb0c85554beb68d33a8c4d64/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bathroom_one.jpg",
+                                                                "alt":  "image 4"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "46764e2e-fe97-4b7f-bd72-57ef4a7224ec1",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/39431a03b7995c3ab99a37cad24f792b/v0/fs.jpeg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/1ddf97d871243d1d1de937fd9ca62522/v0/fs.jpeg",
+                                                                "alt":  "image 2"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "Godrej Platinum",
+                                              "address":  {
+                                                              "address1":  "Godrej Platinum, Hariyali, Vikhroli East",
+                                                              "address2":  "",
+                                                              "aptNumber":  "511",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400037",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://housing-images.n7net.in/012c1500/0d06a441798b5d2bd27f70d6a94c3c0c/v0/fs.jpeg",
+                                              "area":  "2812",
+                                              "type":  "ResidentialApartment",
+                                              "parking":  "2Wheeler",
+                                              "configuration":  "3BHK",
+                                              "furnishing":  "FullyFurnish",
+                                              "size":  "Studio - 3 Beds ",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Pets Allowed",
+                                                                "Fitness Center",
+                                                                "Pool",
+                                                                "Dishwasher",
+                                                                "Refrigerator",
+                                                                "Kitchen"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "11am - 4pm Today",
+                                                                  "timeZone":  "IND",
+                                                                  "workingDays":  [
+                                                                                      "Mon"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact This Property",
+                                                                "phone":  "(708) 725-1991",
+                                                                "email":  "GodrejPlatinium.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About Godrej Towers",
+                                      "description":  "1BHK lavish semi furnished flat available at Godrej Platinum Vikhroli East.The property is based with all the basic amenities required its near to school hospital and the best part easy way to reach to Vikhroli station within 5 mins.",
+                                      "details":  "Check out this 2 BHK Flat for sale in Vikhroli East, Mumbai. This 2 BHK Flat is perfect for a modern-day lifestyle. Vikhroli East is a promising location in Mumbai and this is one of the finest properties in the area. Buy this Flat for sale now. It is located on floor 20. The total number of floors in this project is 28. The property\u0027s price is Rs 3.2 Cr. This property is a modern-day abode, with 1300 square_feet built-up area. The carpet-area is 933 square_feet. It is a North-East-facing property. "
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "Air conditioning",
+                                                          "Washer/Dryer",
+                                                          "Cable ready",
+                                                          "Walk-in closets",
+                                                          "Window coverings",
+                                                          "Skylight"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Price",
+                                                          "configuration",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "5215",
+                                                              "price":  "25,00000",
+                                                              "usableArea":  "715",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "15 march 2025",
+                                                              "configuration":  "1 BHK",
+                                                              "furnishing":  "Fully-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "50001",
+                                                              "price":  "10000000",
+                                                              "usableArea":  "700",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "20 May 2025",
+                                                              "configuration":  "1 BHK",
+                                                              "furnishing":  "Fully-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning",
+                                                                                 "Super Markets"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer",
+                                                                              "Heating"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "Neighborhood",
+                                           "description":  "Vikhroli  lies within Mumbai City in the Mumbai Suburban District in Maharashtra. Its coordinates are 19.1142Â° N, 72.9358Â° E. It is also governed by the Brihanmumbai Municipal Corporation. parel is also located in close proximity to major IT Parks, SEZs and other areas like Powai, Ghatkopar and Mulund to name a few.",
+                                           "details":  "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.The campuses of somaiya college, mumbai University, and the Art Institute of mumbai are also located here."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Power Back-up",
+                                                                 "Lift(s)",
+                                                                 "Feng Shui / Vaastu Compliant",
+                                                                 "Maintenance Staff",
+                                                                 "Water Storage",
+                                                                 "Piped-gas",
+                                                                 "Security Personnel",
+                                                                 "Natural Light",
+                                                                 "Internet/wi-fi connectivity",
+                                                                 "Airy Rooms",
+                                                                 "Fitness Centre / GYM",
+                                                                 "Waste Disposal",
+                                                                 "Rain Water Harvesting",
+                                                                 "Club house / Community Center"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "Schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "Udayachal High School",
+                                                            "address":  "Pirojshanagar, Vikhroli, Mumbai, 400079",
+                                                            "distance":  "1.5 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "ORCHIDS The International School ",
+                                                            "address":  "Rajiv Gandhi Nagar, Vikhroli, Mumbai, 400083",
+                                                            "distance":  "2.8 km",
+                                                            "type":  "International School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "St. Joseph\u0027s High School",
+                                                            "address":  "Godrej \u0026 Boyce Industry Estate, Vikhroli, 400079",
+                                                            "distance":  "1.1 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Abhay International School",
+                                                            "address":  " Kannamwar Nagar , Vikhroli, 400083 ",
+                                                            "distance":  "4.1 km",
+                                                            "type":  "International School",
+                                                            "rating":  "10"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "Mumbai Local Train - Vikhroli Station",
+                                                                 "address":  "vikhroli East, Mumbai, India",
+                                                                 "distance":  "1.2 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             },
+                                                             {
+                                                                 "name":  "BEST Bus Stop - Ghatkoper",
+                                                                 "address":  "Ghatkoper East, Mumbai, India",
+                                                                 "distance":  "1.3 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "Hospitals",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Apollo Spectra Hospital",
+                                                           "address":  " MBPT Colony, ,Chembur, Mumbai ",
+                                                           "distance":  "4.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Sion Hospital",
+                                                           "address":  "Sion East, Mumbai, India",
+                                                           "distance":  "3.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Nanavati Hospital",
+                                                           "address":  "ghatkoper West, Mumbai, India",
+                                                           "distance":  "2.2 km",
+                                                           "type":  "Public",
+                                                           "rating":  "8"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "6803d61d4c1bab22ae7a4318",
+                      "imgGallery":  [
+                                         {
+                                             "id":  null,
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/JPTQzO1hDzcPRmyqjSd7LOxt5Cd6u_fyyfnPiRTsvSo/111/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/MeTB4o9WGF_uk-qnlvyyuXX85bubpy79b2TQQWrcDnw/116/rivers-edge-apartments-waukesha-wi-primary-photo.jpg?p=1",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/cbRLIvIUrw1GElvngCA4OvtBX4QOPQweZrWvnUvuzOY/117/rivers-edge-apartments-waukesha-wi-building-photo.jpg?p=1",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "97f17d55-4632-4f57-a6cd-04b287ff6019",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/b-GMW_rbJh4QqsusEnhmHt4GL3F9Vzl5_ZkjLhWtIbI/116/presidential-towers-chicago-il-building-photo.jpg?p=1",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/MZzLT1wlZo3Mm2Do3lbsBj2JPLYDZQgSyWJNGdM0O3c/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/KmFi8QVcVU4o1SdD-LA33nKoGXTp35fWYneewEvblu4/116/presidential-towers-chicago-il-interior-photo.jpg?p=1",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "46764e2e-fe97-4b7f-bd72-57ef4a722ec1",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/QQ-86lbkTgUgE2KxR32RRMA-cedjQbh0t9W2ky95TMQ/116/presidential-towers-chicago-il-floorplan.png?p=1",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/Thai_Vx8zZQLXwg1ypG5KZ9mCTPMUaay8YmBhFY8I2k/116/presidential-towers-chicago-il-floorplan.png?p=1",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/seciVErFNvKU6w-h4nAQNHEXvxnLmle-U_AH_pnUauI/116/presidential-towers-chicago-il-floorplan.png?p=1",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "Oakwood Apartments",
+                                              "address":  {
+                                                              "address1":  "1234 Linking Road",
+                                                              "address2":  "",
+                                                              "aptNumber":  "201",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400050",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/117/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
+                                              "area":  "4500",
+                                              "type":  "ResidentialApartment",
+                                              "parking":  "4Wheeler",
+                                              "configuration":  "2BHK",
+                                              "furnishing":  "SemiFurnish",
+                                              "size":  "1 Bed - 2 Beds",
+                                              "mapLat":  19.0667,
+                                              "mapLong":  72.8333,
+                                              "amenities":  [
+                                                                "Pets Allowed",
+                                                                "Fitness Center",
+                                                                "Pool",
+                                                                "Dishwasher",
+                                                                "Refrigerator",
+                                                                "Balcony"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "10:00 am - 7:00 pm",
+                                                                  "timeZone":  "IST",
+                                                                  "workingDays":  [
+                                                                                      "Mon",
+                                                                                      "Tue",
+                                                                                      "Wed"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact This Property",
+                                                                "phone":  "+91 98765 43210",
+                                                                "email":  "oakwoodapartments@gmail.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About Oakwood Apartments",
+                                      "description":  "Oakwood Apartments offers a luxurious living experience in the heart of Mumbai. With stunning views, modern amenities, and a prime location, Oakwood Apartments is the perfect place to call home.",
+                                      "details":  "Oakwood Apartments is managed by Oakwood Worldwide, a leader in furnished apartment living. Our community is located in Bandra, Mumbai - 400050."
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "Air conditioning",
+                                                          "Washer/Dryer",
+                                                          "Cable ready",
+                                                          "Walk-in closets",
+                                                          "Balcony",
+                                                          "Skylight"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Price",
+                                                          "configuration",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "1234-201",
+                                                              "price":  "1,50,000",
+                                                              "usableArea":  "800",
+                                                              "measureUnit":  "Sq Ft",
+                                                              "availableFrom":  "17 June 2024",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wi-Fi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "1234-301",
+                                                              "price":  "2,00,000",
+                                                              "usableArea":  "1000",
+                                                              "measureUnit":  "Sq Ft",
+                                                              "availableFrom":  "1 May 2024",
+                                                              "configuration":  "1 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wi-Fi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "Neighborhood",
+                                           "description":  "Located in the vibrant city of Mumbai, Oakwood Apartments is surrounded by iconic landmarks, world-class dining, and endless entertainment options. From Bandra-Worli Sea Link to Juhu Beach, there\u0027s always something to explore.",
+                                           "details":  "The neighborhood is home to some of the best restaurants, theaters, and shopping centers in the city.,With easy access to public transportation, commuting is a breeze."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Washer/Dryer",
+                                                                 "Air Conditioning",
+                                                                 "Dishwasher",
+                                                                 "High Speed Internet Access",
+                                                                 "Wi-Fi",
+                                                                 "Heating",
+                                                                 "Cable Ready",
+                                                                 "Granite Countertops",
+                                                                 "Kitchen",
+                                                                 "Refrigerator",
+                                                                 "Freezer",
+                                                                 "Balcony",
+                                                                 "Views",
+                                                                 "Skylights",
+                                                                 "Walk-In Closets",
+                                                                 "Window Coverings"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "Schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "Dhirubhai Ambani International School",
+                                                            "address":  "Bandra Kurla Complex, Mumbai, Maharashtra 400098",
+                                                            "distance":  "2 km",
+                                                            "type":  "International School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "St. Stanislaus High School",
+                                                            "address":  "Hill Road, Bandra West, Mumbai, Maharashtra 400050",
+                                                            "distance":  "1 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Podar International School",
+                                                            "address":  "Santacruz West, Mumbai, Maharashtra 400054",
+                                                            "distance":  "3 km",
+                                                            "type":  "International School",
+                                                            "rating":  "8"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "Bandra Railway Station",
+                                                                 "address":  "Station Road, Bandra West, Mumbai, Maharashtra 400050",
+                                                                 "distance":  "1.5 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "9"
+                                                             },
+                                                             {
+                                                                 "name":  "Western Express Highway Metro Station",
+                                                                 "address":  "WEH, Mumbai, Maharashtra 400063",
+                                                                 "distance":  "3.5 km",
+                                                                 "type":  "Metro Station",
+                                                                 "rating":  "8"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "Hospital",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Lilavati Hospital and Research Centre",
+                                                           "address":  "A-791, Bandra Reclamation, Mumbai, Maharashtra 400050",
+                                                           "distance":  "1 km",
+                                                           "type":  "Private",
+                                                           "rating":  "10"
+                                                       },
+                                                       {
+                                                           "name":  "Hinduja Hospital",
+                                                           "address":  "Veer Savarkar Marg, Mahim West, Mumbai, Maharashtra 400016",
+                                                           "distance":  "3 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "6803d6394c1bab22ae7a4319",
+                      "imgGallery":  [
+                                         {
+                                             "id":  "d51c4098-4b11-4c43-a6f5-489d7dca9f15",
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27496/4/549924551O-1735979636819.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27347/10/546950035O-1735657874464.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27496/4/549924559O-1735979694887.jpg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "97f17d55-4632-4f57-a6cd-04b287ff6019",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27347/10/546950751O-1735657996940.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://newprojects.99acres.com/projects/unknown/diamond_gardens/images/59zwi0dy.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://newprojects.99acres.com/projects/unknown/diamond_gardens/images/i6ljzvmh.jpg",
+                                                                "alt":  "image 3"
+                                                            },
+                                                            {
+                                                                "url":  "https://newprojects.99acres.com/projects/unknown/diamond_gardens/images/04u4a63h.jpeg",
+                                                                "alt":  "image 4"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27347/10/546950799O-1735657999571.jpg",
+                                                                "alt":  "image 5"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27496/4/549924551O-1735979636819.jpg",
+                                                                "alt":  "image 6"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27347/10/546950035O-1735657874464.jpg",
+                                                                "alt":  "image 7"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/27496/4/549924559O-1735979694887.jpg",
+                                                                "alt":  "image 8"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "46764e2e-fe97-4b7f-bd72-57ef4a722ec1",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/5V83opPk5NdV_swVKFYE6gcvA7GbM7p6M1Ua6AXZoOM/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/VCDhAkTJoWO6cAgu2lcutFRKX9s-fZEWaCSMM_7XTME/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/4YVPEF-dKp7d1Sk6KiTtUfsczYGTTn5J5X0IkEV-cFE/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
+                                                                "alt":  "image 3"
+                                                            },
+                                                            {
+                                                                "url":  "https://images1.apartments.com/i2/qAEqR2TEFSpW8CWK9NQmee4UeRmKoTgvc4SOBdMqsY8/116/the-residences-at-newcity-chicago-il-floorplan.jpg?p=1",
+                                                                "alt":  "image 4"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "Archer Towers",
+                                              "address":  {
+                                                              "address1":  "Diamond Garden, Chembur East",
+                                                              "address2":  "",
+                                                              "aptNumber":  "108",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400087",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "assets/images/regents-park-chicago-il-diningliving-room.jpg",
+                                              "area":  "750",
+                                              "type":  "ResidentialApartment",
+                                              "parking":  "2Wheeler",
+                                              "configuration":  "1BHK",
+                                              "furnishing":  "SemiFurnish",
+                                              "size":  "Studio - 2 Beds ",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Pets Allowed",
+                                                                "Fitness Center",
+                                                                "Pool",
+                                                                "Dishwasher",
+                                                                "Refrigerator",
+                                                                "Kitchen"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "9:00 am - 6:00 pm",
+                                                                  "timeZone":  "IND",
+                                                                  "workingDays":  [
+                                                                                      "Mon",
+                                                                                      "Tue"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact This Property",
+                                                                "phone":  "(708) 725-1991",
+                                                                "email":  "archertower@gmail.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About Presidential Towers",
+                                      "description":  "A spacious 2 bhk flat for rent is available in chembur east in diamond garden, central mumbai. Property has attached 2 bathrooms with 2 rooms set in 750 sq.Ft. Carpet area. The flat consists of 2 bedrooms, built on 750 sq.Ft. Society provides 1 covered parking with this flat. Property is 5-10 years old. This is a furnished flat. Furnishing options provided - 3 ac, 2 bed, 2 wardrobe and 1 modular kitchen. Ready to occupy from sat, 25 jan 2025, this property is ideal for single men and family on any agreement type. The expected rent is 85,000 monthly. Electricity \u0026 water charges are excluded. Security deposit of 250000 is required. The property comes with reserved parking, feng shui / vaastu compliant, piped-Gas, internet/wi-Fi connectivity, etc",
+                                      "details":  "Archer Towers is an apartment community managed by Waterton, located in Cook County and the 400082 ZIP Code. This area is served by the Chembur Public Schools attendance zone."
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "Air conditioning",
+                                                          "Washer/Dryer",
+                                                          "Cable ready",
+                                                          "Walk-in closets",
+                                                          "Window coverings",
+                                                          "Skylight"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Configuration",
+                                                          "Price",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "8191",
+                                                              "price":  "25,000",
+                                                              "usableArea":  "505",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "15 June 2025",
+                                                              "configuration":  "1 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "2404",
+                                                              "price":  "50,000",
+                                                              "usableArea":  "605",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "19 May 2024",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "Neighborhood",
+                                           "description":  "Chicagoâs reputation as one of Americaâs most distinctive cities owes a lot to the electric atmosphere and vibrant culture that defines Downtown Chicago. Iconic sites like Grant Park, Soldier Field, the Chicago Theatre, Navy Pier, and the Chicago Riverwalk are the most famous landmarks in Downtown, but that barely scratches the surface of what the neighborhood has to offer.",
+                                           "details":  "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.,The campuses of Columbia College Chicago, DePaul University, and the Art Institute of Chicago are also located here."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Power Back-up",
+                                                                 "Lift(s)",
+                                                                 "Feng Shui / Vaastu Compliant",
+                                                                 "Maintenance Staff",
+                                                                 "Water Storage",
+                                                                 "Piped-gas",
+                                                                 "Security Personnel",
+                                                                 "Natural Light",
+                                                                 "Internet/wi-fi connectivity",
+                                                                 "Airy Rooms",
+                                                                 "Fitness Centre / GYM",
+                                                                 "Waste Disposal",
+                                                                 "Rain Water Harvesting",
+                                                                 "Club house / Community Center"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "Schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "St. Xavier\u0027s High School",
+                                                            "address":  "Fort, Mumbai, Maharashtra, India",
+                                                            "distance":  "1.5 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Podar International School",
+                                                            "address":  "Santacruz West, Mumbai, Maharashtra, India",
+                                                            "distance":  "2.8 km",
+                                                            "type":  "Private School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "Don Bosco High School",
+                                                            "address":  "Matunga, Mumbai, Maharashtra, India",
+                                                            "distance":  "1.2 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Dhirubhai Ambani International School",
+                                                            "address":  "Bandra Kurla Complex, Mumbai, Maharashtra, India",
+                                                            "distance":  "5.3 km",
+                                                            "type":  "Private K-12 School",
+                                                            "rating":  "10"
+                                                        },
+                                                        {
+                                                            "name":  "Cathedral and John Connon School",
+                                                            "address":  "Fort, Mumbai, Maharashtra, India",
+                                                            "distance":  "2.0 km",
+                                                            "type":  "Private School",
+                                                            "rating":  "10"
+                                                        },
+                                                        {
+                                                            "name":  "EuroKids Preschool",
+                                                            "address":  "Andheri West, Mumbai, Maharashtra, India",
+                                                            "distance":  "1.0 km",
+                                                            "type":  "Private Preschool",
+                                                            "rating":  "9"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "Mumbai Local Train - Andheri Station",
+                                                                 "address":  "Andheri East, Mumbai, Maharashtra, India",
+                                                                 "distance":  "1.2 km",
+                                                                 "type":  "Public",
+                                                                 "rating":  "8"
+                                                             },
+                                                             {
+                                                                 "name":  "BEST Bus Stop - Bandra Station",
+                                                                 "address":  "Bandra West, Mumbai, Maharashtra, India",
+                                                                 "distance":  "3.5 km",
+                                                                 "type":  "Public",
+                                                                 "rating":  "7"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "Hospitals",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Lilavati Hospital",
+                                                           "address":  "Bandra West, Mumbai, Maharashtra, India",
+                                                           "distance":  "4.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Nanavati Hospital",
+                                                           "address":  "Vile Parle West, Mumbai, Maharashtra, India",
+                                                           "distance":  "3.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Sion Hospital",
+                                                           "address":  "Sion East, Mumbai, Maharashtra, India",
+                                                           "distance":  "5.5 km",
+                                                           "type":  "Public",
+                                                           "rating":  "8"
+                                                       },
+                                                       {
+                                                           "name":  "KEM Hospital",
+                                                           "address":  "Parel, Mumbai, Maharashtra, India",
+                                                           "distance":  "7.2 km",
+                                                           "type":  "Public",
+                                                           "rating":  "8"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "6803d65d4c1bab22ae7a431a",
+                      "imgGallery":  [
+                                         {
+                                             "id":  "d51c4098-4b11-4c43-a6f5-489d7dca9f15",
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/751018fb5044ce4844514384ddfeb98f/v0/fs.jpeg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/18f3e28182158216a47e39d95aa65e9c/v0/fs.jpeg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/cf287ab44c99e612d01b28eefd4991e2/v0/fs.jpeg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "97f17d55-4632-4f57-a6cd-04b287ff6019",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/e6553d0b1548c88b1f390e6eb160b850/v0/fs.jpeg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/15efdeb08a827d3bf44d3d4ec14c333a/v0/fs.jpeg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/b8d0ee83fa5a1c09256f4cd918818a1c/v0/fs.jpeg",
+                                                                "alt":  "image 3"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/87dd581002fafaa25fead3cd34dcf818/v0/fs.jpeg",
+                                                                "alt":  "image 4"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "46764e2e-fe97-4b7f-bd72-57ef4a722ec1",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/91aba65c/3bb4cb6507cf8f1f5ba20bb9d66b1947/v0/fs.jpeg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/988a6c867677412becb82d373d70c59f/v0/fs.jpeg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/91aba65c/ba955270c00877ca16b1dc9b19a6cf6a/v0/fs-large.jpeg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "The Urban Oasis",
+                                              "address":  {
+                                                              "address1":  " G D Ambekar Marg, parel",
+                                                              "address2":  "",
+                                                              "aptNumber":  "322",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400012",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://housing-images.n7net.in/4f2250e8/04adb9d1298a6e7a041ef46acd01e8de/v0/fs/simana_the_urban_oasis-parel-mumbai-bhoomi_group.jpeg",
+                                              "area":  "20115.00",
+                                              "type":  "ResidentialLand",
+                                              "parking":  "4Wheeler",
+                                              "configuration":  "2BHK",
+                                              "furnishing":  "Semi-Furnish",
+                                              "size":  "Condo - 2 Beds ",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Pets Allowed",
+                                                                "Fitness Center",
+                                                                "Pool",
+                                                                "Dishwasher",
+                                                                "Refrigerator",
+                                                                "Kitchen"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "11am - 4pm Today",
+                                                                  "timeZone":  "IND",
+                                                                  "workingDays":  [
+                                                                                      "Mon"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact This Property",
+                                                                "phone":  "(708) 725-1991",
+                                                                "email":  "theUrbanOasis.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About Oasis Towers",
+                                      "description":  "The Urban Oasis is a well designed project by Bhoomi Group. It is offering Under Construction units. If you are looking at Apartment, you should check out Simana The Urban Oasis. Set in an expanse of 5.38 Acres , the property offers a remarkable lifestyle. Available configurations include 2 BHK, 3 BHK. As per the area plan, units are in the size range of 826.0 - 1133.0 sq.ft.. Project possession starts from Dec, 2025. There is 2 building in this project. Total number of flats at Simana The Urban Oasis is Tower A -246 Units and Tower B-302 Units. Simana The Urban Oasis is located in Western India Mills Compound, G D Ambekar Marg, Parel, Mumbai",
+                                      "details":  "Come home to  The Urban Oasis. It offers multiple facilities such as Gymnasium, Power Backup. For families with kids, there is Children\u0027s Play Area, Swimming Pool. The property is equipped with Fire Sprinklers. There is 24x7 Security. These amenities make this property totally aspirational."
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "Air conditioning",
+                                                          "Washer/Dryer",
+                                                          "Cable ready",
+                                                          "Walk-in closets",
+                                                          "Window coverings",
+                                                          "Skylight"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Price",
+                                                          "configuration",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "5211",
+                                                              "price":  "25,000",
+                                                              "usableArea":  "715",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "15 march 2025",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "5656",
+                                                              "price":  "880000000",
+                                                              "usableArea":  "715",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "19 May 2024",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning",
+                                                                                 "Super Markets"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer",
+                                                                              "Heating"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "Neighborhood",
+                                           "description":  "Parel  lies within Mumbai City in the Mumbai Suburban District in Maharashtra. Its coordinates are 19.1142Â° N, 72.9358Â° E. It is also governed by the Brihanmumbai Municipal Corporation. parel is also located in close proximity to major IT Parks, SEZs and other areas like Powai, Ghatkopar and Mulund to name a few,Also famous location for ganesh festival",
+                                           "details":  "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.The campuses of somaiya college, mumbai University, and the Art Institute of mumbai are also located here."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Power Back-up",
+                                                                 "Lift(s)",
+                                                                 "Feng Shui / Vaastu Compliant",
+                                                                 "Maintenance Staff",
+                                                                 "Water Storage",
+                                                                 "Piped-gas",
+                                                                 "Security Personnel",
+                                                                 "Natural Light",
+                                                                 "Internet/wi-fi connectivity",
+                                                                 "Airy Rooms",
+                                                                 "Fitness Centre / GYM",
+                                                                 "Waste Disposal",
+                                                                 "Rain Water Harvesting",
+                                                                 "Club house / Community Center"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "Schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "SSL ENGLISH SCHOOL",
+                                                            "address":  " GD Ambekar Marg, Krishna Nagar, Vidyasankul, Mumbai",
+                                                            "distance":  "1.5 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "JBCN International School ",
+                                                            "address":  "Dr Vinay walimbe road,  Parel East,  Mumbai,",
+                                                            "distance":  "2.8 km",
+                                                            "type":  "International School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "St. Joseph\u0027s High School",
+                                                            "address":  "parel West, Mumbai, Maharashtra 400079",
+                                                            "distance":  "1.1 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "C.P Goenka International School",
+                                                            "address":  "Oshiwara, Andheri West, Mumbai, ",
+                                                            "distance":  "4.1 km",
+                                                            "type":  "International School",
+                                                            "rating":  "10"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "Mumbai Local Train - parel Station",
+                                                                 "address":  "Parel East, Mumbai, Maharashtra, India",
+                                                                 "distance":  "1.2 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             },
+                                                             {
+                                                                 "name":  "BEST Bus Stop - lower Parel",
+                                                                 "address":  "Parel East, Mumbai, Maharashtra, India",
+                                                                 "distance":  "1.3 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "Hospitals",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Siddhachal Hospitals",
+                                                           "address":  "Worli Naka, Lower Parel, Mumbai",
+                                                           "distance":  "4.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Gleneagles Hospital",
+                                                           "address":  "Dr Ernest Rd, opp. Shirodkar High School, Parel East",
+                                                           "distance":  "3.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Parel Hospital",
+                                                           "address":  "Parel East, Mumbai, Maharashtra, India",
+                                                           "distance":  "2.2 km",
+                                                           "type":  "Public",
+                                                           "rating":  "8"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "6803d6654c1bab22ae7a431b",
+                      "imgGallery":  [
+                                         {
+                                             "id":  null,
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947143882_ba20bcbf31b1853a47dabc1495acfca7/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_one.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947200171_147096cb627567bd47e5f8f12e3c2326/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_one.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947215188_6983a5d9dd490593d70643f5bd095acf/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_two.jpg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "97f17d55-4632-4f57-a6cd-04b287ff6019",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947124365_f08794fd7ff32e58d9d14bc96c62d194/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947183884_f54ba1f64d2ce8c5a6dd85737ab64059/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947149999_540f35c8914f7c62cbf1a5dea14e92af/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bathroom_one.jpg",
+                                                                "alt":  "image 3"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947135073_80bef49cf53c72eb36ad9646ba025d61/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-kitchen.jpg",
+                                                                "alt":  "image 4"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1739947169345_c055f88e15ca04380ee938149b76fd93/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bathroom_two.jpg",
+                                                                "alt":  "image 5"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "46764e2e-fe97-4b7f-bd72-57ef4a722ec1",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/07ccd45f516b3e0042a47c00261b01cd/v2/fs.jpeg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/0996c2e2bd587d1df85b55fd1942ef42/v2/fs.jpeg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/0a251ad775024b4896d65172aeee005c/v2/fs.jpeg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "Godrej The Trees",
+                                              "address":  {
+                                                              "address1":  "Pirojshanagar, Vikhroli East, Mumbai",
+                                                              "address2":  "",
+                                                              "aptNumber":  "110",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400079",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://housing-images.n7net.in/4f2250e8/488041f5d1878dc5872173cc45e79b4d/v0/fs.jpeg",
+                                              "area":  "1050.00",
+                                              "type":  "StudioApartment",
+                                              "parking":  "4Wheeler",
+                                              "configuration":  "1BHK",
+                                              "furnishing":  "SemiFurnish",
+                                              "size":  "Studio - 1 Beds ",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Pets Allowed",
+                                                                "Fitness Center",
+                                                                "Pool",
+                                                                "Dishwasher",
+                                                                "Refrigerator",
+                                                                "Kitchen"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "9:00 am - 6:00 pm",
+                                                                  "timeZone":  "IND",
+                                                                  "workingDays":  [
+                                                                                      "Mon",
+                                                                                      "Tue"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact This Property",
+                                                                "phone":  "(708) 725-1991",
+                                                                "email":  "godrejthetrees.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About Presidential Towers",
+                                      "description":  "Located in the popular residential address of Vikhroli east, Central mumbai, Godrej The Trees is one of the most preferred destination for apartments in Central Mumbai. This 2 BHK flat is your ticket to be a part of this community. Containing 2 bedroom(s), 2 bathrooms , this flat is spread over a Carpet Area of 750 sq.ft. This flat lies on the 10th level of a 18 storey building. Being a ready to move project, you can expect immediate possession of this 1-5 years old property. All the modern amenities such as Swimming Pool, Fitness Centre / GYM, Club house / Community Center, Park, Shopping Centre, Grocery Shop and Lift(s) will make life easier for you.",
+                                      "details":  "Godrej The Trees Towers is an apartment community managed by Waterton, located in Cook County and the 400079 ZIP Code. This area is served by the good amenities around."
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "Air conditioning",
+                                                          "Washer/Dryer",
+                                                          "Cable ready",
+                                                          "Walk-in closets",
+                                                          "Window coverings",
+                                                          "Skylight"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Price",
+                                                          "configuration",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "5211",
+                                                              "price":  "25,000",
+                                                              "usableArea":  "715",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "15 march 2025",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "2404",
+                                                              "price":  "50,000",
+                                                              "usableArea":  "605",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "19 May 2024",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning",
+                                                                                 "Super Markets"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer",
+                                                                              "Heating"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "Neighborhood",
+                                           "description":  "Vikhroli East lies within Mumbai City in the Mumbai Suburban District in Maharashtra. Its coordinates are 19.1142Â° N, 72.9358Â° E. It is also governed by the Brihanmumbai Municipal Corporation. Vikhroli East is also located in close proximity to major IT Parks, SEZs and other areas like Powai, Ghatkopar and Mulund to name a few.",
+                                           "details":  "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.The campuses of somaiya college, mumbai University, and the Art Institute of mumbai are also located here."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Power Back-up",
+                                                                 "Lift(s)",
+                                                                 "Feng Shui / Vaastu Compliant",
+                                                                 "Maintenance Staff",
+                                                                 "Water Storage",
+                                                                 "Piped-gas",
+                                                                 "Security Personnel",
+                                                                 "Natural Light",
+                                                                 "Internet/wi-fi connectivity",
+                                                                 "Airy Rooms",
+                                                                 "Fitness Centre / GYM",
+                                                                 "Waste Disposal",
+                                                                 "Rain Water Harvesting",
+                                                                 "Club house / Community Center"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "Schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "Udayachal High School",
+                                                            "address":  "Pirojshanagar, Vikhroli, Mumbai 400079",
+                                                            "distance":  "1.5 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "ORCHIDS The International School",
+                                                            "address":  "Rajiv Gandhi Nagar, Vikhroli,400083",
+                                                            "distance":  "2.8 km",
+                                                            "type":  "International School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "St. Joseph\u0027s High School",
+                                                            "address":  "Godrej \u0026 Boyce Industry Estate, Vikhroli 400079",
+                                                            "distance":  "1.2 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Abhay International School",
+                                                            "address":  "B Wing, Kannamwar Nagar I, Vikhroli,400083",
+                                                            "distance":  "5.3 km",
+                                                            "type":  "International School",
+                                                            "rating":  "10"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "Mumbai Local Train - vikhroli Station",
+                                                                 "address":  "Vikhroli East, Mumbai, Maharashtra, India",
+                                                                 "distance":  "1.2 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             },
+                                                             {
+                                                                 "name":  "BEST Bus Stop - Ghatkoper Station",
+                                                                 "address":  "Ghatkoper West, Mumbai, Maharashtra, India",
+                                                                 "distance":  "1.3 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "Hospitals",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Apollo Spectra Hospital",
+                                                           "address":  "Deonar Bus Depot Main GAte,  Chembur, 400088",
+                                                           "distance":  "4.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Nanavati Hospital",
+                                                           "address":  "Vile Parle West, Mumbai, Maharashtra, India",
+                                                           "distance":  "3.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Sion Hospital",
+                                                           "address":  "Sion East, Mumbai, Maharashtra, India",
+                                                           "distance":  "5.5 km",
+                                                           "type":  "Public",
+                                                           "rating":  "8"
+                                                       },
+                                                       {
+                                                           "name":  "KEM Hospital",
+                                                           "address":  "Parel, Mumbai, Maharashtra, India",
+                                                           "distance":  "7.2 km",
+                                                           "type":  "Public",
+                                                           "rating":  "8"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "6803d66e4c1bab22ae7a431c",
+                      "imgGallery":  [
+                                         {
+                                             "id":  null,
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300493O-1739449683515.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300475O-1739449664064.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300489O-1739449713672.jpg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "b78901c2-df34-56gh-ij78-klmn9012opqr",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300357O-1739449674518.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300329O-1739449664529.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300419O-1739449670114.jpg",
+                                                                "alt":  "image 3"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300479O-1739449686963.jpg",
+                                                                "alt":  "image 4"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/media1/28465/0/569300483O-1739449687918.jpg",
+                                                                "alt":  "image 4"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "c34567d8-ef90-12gh-ij34-klmn5678qrst",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://newprojects.99acres.com/projects/Tirumala/Habitats/maps/42825.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://imagecdn.99acres.com/projects/example/gicjwo0_1731489340_530606027.jpg",
+                                                                "alt":  "image 2"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "Hiranandani Avalon",
+                                              "address":  {
+                                                              "address1":  "Hiranandani Avalon, Hiranandani Gardens, Powai",
+                                                              "address2":  "",
+                                                              "aptNumber":  "804",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400076",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://housing-images.n7net.in/012c1500/sample_thumbnail.jpeg",
+                                              "area":  "1450.00",
+                                              "type":  "StudioApartment",
+                                              "parking":  "2Wheeler",
+                                              "configuration":  "2BHK",
+                                              "furnishing":  "SemiFurnish",
+                                              "size":  "2 Beds",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Swimming Pool",
+                                                                "Clubhouse",
+                                                                "Kids Play Area",
+                                                                "Jogging Track",
+                                                                "Power Backup",
+                                                                "Gymnasium"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "10am - 6pm Today",
+                                                                  "timeZone":  "IND",
+                                                                  "workingDays":  [
+                                                                                      "Mon",
+                                                                                      "Tue",
+                                                                                      "Wed",
+                                                                                      "Thu",
+                                                                                      "Fri",
+                                                                                      "Sat"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact This Property",
+                                                                "phone":  "(987) 654-3210",
+                                                                "email":  "info@hiranandaniavalon.in"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About Hiranandani Avalon",
+                                      "description":  "Luxurious 2BHK apartment located in the heart of Powai with fully furnished interiors and state-of-the-art facilities. Surrounded by schools, hospitals, malls and within walking distance to Powai Lake.",
+                                      "details":  "Spacious 2 BHK for sale in Powai, Mumbai. Located on the 8th floor of a 22-floor tower. Carpet area of 850 sq. ft. and built-up area of 1150 sq. ft. Price: â¹2.35 Cr. This apartment is East-facing and perfect for a peaceful lifestyle."
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "Centralized AC",
+                                                          "Modular Kitchen",
+                                                          "Balcony with Lake View",
+                                                          "Wooden Flooring",
+                                                          "Video Door Security",
+                                                          "Private Terrace"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Configuration",
+                                                          "Price",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "A-904",
+                                                              "price":  "23500000",
+                                                              "usableArea":  "850",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "01 June 2025",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "Lake View",
+                                                                                 "Modular Kitchen",
+                                                                                 "High-Speed Internet",
+                                                                                 "Smart Home Integration"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Microwave",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Dishwasher"
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "B-602",
+                                                              "price":  "22000000",
+                                                              "usableArea":  "820",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "15 May 2025",
+                                                              "configuration":  "2 BHK",
+                                                              "furnishing":  "Semi-Furnish",
+                                                              "highlights":  [
+                                                                                 "City View",
+                                                                                 "Wooden Flooring",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Chimney",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "Neighborhood",
+                                           "description":  "Powai is a posh residential neighborhood in Central Mumbai. Home to top tech parks, international schools, shopping malls and natural beauty like Powai Lake. The area is well connected to Eastern Express Highway and Jogeshwari-Vikhroli Link Road.",
+                                           "details":  "Powai hosts top MNCs, fine dining restaurants, and Hiranandani Business Park.The IIT Bombay campus is nearby, and the area offers scenic walking trails and jogging tracks around Powai Lake."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "24x7 Security",
+                                                                 "Elevators",
+                                                                 "Fire Safety Systems",
+                                                                 "Rainwater Harvesting",
+                                                                 "Solar Panels",
+                                                                 "Intercom Facility",
+                                                                 "Landscape Gardens",
+                                                                 "Pet Friendly",
+                                                                 "Indoor Games",
+                                                                 "Visitor Parking"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "Schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "Bombay Scottish School",
+                                                            "address":  "Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",
+                                                            "distance":  "1.0 km",
+                                                            "type":  "Private School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "Podar International School",
+                                                            "address":  "Chandivali, Powai, Mumbai, Maharashtra 400072",
+                                                            "distance":  "2.0 km",
+                                                            "type":  "International School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "IIT Bombay Campus School",
+                                                            "address":  "IIT Bombay Campus, Powai, Mumbai",
+                                                            "distance":  "1.5 km",
+                                                            "type":  "Public School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Gopal Sharma International School",
+                                                            "address":  "Powai, Mumbai, Maharashtra 400076",
+                                                            "distance":  "0.9 km",
+                                                            "type":  "International School",
+                                                            "rating":  "8"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "Kanjurmarg Railway Station",
+                                                                 "address":  "Kanjurmarg East, Mumbai, Maharashtra",
+                                                                 "distance":  "3.2 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             },
+                                                             {
+                                                                 "name":  "JVLR Bus Stop",
+                                                                 "address":  "Jogeshwari-Vikhroli Link Road, Powai, Mumbai",
+                                                                 "distance":  "0.5 km",
+                                                                 "type":  "Bus Stop",
+                                                                 "rating":  "9"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "Hospitals",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Hiranandani Hospital",
+                                                           "address":  "Hiranandani Gardens, Powai, Mumbai, Maharashtra 400076",
+                                                           "distance":  "0.6 km",
+                                                           "type":  "Private",
+                                                           "rating":  "10"
+                                                       },
+                                                       {
+                                                           "name":  "Dr. L H Hiranandani Hospital",
+                                                           "address":  "Hill Side Avenue, Hiranandani Gardens, Powai",
+                                                           "distance":  "0.5 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Seven Hills Hospital",
+                                                           "address":  "Marol, Andheri East, Mumbai",
+                                                           "distance":  "4.8 km",
+                                                           "type":  "Private",
+                                                           "rating":  "8"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "680612b00c56a255617e42c1",
+                      "imgGallery":  [
+                                         {
+                                             "id":  "c86bcf41-413c-4698-a1b8-cf22f08fa785",
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/b07fd9b31d964ec1ab2c82e2fdd68074/v0/fs.jpeg",
+                                                                "alt":  "image1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/29aefa11fa6271e38a0d30bec59c1f84/v0/fs.jpeg",
+                                                                "alt":  "m2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/59520e4fb49912c2c44a2ce1609ac989/v0/fs.jpeg",
+                                                                "alt":  "m3"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/1451f57871f450827c57c786d7f3a9df/v0/fs.jpeg",
+                                                                "alt":  "m4"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/f9ff2c644a72b0a9ab7625c267f77c7f/v0/fs.jpeg",
+                                                                "alt":  "m5"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "85665bff-032e-4919-b74b-fc6a9d0fc2e1",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/34e742e8800bc7754603ea47ae8c2294/v0/fs.jpeg",
+                                                                "alt":  "m1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/b3d9a831e4a82ebc921414a662e9cf4a/v0/fs.jpeg",
+                                                                "alt":  "m2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/5dba2ff09d35fc664ff4250c94d96734/v0/fs.jpeg",
+                                                                "alt":  "m4"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/50fc380e1a5ee37ea0b78a727540c7f7/v0/fs-large.jpeg",
+                                                                "alt":  "m6"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "38998707-bb89-48f0-b1c4-668a13109e24",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/3dphydev/6cfa6e90b928266b7e99b24374ff8608/v0/fs.png",
+                                                                "alt":  "m1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/1346c620d66511a6d20c8138fe23a726/v0/fs.jpeg",
+                                                                "alt":  "m2"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "Sunshine Heights",
+                                              "address":  {
+                                                              "address1":  "Sunshine Heights, Sector 12, Kharghar",
+                                                              "address2":  "",
+                                                              "aptNumber":  "202",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400043",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/117/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
+                                              "area":  "323 sqFt",
+                                              "type":  "Residential Apartment",
+                                              "parking":  "4 wheeler",
+                                              "configuration":  "",
+                                              "furnishing":  "",
+                                              "size":  "Studio - 2 beds",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Pets care",
+                                                                "Laundry",
+                                                                "Fitness Area",
+                                                                "Playing Area",
+                                                                "Pool",
+                                                                "Club house",
+                                                                "CourtYard"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "Open 12pm - 5pm Today",
+                                                                  "timeZone":  "CST",
+                                                                  "workingDays":  [
+                                                                                      "Wednesday"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact ",
+                                                                "phone":  "9321587317",
+                                                                "email":  "tarew83770@lushosa.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About ",
+                                      "description":  "Spacious 3BHK apartment with modern interiors and spectacular views in the heart of Kharghar. Close to parks, malls, schools, and metro station.\nSpacious 3BHK apartment with modern interiors and spectacular views in the heart of Kharghar. Close to parks, malls, schools, and metro station.",
+                                      "details":  "Luxurious 3 BHK for sale in Sector 12, Kharghar. Located on the 12th floor of a 15-floor building. Carpet area of 950 sq. ft., built-up area of 1250 sq. ft. Price: â¹1.75 Cr. West-facing with open balconies."
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "WiFi",
+                                                          "Air Conditioner",
+                                                          "Pets Allowed",
+                                                          "Balcony",
+                                                          "Modular Kitchen"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Configuration",
+                                                          "Price",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "344",
+                                                              "price":  "32423",
+                                                              "usableArea":  "332",
+                                                              "measureUnit":  "ft",
+                                                              "availableFrom":  "2025-04-18",
+                                                              "configuration":  "1bhk",
+                                                              "furnishing":  "Semi Furnish",
+                                                              "highlights":  [
+                                                                                 "Good Connectivity",
+                                                                                 "Dry Cleaning Service",
+                                                                                 "Lounge",
+                                                                                 "Closets",
+                                                                                 "Good view"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dry Cleaning Service",
+                                                                              "Lounge",
+                                                                              "Closets",
+                                                                              "Good view",
+                                                                              "Super Markets",
+                                                                              null
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "345",
+                                                              "price":  "90000",
+                                                              "usableArea":  "712",
+                                                              "measureUnit":  "ft",
+                                                              "availableFrom":  "2025-04-17",
+                                                              "configuration":  "3BHK",
+                                                              "furnishing":  "Fully Furnish",
+                                                              "highlights":  [
+                                                                                 "Good Connectivity",
+                                                                                 "Dry Cleaning Service",
+                                                                                 "Lounge",
+                                                                                 "Good view"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Good Connectivity",
+                                                                              "Dry Cleaning Service",
+                                                                              "Lounge",
+                                                                              "Closets",
+                                                                              "Good view",
+                                                                              "Super Markets"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "neighborHood",
+                                           "description":  "Kharghar is a well-planned locality in Navi Mumbai with excellent connectivity and green surroundings. It features top educational institutions, shopping zones, and proximity to the metro.",
+                                           "details":  "Adjacent to Central Park and ISKCON Temple.Easy access to Kharghar Railway Station and upcoming Navi Mumbai Metro."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Washer/Dryer",
+                                                                 "Air Conditioning",
+                                                                 "Dishwasher",
+                                                                 "High Speed Internet Access",
+                                                                 "Wi-Fi",
+                                                                 "Window Coverings",
+                                                                 "Heating",
+                                                                 "Granite Countertops",
+                                                                 "Kitchen",
+                                                                 "Freezer",
+                                                                 "Office",
+                                                                 "Skylights",
+                                                                 "Walk-In Closets"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "Ryan International School",
+                                                            "address":  "Sector 11, Kharghar, Navi Mumbai",
+                                                            "distance":  "12km",
+                                                            "type":  "Government School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Apeejay School",
+                                                            "address":  "Sector 21, Kharghar, Navi Mumbai",
+                                                            "distance":  "4km",
+                                                            "type":  "Government School",
+                                                            "rating":  "6"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "MGM Hospital",
+                                                                 "address":  "Sector 4, Kharghar, Navi Mumbai",
+                                                                 "distance":  "1km",
+                                                                 "type":  "BUS Station",
+                                                                 "rating":  "6"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "hospital",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Kharghar Railway Station",
+                                                           "address":  "Kharghar, Navi Mumbai",
+                                                           "distance":  "2km",
+                                                           "type":  "Private Hospital",
+                                                           "rating":  "8"
+                                                       },
+                                                       {
+                                                           "name":  "Sector 12 Bus Stop",
+                                                           "address":  "Kharghar, Navi Mumbai",
+                                                           "distance":  "0.8km",
+                                                           "type":  "Private Hospital",
+                                                           "rating":  "8"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "2343434",
+                      "imgGallery":  [
+                                         {
+                                             "id":  "d51c4098-4b11-4c43-a6f5-489d7dca9f154",
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060278040_2f8047a77174e40ad0fb48a3b99f523f/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060334245_b08683a917170cbd1bd5633040afa194/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060342822_cd8622d0849e8e2c3a196546fd18a201/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-living_room.jpg",
+                                                                "alt":  "image 3"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "97f17d55-4632-4f57-a6cd-04b287ff60194",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060294732_741a5574e5f7fd00452ffd4df4ec7c04/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_one.jpg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060310737_ab0b7da909a73c3871b18711681a4a6a/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bedroom_two.jpg",
+                                                                "alt":  "image 2"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060285857_4d94f428177d32fa32225ee4e65945ad/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-kitchen.jpg",
+                                                                "alt":  "image 3"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/01c16c28/1738060301645_4b580226fb0c85554beb68d33a8c4d64/v0/fs/2_bhk_apartment-for-sale-vikhroli_east-Mumbai-bathroom_one.jpg",
+                                                                "alt":  "image 4"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "46764e2e-fe97-4b7f-bd72-57ef4a7224ec1",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/39431a03b7995c3ab99a37cad24f792b/v0/fs.jpeg",
+                                                                "alt":  "image 1"
+                                                            },
+                                                            {
+                                                                "url":  "https://housing-images.n7net.in/012c1500/1ddf97d871243d1d1de937fd9ca62522/v0/fs.jpeg",
+                                                                "alt":  "image 2"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "Godrej Platinum",
+                                              "address":  {
+                                                              "address1":  "Godrej Platinum, Hariyali, Vikhroli East",
+                                                              "address2":  "",
+                                                              "aptNumber":  "511",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400037",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://housing-images.n7net.in/012c1500/0d06a441798b5d2bd27f70d6a94c3c0c/v0/fs.jpeg",
+                                              "area":  "2812",
+                                              "type":  "ResidentialApartment",
+                                              "parking":  "2Wheeler",
+                                              "configuration":  "3BHK",
+                                              "furnishing":  "FullyFurnish",
+                                              "size":  "Studio - 3 Beds ",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Pets Allowed",
+                                                                "Fitness Center",
+                                                                "Pool",
+                                                                "Dishwasher",
+                                                                "Refrigerator",
+                                                                "Kitchen"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "11am - 4pm Today",
+                                                                  "timeZone":  "IND",
+                                                                  "workingDays":  [
+                                                                                      "Mon"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact This Property",
+                                                                "phone":  "(708) 725-1991",
+                                                                "email":  "GodrejPlatinium.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About Godrej Towers",
+                                      "description":  "1BHK lavish semi furnished flat available at Godrej Platinum Vikhroli East.The property is based with all the basic amenities required its near to school hospital and the best part easy way to reach to Vikhroli station within 5 mins.",
+                                      "details":  "Check out this 2 BHK Flat for sale in Vikhroli East, Mumbai. This 2 BHK Flat is perfect for a modern-day lifestyle. Vikhroli East is a promising location in Mumbai and this is one of the finest properties in the area. Buy this Flat for sale now. It is located on floor 20. The total number of floors in this project is 28. The property\u0027s price is Rs 3.2 Cr. This property is a modern-day abode, with 1300 square_feet built-up area. The carpet-area is 933 square_feet. It is a North-East-facing property. "
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "Air conditioning",
+                                                          "Washer/Dryer",
+                                                          "Cable ready",
+                                                          "Walk-in closets",
+                                                          "Window coverings",
+                                                          "Skylight"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Price",
+                                                          "configuration",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "5215",
+                                                              "price":  "25,00000",
+                                                              "usableArea":  "715",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "15 march 2025",
+                                                              "configuration":  "1 BHK",
+                                                              "furnishing":  "Fully-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer"
+                                                                          ]
+                                                          },
+                                                          {
+                                                              "unit":  "50001",
+                                                              "price":  "10000000",
+                                                              "usableArea":  "700",
+                                                              "measureUnit":  "Ft",
+                                                              "availableFrom":  "20 May 2025",
+                                                              "configuration":  "1 BHK",
+                                                              "furnishing":  "Fully-Furnish",
+                                                              "highlights":  [
+                                                                                 "High Speed Internet Access",
+                                                                                 "Wifi",
+                                                                                 "Washer/Dryer",
+                                                                                 "Air Conditioning",
+                                                                                 "Super Markets"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Dishwasher",
+                                                                              "Granite Countertops",
+                                                                              "Refrigerator",
+                                                                              "Freezer",
+                                                                              "Heating"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "Neighborhood",
+                                           "description":  "Vikhroli  lies within Mumbai City in the Mumbai Suburban District in Maharashtra. Its coordinates are 19.1142Â° N, 72.9358Â° E. It is also governed by the Brihanmumbai Municipal Corporation. parel is also located in close proximity to major IT Parks, SEZs and other areas like Powai, Ghatkopar and Mulund to name a few.",
+                                           "details":  "Dozens of theaters, live music venues, museums, and galleries fill the area, along with hundreds of shops and restaurants catering to every conceivable taste.The campuses of somaiya college, mumbai University, and the Art Institute of mumbai are also located here."
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Power Back-up",
+                                                                 "Lift(s)",
+                                                                 "Feng Shui / Vaastu Compliant",
+                                                                 "Maintenance Staff",
+                                                                 "Water Storage",
+                                                                 "Piped-gas",
+                                                                 "Security Personnel",
+                                                                 "Natural Light",
+                                                                 "Internet/wi-fi connectivity",
+                                                                 "Airy Rooms",
+                                                                 "Fitness Centre / GYM",
+                                                                 "Waste Disposal",
+                                                                 "Rain Water Harvesting",
+                                                                 "Club house / Community Center"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "Schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  "Udayachal High School",
+                                                            "address":  "Pirojshanagar, Vikhroli, Mumbai, 400079",
+                                                            "distance":  "1.5 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "ORCHIDS The International School ",
+                                                            "address":  "Rajiv Gandhi Nagar, Vikhroli, Mumbai, 400083",
+                                                            "distance":  "2.8 km",
+                                                            "type":  "International School",
+                                                            "rating":  "9"
+                                                        },
+                                                        {
+                                                            "name":  "St. Joseph\u0027s High School",
+                                                            "address":  "Godrej \u0026 Boyce Industry Estate, Vikhroli, 400079",
+                                                            "distance":  "1.1 km",
+                                                            "type":  "Public High School",
+                                                            "rating":  "8"
+                                                        },
+                                                        {
+                                                            "name":  "Abhay International School",
+                                                            "address":  " Kannamwar Nagar , Vikhroli, 400083 ",
+                                                            "distance":  "4.1 km",
+                                                            "type":  "International School",
+                                                            "rating":  "10"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  "Mumbai Local Train - Vikhroli Station",
+                                                                 "address":  "vikhroli East, Mumbai, India",
+                                                                 "distance":  "1.2 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             },
+                                                             {
+                                                                 "name":  "BEST Bus Stop - Ghatkoper",
+                                                                 "address":  "Ghatkoper East, Mumbai, India",
+                                                                 "distance":  "1.3 km",
+                                                                 "type":  "Railway Station",
+                                                                 "rating":  "8"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "Hospitals",
+                                       "details":  [
+                                                       {
+                                                           "name":  "Apollo Spectra Hospital",
+                                                           "address":  " MBPT Colony, ,Chembur, Mumbai ",
+                                                           "distance":  "4.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Sion Hospital",
+                                                           "address":  "Sion East, Mumbai, India",
+                                                           "distance":  "3.0 km",
+                                                           "type":  "Private",
+                                                           "rating":  "9"
+                                                       },
+                                                       {
+                                                           "name":  "Nanavati Hospital",
+                                                           "address":  "ghatkoper West, Mumbai, India",
+                                                           "distance":  "2.2 km",
+                                                           "type":  "Public",
+                                                           "rating":  "8"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "67b741419296f629d8dd9449"
+                  },
+                  {
+                      "id":  "69cc15eab72aaf49086f0e5f",
+                      "imgGallery":  [
+                                         {
+                                             "id":  "ae1d0564-a544-4647-9275-38759a248d23",
+                                             "type":  "ImageGallery",
+                                             "images":  [
+                                                            {
+                                                                "url":  "err",
+                                                                "alt":  "erer"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "033f9cda-fd46-420e-be20-ad7a9e5deeda",
+                                             "type":  "Photos",
+                                             "images":  [
+                                                            {
+                                                                "url":  "wer",
+                                                                "alt":  "wer"
+                                                            }
+                                                        ]
+                                         },
+                                         {
+                                             "id":  "9b0ce8aa-7841-4b12-a784-7939b6aaa61d",
+                                             "type":  "floorPlan",
+                                             "images":  [
+                                                            {
+                                                                "url":  "wer",
+                                                                "alt":  "wer"
+                                                            }
+                                                        ]
+                                         }
+                                     ],
+                      "propertyDetails":  {
+                                              "name":  "RAJ SHANKAR KADAM",
+                                              "address":  {
+                                                              "address1":  "Mahada Colony,Govandi",
+                                                              "address2":  "",
+                                                              "aptNumber":  "32",
+                                                              "city":  "Mumbai",
+                                                              "zipCode":  "400043",
+                                                              "state":  "Maharashtra",
+                                                              "country":  "India"
+                                                          },
+                                              "thumbnail":  "https://images1.apartments.com/i2/TXlzRBsPZtMKry-Z1-9l8wP4CkBfs1tqf0iSDudoC9k/117/sentral-michigan-avenue-chicago-il-building-photo.jpg?p=1",
+                                              "area":  "2323",
+                                              "type":  "Residential Apartment",
+                                              "parking":  "4 wheeler",
+                                              "configuration":  "",
+                                              "furnishing":  "",
+                                              "size":  "Studio - 2 beds",
+                                              "mapLat":  0.0,
+                                              "mapLong":  0.0,
+                                              "amenities":  [
+                                                                "Pets care",
+                                                                "Laundry",
+                                                                "Fitness Area",
+                                                                "Playing Area",
+                                                                "Pool",
+                                                                "Club house"
+                                                            ],
+                                              "officeHours":  {
+                                                                  "time":  "Open 12pm - 5pm Today",
+                                                                  "timeZone":  "CST",
+                                                                  "workingDays":  [
+                                                                                      "Monday"
+                                                                                  ]
+                                                              },
+                                              "contactUs":  {
+                                                                "title":  "Contact ",
+                                                                "phone":  "9321587317",
+                                                                "email":  "kadamraj623@gmail.com"
+                                                            }
+                                          },
+                      "aboutUs":  {
+                                      "title":  "About ",
+                                      "description":  "dsf sdf dfs fsd fsdf sdfsdf sdf sdf sdf",
+                                      "details":  "sfsdf sdfsdfsdf sdfsd fdfsd fd fsd"
+                                  },
+                      "highlights":  {
+                                         "title":  "Highlights",
+                                         "features":  [
+                                                          "WiFi",
+                                                          "Pets Allowed",
+                                                          "Balcony",
+                                                          "Modular Kitchen"
+                                                      ]
+                                     },
+                      "availableUnits":  {
+                                             "cols":  [
+                                                          "Availability",
+                                                          "Configuration",
+                                                          "Price",
+                                                          "Unit",
+                                                          "Usable Area"
+                                                      ],
+                                             "rows":  [
+                                                          {
+                                                              "unit":  "343",
+                                                              "price":  "34423",
+                                                              "usableArea":  "434",
+                                                              "measureUnit":  "ft",
+                                                              "availableFrom":  "2026-04-08",
+                                                              "configuration":  "1bhk",
+                                                              "furnishing":  "Semi Furnish",
+                                                              "highlights":  [
+                                                                                 "Dry Cleaning Service",
+                                                                                 "Closets",
+                                                                                 "Good view"
+                                                                             ],
+                                                              "kitchen":  [
+                                                                              "Good Connectivity",
+                                                                              "Dry Cleaning Service"
+                                                                          ]
+                                                          }
+                                                      ]
+                                         },
+                      "neighborHood":  {
+                                           "title":  "neighborHood",
+                                           "description":  "asdf sdfasd gadg asdgfasdg a",
+                                           "details":  "sdgasd gsdg sag asfdg adgsasd"
+                                       },
+                      "apartmentFeatures":  {
+                                                "title":  "Apartment Features",
+                                                "features":  [
+                                                                 "Washer/Dryer",
+                                                                 "Air Conditioning",
+                                                                 "Dishwasher",
+                                                                 "High Speed Internet Access",
+                                                                 "Wi-Fi",
+                                                                 "Granite Countertops",
+                                                                 "Kitchen",
+                                                                 "Refrigerator",
+                                                                 "Freezer",
+                                                                 "Office"
+                                                             ]
+                                            },
+                      "education":  {
+                                        "title":  "schools",
+                                        "details":  [
+                                                        {
+                                                            "name":  " asdg",
+                                                            "address":  "sadgf asdg",
+                                                            "distance":  " asg",
+                                                            "type":  "Public High School",
+                                                            "rating":  " sdg sd"
+                                                        }
+                                                    ]
+                                    },
+                      "transportation":  {
+                                             "title":  "Transportation",
+                                             "details":  [
+                                                             {
+                                                                 "name":  " sdg",
+                                                                 "address":  " asdgsdg",
+                                                                 "distance":  "a sdg",
+                                                                 "type":  "BUS Station",
+                                                                 "rating":  "sad gg asd"
+                                                             }
+                                                         ]
+                                         },
+                      "hospital":  {
+                                       "title":  "hospital",
+                                       "details":  [
+                                                       {
+                                                           "name":  " asgadg ",
+                                                           "address":  " asgd",
+                                                           "distance":  " asg",
+                                                           "type":  "Private Hospital",
+                                                           "rating":  " asdgd"
+                                                       }
+                                                   ]
+                                   },
+                      "userId":  "69cc1566b72aaf49086f0e5e"
+                  }
+              ],
+    "Count":  9
+}

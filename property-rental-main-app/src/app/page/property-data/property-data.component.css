@@ -1,6 +1,146 @@
-.about-property h2 {
-    color: #333;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+/* ===== Property Details Page ===== */
+.property-details-page {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* Gallery Section */
+.gallery-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.gallery-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+  
+/* Main Content Layout */
+.details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 24px;
+}
+
+/* Main Column & Sections */
+.main-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 0; /* Crucial: allows grid item to shrink */
+}
+
+.card-section {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  padding: 32px;
+  border: 1.5px solid #f0f0f0;
+  overflow: hidden; /* Prevent inner elements from breaking borders */
+}
+
+.content-section {
+  transition: border-color 0.3s ease;
+}
+
+.content-section:hover {
+  border-color: #c4b5fd;
+}
+
+.section-header {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 16px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e1b4b;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.section-title i {
+  color: #6366f1;
+  font-size: 18px;
+}
+
+.section-body {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* Amenities Grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.grid-section {
+  padding: 24px;
+}
+
+.grid-section.full-width {
+  grid-column: span 2;
+}
+
+/* Sidebar & Sticky */
+.sidebar-column {
+  position: relative;
+  min-width: 0;
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 100px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .details-grid {
+    grid-template-columns: 1fr;
   }
   
+  .sidebar-column {
+    order: -1; /* Move contact form to top on mobile for leads */
+    margin-bottom: 24px;
+  }
+  
+  .sticky-sidebar {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-section.full-width {
+    grid-column: span 1;
+  }
+  
+  .card-section {
+    padding: 24px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
+}

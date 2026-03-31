@@ -84,7 +84,7 @@ POST /account/reset-password
 
 ---
 
-### 4. **Rate Limiting**
+### 4. **Rate Limiting** -- done
 **Priority:** High  
 **Complexity:** Low  
 **Time Estimate:** 1 day

@@ -1,44 +1,48 @@
-<div class="bg-white p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-bold mb-4">📅 Booking Management</h2>
-
-  <!-- Filters -->
-  <div class="mb-4 flex space-x-2">
-    <button class="bg-blue-500 text-white px-4 py-2 rounded" (click)="filterStatus('all')">All</button>
-    <button class="bg-yellow-500 text-white px-4 py-2 rounded" (click)="filterStatus('pending')">Pending</button>
-    <button class="bg-green-500 text-white px-4 py-2 rounded" (click)="filterStatus('accepted')">Accepted</button>
-    <button class="bg-red-500 text-white px-4 py-2 rounded" (click)="filterStatus('rejected')">Rejected</button>
+<div class="section-container">
+  <div class="section-header">
+    <h3><i class="fa-solid fa-calendar-check"></i> Booking Management</h3>
   </div>
 
-  <!-- Booking List -->
-  <table class="table-auto w-full border-collapse border border-gray-300">
-    <thead>
-      <tr class="bg-gray-200">
-        <th class="border p-2">Tenant Name</th>
-        <th class="border p-2">Property</th>
-        <th class="border p-2">Date</th>
-        <th class="border p-2">Status</th>
-        <th class="border p-2">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let booking of filteredBookings" class="border">
-        <td class="p-2">{{ booking.tenant }}</td>
-        <td class="p-2">{{ booking.property }}</td>
-        <td class="p-2">{{ booking.date }}</td>
-        <td class="p-2">
-          <span [ngClass]="{
-            'text-yellow-500': booking.status === 'Pending',
-            'text-green-500': booking.status === 'Accepted',
-            'text-red-500': booking.status === 'Rejected'
-          }">
-            {{ booking.status }}
-          </span>
-        </td>
-        <td class="p-2">
-          <button *ngIf="booking.status === 'Pending'" class="bg-green-500 text-white px-3 py-1 rounded" (click)="updateStatus(booking, 'Accepted')">Accept</button>
-          <button *ngIf="booking.status === 'Pending'" class="bg-red-500 text-white px-3 py-1 rounded" (click)="updateStatus(booking, 'Rejected')">Reject</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- Filters -->
+  <div class="filter-bar">
+    <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="filterStatus('all')">All</button>
+    <button class="filter-btn pending" [class.active]="activeFilter === 'pending'" (click)="filterStatus('pending')">Pending</button>
+    <button class="filter-btn accepted" [class.active]="activeFilter === 'accepted'" (click)="filterStatus('accepted')">Accepted</button>
+    <button class="filter-btn rejected" [class.active]="activeFilter === 'rejected'" (click)="filterStatus('rejected')">Rejected</button>
+  </div>
+
+  <!-- Booking Cards -->
+  <div *ngIf="filteredBookings.length === 0" class="empty-state">
+    <i class="fa-solid fa-calendar-xmark"></i>
+    <p>No bookings found</p>
+  </div>
+
+  <div class="booking-list">
+    <div *ngFor="let booking of filteredBookings" class="booking-card">
+      <div class="booking-avatar">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="booking-info">
+        <h4>{{ booking.tenant }}</h4>
+        <p><i class="fa-solid fa-building"></i> {{ booking.property }}</p>
+        <p class="booking-date"><i class="fa-regular fa-calendar"></i> {{ booking.date }}</p>
+      </div>
+      <div class="booking-status">
+        <span class="status-pill"
+          [class.pending]="booking.status === 'Pending'"
+          [class.accepted]="booking.status === 'Accepted'"
+          [class.rejected]="booking.status === 'Rejected'">
+          {{ booking.status }}
+        </span>
+      </div>
+      <div *ngIf="booking.status === 'Pending'" class="booking-actions">
+        <button class="action-btn accept" (click)="updateStatus(booking, 'Accepted')">
+          <i class="fa-solid fa-check"></i>
+        </button>
+        <button class="action-btn reject" (click)="updateStatus(booking, 'Rejected')">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

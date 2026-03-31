@@ -1,54 +1,64 @@
-<div class="card property-card mt-3" [attr.data-bhk]="propertyCard.bhk">
 
-  <!-- Card Header -->
-  <div class="card-header d-flex align-items-center">
-    <div>
-      <h2 class="card-title">
-        {{ propertyCard.propertyDetails.name || "Not Available" }}
-      </h2>
-      <p class="card-subtitle">
-        {{ propertyCard.propertyDetails.address.address1 + "," + propertyCard.propertyDetails.address.city || "NotAvailable" }}
-      </p>
-    </div>
+<div class="search-result-tile">
+  <div class="tile-media">
+    <ng-container *ngIf="primaryGallery && primaryGallery.images && primaryGallery.images.length > 0; else noGallery">
+      <img [src]="primaryGallery.images[0].url" 
+           class="tile-image"
+           [alt]="propertyCard?.propertyDetails?.name || 'Property'" loading="lazy" />
+    </ng-container>
+    <ng-template #noGallery>
+      <div class="thumb-placeholder d-flex align-items-center justify-content-center flex-column" style="height: 100%; min-height: 200px; background-color: #f3f4f6;">
+        <i class="fa-solid fa-image text-muted" style="font-size: 3rem; color: #9ca3af;"></i>
+      </div>
+    </ng-template>
+    <div class="tile-badge">{{ propertyCard?.propertyDetails?.type || 'Apartment' }}</div>
   </div>
 
-  <!-- Card Content -->
-  <div class="card-content d-flex">
-    <!-- Image Carousel -->
-    <div class="card-image">
-      <ng-container *ngFor="let gallery of propertyCard.imgGallery">
-        <app-image-carousel *ngIf="gallery.type === 'ImageGallery'" [data]="gallery"
-          [imageStyle]="carouselImageStyle"></app-image-carousel>
-      </ng-container>
+  <!-- Right Side: Content -->
+  <div class="tile-content" [routerLink]="['/propertydetails', propertyCard.id]">
+    <div class="tile-header">
+      <div>
+        <h2 class="tile-title">{{ propertyCard?.propertyDetails?.name || 'Unnamed Property' }}</h2>
+        <p class="tile-location"><i class="fa-solid fa-location-dot"></i> {{ propertyCard?.propertyDetails?.address?.city || 'Mumbai' }}, {{ propertyCard?.propertyDetails?.address?.state || '' }}</p>
+      </div>
+      <!-- <div class="tile-price">
+        <span class="price-label">Monthly Rent</span>
+        <span class="price-val">₹{{ propertyCard?.propertyDetails?.price || (propertyCard?.availableUnits?.rows?.[0]?.price) || 'N/A' | number }}</span>
+      </div> -->
     </div>
 
-    <!-- Property Info -->
-
-    <div class="card-info" routerLink="/propertydetails/{{ propertyCard.id }}">
-      <div class="card-body">
-        <p class="property-price text-lg font-bold text-blue-600">
-          {{ propertyCard.propertyDetails.size || "Not Available" }}
-        </p>
-
-        <!-- Area -->
-        <p class="property-area text-sm text-gray-700 mt-1">
-          <span class="font-medium">Area:</span> {{ propertyCard.propertyDetails.area +" " +"sq Ft"|| "Not Available" }}
-        </p>
-
-        <!-- Amenities -->
-        <p class="property-amenities text-sm text-gray-700 mt-1">
-          <span class="font-medium">Amenities:</span> {{ propertyCard.propertyDetails.amenities || "Not Available" }}
-        </p>
-
-        <!-- Contact Info -->
-        <p class="contact-info text-sm text-gray-700 mt-1">
-          <span class="font-medium">Contact:</span> {{ propertyCard.propertyDetails.contactUs.phone || "Not Available"
-          }}
-        </p>
-        <section class="buttons">
-          <button type="submit"  class="button button-primary"  data-bs-toggle="modal" data-bs-target="#requestTour"> Contact This Property</button>
-        </section>
+    <!-- Specs Grid -->
+    <div class="tile-specs">
+      <div class="spec-item">
+        <i class="fa-solid fa-ruler-combined"></i>
+        <span>{{ propertyCard?.propertyDetails?.area || 'N/A' }} sqft</span>
       </div>
+      <div class="spec-item">
+        <i class="fa-solid fa-bed"></i>
+        <span>{{ propertyCard?.propertyDetails?.configuration || 'N/A' }} BHK</span>
+      </div>
+      <div class="spec-item">
+        <i class="fa-solid fa-couch"></i>
+        <span>{{ propertyCard?.propertyDetails?.furnishing || 'Standard' }}</span>
+      </div>
+      <div class="spec-item">
+        <i class="fa-solid fa-car"></i>
+        <span>{{ propertyCard?.propertyDetails?.parking || 'Parking Avail.' }}</span>
+      </div>
+    </div>
+
+    <!-- <div class="tile-amenities">
+      <span class="tag" *ngFor="let am of propertyCard?.propertyDetails?.amenities?.split(',')?.slice(0, 3)">{{ am }}</span>
+      <span class="tag more" *ngIf="propertyCard?.propertyDetails?.amenities?.split(',')?.length > 3">+ More</span>
+    </div> -->
+
+    <div class="tile-footer">
+      <div class="agent-compact">
+        <i class="fa-solid fa-user-check"></i> Verified Agent
+      </div>
+      <button class="btn-tile-details">
+        Details <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
   </div>
 </div>

@@ -19,12 +19,18 @@ export class SignupComponent {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       contactNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      password: ['', [Validators.required, Validators.minLength(8)]]
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      role: ['ROLE_USER', Validators.required]
     });
   }
   onSubmit() {
     if (this.signupForm.valid) {
-      this.authService.signup(this.signupForm.value).subscribe(response => {
+      const formData = { ...this.signupForm.value };
+      // Convert single role to roles array for the backend
+      formData.roles = [formData.role];
+      delete formData.role;
+
+      this.authService.signup(formData).subscribe(response => {
         this.alertService.showAlert('Signup successful! 🎉', 'success'); // Green
         setTimeout(() => this.router.navigate(['/login']), 2000);
       }, error => {

@@ -1,45 +1,55 @@
-<!-- Contact Form -->
-<aside class="form" style="width: 20rem; position: fixed; bottom: 1rem; right: 0.2rem;">
-  <div class="bg-light shadow-lg rounded-lg p-4">
-    <div id="contactLead" class="d-flex flex-column justify-content-between h-100">
-      <!-- Heading -->
-      <h2 class="text-center text-primary mb-4 font-weight-bold">
-        Contact {{propertyContactData.propertyDetails.name}}
-      </h2>
 
-      <!-- Buttons -->
-      <div class="d-grid gap-3">
-        <section class="buttons">
-          <button   class="button button-primary"  data-bs-toggle="modal" data-bs-target="#sendMessage">Send Message</button>
-        </section>
+<div class="contact-lead-card">
+  <div class="lead-header">
+    <div class="owner-avatar">
+      <i class="fa-solid fa-user-tie"></i>
+    </div>
+    <div class="owner-info">
+      <h3>Contact Listing Agent</h3>
+      <p>{{ propertyContactData?.propertyDetails?.name || 'Property Manager' }}</p>
+    </div>
+  </div>
 
-        <section class="buttons" >
-          <button  class="button button-primary" data-bs-toggle="modal" data-bs-target="#requestTour">Request Tour</button>
-        </section>
+  <div class="lead-actions">
+    <button class="btn-primary-lead" data-bs-toggle="modal" data-bs-target="#sendMessage">
+      <i class="fa-solid fa-paper-plane"></i> Send Message
+    </button>
+    <button class="btn-outline-lead" data-bs-toggle="modal" data-bs-target="#requestTour">
+      <i class="fa-solid fa-calendar-days"></i> Request a Tour
+    </button>
+  </div>
+
+  <div class="lead-info-list">
+    <div class="info-item">
+      <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+      <div class="info-text">
+        <span class="label">Phone</span>
+        <span class="value">{{ propertyContactData?.propertyDetails?.contactUs?.phone || 'Not Shared' }}</span>
       </div>
-      <hr>
-      <!-- Contact Information -->
-      <div class="mt-4 text-center">
-        <h4 class="text-blue-400 mb-3">
-          <i class="fas fa-phone-alt me-2 "></i>{{propertyContactData.propertyDetails.contactUs.phone || 'Number Not Available'}}
-        </h4>
-       
-        <h4 class="text-secondary mb-3">
-          <i class="fas fa-envelope me-2"></i>{{propertyContactData.propertyDetails.contactUs.email || 'Email Not Available'}}
-        </h4>
-        <h4 class="text-secondary mb-3">
-          <i class="fas fa-clock me-2"></i>{{"Open"+" "+propertyContactData.propertyDetails.officeHours.time || 'Hours Not Available'}}
-        </h4>
-        <h4 class="text-secondary">
-          <i class="fas fa-calendar-day me-2"></i>{{propertyContactData.propertyDetails.officeHours.workingDays || 'Days Not Available'}}
-        </h4>
-        
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+      <div class="info-text">
+        <span class="label">Email</span>
+        <span class="value">{{ propertyContactData?.propertyDetails?.contactUs?.email || 'Not Shared' }}</span>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+      <div class="info-text">
+        <span class="label">Office Hours</span>
+        <span class="value">{{ propertyContactData?.propertyDetails?.officeHours?.time || '9 AM - 6 PM' }}</span>
+        <span class="sub-value">{{ propertyContactData?.propertyDetails?.officeHours?.workingDays || 'Mon - Fri' }}</span>
       </div>
     </div>
   </div>
-</aside>
 
+  <div class="lead-footer">
+    <p><i class="fa-solid fa-shield-check"></i> Security verified by Cityscape</p>
+  </div>
+</div>
 
 <app-send-message [propertyInfo]="propertyContactData"></app-send-message>
 <app-request-tourform [propertyInfo]="propertyContactData"></app-request-tourform>
-

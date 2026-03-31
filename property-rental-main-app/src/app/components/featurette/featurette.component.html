@@ -1,23 +1,25 @@
-<section class="px-6 py-12 ">
-  <div class="container mx-auto">
-    <div class="featurette flex flex-wrap items-center gap-10 mb-12" *ngFor="let featurette of featuretteData">
-      <div *ngIf="featurette.isEnabled" [class]="featurette.class + ' w-full lg:flex lg:items-center'">
-        <!-- Text Content -->
-        <div class="lg:w-1/2 text-center lg:text-left mb-6 lg:mb-0 order-2 lg:order-1 px-4">
-          <h2 class="featurette-heading font-semibold text-3xl md:text-4xl leading-tight text-gray-800 mb-4">
-            {{ featurette.heading1 || "Not Available" }}
-          </h2>
-          <p class="text-lg text-gray-600">
-            {{ featurette.text || "Not Available" }}
-          </p>
-        </div>
 
-        <!-- Image -->
-        <div class="lg:w-1/2 flex justify-center order-1 lg:order-2 px-4">
-          <img class="rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300" 
-          [src]="featurette.image" alt="Featurette"  />
+<div class="featurettes-wrapper">
+  <div *ngFor="let featurette of featuretteData; let i = index" 
+    class="featurette-item" 
+    [class.reverse]="i % 2 !== 0">
+    
+    <div *ngIf="featurette.isEnabled" class="featurette-content-row">
+      <!-- Text Content -->
+      <div class="featurette-text">
+        <span class="feature-index">0{{ i + 1 }}</span>
+        <h2 class="featurette-heading">{{ featurette.heading1 || "Not Available" }}</h2>
+        <p class="featurette-desc">{{ featurette.text || "Not Available" }}</p>
+        <div class="feature-actions" *ngIf="i === 0">
+          <button class="btn-info-action" routerLink="/FindProperty">Get Started <i class="fa-solid fa-arrow-right"></i></button>
         </div>
+      </div>
+
+      <!-- Image -->
+      <div class="featurette-img-box">
+        <div class="img-accent-bg"></div>
+        <img [src]="featurette.image" alt="Featurette" />
       </div>
     </div>
   </div>
-</section>
+</div>

@@ -1,0 +1,112 @@
+/* Modern Featurette Style */
+.featurettes-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.featurette-content-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.featurette-item.reverse .featurette-content-row {
+  flex-direction: row-reverse;
+}
+
+/* Text Content */
+.featurette-text {
+  flex: 1;
+}
+
+.feature-index {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: #7c3aed;
+  margin-bottom: 16px;
+  letter-spacing: 0.2em;
+}
+
+.featurette-heading {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1e1b4b;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.featurette-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 32px;
+}
+
+.btn-info-action {
+  padding: 12px 28px;
+  background: #f5f3ff;
+  color: #7c3aed;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.btn-info-action:hover {
+  background: #ede9fe;
+  gap: 16px;
+}
+
+/* Image Column */
+.featurette-img-box {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.img-accent-bg {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 120%;
+  height: 120%;
+  background: #f1f5f9;
+  border-radius: 40px;
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+
+.featurette-item.reverse .img-accent-bg {
+  left: auto;
+  right: -20px;
+  transform: rotate(3deg);
+  background: #f5f3ff;
+}
+
+.featurette-img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .featurettes-wrapper { gap: 80px; padding: 40px 20px; }
+  .featurette-content-row { flex-direction: column !important; gap: 40px; text-align: center; }
+  .featurette-heading { font-size: 28px; }
+  .btn-info-action { margin: 0 auto; }
+}

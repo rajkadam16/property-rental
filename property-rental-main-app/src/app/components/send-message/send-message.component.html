@@ -1,114 +1,91 @@
-<div class="modal fade" id="sendMessage" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-light">
-        <h5 class="modal-title fw-semibold text-dark" id="fileModalLabel">{{propertyInfo.propertyDetails.name}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="sendMessage" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+    <div class="modal-content premium-modal">
+      <div class="modal-header modal-header-custom">
+        <h5 class="modal-title" id="messageModalLabel">
+          <i class="fa-solid fa-paper-plane text-purple"></i> Send Message
+        </h5>
+        <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
-      <div class="modal-body">
-        <div class="bg-light p-4 rounded shadow">
-          <form action="" [formGroup]="sendMessage" (ngSubmit)="onSubmit()">
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <input  
-                  type="text" 
-                  placeholder="First name" 
-                  class="form-control" 
-                  formControlName="firstName" 
-                />
-                <small class="text-danger" *ngIf="sendMessage.controls['firstName'].touched && sendMessage.controls['firstName'].hasError('required')">
-                  First name is required
-                </small>
-                <small class="text-danger" *ngIf="sendMessage.controls['firstName'].touched && sendMessage.controls['firstName'].hasError('maxlength')">
-                  First name must be less than 20 characters
-                </small>
+      
+      <div class="modal-body p-0">
+        <div class="modal-form-wrapper">
+          <p class="modal-subtitle">To: <strong>Property Manager ({{propertyInfo?.propertyDetails?.name}})</strong></p>
+          
+          <form [formGroup]="sendMessage" (ngSubmit)="onSubmit()">
+            
+            <div class="input-grid">
+              <div class="form-group">
+                <label>First Name</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" placeholder="John" formControlName="firstName" />
+                </div>
+                <small class="error-text" *ngIf="sendMessage.controls['firstName'].touched && sendMessage.controls['firstName'].hasError('required')">Required</small>
               </div>
-              <div class="col-md-6">
-                <input 
-                  type="text" 
-                  placeholder="Last name" 
-                  class="form-control" 
-                  formControlName="lastName" 
-                />
-                <small class="text-danger" *ngIf="sendMessage.controls['lastName'].touched && sendMessage.controls['lastName'].hasError('required')">
-                  Last name is required
-                </small>
-                <small class="text-danger" *ngIf="sendMessage.controls['lastName'].touched && sendMessage.controls['lastName'].hasError('maxlength')">
-                  Last name must be less than 20 characters
-                </small>
+              
+              <div class="form-group">
+                <label>Last Name</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" placeholder="Doe" formControlName="lastName" />
+                </div>
+                <small class="error-text" *ngIf="sendMessage.controls['lastName'].touched && sendMessage.controls['lastName'].hasError('required')">Required</small>
               </div>
             </div>
-            <div class="mb-3">
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                class="form-control" 
-                formControlName="email" 
-              />
-              <small class="text-danger" *ngIf="sendMessage.controls['email'].touched && sendMessage.controls['email'].hasError('required')">
-                Email is required
-              </small>
-              <small class="text-danger" *ngIf="sendMessage.controls['email'].touched && sendMessage.controls['email'].hasError('email')">
-                Please enter a valid email address
-              </small>
-            </div>
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label class="form-label">Preferred date</label>
-                <input 
-                  type="date" 
-                  class="form-control" 
-                  formControlName="tourDate" 
-                />
-                <small class="text-danger" *ngIf="sendMessage.controls['tourDate'].touched && sendMessage.controls['tourDate'].hasError('required')">
-                  Date is required
-                </small>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <div class="input-with-icon">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="john@example.com" formControlName="email" />
               </div>
-              <div class="col-md-6">
-                <label class="form-label">Contact no</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone" 
-                  class="form-control" 
-                  required 
-                  formControlName="phoneNumber" 
-                />
-                <small class="text-danger" *ngIf="sendMessage.controls['phoneNumber'].touched && sendMessage.controls['phoneNumber'].hasError('required')">
-                  Phone number is required
-                </small>
-                <small class="text-danger" *ngIf="sendMessage.controls['phoneNumber'].touched && sendMessage.controls['phoneNumber'].hasError('pattern')">
-                  Please enter a valid phone number
-                </small>
+              <small class="error-text" *ngIf="sendMessage.controls['email'].touched && sendMessage.controls['email'].hasError('required')">Required</small>
+            </div>
+
+            <div class="input-grid">
+              <div class="form-group">
+                <label>Preferred Contact Date</label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-calendar"></i>
+                  <input type="date" formControlName="tourDate" />
+                </div>
+                <small class="error-text" *ngIf="sendMessage.controls['tourDate'].touched && sendMessage.controls['tourDate'].hasError('required')">Required</small>
+              </div>
+              
+              <div class="form-group">
+                <label>Contact Number</label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" formControlName="phoneNumber" placeholder="9876543210" />
+                </div>
+                <small class="error-text" *ngIf="sendMessage.controls['phoneNumber'].touched && sendMessage.controls['phoneNumber'].hasError('required')">Required</small>
               </div>
             </div>
-            <div class="mb-3">
-              <label class="form-label">Custom Message</label>
-              <textarea class="form-control" formControlName="coustomMessage" ></textarea>
+
+            <div class="form-group">
+              <label>Message</label>
+              <div class="input-with-icon">
+                <i class="fa-regular fa-comment-dots" style="top: 24px;"></i>
+                <textarea formControlName="coustomMessage" placeholder="Hello, I am interested in this property..."></textarea>
+              </div>
             </div>
-            <div class="d-grid">
-              <button 
-                type="submit" 
-                class="btn btn-success" 
-                [disabled]="sendMessage.invalid" 
-                (click)="onSubmit();sendEmail();reset()">
-                Send Message
+
+            <div class="form-group term-check">
+              <label class="custom-check mt-2">
+                <input type="checkbox" formControlName="acceptTerms" />
+                <span class="chk-box"></span> Email me listings and apartments related info
+              </label>
+            </div>
+
+            <div class="modal-footer-actions">
+              <button type="submit" class="btn-gradient-submit" [disabled]="sendMessage.invalid" (click)="sendEmail();reset()">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
               </button>
             </div>
-            <div class="form-check mt-3">
-              <input 
-                type="checkbox" 
-                class="form-check-input" 
-                id="acceptTerms" 
-                formControlName="acceptTerms" 
-              />
-              <label class="form-check-label" for="acceptTerms">
-                Email me listings and apartments related info
-              </label>
-              <small class="text-danger" *ngIf="sendMessage.controls['acceptTerms'].touched && sendMessage.controls['acceptTerms'].hasError('required')">
-                You must accept the terms and conditions
-              </small>
-            </div>
+            
           </form>
         </div>
       </div>

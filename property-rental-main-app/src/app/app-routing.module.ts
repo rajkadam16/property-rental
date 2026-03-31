@@ -11,6 +11,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { authGuardGuard } from './core/guards/auth-guard.guard';
+import { RoleGuard } from './core/guards/role.guard';
 import { PropertiesComponent } from './page/dashboard/sections/properties/properties.component';
 import { BookingsComponent } from './page/dashboard/sections/bookings/bookings.component';
 import { EarningsComponent } from './page/dashboard/sections/earnings/earnings.component';
@@ -55,7 +56,8 @@ const routes: Routes = [
   {
     path: 'addproperty',
     component: AddPropertyComponent,
-    canActivate: [authGuardGuard],
+    canActivate: [RoleGuard],
+    data: { roles: ['ROLE_OWNER', 'ROLE_ADMIN'] },
   },
   {
     path: 'contactus',

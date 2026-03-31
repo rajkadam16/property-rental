@@ -1,0 +1,125 @@
+/* Nearby Amenities / School Card */
+.nearby-amenities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.amenity-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border: 1.5px solid #f0f0f0;
+  border-radius: 12px;
+  transition: all 0.2s;
+  background: #fff;
+}
+
+.amenity-card:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.amenity-info {
+  flex: 1;
+}
+
+.amenity-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.amenity-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 280px;
+}
+
+.amenity-type {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6366f1;
+  background: #f5f3ff;
+  padding: 2px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.amenity-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-item i {
+  color: #c4b5fd;
+  width: 14px;
+}
+
+/* Rating */
+.amenity-rating {
+  text-align: center;
+  padding-left: 20px;
+  border-left: 1px solid #f3f4f6;
+  min-width: 80px;
+}
+
+.rating-circle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #6366f1;
+  margin-bottom: 2px;
+}
+
+.rating-label {
+  font-size: 12px;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.rating-text {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .amenity-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .amenity-rating {
+    border-left: none;
+    border-top: 1px solid #f3f4f6;
+    padding-left: 0;
+    padding-top: 12px;
+    margin-top: 12px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .rating-circle {
+    text-align: left;
+  }
+}

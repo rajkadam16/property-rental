@@ -15,5 +15,13 @@ carouselImageStyle:any = {
   height: '100%',
 };
 
-} 
+  get primaryGallery() {
+    if (!this.propertyCard || !this.propertyCard.imgGallery || this.propertyCard.imgGallery.length === 0) {
+      return null;
+    }
+    const best = this.propertyCard.imgGallery.find((g: any) => g.type === 'Photos' || g.type === 'ImageGallery');
+    return best || this.propertyCard.imgGallery[0];
+  }
+
+}
  

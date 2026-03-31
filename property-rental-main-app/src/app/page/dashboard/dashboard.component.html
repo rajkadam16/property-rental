@@ -1,51 +1,109 @@
-<div class="flex h-screen">
+<div class="dashboard-layout">
+
   <!-- Sidebar -->
-  <aside class="w-64 bg-white shadow-lg p-5">
-      <h2 class="text-xl font-bold mb-4">Dashboard</h2>
-      <ul>
-          <li class="mb-2"><a routerLink="/dashboard/properties" class="text-gray-700 hover:text-blue-600">🏠 Properties</a></li>
-          <li class="mb-2"><a  routerLink="/dashboard/bookings" class="text-gray-700 hover:text-blue-600">📅 Bookings</a></li>
-          <li class="mb-2"><a routerLink="/dashboard/earnings" class="text-gray-700 hover:text-blue-600">💰 Earnings</a></li>
-          <li class="mb-2"><a routerLink="/dashboard/reviews" class="text-gray-700 hover:text-blue-600">⭐ Reviews</a></li>
-          <button type="button" (click)="logout()" class="text-red-500 font-bold">🚪 Logout</button>
-      </ul>
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h2>Cityscape<span>.</span></h2>
+      <span>Property Dashboard</span>
+    </div>
+    <ul class="sidebar-nav">
+      <li>
+        <a routerLink="/dashboard/properties" routerLinkActive="active">
+          <i class="fa-solid fa-building"></i> My Properties
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/bookings" routerLinkActive="active">
+          <i class="fa-solid fa-calendar-check"></i> Bookings
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/earnings" routerLinkActive="active">
+          <i class="fa-solid fa-indian-rupee-sign"></i> Earnings
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/reviews" routerLinkActive="active">
+          <i class="fa-solid fa-star"></i> Reviews
+        </a>
+      </li>
+      <li>
+        <a routerLink="/addproperty" routerLinkActive="active">
+          <i class="fa-solid fa-plus"></i> Add Property
+        </a>
+      </li>
+      <li>
+        <button type="button" class="nav-btn logout-btn" (click)="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </li>
+    </ul>
   </aside>
-  
+
   <!-- Main Content -->
-  <main class="flex-1 p-6">
-      <!-- User Info -->
-      <div class="flex justify-between items-center bg-white p-5 shadow rounded-lg mb-6">
-          <div>
-              <h3 class="text-2xl font-semibold">Welcome</h3>
-              <p class="text-gray-500">Your property dashboard overview</p>
-          </div>
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile" class="rounded-full w-20 h-20 object-cover">
+  <main class="main-content">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-info">
+        <h3>Welcome back 👋</h3>
+        <p>Here's an overview of your property portfolio</p>
+        <div class="user-badge">
+          <i class="fa-solid fa-shield-halved"></i> {{ userRole }}
+        </div>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+        alt="Profile" class="top-bar-avatar" />
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon purple">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="stat-info">
+          <h4>Total Properties</h4>
+          <p class="stat-value">{{ totalProperties }}</p>
+        </div>
       </div>
 
-      <!-- Statistics -->
-      <div class="grid grid-cols-4 gap-6">
-          <div class="bg-white p-4 rounded-lg shadow text-center">
-              <h4 class="text-lg font-semibold">🏠 Total Properties</h4>
-              <p class="text-2xl font-bold">7</p>
-          </div>
-          <div class="bg-white p-4 rounded-lg shadow text-center">
-              <h4 class="text-lg font-semibold">📅 Pending Bookings</h4>
-              <p class="text-2xl font-bold">2</p>
-          </div>
-          <div class="bg-white p-4 rounded-lg shadow text-center">
-              <h4 class="text-lg font-semibold">💰 Total Earnings</h4>
-              <p class="text-2xl font-bold">₹55,00,000</p>
-          </div>
-          <div class="bg-white p-4 rounded-lg shadow text-center">
-              <h4 class="text-lg font-semibold">⭐ Average Rating</h4>
-              <p class="text-2xl font-bold">4.5</p>
-          </div>
+      <div class="stat-card">
+        <div class="stat-icon amber">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <div class="stat-info">
+          <h4>Pending</h4>
+          <p class="stat-value">{{ pendingBookings }}</p>
+        </div>
       </div>
 
-      <!-- Properties List -->
-      <div class="mt-6">
-        <router-outlet></router-outlet>
+      <div class="stat-card">
+        <div class="stat-icon green">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+        </div>
+        <div class="stat-info">
+          <h4>Est. Earnings</h4>
+          <p class="stat-value">₹{{ totalEarnings | number }}</p>
+        </div>
       </div>
-        
+
+      <div class="stat-card">
+        <div class="stat-icon blue">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="stat-info">
+          <h4>Avg Rating</h4>
+          <p class="stat-value">{{ averageRating > 0 ? (averageRating | number: '1.1-1') : '—' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Content (router-outlet) -->
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+
   </main>
 </div>

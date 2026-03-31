@@ -52,16 +52,23 @@ export class PropertyDataComponent implements OnInit {
         });
       })
     ).subscribe((response: any) => {
+      console.log("=== APP DATA FROM API ===", response);
       this.product = response;
-      this.imgGallerys = response.imgGallery;
-      this.aboutProperty = response.aboutUs;
-      this.apartmentFeatures = response.apartmentFeatures;
-      this.propertyNeighborHood = response.neighborHood;
-      this.propertyEducation = response.education;
+      this.imgGallerys = response?.imgGallery || [];
+      console.log("=== APP DATA IMAGES ===", this.imgGallerys);
+      
+      this.aboutProperty = response?.aboutUs ? [response.aboutUs] : [];
+      this.apartmentFeatures = response?.apartmentFeatures;
+      this.propertyNeighborHood = response?.neighborHood ? [response.neighborHood] : [];
+      this.propertyEducation = response?.education;
       this.transportations = response.transportation;
       this.hospitals = response.hospital;
     });
   }
 
+  get primaryGallery() {
+    if (!this.imgGallerys || this.imgGallerys.length === 0) return null;
+    return this.imgGallerys.find(g => g.type === 'Photos' || g.type === 'ImageGallery') || this.imgGallerys[0];
+  }
 
 }
