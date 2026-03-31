@@ -1,29 +1,188 @@
-h4 {
-    color: #505050;
-    font-size: 1.15em;
-    font-weight: 900;
-    margin: 0 0 0.5em;
-    text-align: center;
+/* ===== Property Card — Premium ===== */
+.property-card {
+  width: 350px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid #f0f0f0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.10);
+  border-color: #c4b5fd;
+}
 
-.card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color:  #E8F9FF; /* Card background for contrast with black background */
-    color: #000000; /* Text color for contrast */
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+/* Thumbnail */
+.card-thumb {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
 
-  @keyframes backgroundAnimation {
-    from {
-      background-position: top;
-    }
-    to {
-      background-position: bottom;
-    }
-  }
-  
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.property-card:hover .card-thumb img {
+  transform: scale(1.08);
+}
+
+/* Overlay on hover */
+.card-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.25) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.property-card:hover .card-thumb-overlay {
+  opacity: 1;
+}
+
+/* Badge */
+.card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 14px;
+  background: rgba(124,58,237,0.92);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+/* Wishlist icon */
+.card-wishlist {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+}
+
+.card-wishlist:hover {
+  background: #fff;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* Card body */
+.card-body {
+  padding: 20px 20px 14px;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 6px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-location {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-location i {
+  color: #7c3aed;
+  font-size: 12px;
+}
+
+.card-meta {
+  display: flex;
+  gap: 16px;
+}
+
+.card-meta span {
+  font-size: 12px;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f8fafc;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.card-meta span i {
+  color: #c4b5fd;
+  font-size: 11px;
+}
+
+/* Card footer */
+.card-footer {
+  padding: 14px 20px 18px;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-cta {
+  font-size: 13px;
+  font-weight: 700;
+  color: #7c3aed;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.25s ease;
+}
+
+.card-cta i {
+  transition: transform 0.25s ease;
+}
+
+.property-card:hover .card-cta {
+  gap: 10px;
+}
+
+.property-card:hover .card-cta i {
+  transform: translateX(3px);
+}
+
+.card-verified {
+  font-size: 12px;
+  font-weight: 600;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-verified i {
+  font-size: 12px;
+}

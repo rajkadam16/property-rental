@@ -1,574 +1,683 @@
 <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
-  <div class="container border h-[100vh] w-[70vw] rounded-md overflow-y-auto">
-    <ul class="nav nav-tabs flex gap-1" id="myTab" role="tablist">
+  <div class="page-wrapper">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>List Your Property</h1>
+      <p>Fill in the details below to create a professional property listing</p>
+    </div>
+
+    <!-- Stepper Navigation -->
+    <ul class="stepper-nav nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active hover:text-gray-800" id="home-tab" data-bs-toggle="tab"
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
           data-bs-target="#Basic-Info" type="button" role="tab" aria-controls="Basic-Info" aria-selected="true">
-          <i class="fa-solid fa-user fa-lg"></i>
-          <span class="pl-3 font-bold">Personal-Detail</span>
+          <i class="fa-solid fa-user"></i>
+          <span class="step-label">Contact Info</span>
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link hover:text-gray-800" id="propertyDetails-tab" data-bs-toggle="tab"
-          data-bs-target="#Property-Details" type="button" role="tab" aria-controls="#Property-Details"
+        <button class="nav-link" id="propertyDetails-tab" data-bs-toggle="tab"
+          data-bs-target="#Property-Details" type="button" role="tab" aria-controls="Property-Details"
           aria-selected="false">
-          <i class="fa-sharp-duotone fa-solid fa-house fa-lg"></i>
-          <span class="pl-3 font-bold">Property-Details</span>
+          <i class="fa-solid fa-house"></i>
+          <span class="step-label">Property</span>
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link hover:text-gray-800" id="AboutProperty-tab" data-bs-toggle="tab"
+        <button class="nav-link" id="AboutProperty-tab" data-bs-toggle="tab"
           data-bs-target="#About-property" type="button" role="tab" aria-controls="About-property"
           aria-selected="false">
-          <i class="fa-solid fa-circle-info fa-lg"></i>
-          <span class="pl-3 font-bold">About-Property </span>
+          <i class="fa-solid fa-circle-info"></i>
+          <span class="step-label">About</span>
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link hover:text-gray-800" id="Neighbourhood-tab" data-bs-toggle="tab"
+        <button class="nav-link" id="Neighbourhood-tab" data-bs-toggle="tab"
           data-bs-target="#Neighbourhood" type="button" role="tab" aria-controls="Neighbourhood" aria-selected="false">
-          <i class="fa-solid fa-location-crosshairs fa-lg"></i>
-          <span class="pl-3 font-bold">Neighbourhood</span>
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <span class="step-label">Neighbourhood</span>
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link hover:text-gray-800" id="Units-tab" data-bs-toggle="tab" data-bs-target="#Units"
+        <button class="nav-link" id="Units-tab" data-bs-toggle="tab" data-bs-target="#Units"
           type="button" role="tab" aria-controls="Units" aria-selected="false">
-          <i class="fa-brands fa-unity fa-lg"></i>
-          <span class="pl-3 font-bold"> Units </span>
+          <i class="fa-solid fa-building"></i>
+          <span class="step-label">Units</span>
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link hover:text-gray-800" id="Images-tab" data-bs-toggle="tab" data-bs-target="#Images"
+        <button class="nav-link" id="Images-tab" data-bs-toggle="tab" data-bs-target="#Images"
           type="button" role="tab" aria-controls="Images" aria-selected="false">
-          <i class="fa-regular fa-image fa-lg"></i>
-          <span class="pl-3 font-bold">Images</span>
+          <i class="fa-regular fa-image"></i>
+          <span class="step-label">Images</span>
         </button>
       </li>
     </ul>
+
+    <!-- Tab Content -->
     <div class="tab-content" id="myTabContent">
-      <div class="ml-4 tab-pane fade show active" id="Basic-Info" role="tabpanel" aria-labelledby="home-tab">
-        <div formGroupName="propertyDetails">
+
+      <!-- ========== TAB 1: Contact Info ========== -->
+      <div class="tab-pane fade show active" id="Basic-Info" role="tabpanel" aria-labelledby="home-tab">
+        <div class="form-card" formGroupName="propertyDetails">
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-address-book"></i> Contact Information
+          </h3>
+
           <div formGroupName="contactUs">
-            <div class="mt-3">
-              <label for="phone" class="block text-lg pl-4">Phone number :</label>
-              <input type="tel" formControlName="phone" id="phone" name="phone" pattern="^[7-9]{1}[0-9]{9}$"
-                placeholder="9123456789" class="ml-4 pl-2 mt-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-            </div>
-            <div class="pt-4">
-              <label for="email" class="block text-lg pl-4">Email Address :</label>
-              <input type="email" id="email" formControlName="email" placeholder="abc123@gmail.com" pattern="" size="30"
-                class="ml-4 pl-2 mt-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" formControlName="phone" id="phone" placeholder="e.g. 9123456789"
+                  pattern="^[7-9]{1}[0-9]{9}$" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" formControlName="email" placeholder="e.g. john@example.com" />
+              </div>
             </div>
           </div>
 
-          <div formGroupName="officeHours" class="ml-4 mt-4">
-            <label>Your Availableness :</label>
-            <div>
-              <label for="contact at">Available time :</label>
-              <select formControlName="time" name="" id="time"
-                class="mt-2 ml-5 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md">
-                <option value="">--Select Time--</option>
-                <option value="Open 12pm - 5pm Today">
-                  Open 12pm - 5pm Today
-                </option>
-                <option value="Open 11am - 5pm Today">
-                  Open 11am - 5pm Today
-                </option>
-                <option value="Open 10am - 4pm Today">
-                  Open 10am - 4pm Today
-                </option>
-                <option value="Open 11am - 4pm Today">
-                  Open 11am - 4pm Today
-                </option>
-                <option value="Open 12am - 3pm Today">
-                  Open 11am - 4pm Today
-                </option>
-              </select>
-            </div>
-            <div formArrayName="workingDays" class="mt-3">
-              <label for="weeks">Available Days:</label>
-              <select [formControlName]="0" id="weeks" class="mt-2 ml-5 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md"
-                (change)="logWorkingDays()">
-                <option value="" selected>--Select Day--</option>
-                <option *ngFor="let day of WeeksList" [value]="day">
-                  {{ day }}
-                </option>
-              </select>
+          <hr class="section-divider" />
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-clock"></i> Office Hours
+          </h3>
+
+          <div formGroupName="officeHours">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="time">Available Time</label>
+                <select formControlName="time" id="time">
+                  <option value="">— Select Time Slot —</option>
+                  <option value="Open 10am - 4pm Today">10:00 AM – 4:00 PM</option>
+                  <option value="Open 11am - 5pm Today">11:00 AM – 5:00 PM</option>
+                  <option value="Open 12pm - 5pm Today">12:00 PM – 5:00 PM</option>
+                  <option value="Open 11am - 4pm Today">11:00 AM – 4:00 PM</option>
+                  <option value="Open 12am - 3pm Today">12:00 PM – 3:00 PM</option>
+                </select>
+              </div>
+              <div class="form-group" formArrayName="workingDays">
+                <label for="weeks">Available Days</label>
+                <select [formControlName]="0" id="weeks" (change)="logWorkingDays()">
+                  <option value="">— Select Day —</option>
+                  <option *ngFor="let day of WeeksList" [value]="day">{{ day }}</option>
+                </select>
+              </div>
             </div>
           </div>
+
         </div>
-        <hr class="mt-10" />
       </div>
-      <div class="ml-4 tab-pane fade" id="Property-Details" role="tabpanel" aria-labelledby="propertyDetails-tab">
-        <div formGroupName="propertyDetails">
-          <div class="mt-3 ml-4">
 
-            <label for="name">Property Name :</label>
-            <input id="name" formControlName="name" placeholder="ex.shanti niketan"
-              class="ml-3 pl-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
+      <!-- ========== TAB 2: Property Details ========== -->
+      <div class="tab-pane fade" id="Property-Details" role="tabpanel" aria-labelledby="propertyDetails-tab">
+        <div class="form-card" formGroupName="propertyDetails">
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-building"></i> Property Information
+          </h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Property Name</label>
+              <input id="name" formControlName="name" placeholder="e.g. Shanti Niketan Residency" />
+            </div>
+            <div class="form-group">
+              <label for="thumbnail">Thumbnail URL</label>
+              <input id="thumbnail" formControlName="thumbnail" placeholder="https://example.com/image.jpg" />
+            </div>
           </div>
-          <div formGroupName="address" class="ml-4">
-            <div class="mt-3 flex gap-14">
-              <div class="mt-2">
-                <label for="address1 " class="block">
-                  Apartment Address :</label>
-                <textarea name="address1" formControlName="address1"
-                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
+
+          <hr class="section-divider" />
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-map-location-dot"></i> Address
+          </h3>
+
+          <div formGroupName="address">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="address1">Street Address</label>
+                <textarea formControlName="address1" id="address1"
+                  placeholder="Enter the full street address" style="min-height: 60px;"></textarea>
               </div>
-              <div class="mt-2">
-                <label for="aptNumber" class="block">Apartment Number :</label>
-                <input type="text" name="aptNumber" formControlName="aptNumber"
-                  class="mt-2 w-40 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-              </div>
-              <div class="mt-2">
-                <label for="zipCode" class="block">zipcode :</label>
-                <input type="text" id="zipCode" formControlName="zipCode" name=""
-                  class="mt-2 w-32 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
+              <div class="form-group">
+                <label for="aptNumber">Apartment / Unit Number</label>
+                <input type="text" formControlName="aptNumber" id="aptNumber" placeholder="e.g. A-204" />
               </div>
             </div>
-            <div class="flex gap-14 mt-3">
-              <div>
-                <label for="city" class="block">City :</label>
-                <select name="city" id="city " formControlName="city"
-                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md">
-                  <option value="">select city</option>
+            <div class="form-row three-col">
+              <div class="form-group">
+                <label for="city">City</label>
+                <select formControlName="city" id="city">
+                  <option value="">— Select City —</option>
                   <option value="Mumbai">Mumbai</option>
                   <option value="Pune">Pune</option>
                   <option value="Nashik">Nashik</option>
                   <option value="Delhi">Delhi</option>
                 </select>
               </div>
-              <div>
-                <label for="state" class="block">State :</label>
-                <select name="state" id="state" formControlName="state"
-                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md">
-                  <option value="">select state</option>
+              <div class="form-group">
+                <label for="state">State</label>
+                <select formControlName="state" id="state">
+                  <option value="">— Select State —</option>
                   <option value="Maharashtra">Maharashtra</option>
                   <option value="Gujarat">Gujarat</option>
-                  <option value="karnataka">karnataka</option>
+                  <option value="karnataka">Karnataka</option>
                   <option value="Goa">Goa</option>
                 </select>
               </div>
-              <div>
-                <label for="country" class="block">Country :</label>
-                <select name="country" id="country" formControlName="country"
-                  class="mt-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md">
-                  <option value="">select country</option>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select formControlName="country" id="country">
+                  <option value="">— Select Country —</option>
                   <option value="India">India</option>
                 </select>
               </div>
             </div>
-          </div>
-          <div class="mt-3 flex">
-            <div class="ml-4 mt-2">
-              <label for="area" class="block">Area :</label>
-              <input type="text" id="area" formControlName="area" name="" placeholder="ex:5000 sq ft"
-                class="pl-2 mt-2 w-32 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-            </div>
-            <div class="mt-2 ml-48">
-              <label for="size" class="block">Apartment Size :</label>
-              <input type="text" name="size" formControlName="size" placeholder="ex: Studio - 2 Beds "
-                class="pl-2 mt-2 w-52 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-            </div>
-          </div>
-          <div class="mt-4 ml-4">
-            <label for="thumbnail" class="block">Thumbnail:</label>
-            <input id="thumbnail" formControlName="thumbnail" placeholder="upload thumbnail"
-              class="ml-2 pl-2 border-2 w-64 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-          </div>
-          <div class="ml-4 mt-6 flex gap-3">
-            <label for="type" class="block">Appartment Type :</label>
-            <input type="radio" id="Appartment1" formControlName="type" name="type"
-              value="Residential Apartment" /><label>Residential Apartment</label>
-            <input type="radio" id="Appartment2" formControlName="type" name="type"
-              value="Residential Land" /><label>Residential Land</label>
-            <input type="radio" id="Appartment3" formControlName="type" name="type" value="Studio Apartment" /><label>
-              Studio Apartment</label>
-            <input type="radio" id="Appartment4" formControlName="type" name="type" value="Penthouses" /><label>
-              Penthouses</label>
-            <input type="radio" id="Appartment5" formControlName="type" name="type" value="Luxury Apartment" /><label>
-              Luxury Apartment</label>
-          </div>
-          <div class="ml-4 mt-3 flex gap-2">
-            <label for="parking" class="block">Parking :</label>
-            <input type="radio" id="parking1" formControlName="parking" name="parking" value="2 wheeler" /><label>2
-              wheeler</label>
-            <input type="radio" id="parking2" formControlName="parking" name="parking" value="4 wheeler" /><label>4
-              wheeler</label>
-            <input type="radio" id="parking3" formControlName="parking" name="parking" value="Not allowed" /><label>Not
-              allowed</label>
-          </div>
-          <div formArrayName="amenities" class="ml-4 mt-3">
-            <label class="block"> Appartment Amenities :</label>
-            <div class="flex flex-wrap mt-2">
-              <div *ngFor="let amenity of amenities.controls; let i = index" class="flex items-center">
-                <input [formControlName]="i" type="checkbox" [id]="'amenities' + i" />
-                <label [for]="'amenities' + i" class="ml-2 mr-10">{{
-                  amenitiesList[i]
-                  }}</label>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="zipCode">Zip Code</label>
+                <input type="text" formControlName="zipCode" id="zipCode" placeholder="e.g. 411001" />
               </div>
             </div>
           </div>
-        </div>
-        <div formGroupName="highlights" class="ml-4 mt-3 mb-4">
-          <div formArrayName="features">
-            <label> Appartment highlights :</label>
-            <div class="flex flex-wrap mt-2">
-              <div *ngFor="let feature of highlights.controls; let i = index" class="flex items-center">
-                <input [formControlName]="i" type="checkbox" [id]="'feature' + 'i'" />
-                <label [for]="'feature' + 'i'" class="ml-2 mr-10">{{
-                  featureList[i]
-                  }}</label>
-              </div>
+
+          <hr class="section-divider" />
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-ruler-combined"></i> Specifications
+          </h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="area">Total Area</label>
+              <input type="text" formControlName="area" id="area" placeholder="e.g. 5000 sq ft" />
+            </div>
+            <div class="form-group">
+              <label for="size">Apartment Size</label>
+              <input type="text" formControlName="size" placeholder="e.g. Studio – 2 Beds" />
             </div>
           </div>
-        </div>
-        <hr />
-      </div>
-      <div class="ml-4 mt-3 tab-pane fade" id="About-property" role="tabpanel" aria-labelledby="AboutProperty-tab">
-        <div formGroupName="aboutUs" class="ml-4">
-          <div class="">
-            <label class="block"> About Property :</label>
-            <textarea formControlName="description" placeholder="....Write description about your property... "
-              class="mt-2 pl-3 w-[30vw] h-24 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
-          </div>
-        </div>
-        <div formGroupName="aboutUs" class="ml-4">
-          <div class="">
-            <label class="block">Property Detail :</label>
-            <textarea formControlName="details" placeholder="....Write details about your property... "
-              class="mt-2 pl-3 w-[30vw] h-20 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
-          </div>
-        </div>
-        <div formGroupName="apartmentFeatures" class="ml-4 mt-4">
-          <div formArrayName="features">
-            <label> Appartment Features :</label>
-            <div class="flex flex-wrap mt-3">
-              <div *ngFor="
-                  let feature of apartmentFeatures.controls;
-                  let i = index
-                ">
-                <input [formControlName]="i" type="checkbox" [id]="'feature' + 'i'" />
-                <label [for]="'feature' + 'i'" class="ml-2 mr-6">{{
-                  apartmnetFeaturesList[i]
-                  }}</label>
-              </div>
+
+          <!-- Property Type -->
+          <div class="radio-group">
+            <label class="radio-group-label">Property Type</label>
+            <div class="radio-options">
+              <span class="radio-option">
+                <input type="radio" formControlName="type" value="Residential Apartment" id="type1" />
+                <label for="type1">Residential Apartment</label>
+              </span>
+              <span class="radio-option">
+                <input type="radio" formControlName="type" value="Residential Land" id="type2" />
+                <label for="type2">Residential Land</label>
+              </span>
+              <span class="radio-option">
+                <input type="radio" formControlName="type" value="Studio Apartment" id="type3" />
+                <label for="type3">Studio Apartment</label>
+              </span>
+              <span class="radio-option">
+                <input type="radio" formControlName="type" value="Penthouses" id="type4" />
+                <label for="type4">Penthouse</label>
+              </span>
+              <span class="radio-option">
+                <input type="radio" formControlName="type" value="Luxury Apartment" id="type5" />
+                <label for="type5">Luxury Apartment</label>
+              </span>
             </div>
           </div>
-        </div>
-        <hr class="mt-16" />
-      </div>
-      <div class="ml-4 mt-3 mb-4 tab-pane fade" id="Neighbourhood" role="tabpanel" aria-labelledby="Neighbourhood-tab">
-        <div formGroupName="neighborHood" class="ml-4">
-          <div>
-            <label class="block"> Neighbourhood description :</label>
-            <textarea formControlName="description"
-              placeholder="....Write neighborHood  description about your property... "
-              class="mt-2 pl-3 w-[30vw] h-24 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
+
+          <!-- Parking -->
+          <div class="radio-group">
+            <label class="radio-group-label">Parking</label>
+            <div class="radio-options">
+              <span class="radio-option">
+                <input type="radio" formControlName="parking" value="2 wheeler" id="parking1" />
+                <label for="parking1">2 Wheeler</label>
+              </span>
+              <span class="radio-option">
+                <input type="radio" formControlName="parking" value="4 wheeler" id="parking2" />
+                <label for="parking2">4 Wheeler</label>
+              </span>
+              <span class="radio-option">
+                <input type="radio" formControlName="parking" value="Not allowed" id="parking3" />
+                <label for="parking3">Not Allowed</label>
+              </span>
+            </div>
           </div>
-          <div>
-            <label class="block"> Neighbourhood Details :</label>
-            <textarea formControlName="details" placeholder="....Write neighborHood  details about your property... "
-              class="mt-2 pl-3 w-[30vw] h-20 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
-          </div>
-        </div>
-        <div formGroupName="education" class="mt-2 ml-4">
-          <div formArrayName="details">
-            <div *ngFor="let detail of educationDetails.controls; let i = index" [formGroupName]="i">
-              <div class="flex gap-14">
-                <div>
-                  <label class="block">School's name :</label>
-                  <input type="text" formControlName="name" id="name" placeholder="School nearby.. "
-                    class="pl-1 pt-1 mt-2 h-8 bg-[#e2dfd2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label class="block">School Adress:</label>
-                  <textarea formControlName="address" id="adress" placeholder="....Address of school..."
-                    class="mt-2 pl-3 pt-1 w-96 h-8 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
-                </div>
+
+          <hr class="section-divider" />
+
+          <!-- Amenities -->
+          <h3 class="section-title">
+            <i class="fa-solid fa-spa"></i> Amenities
+          </h3>
+          <div formArrayName="amenities">
+            <div class="checkbox-grid">
+              <div *ngFor="let amenity of amenities.controls; let i = index" class="checkbox-item">
+                <input [formControlName]="i" type="checkbox" [id]="'amenity-' + i" />
+                <label [for]="'amenity-' + i">{{ amenitiesList[i] }}</label>
               </div>
-              <div class="flex gap-14">
-                <div>
-                  <label class="block"> Distance:</label>
-                  <input type="text" formControlName="distance" placeholder="ex: 1km"
-                    class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label class="block">School Type :</label>
-                  <select name="type" id="type" formControlName="type"
-                    class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md shadow-md">
-                    <option value="">select school type</option>
-                    <option value="Public High School">
-                      Public High School
-                    </option>
-                    <option value="Government School">Government School</option>
-                    <option value="Convent School">Convent School</option>
-                    <option value="International School">
-                      International School
-                    </option>
-                  </select>
-                </div>
-                <div class="mt">
-                  <label class="block">School Rating [0-10] :</label>
-                  <input type="text" max="10" formControlName="rating"
-                    class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-              </div>
-              <div class="flex gap-[53vh]">
-                <div *ngIf="i === educationDetails.length - 1">
-                  <button type="button" (click)="addeducationDetail()">
-                    Add More school's
-                  </button>
-                </div>
-                <div *ngIf="i > 0">
-                  <button type="button" (click)="removeEduDetail(i)">
-                    Remove
-                  </button>
-                </div>
-              </div>
-              <hr class="mt-2" />
             </div>
           </div>
         </div>
 
-        <div formGroupName="hospital" class="ml-4 mt-2">
-          <div formArrayName="details">
-            <div *ngFor="let details of hospitalDetails.controls; let i = index" [formGroupName]="i">
-              <div class="flex gap-14">
-                <div>
-                  <label class="block">Hospital name :</label>
-                  <input type="text" formControlName="name" id="name" placeholder="hospital nearby.. "
-                    class="mt-2 pl-1 pt-1 h-8 bg-[#e2dfd2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label class="block">Hospital Adress:</label>
-                  <textarea formControlName="address" id="adress" placeholder="....Address of hospital..."
-                    class="mt-2 pl-3 pt-1 w-96 h-8 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
-                </div>
+        <!-- Highlights (outside propertyDetails formGroupName) -->
+        <div class="form-card" formGroupName="highlights">
+          <h3 class="section-title">
+            <i class="fa-solid fa-star"></i> Highlights
+          </h3>
+          <div formArrayName="features">
+            <div class="checkbox-grid">
+              <div *ngFor="let feature of highlights.controls; let i = index" class="checkbox-item">
+                <input [formControlName]="i" type="checkbox" [id]="'highlight-feat-' + i" />
+                <label [for]="'highlight-feat-' + i">{{ featureList[i] }}</label>
               </div>
-              <div class="mt-3 flex gap-14">
-                <div>
-                  <label class="block"> Distance:</label>
-                  <input type="text" formControlName="distance" placeholder="ex: 1km"
-                    class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label class="block">Hospital Type :</label>
-                  <select name="type" id="type" formControlName="type"
-                    class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md shadow-md">
-                    <option value="">select hospital type</option>
-                    <option value="Private Hospital">Private Hospital</option>
-                    <option value="Government Hospital">
-                      Government Hospital
-                    </option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block"> Hospital Rating [0-10] :</label>
-                  <input type="text" max="10" formControlName="rating"
-                    class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-              </div>
-              <div class="flex gap-[53vh]">
-                <div *ngIf="i === hospitalDetails.length - 1">
-                  <button type="button" (click)="addhospitalDetail()">
-                    Add More Hospitals
-                  </button>
-                </div>
-                <div *ngIf="i > 0">
-                  <button type="button" (click)="removeHosDetail(i)">
-                    Remove
-                  </button>
-                </div>
-              </div>
-              <hr class="mt-2" />
-            </div>
-          </div>
-        </div>
-        <div formGroupName="transportation" class="mt-2 ml-4">
-          <div formArrayName="details">
-            <div *ngFor="let transport of transportDetails.controls; let i = index" [formGroupName]="i">
-              <div class="flex gap-14">
-                <div>
-                  <label class="block">Transport name :</label>
-                  <input type="text" formControlName="name" id="name" placeholder="Transport nearby.. "
-                    class="mt-2 pl-1 pt-1 h-8 bg-[#e2dfd2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label class="block">Transport's Adress:</label>
-                  <textarea formControlName="address" id="address" placeholder="....Address of transportation..."
-                    class="mt-2 pl-3 pt-1 w-96 h-8 bg-[#E2DFD2] rounded-md shadow-md"></textarea>
-                </div>
-              </div>
-              <div class="mt-3 flex gap-14">
-                <div>
-                  <label class="block"> Distance:</label>
-                  <input type="text" formControlName="distance" placeholder="ex: 1km"
-                    class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label class="block">Transport's Type :</label>
-                  <select name="type" id="type" formControlName="type"
-                    class="mt-2 pl-3 pt-1 w-70 h-8 bg-[#E2DFD2] rounded-md shadow-md">
-                    <option value="">select transport type</option>
-                    <option value="BUS Station">BUS Station</option>
-                    <option value="Railway Station">Railway Station</option>
-                    <option value="Airport">Airport</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block"> Transport Rating [0-10] :</label>
-                  <input type="text" max="10" formControlName="rating"
-                    class="mt-2 pl-2 pt-1 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-              </div>
-              <div class="flex gap-[53vh]">
-                <div *ngIf="i === transportDetails.length - 1">
-                  <button type="button" (click)="addTransport()">
-                    Add More Transport
-                  </button>
-                </div>
-                <div *ngIf="i > 0">
-                  <button type="button" (click)="removeTransDetail(i)">
-                    Remove
-                  </button>
-                </div>
-              </div>
-              <hr class="mt-2" />
             </div>
           </div>
         </div>
       </div>
 
-      <div class="ml-4 mt-3 mb-4 tab-pane fade" id="Units" role="tabpanel" aria-labelledby="Units-tab">
-        <div formGroupName="availableUnits">
+      <!-- ========== TAB 3: About Property ========== -->
+      <div class="tab-pane fade" id="About-property" role="tabpanel" aria-labelledby="AboutProperty-tab">
+        <div class="form-card">
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-file-lines"></i> About Your Property
+          </h3>
+
+          <div formGroupName="aboutUs">
+            <div class="form-group">
+              <label>Property Description</label>
+              <textarea formControlName="description"
+                placeholder="Describe what makes your property special — location, views, lifestyle..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Property Details</label>
+              <textarea formControlName="details"
+                placeholder="Include specifics like construction year, materials, recent renovations..."></textarea>
+            </div>
+          </div>
+
+          <hr class="section-divider" />
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-list-check"></i> Apartment Features
+          </h3>
+
+          <div formGroupName="apartmentFeatures">
+            <div formArrayName="features">
+              <div class="checkbox-grid">
+                <div *ngFor="let feature of apartmentFeatures.controls; let i = index" class="checkbox-item">
+                  <input [formControlName]="i" type="checkbox" [id]="'apt-feat-' + i" />
+                  <label [for]="'apt-feat-' + i">{{ apartmnetFeaturesList[i] }}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== TAB 4: Neighbourhood ========== -->
+      <div class="tab-pane fade" id="Neighbourhood" role="tabpanel" aria-labelledby="Neighbourhood-tab">
+        <div class="form-card">
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-map"></i> Neighbourhood Overview
+          </h3>
+
+          <div formGroupName="neighborHood">
+            <div class="form-group">
+              <label>Neighbourhood Description</label>
+              <textarea formControlName="description"
+                placeholder="Describe the neighbourhood — vibe, safety, connectivity..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Neighbourhood Details</label>
+              <textarea formControlName="details"
+                placeholder="Nearby landmarks, shopping areas, parks..."></textarea>
+            </div>
+          </div>
+
+          <hr class="section-divider" />
+
+          <!-- Schools -->
+          <h3 class="section-title">
+            <i class="fa-solid fa-school"></i> Nearby Schools
+          </h3>
+          <div formGroupName="education">
+            <div formArrayName="details">
+              <div *ngFor="let detail of educationDetails.controls; let i = index" [formGroupName]="i">
+                <div class="detail-card">
+                  <div class="detail-card-header">
+                    <span><i class="fa-solid fa-graduation-cap"></i> School {{ i + 1 }}</span>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>School Name</label>
+                      <input type="text" formControlName="name" placeholder="e.g. Delhi Public School" />
+                    </div>
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input type="text" formControlName="address" placeholder="School address" />
+                    </div>
+                  </div>
+                  <div class="form-row three-col">
+                    <div class="form-group">
+                      <label>Distance</label>
+                      <input type="text" formControlName="distance" placeholder="e.g. 1.5 km" />
+                    </div>
+                    <div class="form-group">
+                      <label>School Type</label>
+                      <select formControlName="type">
+                        <option value="">— Select —</option>
+                        <option value="Public High School">Public High School</option>
+                        <option value="Government School">Government School</option>
+                        <option value="Convent School">Convent School</option>
+                        <option value="International School">International School</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Rating (0–10)</label>
+                      <input type="number" formControlName="rating" max="10" min="0" placeholder="8" />
+                    </div>
+                  </div>
+                  <div class="action-row">
+                    <button *ngIf="i === educationDetails.length - 1" type="button" class="btn-secondary"
+                      (click)="addeducationDetail()">
+                      <i class="fa-solid fa-plus"></i> Add School
+                    </button>
+                    <button *ngIf="i > 0" type="button" class="btn-danger" (click)="removeEduDetail(i)">
+                      <i class="fa-solid fa-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="section-divider" />
+
+          <!-- Hospitals -->
+          <h3 class="section-title">
+            <i class="fa-solid fa-hospital"></i> Nearby Hospitals
+          </h3>
+          <div formGroupName="hospital">
+            <div formArrayName="details">
+              <div *ngFor="let detail of hospitalDetails.controls; let i = index" [formGroupName]="i">
+                <div class="detail-card">
+                  <div class="detail-card-header">
+                    <span><i class="fa-solid fa-stethoscope"></i> Hospital {{ i + 1 }}</span>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Hospital Name</label>
+                      <input type="text" formControlName="name" placeholder="e.g. Apollo Hospital" />
+                    </div>
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input type="text" formControlName="address" placeholder="Hospital address" />
+                    </div>
+                  </div>
+                  <div class="form-row three-col">
+                    <div class="form-group">
+                      <label>Distance</label>
+                      <input type="text" formControlName="distance" placeholder="e.g. 2 km" />
+                    </div>
+                    <div class="form-group">
+                      <label>Hospital Type</label>
+                      <select formControlName="type">
+                        <option value="">— Select —</option>
+                        <option value="Private Hospital">Private Hospital</option>
+                        <option value="Government Hospital">Government Hospital</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Rating (0–10)</label>
+                      <input type="number" formControlName="rating" max="10" min="0" placeholder="7" />
+                    </div>
+                  </div>
+                  <div class="action-row">
+                    <button *ngIf="i === hospitalDetails.length - 1" type="button" class="btn-secondary"
+                      (click)="addhospitalDetail()">
+                      <i class="fa-solid fa-plus"></i> Add Hospital
+                    </button>
+                    <button *ngIf="i > 0" type="button" class="btn-danger" (click)="removeHosDetail(i)">
+                      <i class="fa-solid fa-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="section-divider" />
+
+          <!-- Transportation -->
+          <h3 class="section-title">
+            <i class="fa-solid fa-bus"></i> Transportation
+          </h3>
+          <div formGroupName="transportation">
+            <div formArrayName="details">
+              <div *ngFor="let transport of transportDetails.controls; let i = index" [formGroupName]="i">
+                <div class="detail-card">
+                  <div class="detail-card-header">
+                    <span><i class="fa-solid fa-train-subway"></i> Transport {{ i + 1 }}</span>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Transport Name</label>
+                      <input type="text" formControlName="name" placeholder="e.g. Dadar Railway Station" />
+                    </div>
+                    <div class="form-group">
+                      <label>Address</label>
+                      <input type="text" formControlName="address" placeholder="Station address" />
+                    </div>
+                  </div>
+                  <div class="form-row three-col">
+                    <div class="form-group">
+                      <label>Distance</label>
+                      <input type="text" formControlName="distance" placeholder="e.g. 500 m" />
+                    </div>
+                    <div class="form-group">
+                      <label>Transport Type</label>
+                      <select formControlName="type">
+                        <option value="">— Select —</option>
+                        <option value="BUS Station">Bus Station</option>
+                        <option value="Railway Station">Railway Station</option>
+                        <option value="Airport">Airport</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Rating (0–10)</label>
+                      <input type="number" formControlName="rating" max="10" min="0" placeholder="9" />
+                    </div>
+                  </div>
+                  <div class="action-row">
+                    <button *ngIf="i === transportDetails.length - 1" type="button" class="btn-secondary"
+                      (click)="addTransport()">
+                      <i class="fa-solid fa-plus"></i> Add Transport
+                    </button>
+                    <button *ngIf="i > 0" type="button" class="btn-danger" (click)="removeTransDetail(i)">
+                      <i class="fa-solid fa-trash"></i> Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== TAB 5: Available Units ========== -->
+      <div class="tab-pane fade" id="Units" role="tabpanel" aria-labelledby="Units-tab">
+        <div class="form-card" formGroupName="availableUnits">
+
+          <h3 class="section-title">
+            <i class="fa-solid fa-door-open"></i> Available Units
+          </h3>
+
           <div formArrayName="rows">
             <div *ngFor="let unit of availableUnits.controls; let i = index" [formGroupName]="i">
-              <div class="flex gap-5">
-                <div>
-                  <label for="unit" class="block">Unit No:</label>
-                  <input type="text" id="unit" formControlName="unit" placeholder="unit"
-                    class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
+              <div class="detail-card">
+                <div class="detail-card-header">
+                  <span><i class="fa-solid fa-building-circle-check"></i> Unit {{ i + 1 }}</span>
                 </div>
-                <div>
-                  <label for="price" class="block">Price:</label>
-                  <input type="text" id="price" formControlName="price" placeholder="ex:500000"
-                    class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label for="usableArea" class="block">Usable Area:</label>
-                  <input type="text" id="usableArea" formControlName="usableArea" placeholder="505"
-                    class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label for="measureUnit" class="block">Measure Unit:</label>
-                  <input type="text" id="measureUnit" formControlName="measureUnit" placeholder="Ft"
-                    class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-                <div>
-                  <label for="configuration" class="block">Configuration:</label>
-                  <input type="text" id="configuration" formControlName="configuration" placeholder="ex:2BHK"
-                    class="mt-2 pl-2 h-8 bg-[#E2DFD2] rounded-md shadow-md" />
-                </div>
-              </div>
-              <div class="mt-3">
-                <label for="availableFrom" class="block">Available From:</label>
-                <input type="date" id="availableFrom" formControlName="availableFrom"
-                  class="mt-2 h-10 pl-2 bg-[#E2DFD2] rounded-md shadow-md" />
-              </div>
-              <div formArrayName="highlights" class="mt-3">
-                <label class="block">Unit highlights :</label>
-                <div class="flex flex-wrap mt-3">
-                  <div *ngFor="
-                      let highlight of getHighlightsForRow(i).controls;
-                      let j = index
-                    " class="flex items-center">
-                    <input [formControlName]="j" type="checkbox" [id]="'highlight-' + i + '-' + j" />
-                    <label [for]="'highlight-' + i + '-' + j" class="ml-2 mr-5">{{ highlightList[j] }}</label>
+
+                <div class="form-row five-col">
+                  <div class="form-group">
+                    <label>Unit No.</label>
+                    <input type="text" formControlName="unit" placeholder="e.g. A-101" />
+                  </div>
+                  <div class="form-group">
+                    <label>Price (₹)</label>
+                    <input type="text" formControlName="price" placeholder="e.g. 25000" />
+                  </div>
+                  <div class="form-group">
+                    <label>Usable Area</label>
+                    <input type="text" formControlName="usableArea" placeholder="e.g. 850" />
+                  </div>
+                  <div class="form-group">
+                    <label>Measure Unit</label>
+                    <input type="text" formControlName="measureUnit" placeholder="sq ft" />
+                  </div>
+                  <div class="form-group">
+                    <label>Configuration</label>
+                    <input type="text" formControlName="configuration" placeholder="e.g. 2 BHK" />
                   </div>
                 </div>
-              </div>
-              <div formArrayName="kitchen" class="mt-3">
-                <label class="block">kitchen features :</label>
-                <div class="flex flex-wrap mt-3">
-                  <div *ngFor="
-                      let highlight of getKitchenForRow(i).controls;
-                      let j = index
-                    " class="flex items-center">
-                    <input [formControlName]="j" type="checkbox" [id]="'highlight-' + i + '-' + j" />
-                    <label [for]="'highlight-' + i + '-' + j" class="ml-2 mr-5">{{ kitchenList[j] }}</label>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>Available From</label>
+                    <input type="date" formControlName="availableFrom" />
                   </div>
                 </div>
-              </div>
-              <div class="mt-3 flex gap-2">
-                <label for="furnishing" class="block">Furnishing Type:</label>
 
-                <input type="radio" formControlName="furnishing" value="Semi Furnish" id="furnishing1">
-                <label for="furnishing1">Semi Furnish</label>
+                <!-- Furnishing Type -->
+                <div class="radio-group">
+                  <label class="radio-group-label">Furnishing</label>
+                  <div class="radio-options">
+                    <span class="radio-option">
+                      <input type="radio" formControlName="furnishing" value="Semi Furnish"
+                        [id]="'furnish1-' + i" />
+                      <label [for]="'furnish1-' + i">Semi Furnished</label>
+                    </span>
+                    <span class="radio-option">
+                      <input type="radio" formControlName="furnishing" value="Fully Furnish"
+                        [id]="'furnish2-' + i" />
+                      <label [for]="'furnish2-' + i">Fully Furnished</label>
+                    </span>
+                    <span class="radio-option">
+                      <input type="radio" formControlName="furnishing" value="Unfurnished"
+                        [id]="'furnish3-' + i" />
+                      <label [for]="'furnish3-' + i">Unfurnished</label>
+                    </span>
+                  </div>
+                </div>
 
-                <input type="radio" formControlName="furnishing" value="Fully Furnish" id="furnishing2">
-                <label for="furnishing2">Fully Furnish</label>
+                <!-- Unit Highlights -->
+                <div class="sub-section-title">Unit Highlights</div>
+                <div formArrayName="highlights">
+                  <div class="checkbox-grid">
+                    <div *ngFor="let h of getHighlightsForRow(i).controls; let j = index"
+                      class="checkbox-item">
+                      <input [formControlName]="j" type="checkbox" [id]="'unit-hl-' + i + '-' + j" />
+                      <label [for]="'unit-hl-' + i + '-' + j">{{ highlightList[j] }}</label>
+                    </div>
+                  </div>
+                </div>
 
-                <input type="radio" formControlName="furnishing" value="Unfurnished" id="furnishing3">
-                <label for="furnishing3">Unfurnished</label>
-              </div>
-              <div class="flex gap-[80vh]">
-                <div *ngIf="i === availableUnits.length - 1">
-                  <button type="button" (click)="addHighlights()">
-                    Add more Units
+                <!-- Kitchen Features -->
+                <div class="sub-section-title" style="margin-top: 20px;">Kitchen Features</div>
+                <div formArrayName="kitchen">
+                  <div class="checkbox-grid">
+                    <div *ngFor="let k of getKitchenForRow(i).controls; let j = index"
+                      class="checkbox-item">
+                      <input [formControlName]="j" type="checkbox" [id]="'unit-kit-' + i + '-' + j" />
+                      <label [for]="'unit-kit-' + i + '-' + j">{{ kitchenList[j] }}</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="action-row">
+                  <button *ngIf="i === availableUnits.length - 1" type="button" class="btn-secondary"
+                    (click)="addHighlights()">
+                    <i class="fa-solid fa-plus"></i> Add Unit
+                  </button>
+                  <button *ngIf="i > 0" type="button" class="btn-danger" (click)="removeHighlights(i)">
+                    <i class="fa-solid fa-trash"></i> Remove Unit
                   </button>
                 </div>
-                <div *ngIf="i > 0">
-                  <button type="button" (click)="removeHighlights(i)">
-                    Remove
-                  </button>
-                </div>
               </div>
-              <hr class="mt-3" />
             </div>
           </div>
+
         </div>
       </div>
+
+      <!-- ========== TAB 6: Images ========== -->
       <div class="tab-pane fade" id="Images" role="tabpanel" aria-labelledby="Images-tab">
-        <div formArrayName="imgGallery" class="gallery-container">
-          <div *ngFor="let gallery of imageGalleryFormArray.controls; let i = index" [formGroupName]="i"
-            class="gallery-section border rounded p-3 mb-4 shadow-sm">
-            <h5 class="text-primary mb-3">Gallery {{ i + 1 }}</h5>
-            <div formArrayName="images">
-              <div *ngFor="let image of getImagesFormArray(i).controls; let j = index" [formGroupName]="j"
-                class="image-group mb-3 p-3 border rounded bg-light">
+        <div class="form-card">
 
-                <div class="form-row mb-2">
-                  <label class="form-label">Image URL:</label>
-                  <input type="text" class="form-control" formControlName="url" placeholder="Enter Image URL" />
+          <h3 class="section-title">
+            <i class="fa-solid fa-images"></i> Image Gallery
+          </h3>
+
+          <div formArrayName="imgGallery">
+            <div *ngFor="let gallery of imageGalleryFormArray.controls; let i = index" [formGroupName]="i">
+              <div class="gallery-section">
+                <div class="gallery-title">
+                  <i class="fa-regular fa-folder-open"></i>
+                  <span *ngIf="i === 0">Image Gallery</span>
+                  <span *ngIf="i === 1">Photos</span>
+                  <span *ngIf="i === 2">Floor Plans</span>
                 </div>
 
-                <div class="form-row mb-2">
-                  <label class="form-label">Alt Text:</label>
-                  <input type="text" class="form-control" formControlName="alt" placeholder="Enter Alt Text" />
+                <div formArrayName="images">
+                  <div *ngFor="let image of getImagesFormArray(i).controls; let j = index" [formGroupName]="j">
+                    <div class="image-entry">
+                      <div class="form-group">
+                        <label>Image URL</label>
+                        <input type="text" formControlName="url" placeholder="https://example.com/photo.jpg" />
+                      </div>
+                      <div class="form-group">
+                        <label>Alt Text</label>
+                        <input type="text" formControlName="alt" placeholder="Describe this image" />
+                      </div>
+                      <button *ngIf="getImagesFormArray(i).length > 1" type="button" class="btn-danger"
+                        (click)="removeImage(i, j)" style="height: 40px; margin-bottom: 0;">
+                        <i class="fa-solid fa-xmark"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="text-end">
-                  <button type="button" class="btn btn-sm btn-danger" (click)="removeImage(i, j)"
-                    *ngIf="getImagesFormArray(i).length > 1">
-                    Remove Image
+                <div style="margin-top: 12px;">
+                  <button type="button" class="btn-secondary" (click)="addImage(i)">
+                    <i class="fa-solid fa-plus"></i> Add Image
                   </button>
                 </div>
               </div>
             </div>
-
-            <div class="text-center mt-3">
-              <button type="button" class="btn btn-sm btn-primary" (click)="addImage(i)">
-                + Add Image
-              </button>
-            </div>
           </div>
-        </div>
-        <div class="text-center mt-4">
-          <button type="submit" class="btn btn-success">Add property</button>
+
+          <hr class="section-divider" />
+
+          <div class="submit-wrapper">
+            <button type="submit" class="btn-success">
+              <i class="fa-solid fa-paper-plane"></i> Publish Property
+            </button>
+          </div>
+
         </div>
       </div>
+
     </div>
   </div>
 </form>

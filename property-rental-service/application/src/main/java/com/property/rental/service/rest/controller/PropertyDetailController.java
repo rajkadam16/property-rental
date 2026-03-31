@@ -2,10 +2,9 @@ package com.property.rental.service.rest.controller;
 
 import com.property.rental.service.common.enity.PropertyDataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import com.property.rental.service.core.api.service.PropertyDetailService;
 import java.util.HashMap;
 import java.util.List;
@@ -32,6 +31,7 @@ public class PropertyDetailController {
 		return ResponseEntity.ok(propertyDetailService.getUserProperties(userId));
 	}
 
+	@PreAuthorize("hasAnyRole('OWNER', 'ADMIN')")
 	@PostMapping("/create")
 	public ResponseEntity<Map<String, String>> addPropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
 		String message = propertyDetailService.addPropertyDetail(propertyDetail);
@@ -40,6 +40,7 @@ public class PropertyDetailController {
 		return ResponseEntity.ok(response);
 	}
 
+	@PreAuthorize("hasAnyRole('OWNER', 'ADMIN')")
 	@PutMapping("/update")
 	public ResponseEntity<Map<String, String>> updatePropertyDetail(@RequestBody PropertyDataEntity propertyDetail) {
 		String message = propertyDetailService.updatePropertyDetail(propertyDetail);
@@ -48,6 +49,7 @@ public class PropertyDetailController {
 		return ResponseEntity.ok(response);
 	}
 
+	@PreAuthorize("hasRole('ADMIN')")
 	@DeleteMapping("/delete/{propertyID}")
 	public ResponseEntity<Map<String, String>> deleteProperty(@PathVariable("propertyID") String propertyID) {
 		String message = propertyDetailService.deletePropertyDetail(propertyID);

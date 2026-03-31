@@ -1,33 +1,60 @@
-<h3 class="text-xl font-semibold mb-4">Your Properties</h3>
-<table class="table table-striped bg-white shadow rounded-lg">
-    <thead class="bg-gray-200">
-        <tr>
-            <th>Property Name</th>
-            <th>Location</th>
-            <th>Property Type</th>
-            <th>Status</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Loader centered in the table -->
-        <tr *ngIf="loader">
-            <td colspan="5" class="text-center">
-                <div class="flex justify-center items-center h-32">
-                    <app-loder></app-loder>
-                </div>
-            </td>
-        </tr>
-        
-        <!-- Property list -->
-        <tr *ngFor="let property of properties">
-            <td>{{ property.propertyDetails.name }}</td>
-            <td>{{ property.propertyDetails.address.address1 }}</td>
-            <td>{{ property.propertyDetails.type }}</td>
-            <td><span class="badge bg-success">Available</span></td>
-            <td>
-                <button (click)="deleteProperty(property.id)" class="btn btn-sm btn-danger">Delete</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="properties-section">
+  <div class="section-header">
+    <h3><i class="fa-solid fa-building"></i> Your Properties</h3>
+    <span class="property-count">{{ properties.length }} listed</span>
+  </div>
+
+  <!-- Loader -->
+  <div *ngIf="loader" class="loader-container">
+    <app-loder></app-loder>
+  </div>
+
+  <!-- Empty State -->
+  <div *ngIf="!loader && properties.length === 0" class="empty-state">
+    <i class="fa-solid fa-house-circle-xmark"></i>
+    <p>No properties listed yet</p>
+    <a routerLink="/addproperty" class="add-btn">
+      <i class="fa-solid fa-plus"></i> Add Your First Property
+    </a>
+  </div>
+
+  <!-- Property Cards -->
+  <div *ngIf="!loader && properties.length > 0" class="property-grid">
+    <div *ngFor="let property of properties" class="property-card">
+      <div class="property-thumb">
+        <ng-container *ngFor="let gallery of property?.imgGallery">
+          <img *ngIf="gallery.type === 'Photos' || gallery.type === 'ImageGallery'"
+            [src]="gallery.images && gallery.images.length > 0 ? gallery.images[0].url : 'assets/images/placeholder.jpg'"
+            [alt]="property?.propertyDetails?.name || 'Property'" />
+        </ng-container>
+        <div *ngIf="!property?.imgGallery" class="thumb-placeholder">
+          <i class="fa-solid fa-image"></i>
+        </div>
+        <span class="status-badge" [class.pending]="property.status === 'pending'"
+          [class.active]="property.status !== 'pending'">
+          {{ property.status || 'Active' }}
+        </span>
+      </div>
+      <div class="property-body">
+        <h4 class="property-name">{{ property.propertyDetails?.name || 'Unnamed Property' }}</h4>
+        <p class="property-location">
+          <i class="fa-solid fa-location-dot"></i>
+          {{ property.propertyDetails?.address?.city || 'N/A' }},
+          {{ property.propertyDetails?.address?.state || '' }}
+        </p>
+        <div class="property-meta">
+          <span *ngIf="property.propertyDetails?.type"><i class="fa-solid fa-house"></i> {{ property.propertyDetails.type }}</span>
+          <span *ngIf="property.propertyDetails?.area"><i class="fa-solid fa-ruler-combined"></i> {{ property.propertyDetails.area }}</span>
+        </div>
+      </div>
+      <div class="property-actions">
+        <a [routerLink]="['/propertydetails', property.id]" class="btn-view">
+          <i class="fa-solid fa-eye"></i> View
+        </a>
+        <button (click)="deleteProperty(property.id)" class="btn-delete">
+          <i class="fa-solid fa-trash"></i> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

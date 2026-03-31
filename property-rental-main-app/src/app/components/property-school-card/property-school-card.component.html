@@ -1,22 +1,22 @@
-<div class="container mx-auto p-4">
-    <div class="row g-4">
-        <!-- Card Template -->
-        <div class="col-12 col-md-6" *ngFor="let data of school.details">
-            <div class="card shadow-sm rounded overflow-hidden h-100 d-flex flex-row">
-                <div class="p-3 flex-grow-1">
-                    <h3 class="h5 fw-semibold text-dark text-truncate">{{ data.name || "Not Available"}}</h3>
-                    <p class="text-muted small">{{ data.type || "Not Available"}}</p>
-                    <p class="text-muted small text-truncate">{{ data.address|| "Not Available"}}</p>
-                    <p class="text-muted small">{{ data.distance || "Not Available"}}</p>
-                </div>
-                <div class="bg-light d-flex align-items-center justify-content-center p-3" >
-                    <div class="text-center">
-                        <h1 class="display-4 fw-bold text-[#C5BAFF]">{{ data.rating || "Not Available"}}</h1>
-                        <span class="text-muted small">Out of 10</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+<div class="nearby-amenities-list">
+  <div class="amenity-card" *ngFor="let data of school?.details">
+    <div class="amenity-info">
+      <div class="amenity-header">
+        <h3 class="amenity-name">{{ data.name || "Not Available" }}</h3>
+        <span class="amenity-type badge">{{ data.type || "Nearby" }}</span>
+      </div>
+      <div class="amenity-meta">
+        <span class="meta-item"><i class="fa-solid fa-map-marker-alt"></i> {{ data.address || "Location not provided" }}</span>
+        <span class="meta-item"><i class="fa-solid fa-person-walking"></i> {{ data.distance || "N/A" }} from property</span>
+      </div>
+    </div>
+    <div class="amenity-rating">
+      <div class="rating-circle">
+        <span class="rating-val">{{ data.rating || '—' }}</span>
+        <span class="rating-label">/10</span>
+      </div>
+      <div class="rating-text">Rating</div>
+    </div>
+  </div>
+</div>

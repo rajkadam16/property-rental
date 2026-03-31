@@ -1,88 +1,95 @@
-<div class="mt-4 border bg-white border-secondary p-4 rounded">
-  <div class="d-flex justify-content-between">
-    <div>
-      <div class="property-location small mb-2 text-muted">
-        {{ apartmentData?.propertyDetails?.name + " / " + apartmentData.propertyDetails.address.city + " / " +
-        apartmentData.propertyDetails.address.state + " / " + apartmentData.propertyDetails.address.country || "Not Available"}}
-      </div>
-      <h1 class="h1 fw-bold">{{ apartmentData?.propertyDetails?.name || "Not Available" }}</h1>
-      <p class="mt-1 h6"> {{ apartmentData.propertyDetails.address.address1 + "," +
-        apartmentData.propertyDetails.address.city || "Not Available" }}</p>
-      <div class="mt-2 h5 fw-bold text-secondary">
-        {{ apartmentData.propertyDetails.type || "Not Available" }}
-      </div>
-      <div class="d-flex gap-3 mt-4">
-        <button type="button" class="button button-primary" data-bs-toggle="modal" [routerLink]="['PropertyMediaView']">
-          Floor media
-        </button> 
-      </div>
-    </div>
-  </div>
-  <div class="mt-4 group">
-    <button type="button" class="flex items-center text-blue-600">
-      <span class="hover:underline">Show floor plan details</span>
-      <svg class="ml-2 transition-transform duration-300 transform group-hover:rotate-180"
-        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 9l6 6 6-6"></path>
-      </svg>
-    </button>
 
-    <div class="hidden group-hover:block mt-4 bg-gray-50 p-4 border rounded-lg">
-      <p class="text-sm font-bold text-gray-900">Highlights</p>
-      <div class="d-flex gap-4 mt-4 text-secondary">
-        <ul class="list-unstyled ps-3 mb-0">
-          <li>{{ floorDetails.highlights.features || "Not Available"}}</li>
-        </ul>
+<div class="apt-info-container">
+  <!-- Header Info -->
+  <div class="apt-header">
+    <div class="breadcrumb-nav">
+      {{ apartmentData?.propertyDetails?.address?.city }} / {{ apartmentData?.propertyDetails?.address?.state }} / {{ apartmentData?.propertyDetails?.type }}
+    </div>
+    <div class="title-row">
+      <h1 class="apt-title">{{ apartmentData?.propertyDetails?.name || "Not Available" }}</h1>
+      <div class="type-badge">{{ apartmentData?.propertyDetails?.type || "Apartment" }}</div>
+    </div>
+    <p class="apt-address">
+      <i class="fa-solid fa-location-dot"></i>
+      {{ apartmentData.propertyDetails.address.address1 }}, {{ apartmentData.propertyDetails.address.city }}
+    </p>
+
+    <div class="header-actions">
+      <button type="button" class="btn-floor-media" [routerLink]="['PropertyMediaView']">
+        <i class="fa-solid fa-images"></i> Floor Media
+      </button>
+      <div class="price-range" *ngIf="unitData?.availableUnits?.rows?.length">
+        <span class="label">Starting From</span>
+        <span class="value">₹{{ unitData.availableUnits.rows[0].price }}</span>
       </div>
     </div>
   </div>
 
-  <div class="mt-4">
-    <p class="h5 fw-bold mb-3">Units Available</p>
-    <hr class="mb-3" />
-    <details class="border rounded p-3">
-      <summary class="d-flex justify-content-between fw-semibold">
-        <!-- Column Headers -->
-        <span *ngFor="let col of unitData.availableUnits.cols" class="text-dark">
-          {{ col || "Not Available" }}
-        </span>
+  <!-- Floor Plan Details -->
+  <div class="details-accordion mt-6">
+    <details class="modern-details">
+      <summary class="details-summary">
+        <span class="summary-text"><i class="fa-solid fa-layer-group"></i> Show Floor Plan Highlights</span>
+        <i class="fa-solid fa-chevron-down chevron"></i>
       </summary>
-    </details>
-
-    <div class="mt-4">
-      <!-- Unit Rows -->
-      <details class="border rounded p-3 mb-3" *ngFor="let item of unitData.availableUnits.rows">
-        <summary class="d-flex justify-content-between text-primary fw-bold cursor-pointer">
-          <span>{{ item.unit || "Not Available" }}</span>
-          <span>{{"₹"+ item.price || "Not Available" }}</span>
-          <span>{{ item.usableArea + ' ' + item.measureUnit || "Not Available" }}</span>
-          <span>{{ item.configuration || "Not Available" }}</span>
-          <span>{{ item.availableFrom || "Not Available" }}</span>
-
-        </summary>
-        <div class="mt-3 text-muted small">
-          <p class="fw-bold">Highlights:</p>
-          <ul class="row list-unstyled g-2">
-            <li class="col-6" *ngFor="let data of item.highlights">
-              {{ data || "Not Available" }}
-            </li>
-          </ul>
-          <p class="mt-3 fw-bold">Kitchen Features:</p>
-          <ul class="row list-unstyled g-2">
-            <li class="col-6" *ngFor="let data of item.kitchen">
-              {{ data || "Not Available" }}
-            </li>
-          </ul>
-          <p class="mt-3 fw-bold">furnishing:</p>
-          <ul class="row list-unstyled g-2">
-            <li class="col-6">
-              <span class="font-semibold"> {{ item.furnishing || "Not Available" }}</span><br>
-            </li>
-          </ul>
+      <div class="details-content">
+        <div class="highlights-grid">
+          <div class="highlight-item" *ngIf="floorDetails?.highlights?.features">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>{{ floorDetails.highlights.features }}</span>
+          </div>
+          <div class="highlight-item" *ngIf="apartmentData?.propertyDetails?.area">
+            <i class="fa-solid fa-ruler"></i>
+            <span>Total Area: {{ apartmentData.propertyDetails.area }} sqft</span>
+          </div>
         </div>
-      </details>
+      </div>
+    </details>
+  </div>
+
+  <!-- Units Available Table -->
+  <div class="units-section mt-8">
+    <h3 class="section-subtitle">Available Units</h3>
+    <div class="units-list">
+      <div class="unit-row header">
+        <span>Unit</span>
+        <span>Monthly Rent</span>
+        <span>Area</span>
+        <span>Config</span>
+        <span>Availability</span>
+      </div>
+      
+      <div class="unit-card-wrapper" *ngFor="let item of unitData?.availableUnits?.rows">
+        <details class="unit-details">
+          <summary class="unit-summary">
+            <span class="unit-name">{{ item.unit }}</span>
+            <span class="unit-rent">₹{{ item.price  }}</span>
+            <span class="unit-area">{{ item.usableArea }} {{ item.measureUnit }}</span>
+            <span class="unit-config">{{ item.configuration }}</span>
+            <span class="unit-date badge-date">{{ item.availableFrom }}</span>
+            <i class="fa-solid fa-plus-circle toggle-icon"></i>
+          </summary>
+          <div class="unit-expanded">
+            <div class="expanded-grid">
+              <div class="expanded-col">
+                <h6>Highlights</h6>
+                <ul>
+                  <li *ngFor="let data of item.highlights"><i class="fa-solid fa-star"></i> {{ data }}</li>
+                </ul>
+              </div>
+              <div class="expanded-col">
+                <h6>Kitchen & Furnishing</h6>
+                <ul>
+                  <li><strong>Kitchen:</strong> {{ item.kitchen?.join(', ') || 'Standard' }}</li>
+                  <li><strong>Status:</strong> {{ item.furnishing || 'Unfurnished' }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
     </div>
   </div>
 </div>
+
 <router-outlet></router-outlet>

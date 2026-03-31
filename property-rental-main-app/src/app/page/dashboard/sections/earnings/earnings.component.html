@@ -1,50 +1,50 @@
-<div class="bg-white p-6 rounded-lg shadow-md">
-  <h2 class="text-2xl font-bold mb-4">💰 Earnings Dashboard</h2>
+<div class="section-container">
+  <div class="section-header">
+    <h3><i class="fa-solid fa-indian-rupee-sign"></i> Earnings Overview</h3>
+  </div>
 
-  <!-- Earnings Overview -->
-  <div class="grid grid-cols-3 gap-4 mb-6">
-    <div class="bg-green-100 p-4 rounded">
-      <h3 class="text-lg font-semibold">Total Earnings</h3>
-      <p class="text-2xl font-bold text-green-600">₹{{ totalEarnings }}</p>
+  <!-- Summary Cards -->
+  <div class="summary-grid">
+    <div class="summary-card green">
+      <div class="summary-icon"><i class="fa-solid fa-wallet"></i></div>
+      <div>
+        <span class="summary-label">Total Earnings</span>
+        <span class="summary-value">₹{{ totalEarnings | number }}</span>
+      </div>
     </div>
-    <div class="bg-yellow-100 p-4 rounded">
-      <h3 class="text-lg font-semibold">Pending Payments</h3>
-      <p class="text-2xl font-bold text-yellow-600">₹{{ pendingPayments }}</p>
+    <div class="summary-card amber">
+      <div class="summary-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+      <div>
+        <span class="summary-label">Pending Payments</span>
+        <span class="summary-value">₹{{ pendingPayments | number }}</span>
+      </div>
     </div>
-    <div class="bg-blue-100 p-4 rounded">
-      <h3 class="text-lg font-semibold">Total Transactions</h3>
-      <p class="text-2xl font-bold text-blue-600">{{ transactions.length }}</p>
+    <div class="summary-card blue">
+      <div class="summary-icon"><i class="fa-solid fa-receipt"></i></div>
+      <div>
+        <span class="summary-label">Transactions</span>
+        <span class="summary-value">{{ transactions.length }}</span>
+      </div>
     </div>
   </div>
 
-  <!-- Recent Transactions -->
-  <h3 class="text-xl font-bold mb-3">📋 Recent Transactions</h3>
-  <table class="table-auto w-full border-collapse border border-gray-300">
-    <thead>
-      <tr class="bg-gray-200">
-        <th class="border p-2">Tenant</th>
-        <th class="border p-2">Property</th>
-        <th class="border p-2">Date</th>
-        <th class="border p-2">Amount</th>
-        <th class="border p-2">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr *ngFor="let transaction of transactions" class="border">
-        <td class="p-2">{{ transaction.tenant }}</td>
-        <td class="p-2">{{ transaction.property }}</td>
-        <td class="p-2">{{ transaction.date }}</td>
-        <td class="p-2">₹{{ transaction.amount }}</td>
-        <td class="p-2">
-          <span [ngClass]="{
-            'text-green-500': transaction.status === 'Paid',
-            'text-yellow-500': transaction.status === 'Pending'
-          }">
-            {{ transaction.status }}
-          </span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- Transaction List -->
+  <h4 class="sub-title"><i class="fa-solid fa-list"></i> Recent Transactions</h4>
+  <div class="transaction-list">
+    <div *ngFor="let t of transactions" class="transaction-row">
+      <div class="transaction-info">
+        <div class="transaction-avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div>
+          <h5>{{ t.tenant }}</h5>
+          <p><i class="fa-solid fa-building"></i> {{ t.property }} &middot; {{ t.date }}</p>
+        </div>
+      </div>
+      <div class="transaction-amount">₹{{ t.amount | number }}</div>
+      <span class="status-pill" [class.paid]="t.status === 'Paid'" [class.pending]="t.status === 'Pending'">
+        {{ t.status }}
+      </span>
+    </div>
+  </div>
 </div>

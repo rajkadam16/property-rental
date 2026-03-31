@@ -1,102 +1,126 @@
-<!-- Section: Design Block -->
-<section class="h-screen w-full flex justify-center items-center bg-gray-100">
-  <!-- Jumbotron -->
-  <div class="px-4 py-5 text-center text-lg-start">
-    <div class="container">
-      <div class="row flex flex-col lg:flex-row items-center justify-center lg:justify-between">
-        <div class="col-lg-6 mb-5 lg:mb-0">
-          <h1 class="my-5 text-4xl font-bold leading-tight">
-            Rent smarter, <br />
-            <span class="text-purple-300">live better..</span>
-          </h1>
-          <p class="text-gray-600 leading-relaxed">
-            Our property rental system is designed to make renting easy, fast, and secure.
-            With a seamless process for listing properties and finding rentals, we bridge
-            the gap between landlords and tenants effortlessly. Whether you're looking to
-            rent out a property or find a perfect place to stay, our platform ensures a
-            smooth and reliable experience for everyone.
-          </p>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="d-logo flex justify-center items-center">
-              <img class="logo" src="assets/images/favicon.png" alt="logo">
+<section class="signup-page">
+  <div class="signup-container">
+    <!-- Left: Brand Panel -->
+    <div class="brand-panel">
+      <div class="brand-content">
+        <span class="brand-tag">Join Cityscape</span>
+        <h1>Rent smarter,<br /><span class="brand-accent">live better.</span></h1>
+        <p>Our property rental system is designed to make renting easy, fast, and secure. Join a community of trusted residents and property owners today.</p>
+        
+        <div class="brand-perks">
+          <div class="perk-item">
+            <div class="perk-icon"><i class="fa-solid fa-house-circle-check"></i></div>
+            <div class="perk-text">
+              <strong>Verified Listings</strong>
+              <span>Every property is manually checked for quality.</span>
             </div>
-            <div class="title">
-              <h2>One account</h2>
-              <h2>Many possibilities</h2>
+          </div>
+          <div class="perk-item">
+            <div class="perk-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <div class="perk-text">
+              <strong>Safe Transactions</strong>
+              <span>Secure payment gateway and digital agreements.</span>
             </div>
-            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-              <section class="form">
-                <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="text" class="form-control" formControlName="firstName"
-                    placeholder="Enter your First Name" />
-                  <small class="text-danger"
-                    *ngIf="signupForm.controls['firstName'].touched && signupForm.controls['firstName'].hasError('required')">
-                    First name is required
-                  </small>
-                </div>
-
-                <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" class="form-control" formControlName="lastName"
-                    placeholder="Enter your Last Name" />
-                  <small class="text-danger"
-                    *ngIf="signupForm.controls['lastName'].touched && signupForm.controls['lastName'].hasError('required')">
-                    Last name is required
-                  </small>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control" formControlName="email"
-                    placeholder="Enter your Email" />
-                    <small class="text-danger"
-                    *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('required')">
-                    Email is required
-                  </small>
-                  <small class="text-danger"
-                    *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('email')">
-                    Please enter a valid email address
-                  </small>
-                </div>
-                <div class="form-group">
-                  <label for="contactNumber">Contact Number</label>
-                  <input type="number" id="contactNumber" class="form-control" formControlName="contactNumber"
-                    placeholder="Enter your Contact Number" />
-                  <small class="text-danger"
-                    *ngIf="signupForm.controls['contactNumber'].touched && signupForm.controls['contactNumber'].hasError('required')">
-                    Contact number is required
-                  </small>
-                  <small class="text-danger"
-                    *ngIf="signupForm.controls['contactNumber'].touched && signupForm.controls['contactNumber'].hasError('pattern')">
-                    Please enter a valid Contact number
-                  </small>
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" id="password" class="form-control" formControlName="password"
-                    placeholder="Enter your password" />
-                    <small class="text-danger"
-                    *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].hasError('required')">
-                    Password is required
-                  </small>
-                  <small class="text-danger"
-                  *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].hasError('pattern')">
-                  Password must be at least 8 characters long
-                </small>
-                </div>
-              </section>
-              <section class="buttons">
-                <button type="submit" [disabled]="signupForm.invalid" class="button button-primary">Sign Up</button>
-              </section>
-              <section class="not-member">
-                <span>Already member? <a class="link" routerLink="/login">Login</a></span>
-              </section>
-            </form>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Right: Signup Form -->
+    <div class="form-panel">
+      <div class="signup-card">
+        <div class="signup-logo">
+          <img src="assets/images/favicon.png" alt="logo" />
+        </div>
+        <h2>Create an account</h2>
+        <p class="signup-subtitle">Join us and find your dream home</p>
+
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+          
+          <div class="name-row">
+            <div class="field-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" formControlName="firstName" placeholder="John" />
+              <small class="field-error" *ngIf="signupForm.controls['firstName'].touched && signupForm.controls['firstName'].hasError('required')">
+                Required
+              </small>
+            </div>
+            <div class="field-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" formControlName="lastName" placeholder="Doe" />
+              <small class="field-error" *ngIf="signupForm.controls['lastName'].touched && signupForm.controls['lastName'].hasError('required')">
+                Required
+              </small>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" formControlName="email" placeholder="john@example.com" />
+            </div>
+            <small class="field-error" *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('required')">
+              Email is required
+            </small>
+            <small class="field-error" *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].hasError('email')">
+              Invalid email format
+            </small>
+          </div>
+
+          <div class="field-group">
+            <label for="contactNumber">Contact Number</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-phone"></i>
+              <input type="number" id="contactNumber" formControlName="contactNumber" placeholder="9876543210" />
+            </div>
+            <small class="field-error" *ngIf="signupForm.controls['contactNumber'].touched && signupForm.controls['contactNumber'].hasError('required')">
+              Contact number is required
+            </small>
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" formControlName="password" placeholder="••••••••" />
+            </div>
+            <small class="field-error" *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].hasError('required')">
+              Password is required
+            </small>
+            <small class="field-error" *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].hasError('pattern')">
+              At least 8 characters
+            </small>
+          </div>
+
+          <div class="field-group">
+            <label for="role">I am a</label>
+            <div class="role-selector">
+              <label class="role-option">
+                <input type="radio" name="role" value="ROLE_USER" formControlName="role" checked>
+                <div class="role-card">
+                  <i class="fa-solid fa-user"></i>
+                  <span>Tenant</span>
+                </div>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="ROLE_OWNER" formControlName="role">
+                <div class="role-card">
+                  <i class="fa-solid fa-house-user"></i>
+                  <span>Owner</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="signupForm.invalid" class="signup-btn">
+            <i class="fa-solid fa-user-plus"></i> Create Account
+          </button>
+
+          <div class="login-prompt">
+            Already have an account? <a routerLink="/login" class="login-link">Sign In</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>

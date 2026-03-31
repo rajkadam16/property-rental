@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./bookings.component.css']
 })
 export class BookingsComponent {
+  activeFilter = 'all';
+
   bookings = [
     { tenant: 'Raj Kadam', property: 'Archer Towers', date: '2025-03-15', status: 'Pending' },
     { tenant: 'Chetan Mohite', property: 'Oakwood Apartments', date: '2025-03-16', status: 'Accepted' },
@@ -13,10 +15,10 @@ export class BookingsComponent {
     { tenant: 'Sandesh Babar', property: 'The Urban Oasis', date: '2025-03-18', status: 'Rejected' }
   ];
 
-  
   filteredBookings = [...this.bookings];
 
-  filterStatus(status: string) {
+  filterStatus(status: string): void {
+    this.activeFilter = status;
     if (status === 'all') {
       this.filteredBookings = [...this.bookings];
     } else {
@@ -24,26 +26,8 @@ export class BookingsComponent {
     }
   }
 
-  async updateStatus(requestId: any, status: string): Promise<void> {
-    try {
-      const response: Response = await fetch(
-        `https://backend.yourclaw.tech/api/adoption-requests/${requestId}`,
-        {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ status }),
-        }
-      );
-  
-      const data: unknown = await response.json();
-  
-      if (!response.ok) {
-        throw new Error("Failed to update request status");
-      }
-    } catch (error) {
-      console.error("Error updating request status:", error);
-    }
+  updateStatus(booking: any, status: string): void {
+    booking.status = status;
+    this.filterStatus(this.activeFilter);
   }
 }

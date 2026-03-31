@@ -1,55 +1,92 @@
-/* Default Alert Box */
+/* Premium Alert Box */
 .alert-box {
   position: fixed;
-  top: 80px;
-  right: 20px;
-  padding: 15px 25px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  top: 90px;
+  right: 24px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 280px;
-  max-width: 350px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
+  min-width: 320px;
+  max-width: 400px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  background: #ffffff;
+  border-left: 5px solid transparent;
   opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInOut 3s ease-in-out forwards;
+  transform: translateX(50px);
+  animation: slideInRight 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, fadeOutRight 0.4s ease-in forwards 3s;
 }
 
-/* Alert Types */
+.alert-box p {
+  margin: 0;
+  padding-right: 12px;
+  line-height: 1.5;
+}
+
+/* Alert Semantic Colors */
 .success {
-  background: #4caf50; /* Green */
+  border-left-color: #10b981;
+}
+.success::before {
+  content: '\f058'; /* FontAwesome check-circle */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #10b981;
+  font-size: 20px;
+  margin-right: 12px;
 }
 
 .error {
-  background: #f44336; /* Red */
+  border-left-color: #ef4444;
+}
+.error::before {
+  content: '\f057'; /* FontAwesome times-circle */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #ef4444;
+  font-size: 20px;
+  margin-right: 12px;
 }
 
 .warning {
-  background: #ff9800; /* Orange */
+  border-left-color: #f59e0b;
+}
+.warning::before {
+  content: '\f071'; /* FontAwesome exclamation-triangle */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #f59e0b;
+  font-size: 20px;
+  margin-right: 12px;
 }
 
 /* Close Button */
 .close-btn {
-  margin-left: 15px;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  transition: 0.3s;
+  font-size: 24px;
+  color: #9ca3af;
+  transition: all 0.2s;
+  line-height: 1;
 }
 
 .close-btn:hover {
-  color: #000;
+  color: #4b5563;
+  transform: scale(1.1);
 }
 
-/* Fade-in and slide animation */
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(-20px); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-20px); }
+/* Animations */
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOutRight {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(50px); }
 }

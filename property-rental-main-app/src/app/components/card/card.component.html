@@ -1,10 +1,33 @@
-<div class="card shadow-lg rounded overflow-hidden min-w-96 h-100">
-  <div class="card-img-top" style="height: 12rem; overflow: hidden;">
-    <img [src]="product.propertyDetails.thumbnail" class="w-100 h-100 object-fit-cover" alt="">
+<div class="property-card" [routerLink]="['/propertydetails', product.id]" style="cursor: pointer;">
+  <div class="card-thumb">
+    <ng-container *ngFor="let gallery of product?.imgGallery">
+      <img *ngIf="gallery.type === 'Photos' || gallery.type === 'ImageGallery'" 
+           [src]="gallery.images && gallery.images.length > 0 ? gallery.images[0].url : 'assets/images/placeholder.jpg'" 
+           [alt]="product?.propertyDetails?.name" loading="lazy" />
+    </ng-container>
+    <div class="card-thumb-overlay"></div>
+    <span class="card-badge" *ngIf="product.propertyDetails.type">
+      {{ product.propertyDetails.type }}
+    </span>
+    <span class="card-wishlist"><i class="fa-regular fa-heart"></i></span>
   </div>
-  <div class="card-body p-3">
-    <h4 class="card-title h5 fw-bold mb-2 ">{{product.propertyDetails.name}}</h4>
-    <p class="card-text text-center text-muted">{{product.propertyDetails.address.address1 + ', ' + product.propertyDetails.address.city}}</p>
-    <p class="text-center pt-2 small text-dark fw-bold">{{product.propertyDetails.size}}</p>
+  <div class="card-body">
+    <h4 class="card-title">{{ product.propertyDetails.name }}</h4>
+    <p class="card-location">
+      <i class="fa-solid fa-location-dot"></i>
+      {{ product.propertyDetails.address.city || 'N/A' }}{{ product.propertyDetails.address.state ? ', ' + product.propertyDetails.address.state : '' }}
+    </p>
+    <div class="card-meta">
+      <span *ngIf="product.propertyDetails.size">
+        <i class="fa-solid fa-ruler-combined"></i> {{ product.propertyDetails.size }}
+      </span>
+      <span *ngIf="product.propertyDetails.parking">
+        <i class="fa-solid fa-car"></i> {{ product.propertyDetails.parking }}
+      </span>
+    </div>
+  </div>
+  <div class="card-footer">
+    <span class="card-cta">View Details <i class="fa-solid fa-arrow-right"></i></span>
+    <span class="card-verified"><i class="fa-solid fa-circle-check"></i> Verified</span>
   </div>
 </div>

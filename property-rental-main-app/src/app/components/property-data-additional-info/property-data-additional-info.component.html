@@ -1,9 +1,7 @@
-<div class="pt-2">
-  <p class="pt-3">
-    {{ propertyInfo.description|| "Not Available" }}
-  </p>
-  <br />
-  <p class="">
-    {{ propertyInfo.details || "Not Available"}}
-  </p>
+
+<div class="additional-info-wrapper">
+  <div class="info-content-box" *ngFor="let info of propertyInfo">
+    <div class="desc-main">{{ info.description || "No description available" }}</div>
+    <div class="details-text" *ngIf="info.details">{{ info.details }}</div>
+  </div>
 </div>

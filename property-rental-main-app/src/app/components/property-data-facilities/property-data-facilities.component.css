@@ -1,27 +1,37 @@
-ul {
-    list-style-type:disc; /* options: disc, circle, square, none */
-  }
-  
-  .property-item {
-    margin-bottom: 15px;
-  }
-  
-  .features-container {
-    display: flex;
-    gap: 20px; /* space between each column */
-  }
-  
-  .features-wrapper {
-    flex: 1; /* Each wrapper takes equal space */
-  }
-  
-  .features-list {
-    list-style-type: disc; /* Default bullet */
-    padding-left: 20px; /* Space for bullets */
-    margin-top: 10px; /* Adjust spacing */
-  }
-  
-  .features-list li {
-    margin-bottom: 5px; /* Space between list items */
-  }
-  
+/* Premium Facilities Grid */
+.features-grid-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin-top: 8px;
+}
+
+.feature-item-modern {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid #f3f4f6;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: all 0.2s;
+}
+
+.feature-item-modern:hover {
+  background: #f5f3ff;
+  border-color: #c4b5fd;
+  transform: translateY(-2px);
+}
+
+.feature-bullet {
+  color: #10b981;
+  font-size: 14px;
+}
+
+.feature-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  text-transform: capitalize;
+}

@@ -41,7 +41,7 @@ export class LoginComponent {
           this.alertService.showAlert('Login successful 🎉', 'success');
           setTimeout(() => window.location.assign('/dashboard'), 2000);
         } else {
-          this.alertService.showAlert('Login failed!', 'error');
+          this.alertService.showAlert(response.message || 'Login failed!', 'error');
         }
       });
     }

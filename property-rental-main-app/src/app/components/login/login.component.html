@@ -1,68 +1,70 @@
-<!-- Section: Design Block -->
-<section class="h-screen w-full flex justify-center items-center bg-gray-100">
-  <!-- Jumbotron -->
-  <div class="px-4 py-5 text-center text-lg-start">
-    <div class="container">
-      <div class="row flex flex-col lg:flex-row items-center justify-center lg:justify-between">
-        <div class="col-lg-6 mb-5 lg:mb-0">
-          <h1 class="my-5 text-4xl font-bold leading-tight">
-            Easy rentals, <br />
-            <span class="text-purple-300">trusted connections.</span>
-          </h1>
-          <p class="text-gray-600 leading-relaxed">
-            Our property rental system makes renting simple and hassle-free.
-            Whether you're a property owner looking to list your rental or a
-            tenant searching for the perfect home, our platform ensures a smooth
-            and secure experience. With user-friendly features and a reliable process,
-            we connect landlords and tenants effortlessly, making property management easier than ever.
-          </p>
+<section class="login-page">
+  <div class="login-container">
+    <!-- Left: Brand Panel -->
+    <div class="brand-panel">
+      <div class="brand-content">
+        <span class="brand-tag">Welcome back</span>
+        <h1>Easy rentals,<br /><span class="brand-accent">trusted connections.</span></h1>
+        <p>Our property rental system makes renting simple and hassle-free. Whether
+          you're a property owner or a tenant searching for the perfect home, we connect you effortlessly.</p>
+        <div class="brand-features">
+          <div class="brand-feature"><i class="fa-solid fa-shield-halved"></i> Secure Platform</div>
+          <div class="brand-feature"><i class="fa-solid fa-bolt"></i> Instant Booking</div>
+          <div class="brand-feature"><i class="fa-solid fa-handshake"></i> Trusted Owners</div>
         </div>
+      </div>
+    </div>
 
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="d-logo flex justify-center items-center">
-              <img class="logo" src="assets/images/favicon.png" alt="logo">
+    <!-- Right: Login Form -->
+    <div class="form-panel">
+      <div class="login-card">
+        <div class="login-logo">
+          <img src="assets/images/favicon.png" alt="logo" />
+        </div>
+        <h2>Sign in to your account</h2>
+        <p class="login-subtitle">Enter your credentials to continue</p>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="field-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" formControlName="email" placeholder="you@example.com" />
             </div>
-            <div class="title">
-              <h2>One account</h2>
-              <h2>Many possibilities</h2>
-            </div>
-            <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-              <section class="form">
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" id="email" class="form-control" formControlName="email" placeholder="Enter your email" />
-                  <small class="text-danger" *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('required')">
-                    Email is required
-                  </small>
-                  <small class="text-danger" *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('email')">
-                    Please enter a valid email address
-                  </small>
-                </div>
-
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" id="password" class="form-control" formControlName="password" placeholder="Enter your password" />
-                  <small class="text-danger" *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].hasError('required')">
-                    Password is required
-                  </small>
-                </div>
-
-                <div class="space-between">
-                  <a  class="link">Forgot password?</a>
-                </div>
-              </section>
-
-              <section class="buttons">
-                <button type="submit" [disabled]="loginForm.invalid" class="button button-primary">Sign in</button>
-              </section>
-
-              <section class="not-member">
-                <span>Not a member yet? <a class="link"routerLink="/signup" >Sign up</a></span>
-              </section>
-            </form>
+            <small class="field-error"
+              *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('required')">
+              Email is required
+            </small>
+            <small class="field-error"
+              *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('email')">
+              Please enter a valid email
+            </small>
           </div>
-        </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" formControlName="password" placeholder="••••••••" />
+            </div>
+            <small class="field-error"
+              *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].hasError('required')">
+              Password is required
+            </small>
+          </div>
+
+          <div class="form-options">
+            <a class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" [disabled]="loginForm.invalid" class="login-btn">
+            <i class="fa-solid fa-right-to-bracket"></i> Sign In
+          </button>
+
+          <div class="signup-prompt">
+            Don't have an account? <a routerLink="/signup" class="signup-link">Create one</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>

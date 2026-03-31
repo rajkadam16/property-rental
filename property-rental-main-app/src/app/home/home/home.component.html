@@ -1,46 +1,62 @@
 
-<main class="w-full h-full ">
+<main class="home-page">
   <!-- Hero Section -->
-  <section id="page-1" class="bg-cover bg-center h-screen flex items-center justify-center"
-    style="background-image: url('assets/images/home-main.jpg'); background-blend-mode: overlay; background-color: rgba(0, 0, 0, 0.2);">
-    <div class="container mx-auto text-center px-4">
-      <h1 class="text-white text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-md">
-        Find your perfect rental
-      </h1>
-      <h1 class="text-white text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-md">
-        easy, fast, and hassle-free!
-      </h1>
-      <div class="flex justify-center mt-4">
+  <section class="hero" style="background-image: url('assets/images/home-main.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🏠 Trusted by 1000+ renters</span>
+      <h1>Find your perfect<br /><span class="hero-accent">rental home</span></h1>
+      <p class="hero-subtitle">Easy, fast, and hassle-free property rentals across India</p>
+      <div class="hero-search">
         <app-search></app-search>
+      </div>
+      <div class="hero-stats-inline">
+        <div class="hero-stat"><span>500+</span>Properties</div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><span>1200+</span>Happy Tenants</div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><span>50+</span>Cities</div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><span>4.8★</span>Avg Rating</div>
       </div>
     </div>
   </section>
 
   <!-- Rentals Section -->
-  <div class="pb-10 ">
-    <h1 class="text-center text-3xl font-semibold mb-8 text-black">Explore Rentals in Mumbai</h1>
-    <div class="cards-container flex flex-wrap justify-center gap-6">
-      <app-card *ngFor="let card of products.slice(0,3)" [product]="card" class="p-4"></app-card>
+  <section class="rentals-section">
+    <div class="section-header-home">
+      <span class="section-tag">Featured Listings</span>
+      <h2>Explore Rentals in Mumbai</h2>
+      <p>Handpicked properties for your perfect stay</p>
     </div>
-  </div>
+    <div class="cards-container">
+      <app-card *ngFor="let card of products.slice(0,3)" [product]="card"></app-card>
+    </div>
+    <div class="view-all-wrapper">
+      <a routerLink="/FindProperty" class="view-all-btn">
+        View All Properties <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
 
   <!-- Information Section -->
-  <div class="text-center my-16 px-6 ">
-    <h1 class="text-4xl font-semibold mb-6 text-black">
-      Renting Made Easy for Residents and Property Managers
-    </h1>
-    <p class=" font-light text-lg mb-8">
-      Our articles, guides, and videos help you through the process, start to finish.
-    </p>
-    <div class="flex justify-center">
-      <app-featurette></app-featurette>
+  <section class="info-section">
+    <div class="section-header-home">
+      <span class="section-tag">Why Choose Us</span>
+      <h2>Renting Made Easy for Everyone</h2>
+      <p>Our articles, guides, and videos help you through the process, start to finish</p>
     </div>
-  </div>
+    <app-featurette></app-featurette>
+  </section>
 
   <!-- FAQ Section -->
-  <section class="flex justify-center mt-16  py-12">
-    <div class="px-6 w-full max-w-5xl">
-      <h1 class="text-3xl font-bold mb-8 text-black">FAQs</h1>
+  <section class="faq-section">
+    <div class="faq-wrapper">
+      <div class="section-header-home">
+        <span class="section-tag">Got Questions?</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about renting with Cityscape</p>
+      </div>
       <app-faqs></app-faqs>
     </div>
   </section>

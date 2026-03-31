@@ -9,22 +9,25 @@ import { AlertService } from 'src/app/core/service/alert.service';
 })
 export class ContactUsComponent {
 
-  contactForm:FormGroup;
+  contactForm: FormGroup;
+
   constructor(private readonly fb: FormBuilder, private readonly alertService: AlertService) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      contactNumber: ['', Validators.required],
       message: ['', Validators.required]
     });
   }
+
   onSubmit() {
     if (this.contactForm.valid) {
-      // Simulate a successful form submission
-      this.alertService.showAlert('Message sent successfully! 🎉', 'success'); // Green
+      this.alertService.showAlert('Message sent successfully! 🎉', 'success');
       console.log('Form submitted:', this.contactForm.value);
+      this.contactForm.reset();
     } else {
-      this.alertService.showAlert('Please fill in all fields correctly.', 'error'); // Red
+      this.alertService.showAlert('Please fill in all fields correctly.', 'error');
     }
   }
-                      
 }

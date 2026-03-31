@@ -1,87 +1,110 @@
-  <section class="container flex justify-center items-center px-10  h-full w-screen">
-  <div class="right max-h-[90vh] w-[30%]  md:w-[30%] md:h-[95%] bg-slate-200 rounded-lg p-6 shadow-md ">
-    <!-- filtering data by Search Bar -->
-    <div class="mb-6">
-      <input [(ngModel)]="searchText"
-        class="form-control w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        type="search" placeholder="Search for a property" aria-label="Search" />
+
+<div class="search-page-container">
+  
+  <!-- Sidebar Filters -->
+  <aside class="search-sidebar">
+    <div class="sidebar-header">
+      <h3><i class="fa-solid fa-sliders"></i> Filter Criteria</h3>
+      <button class="clear-all" (click)="searchText = ''">Reset</button>
     </div>
-    <div class="property-filter mb-6">
-      <label class="block text-sm font-medium text-gray-800 mb-3">Filter by Configuration</label>
-      <div class="space-y-2">
-        <div class="flex items-center" *ngFor="let option of bhkOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.configuration',this.bhkOptions)" type="checkbox"
-            class="form-checkbox h-5 w-5 text-blue-600" />
-          <span class="ml-2 text-gray-700">{{ option.label }}</span>
-        </div>
+
+    <!-- Search Input -->
+    <div class="filter-group">
+      <div class="search-field">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input [(ngModel)]="searchText" type="search" placeholder="City or Property name..." />
       </div>
     </div>
 
-    <!-- Filter by Type of Property -->
-    <div class="property-filter mb-6">
-      <label class="block text-sm font-medium text-gray-800 mb-3">Type of Property</label>
-      <div class="space-y-2">
-        <div class="flex items-center" *ngFor="let option of TypeofPropertysOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.type',this.TypeofPropertysOptions)"
-            type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
-          <span class="ml-2 text-gray-700">{{ option.label }}</span>
-        </div>
+    <!-- Filter Sections -->
+    <div class="filter-section">
+      <h4 class="filter-label">Listing Configuration</h4>
+      <div class="filter-options">
+        <label class="custom-checkbox" *ngFor="let option of bhkOptions">
+          <input type="checkbox" [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.configuration', bhkOptions)" />
+          <span class="checkmark"></span>
+          <span class="label-text">{{ option.label }}</span>
+        </label>
       </div>
     </div>
 
-    <!-- Filter by Furnishing -->
-    <div class="property-filter mb-6">
-      <label class="block text-sm font-medium text-gray-800 mb-3">Furnishing</label>
-      <div class="space-y-2">
-        <div class="flex items-center" *ngFor="let option of furnishingOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.furnishing',this.furnishingOptions)"
-            type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" />
-          <span class="ml-2 text-gray-700"> {{ option.label }}</span>
-        </div>
+    <div class="filter-section">
+      <h4 class="filter-label">Type of Property</h4>
+      <div class="filter-options">
+        <label class="custom-checkbox" *ngFor="let option of TypeofPropertysOptions">
+          <input type="checkbox" [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.type', TypeofPropertysOptions)" />
+          <span class="checkmark"></span>
+          <span class="label-text">{{ option.label }}</span>
+        </label>
       </div>
     </div>
 
-    <!-- Filter by Parking -->
-    <div class="property-filter mb-6">
-      <label class="block text-sm font-medium text-gray-800 mb-3">Parking</label>
-      <div class="space-y-2">
-        <div class="flex items-center" *ngFor="let option of ParkingOptions">
-          <input [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.parking', ParkingOptions)" type="checkbox"
-            class="form-checkbox h-5 w-5 text-blue-600" />
-          <span class="ml-2 text-gray-700">{{ option.label }}</span>
-        </div>
+    <div class="filter-section">
+      <h4 class="filter-label">Furnishing Status</h4>
+      <div class="filter-options">
+        <label class="custom-checkbox" *ngFor="let option of furnishingOptions">
+          <input type="checkbox" [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.furnishing', furnishingOptions)" />
+          <span class="checkmark"></span>
+          <span class="label-text">{{ option.label }}</span>
+        </label>
       </div>
     </div>
 
-  </div>
+    <div class="filter-section">
+      <h4 class="filter-label">Parking & Extras</h4>
+      <div class="filter-options">
+        <label class="custom-checkbox" *ngFor="let option of ParkingOptions">
+          <input type="checkbox" [(ngModel)]="option.checked" (change)="filterProperties('propertyDetails.parking', ParkingOptions)" />
+          <span class="checkmark"></span>
+          <span class="label-text">{{ option.label }}</span>
+        </label>
+      </div>
+    </div>
+  </aside>
 
-  <!-- Property Cards -->
-  <div class="left w-[70%] h-[95%] px-20">
+  <!-- Main Content Results -->
+  <main class="results-area">
+    <div class="results-header">
+      <div class="results-info">
+        <h3>Available Listings</h3>
+        <p>Showing {{ filteredProperties.length || 0 }} properties in Mumbai</p>
+      </div>
+      <div class="sort-selector">
+        <span class="label">Sort By:</span>
+        <select class="sort-dropdown">
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest First</option>
+        </select>
+      </div>
+    </div>
 
-    <div>
+    <div class="results-list">
+      <!-- Loader State -->
+      <div class="loader-state" *ngIf="loader">
+        <app-loder></app-loder>
+        <p>Finding the perfect homes for you...</p>
+      </div>
 
+      <!-- Result Cards -->
       <app-property-cards
-        *ngFor="let apartment of filteredProperties|filterCards:searchText|paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
+        *ngFor="let apartment of filteredProperties | filterCards:searchText | paginate : { itemsPerPage: pageSize, currentPage }; let i = index"
         [propertyCard]="apartment" [index]="i">
       </app-property-cards>
-      <ng-container>
-        <!-- Loader -->
-        <div class="d-flex justify-content-center align-items-center" *ngIf="loader" style="height: 40vh;">
-           <app-loder></app-loder>
-          </div>
 
-        <!-- No Data Found -->
-        <div class="d-flex justify-content-center align-items-center text-center"
-          *ngIf="!loader && filteredProperties.length === 0" style="height: 40vh;">
-          <h1 class="text-muted">No Data Found</h1>
-        </div>
-      </ng-container>
-
+      <!-- Empty State -->
+      <div class="empty-state" *ngIf="!loader && filteredProperties.length === 0">
+        <i class="fa-solid fa-house-circle-xmark"></i>
+        <h3>No Listings Found</h3>
+        <p>Try adjusting your filters or searching in a different area.</p>
+        <button class="clear-filters-btn" (click)="searchText = ''">Clear All Filters</button>
+      </div>
     </div>
-    <div class="border-top text-black font-bold d-md-flex justify-content-center align-items-center p-6 ">
+
+    <!-- Pagination -->
+    <footer class="pagination-footer" *ngIf="!loader && filteredProperties.length > pageSize">
       <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
-    </div>
-  </div>
+    </footer>
+  </main>
 
-
-</section>
+</div>

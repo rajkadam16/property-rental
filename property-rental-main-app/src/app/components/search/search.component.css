@@ -1,66 +1,59 @@
-.group {
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    justify-content: center ;
-    position: relative;
-    max-width: 100%;
-  }
-  
-  .input {
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem;
-    width: 100%;
-    padding-left: 2.5rem;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    background-color: #c5dac5;
-    color: #0d0c22;
-    box-shadow: 0 0 5px #666965, 0 0 0 10px #f5f5f5eb;
-    transition: .3s ease;
-  }
-  
-  .input::placeholder {
-    color: #777;
-  }
-  
-  .icon {
-    position: absolute;
-    left: 1rem;
-    fill: #777;
-    width: 1rem;
-    height: 1rem;
-  }
-  
-  button {
-    margin-left: 15px;
-    padding: 12.5px 30px;
-    border: 0;
-    border-radius: 100px;
-    background-color: #C5BAFF;
-    color: #000;
-    font-weight: Bold;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-  }
-  
-  button:hover {
-    background-color: #C4D9FF;
-    transform: scale(1.05);
-  }
-  
-  button:active {
-    background-color: #C4D9FF;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
-    box-shadow: none;
-    transform: scale(0.98);
-  }
-  
-  
-  
-  
-  
-  
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 6px 8px 6px 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  max-width: 560px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+}
+
+.search-icon {
+  color: #9ca3af;
+  font-size: 16px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #1a1a2e;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+}
+
+.search-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(124,58,237,0.35);
+}
+
+.search-btn:active {
+  transform: scale(0.98);
+}

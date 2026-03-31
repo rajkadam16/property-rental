@@ -1,0 +1,27 @@
+/* Additional Info Style */
+.additional-info-wrapper {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.info-content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.desc-main {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: pre-line;
+}
+
+.details-text {
+  font-size: 15px;
+  color: #6b7280;
+  background: #f8fafc;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 4px solid #c4b5fd;
+}

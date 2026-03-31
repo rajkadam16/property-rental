@@ -1,19 +1,39 @@
-<header id="header" class="header d-flex align-items-center sticky-top">
-  <div class="container position-relative d-flex align-items-center">
-    <a routerLink="/" class="logo d-flex align-items-center me-auto">
-      <h1 class="sitename">{{heading}}</h1><span>.</span>
+<header id="header" class="header">
+  <div class="nav-container">
+    <a routerLink="/" class="logo-link">
+      <span class="logo-text">Cityscape</span><span class="logo-dot">.</span>
     </a>
-    <nav id="navmenu" class="navmenu">
+
+    <!-- Hamburger Toggle (Mobile) -->
+    <button class="hamburger" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Mobile overlay backdrop -->
+    <div class="nav-backdrop" [class.visible]="mobileMenuOpen" (click)="closeMobileMenu()"></div>
+
+    <nav class="nav-menu" [class.open]="mobileMenuOpen">
+      <div class="mobile-nav-header">
+        <span class="mobile-logo-text">Cityscape<span class="mobile-logo-dot">.</span></span>
+      </div>
       <ul>
-        <li><a routerLink="/FindProperty">Find Property</a></li>
-        <li><a routerLink="/addproperty">Add Property</a></li>
-        <li><a routerLink="/dashboard">Dashboard</a></li>
-        <li><a routerLink="/contactus">Contact Us</a></li>
-        <ng-container *ngIf="!isLoggedIn"> 
-          <li><a routerLink="/signup">Sign Up</a></li>
-          <li><a routerLink="/login">Log In</a></li>
+        <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a routerLink="/FindProperty" routerLinkActive="active-link" (click)="closeMobileMenu()"><i class="fa-solid fa-magnifying-glass"></i> Find Property</a></li>
+        <li *ngIf="canCreateProperty"><a routerLink="/addproperty" routerLinkActive="active-link" (click)="closeMobileMenu()"><i class="fa-solid fa-plus"></i> Add Property</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/dashboard" routerLinkActive="active-link" (click)="closeMobileMenu()"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li><a routerLink="/contactus" routerLinkActive="active-link" (click)="closeMobileMenu()"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <ng-container *ngIf="!isLoggedIn">
+          <li class="nav-cta-group">
+            <a routerLink="/signup" class="nav-btn-outline" (click)="closeMobileMenu()">Sign Up</a>
+            <a routerLink="/login" class="nav-btn-primary" (click)="closeMobileMenu()">Log In</a>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="isLoggedIn">
+          <li><button (click)="logout(); closeMobileMenu()" class="nav-btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></li>
         </ng-container>
       </ul>
-    </nav>  
+    </nav>
   </div>
 </header>
